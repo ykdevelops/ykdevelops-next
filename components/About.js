@@ -8,21 +8,23 @@ import BoxCanvas from './BoxCanvas'
 import { Suspense } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image';
 const About = () => {
-    const ref = useRef()
+    const ref = useRef();
+    const videoUrl = 'https://ykdevelops.s3.us-east-2.amazonaws.com/mugculture.mp4';
     return (
         <div className={styles.aboutPage}>
             <Parallax pages={3} ref={ref} className={styles.container}>
                 <ParallaxLayer speed={1} sticky={{ start: 0, end: 0.5 }}
                     className={styles.imageContainer}
                 >
-                    <Suspense
-                        fallback={<div className={styles['loading-image']}></div>}
-                    >
-                        <img
+                    <Suspense fallback={<div className={styles['loading-image']}></div>}>
+                        <Image
                             className={styles.headshot}
-                            src='/aboutImage.png'
-                            alt='headshot'
+                            src="/aboutImage.png"
+                            alt="headshot"
+                            width={200} // Provide the width of the image
+                            height={200} // Provide the height of the image
                         />
                     </Suspense>
                 </ParallaxLayer>
@@ -52,10 +54,23 @@ const About = () => {
                     </div>
 
                 </ParallaxLayer>
-                <ParallaxLayer offset={1.5} speed={1} >
+                <ParallaxLayer offset={1.5} speed={0.5} >
 
                     <BoxCanvas />
 
+                </ParallaxLayer>
+                <ParallaxLayer offset={2} speed={0.5}>
+                    <video
+                        src={videoUrl}
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        style={{
+                            maxWidth: '100%',
+                            height: 'auto',
+                        }}
+                    />
                 </ParallaxLayer>
 
 

@@ -21,7 +21,7 @@ function RotatingModel({ url }) {
 }
 
 const BoxCanvas = () => {
-    const modelUrl = '/deskScene21.gltf';
+    const modelUrl = 'https://ykdevelops.s3.us-east-2.amazonaws.com/deskScene21.gltf';
 
     return (
         <Canvas style={{ height: '700px' }}>
