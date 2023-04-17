@@ -31,7 +31,7 @@ const About = () => {
                 <ParallaxLayer offset={0} speed={1} className={styles.textContainer}>
                     <div className={styles.textContainerMid}>
                         <div className={styles.title1}>Hello,</div>
-                        <div className={styles.title1}>I'm Youssef!</div>
+                        <div className={styles.title1}>I`&apos;`m Youssef!</div>
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer offset={0.9} speed={1} className={styles.textContainer}>
