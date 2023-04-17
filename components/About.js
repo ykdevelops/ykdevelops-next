@@ -1,64 +1,67 @@
-import React from 'react';
-import styles from '../styles/About.module.css';
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaYoutubeSquare } from "react-icons/fa";
-import { AiFillFilePdf } from "react-icons/ai";
-// import currentFile from '../public/resume.pdf';
-import { Suspense } from 'react';
-
+import React from 'react'
+import styles from '../styles/About.module.css'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithubSquare } from 'react-icons/fa'
+import { FaYoutubeSquare } from 'react-icons/fa'
+import { AiFillFilePdf } from 'react-icons/ai'
+import BoxCanvas from './BoxCanvas'
+import { Suspense } from 'react'
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { useState, useEffect, useRef } from 'react'
 const About = () => {
+    const ref = useRef()
     return (
-        <div className={styles['about-page']}>
-
-            <div className={styles['headshot-row']}>
-                <Suspense fallback={<div className={styles['loading-image']}></div>}>
-                    <img className={styles.headshot} src="/aboutImage.png" alt="headshot" />
-                </Suspense>
-                <h2 className={styles['welcome-statement']}>
-                    <div>Hello,</div>
-                    <div>I'm Youssef!</div>
-                </h2>
-            </div>
-
-            <div className={styles['yellow-box-row']}>
-                <div className={styles['yellow-box']}>
-                    <div className={styles['icon-column']} >
-                        {/* <abbr title="My Resume">
-                            <a href={currentFile} className={styles['icon-row']} target="_blank" rel="noreferrer">
-                                <AiFillFilePdf className={styles['about-social-icon']} />
-                            </a>
-                        </abbr> */}
-                        <abbr title="My LinkedIn">
-                            <a href="https://linkedin.com/in/ykdevelops" className={styles['icon-row']} target="_blank" rel="noreferrer">
-                                <FaLinkedin className={styles['about-social-icon']} />
-                            </a>
-                        </abbr>
-                        <abbr title="My Github">
-                            <a href="https://github.com/ykdevelops" className={styles['icon-row']} target="_blank" rel="noreferrer">
-                                <FaGithubSquare className={styles['about-social-icon']} />
-                            </a>
-                        </abbr>
-                        <abbr title="My Youtube">
-                            <a href="https://www.youtube.com/channel/UCRIft9RM1NOq6m0MIJeiJJg" className={styles['icon-row']} target="_blank" rel="noreferrer">
-                                <FaYoutubeSquare className={styles['about-social-icon']} />
-                            </a>
-                        </abbr>
+        <div className={styles.aboutPage}>
+            <Parallax pages={3} ref={ref} className={styles.container}>
+                <ParallaxLayer speed={1} sticky={{ start: 0, end: 0.5 }}
+                    className={styles.imageContainer}
+                >
+                    <Suspense
+                        fallback={<div className={styles['loading-image']}></div>}
+                    >
+                        <img
+                            className={styles.headshot}
+                            src='/aboutImage.png'
+                            alt='headshot'
+                        />
+                    </Suspense>
+                </ParallaxLayer>
+                <ParallaxLayer offset={0} speed={1} className={styles.textContainer}>
+                    <div className={styles.textContainerMid}>
+                        <div className={styles.title1}>Hello,</div>
+                        <div className={styles.title1}>I'm Youssef!</div>
                     </div>
-                    <div className={styles['description-column']}>
-                        <p className={styles['description-text']}>
-                            As a developer with over a year of experience, I specialize in creating responsive web applications using Javascript frameworks like React and Vue. I am passionate about staying up-to-date with the latest online technologies and using them to create innovative and engaging user experiences.
-                        </p>
-                        <p className={styles['description-text']}>
-                            Recently, I have also been diving into Next.js, and I am enthusiastic about the potential it offers for building performant, scalable, and feature-rich web applications.
-                        </p>
+                </ParallaxLayer>
+                <ParallaxLayer offset={0.9} speed={1} className={styles.textContainer}>
+                    <div className={styles.textContainerMid}>
+
+                        <div className={styles.descriptionColumn}>
+                            <p className={styles.description}>
+                                As a developer with over a year of experience, I specialize in
+                                creating responsive web applications using Javascript
+                                frameworks like React and Vue. I am passionate about staying
+                                up-to-date with the latest online technologies and using them
+                                to create innovative and engaging user experiences.
+                            </p>
+                            <p className={styles.description}>
+                                Recently, I have been diving into Next.js, and I am
+                                enthusiastic about the potential it offers for building
+                                performant, scalable, and feature-rich web applications.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                </ParallaxLayer>
+                <ParallaxLayer offset={1.5} speed={1} >
+
+                    <BoxCanvas />
+
+                </ParallaxLayer>
+
+
+            </Parallax>
         </div>
-    );
-};
+    )
+}
 
-
-
-export default About;
+export default About
