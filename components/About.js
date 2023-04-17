@@ -21,7 +21,7 @@ const About = () => {
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
                             className={styles.headshot}
-                            src="/aboutImage.png"
+                            src="https://ykdevelops.s3.us-east-2.amazonaws.com/aboutImage.png"
                             alt="headshot"
                             width={200} // Provide the width of the image
                             height={200} // Provide the height of the image
