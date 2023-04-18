@@ -26,7 +26,7 @@ export default function MobileHome() {
         </Suspense>
         <h2 className={styles.welcomeStatement}>
           <div>Hello,</div>
-          <div>I'm Youssef!</div>
+          <div>I&apos;m Youssef!</div>
         </h2>
       </div>
 
