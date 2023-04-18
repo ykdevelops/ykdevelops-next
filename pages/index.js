@@ -29,7 +29,7 @@ function useWindowSize() {
 
 export default function Home() {
   const { width } = useWindowSize();
-  const isMobile = width ? width <= 600 : false;
+  const isMobile = width ? width <= 800 : false;
 
   return (
     <div className={styles.container}>

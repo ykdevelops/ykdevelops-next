@@ -1,0 +1,128 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e2dfdd;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 100px;
+}
+.about-me-column {
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 60px;
+}
+.about-me {
+  font-size: 6.5rem;
+}
+.welcome-statement {
+  font-size: 7vw;
+  margin-bottom: 2rem;
+  text-align: center;
+  /* transform: translate(150px, -430px); */
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 3rem;
+  transform: translateX(-25px);
+}
+.description-text {
+  font-size: 20px;
+  width: 90%;
+  max-width: 550px;
+  text-align: start;
+}
+.description-column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4rem;
+}
+.headshot {
+  width: 200px;
+  height: 200px;
+  z-index: 0;
+}
+.loading-image {
+  background-color: grey;
+  width: 200px;
+  height: 200px;
+}
+.headshot-row {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.yellow-box {
+  width: 95%;
+  max-width: 600px;
+  max-height: 900px;
+  background-color: transparent;
+  transform: translate(0px, -2rem);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.yellow-box-row {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.about-social-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0px 20px 0px 20px;
+  fill: black;
+}
+.about-social-icon:hover {
+  width: 3rem;
+  height: 3rem;
+  margin: 0px 20px 0px 20px;
+  fill: black;
+  background-color: #f0d460;
+  border-radius: 5%;
+  box-shadow: 0 0 5px 0px rgba(67, 67, 67, 0.8);
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  height: 100%;
+}
+.icon-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.black-bar-3 {
+  width: 50px;
+  height: 60px;
+  background-color: black;
+}
+.black-bar-4 {
+  width: 60px;
+  height: 50px;
+  background-color: black;
+}
