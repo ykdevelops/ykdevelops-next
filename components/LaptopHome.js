@@ -14,7 +14,7 @@ export default function LaptopHome() {
     const videoUrl = 'https://ykdevelops.s3.us-east-2.amazonaws.com/mugculture.mp4';
     return (
         <div className={styles.aboutPage}>
-            <Parallax pages={8} ref={ref} className={styles.container}>
+            <Parallax pages={9} ref={ref} className={styles.container}>
                 <ParallaxLayer //image
                     speed={0.1} sticky={{ start: 0, end: 0.8 }}
                     className={styles.layer}
@@ -55,7 +55,7 @@ export default function LaptopHome() {
                                 As a web developer with over a year of professional experience, I specialize in creating responsive web applications using the Javascript frameworks React and Vue.
                             </p>
                             <p className={styles.description}>
-                                I am passionate about staying up-to-date with the latest web technologies and utilizing them to create innovative and engaging user experiences.
+                                I  am passionate about A.I research and enjoy practicing different A.I techniques daily to create stunning websites, art, music, and text.
                             </p>
                         </div>
                     </div>
@@ -69,14 +69,22 @@ export default function LaptopHome() {
                             <div className={styles.title}>Work Experience</div>
                             <div className={styles.company}>QuoteMedia, Inc. - Intermediate Front End Developer</div>
                             <div className={styles.date}>August 2022 - March 2023</div>
+                            <div className={styles.date}>Developed responsive web applications using Astro and Vue.js for the
+                                marketing team, including customizing financial web widgets (Qmods).
+                                Public project: https://catalog.quotemedia.com/trading</div>
                         </div>
                         <div className={styles.info}>
                             <div className={styles.company}>SpeakHabla - Junior Full Stack Developer</div>
                             <div className={styles.date}>April 2022 - September 2022</div>
+                            <div className={styles.date}>Developed BELA (Business English Level Assessment), a website built
+                                using ReactJS and Firebase.</div>
                         </div>
                         <div className={styles.info}>
                             <div className={styles.company}>IBM/SLiDE - Junior Front End Developer</div>
                             <div className={styles.date}>September 2021 - December 2021</div>
+                            <div className={styles.date}>Developed a progressive web application using ReactJS in partnership
+                                with NBIFC. Assisted with user testing and provided ongoing
+                                maintenance for multiple Wordpress sites for SLiDE clients.</div>
                         </div>
                     </div>
 
@@ -98,7 +106,7 @@ export default function LaptopHome() {
                                     Ykdevelops Studio
                                 </p>
                                 <p className={styles.description}>
-                                    ReactJS + React Three Fiber + Firebase
+                                    ReactJS + ThreeJS + Firebase
                                 </p>
 
                             </div>
@@ -108,7 +116,7 @@ export default function LaptopHome() {
                 </ParallaxLayer>
                 <ParallaxLayer //R3F Title2
                     className={styles.layer}
-                    speed={0.1} offset={4} >
+                    speed={0.1} offset={3.8} >
                     <div className={styles.textContainer}><div className={styles.textContainerMid}>
                         <div className={styles.descriptionColumn}>
                             <p className={styles.description}>
@@ -125,7 +133,7 @@ export default function LaptopHome() {
                 <ParallaxLayer // MC Video
                     className={styles.layer}
 
-                    speed={1} sticky={{ start: 5.2, end: 5.8 }} >
+                    speed={1} sticky={{ start: 5.2, end: 6.5 }} >
                     <div className={styles.leftHalf}> <video
                         src={videoUrl}
                         controls
@@ -162,7 +170,7 @@ export default function LaptopHome() {
                 </ParallaxLayer>
                 <ParallaxLayer //MC Title2
                     className={styles.layer}
-                    speed={0.1} offset={5.8} >
+                    speed={0.1} offset={6.4} >
                     <div className={styles.textContainer}>
                         <div className={styles.textContainerMid}>
                             <div className={styles.descriptionColumn}>
@@ -182,7 +190,7 @@ export default function LaptopHome() {
                 </ParallaxLayer>
                 <ParallaxLayer //Contact
                     className={styles.layer}
-                    speed={0.1} sticky={{ start: 7, end: 8 }} >
+                    speed={0.1} sticky={{ start: 7.5, end: 8 }} >
 
                     <div>
                         <div>Contact me </div>

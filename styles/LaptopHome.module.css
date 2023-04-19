@@ -76,6 +76,7 @@
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
+  margin-right: 1rem;
 }
 .rightHalf {
   width: 50%;
@@ -84,6 +85,7 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  margin-left: 1rem;
 }
 .layer {
   width: 100%;
