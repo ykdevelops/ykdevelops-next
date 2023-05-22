@@ -1,73 +1,28 @@
-/* This will target the .about-page element */
 .aboutPage {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
-
 /* For Webkit-based browsers (Chrome, Safari, etc.) */
 .container::-webkit-scrollbar {
   display: none;
 }
 .container {
   width: 90%;
-  max-width: 1500px;
+  max-width: 4000px;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
   display: flex;
   flex-direction: column;
 }
-.headshot {
-  width: 500px;
-  height: 500px;
-  z-index: -1;
-}
-.textContainer {
+.layer {
   width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
-}
-.textContainerMid {
-  width: 50%;
-}
-
-.title1 {
-  font-size: 60px;
-}
-.description {
-  font-size: 30px;
-}
-.workExperience {
-  padding: 2rem;
-  background-color: transparent;
-  font-family: "Arial", sans-serif;
-}
-
-.info {
-  margin-bottom: 2.5rem;
-}
-
-.workExperience > div:last-child {
-  margin-bottom: 0;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.company {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.date {
-  font-size: 1rem;
-  font-style: italic;
+  align-items: center;
+  flex-direction: row;
 }
 .leftHalf {
   width: 50%;
@@ -80,16 +35,121 @@
 }
 .rightHalf {
   width: 50%;
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   margin-left: 1rem;
 }
-.layer {
+.loaderImage {
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+}
+.headshot {
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+}
+.textContainer {
   width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contactInfo {
+  font-size: 1vw; /* Use 1% of the viewport width for the font size */
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.description {
+  font-size: 2rem;
+}
+.socialIcon {
+  font-size: 6rem;
+  padding-right: 3rem;
+}
+.contactItem {
+  font-size: 4rem;
+}
+.iconRow {
+  z-index: 1111 !important;
+  position: relative;
+}
+/* #region Intro */
+.introTitle {
+  font-size: 5rem;
+}
+.introDescription {
+  font-size: 2rem;
+}
+/* #endregion Intro */
+
+/* #region Work Experience */
+.workContainer {
+  max-width: 1100px;
+}
+.workCompany {
+  display: flex;
+  flex-direction: row;
+}
+.workLogo {
+  margin-right: 1rem;
+}
+.workInfo {
+  padding: 0rem 0rem 5rem 0rem;
+}
+.workTitle {
+  font-size: 4.5rem;
+  padding-bottom: 3rem;
+}
+.workCompany {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.workDate {
+  font-size: 1.75rem;
+}
+.workDescription {
+  padding: 1rem 0 0 0;
+  font-size: 1.4rem;
+}
+
+/* #endregion Work Experience */
+
+/* #region Project */
+.projectContainer {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.projectTitle {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+.projectLanguages {
+  font-size: 2rem;
+  padding-bottom: 4rem;
+}
+.projectDescription {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.projectVisual {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
+/* #endregion Project */
+
+/* #region Contact */
+
+/* #endregion Contact */

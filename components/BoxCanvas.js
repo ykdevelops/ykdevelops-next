@@ -30,8 +30,9 @@ const BoxCanvas = () => {
             <Suspense fallback={null}>
                 <RotatingModel url={modelUrl} />
             </Suspense>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
         </Canvas>
+
     );
 };
 
