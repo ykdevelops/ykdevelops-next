@@ -13,10 +13,8 @@ export default function Intro() {
                     <Image
                         src='https://ykdevelops.s3.us-east-2.amazonaws.com/aboutImage.png'
                         alt='headshot'
-                        width={400}
-                        height={400}
-
-
+                        width={600}
+                        height={600}
                     />
                 </Suspense>
             </div>

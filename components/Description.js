@@ -17,11 +17,11 @@ export default function Description() {
                         alt='headshot'
                         width={500}
                         height={500}
-
+                        className={styles.descriptionImage}
                     />
                 </Suspense>
             </div>
-            <div className={styles.rightHalfImage}>
+            <div className={styles.rightHalf}>
 
                 <div className={styles.textContainer}>
 
