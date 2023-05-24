@@ -1,13 +1,18 @@
-import React from 'react'
-import styles from '../styles/LaptopHome.module.css'
+import React, { Suspense, lazy } from 'react';
+// import { useInView } from 'react-intersection-observer'; // Optional, for scroll-based lazy loading
+//const BoxCanvas = lazy(() => import('./BoxCanvas'));
+import { startTransition } from 'react';
 import BoxCanvas from './BoxCanvas'
-import { Suspense } from 'react'
+import styles from '../styles/LaptopHome.module.css'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaYoutubeSquare } from 'react-icons/fa'
+import { BsLink45Deg } from 'react-icons/bs'
+import { BsGithub } from 'react-icons/bs'
+
 import { AiFillFilePdf } from 'react-icons/ai'
 export default function LaptopHome() {
     const ref = useRef()
@@ -28,7 +33,8 @@ export default function LaptopHome() {
                                 alt='headshot'
                                 width={400}
                                 height={400}
-                                layout='responsive'
+
+
                             />
                         </Suspense>
                     </div>
@@ -44,32 +50,30 @@ export default function LaptopHome() {
                 >
 
                     <div className={styles.leftHalf}>
-                        <div className={styles.textContainer}>
-                            <p className={styles.introDescription}>
-                                As a web developer with over a year of professional experience,
-                                I specialize in creating responsive web applications using the
-                                Javascript frameworks React and Vue.
-                            </p>
-                            <p className={styles.introDescription}>
-                                I am passionate about A.I research and enjoy practicing
-                                different A.I techniques daily to create stunning websites, art,
-                                music, and text.
-                            </p>
-                        </div>
 
-                    </div>
-                    <div className={styles.rightHalfImage}>
                         <Suspense
                             fallback={<div className={styles.loaderImage}></div>}
                         >
                             <Image
-                                src='/catComputer.gif'
+                                src='/descriptionArt.png'
                                 alt='headshot'
-                                width={250}
-                                height={200}
+                                width={500}
+                                height={500}
 
                             />
                         </Suspense>
+                    </div>
+                    <div className={styles.rightHalfImage}>
+
+                        <div className={styles.textContainer}>
+
+                            <p className={styles.introDescription}>
+                            </p>
+                            <p className={styles.introDescription}>
+                                I harness the power of JavaScript frameworks like  <strong>React</strong> and <strong>Vue</strong> to deliver seamless and responsive experiences across various devices.
+                            </p>
+
+                        </div>
                     </div>
                 </div>
 
@@ -85,8 +89,8 @@ export default function LaptopHome() {
                                 <Image
                                     src='/qm.jpeg'
                                     alt='QuoteMediaLogo'
-                                    width={100}
-                                    height={100}
+                                    width={150}
+                                    height={150}
                                     className={styles.workLogo}
                                 />
                             </Suspense>
@@ -108,8 +112,8 @@ export default function LaptopHome() {
                                 <Image
                                     src='/speakHablaLogo.jpeg'
                                     alt='speakHablaLogo'
-                                    width={100}
-                                    height={100}
+                                    width={150}
+                                    height={150}
                                     className={styles.workLogo}
                                 />
                             </Suspense>
@@ -134,8 +138,8 @@ export default function LaptopHome() {
                                 <Image
                                     src='/ibm-logo.jpeg'
                                     alt='IBM_logo'
-                                    width={100}
-                                    height={100}
+                                    width={150}
+                                    height={150}
                                     className={styles.workLogo}
                                 />
                             </Suspense>
@@ -173,44 +177,61 @@ export default function LaptopHome() {
                                 }}
                             />
                         </div>
+
                     </div>
                     <div className={styles.rightHalf}>
-                        <div className={styles.projectContainer}>
+                        <div className={styles.textContainer}>
                             <div className={styles.projectTitle}>MugCulture Beta</div>
-                            <div className={styles.projectLanguages}>
-                                NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
-                            </div>
-
-                            <div className={styles.projectDescription}>
-                                Crafted a high-performance, responsive e-commerce website for
-                                MugCulture using Next.js and Framer Motion, deployed on Vercel.
-                                The site features tailored mugs with a focus on delivering an
-                                exceptional user experience, and seamless adaptability across
-                                various devices.
-                            </div>
                         </div>
+
+                        <div className={styles.projectDescription}>
+                            Crafted a high-performance, responsive e-commerce website for
+                            MugCulture using Next.js and Framer Motion, deployed on Vercel.
+                            The site features tailored mugs with a focus on delivering an
+                            exceptional user experience, and seamless adaptability across
+                            various devices.
+                        </div>
+                        <div className={styles.projectLanguages}>
+                            NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
+                        </div>
+                        <div >
+                            <BsLink45Deg className={styles.projectIconLink} />
+                            <BsGithub className={styles.projectIconLink2} />
+                        </div>
+
                     </div>
                 </div>
 
                 <div // MC Video
                     className={styles.layer}
                 >
-                    <div className={styles.leftHalf}>
-                        <BoxCanvas />
+                    <div className={styles.leftHalf} ref={ref}>
+
+                        <Suspense
+                            fallback={<div className={styles.loaderImage}></div>}
+                        >
+                            <BoxCanvas />
+                        </Suspense>
+
                     </div>
                     <div className={styles.rightHalf}>
                         <div className={styles.textContainer}>
-                            <div className={styles.projectTitle}>Ykdevelops Studio</div>
-                            <div className={styles.projectLanguages}>
-                                {' '}
-                                ReactJS | ThreeJS | Firebase
-                            </div>
+                            <div className={styles.projectTitle}>3D Studio</div>
+
                             <div className={styles.projectDescription}>
-                                This site features an innovative 3D visualization of my virtual
+                                This site features an innovative 3D visualization of my
                                 workspace . It provides visitors with an
-                                engaging interactive experience going beyond the 2D norm              </div>
+                                engaging interactive experience going beyond the 2D norm of web applications.
+                            </div>
                         </div>
 
+                        <div className={styles.projectLanguages}>
+                            ReactJS | ThreeJS | Firebase
+                        </div>
+                        <div className={styles.projectDescription}>
+                            <BsLink45Deg className={styles.projectIconLink} />
+                            <BsGithub className={styles.projectIconLink2} />
+                        </div>
                     </div>
                 </div>
 
@@ -225,31 +246,62 @@ export default function LaptopHome() {
                             <abbr title='My LinkedIn'>
                                 <a
                                     href='https://linkedin.com/in/ykdevelops'
-                                    className={styles.iconRow}
+
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <FaLinkedin className={styles.socialIcon} />
+                                    <Suspense
+                                        fallback={<div className={styles.loaderImage}></div>}
+                                    >
+                                        <Image
+                                            src='/linkedin1.png'
+                                            alt='linkedin'
+                                            width={50}
+                                            height={50}
+                                            className={styles.contactIcon}
+                                        />
+                                    </Suspense>
                                 </a>
+
                             </abbr>
                             <abbr title='My Github'>
                                 <a
                                     href='https://github.com/ykdevelops'
-                                    className={styles.iconRow}
+
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <FaGithubSquare className={styles.socialIcon} />
+                                    <Suspense
+                                        fallback={<div className={styles.loaderImage}></div>}
+                                    >
+                                        <Image
+                                            src='/github.png'
+                                            alt='github'
+                                            width={50}
+                                            height={50}
+                                            className={styles.contactIcon}
+                                        />
+                                    </Suspense>
                                 </a>
                             </abbr>
                             <abbr title='My Youtube'>
                                 <a
                                     href='https://www.youtube.com/channel/UCRIft9RM1NOq6m0MIJeiJJg'
-                                    className={styles.iconRow}
+
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <FaYoutubeSquare className={styles.socialIcon} />
+                                    <Suspense
+                                        fallback={<div className={styles.loaderImage}></div>}
+                                    >
+                                        <Image
+                                            src='/youtube1.png'
+                                            alt='youtube'
+                                            width={50}
+                                            height={50}
+                                            className={styles.contactIcon}
+                                        />
+                                    </Suspense>
                                 </a>
                             </abbr>
                         </div>

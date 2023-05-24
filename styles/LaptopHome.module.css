@@ -42,6 +42,15 @@
   flex-direction: column;
   margin-left: 1rem;
 }
+.rightHalfImage {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
 .loaderImage {
   width: 500px;
   height: 500px;
@@ -80,6 +89,7 @@
 .iconRow {
   z-index: 1111 !important;
   position: relative;
+  padding-right: 1rem;
 }
 /* #region Intro */
 .introTitle {
@@ -114,7 +124,7 @@
   padding-bottom: 1rem;
 }
 .workDate {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
 }
 .workDescription {
   padding: 1rem 0 0 0;
@@ -137,19 +147,36 @@
   padding-bottom: 2rem;
 }
 .projectLanguages {
-  font-size: 2rem;
-  padding-bottom: 4rem;
+  font-size: 1rem;
+  padding-top: 0rem;
 }
 .projectDescription {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-bottom: 1rem;
+}
+.projectLinkIcon {
+  padding-right: 4rem;
 }
 .projectVisual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.projectIconLink {
+  padding-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+.projectIconLink2 {
+  width: 1.8rem;
+  height: 1.8rem;
+  transform: translateY(-10px);
 }
 /* #endregion Project */
 
 /* #region Contact */
-
+.contactIcon {
+  padding: 1rem 1rem 0 0;
+  width: 100px;
+  height: 100px;
+}
 /* #endregion Contact */
