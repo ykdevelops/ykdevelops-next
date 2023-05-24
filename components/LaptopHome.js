@@ -238,6 +238,18 @@ export default function LaptopHome() {
                 <div //Contact
                     className={styles.layer}
                 >
+                    <Suspense
+                        fallback={<div className={styles.loaderImage}></div>}
+                    >
+                        <Image
+                            src='/contactMePic.png'
+                            alt='headshot'
+                            width={400}
+                            height={400}
+
+
+                        />
+                    </Suspense>
                     <div className={styles.contactInfo}>
                         <div className={styles.contactItem}>Contact me </div>
                         <div className={styles.contactItem}>ykdevelops@gmail.com</div>
