@@ -179,4 +179,8 @@
   width: 100px;
   height: 100px;
 }
+.contactRow {
+  display: flex;
+  flex-direction: row;
+}
 /* #endregion Contact */
