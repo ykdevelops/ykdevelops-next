@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Image from 'next/image'
-import styles from '../styles/LaptopHome.module.css'
+import styles from '../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
@@ -23,7 +23,7 @@ export default function Studio() {
                     <h1 className={styles.projectTitle}>3D Studio</h1>
 
                     <p className={styles.projectDescription}>
-                        This site features an innovative 3D visualization of my
+                        Crafted an innovative 3D visualization of my
                         workspace . It provides visitors with an
                         engaging interactive experience going beyond the 2D norm of web applications.
                     </p>

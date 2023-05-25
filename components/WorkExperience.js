@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Image from 'next/image'
-import styles from '../styles/LaptopHome.module.css'
+import styles from '../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 export default function WorkExperience() {
