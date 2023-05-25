@@ -14,7 +14,7 @@ export default function Description() {
                 >
                     <Image
                         src='/descriptionArt.png'
-                        alt='headshot'
+                        alt='tech logos'
                         width={500}
                         height={500}
                         className={styles.descriptionImage}

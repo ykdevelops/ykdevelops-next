@@ -28,19 +28,19 @@ export default function MugCulture() {
                 </div>
                 <div className={styles.rightHalf}>
                     <div className={styles.textContainer}>
-                        <div className={styles.projectTitle}>MugCulture Beta</div>
+                        <h1 className={styles.projectTitle}>MugCulture Beta</h1>
                     </div>
 
-                    <div className={styles.projectDescription}>
+                    <p className={styles.projectDescription}>
                         Crafted a high-performance, responsive e-commerce website for
                         MugCulture using Next.js and Framer Motion, deployed on Vercel. The
                         site features tailored mugs with a focus on delivering an
                         exceptional user experience, and seamless adaptability across
                         various devices.
-                    </div>
-                    <div className={styles.projectLanguages}>
+                    </p>
+                    <h2 className={styles.projectLanguages}>
                         NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
-                    </div>
+                    </h2>
                     <div>
                         <a
                             href="https://mug-culture-shop.vercel.app/"

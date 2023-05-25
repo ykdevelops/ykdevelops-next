@@ -20,8 +20,8 @@ const Intro: React.FC = () => {
         </div>
         <div className={styles.rightHalf}>
           <div className={styles.textContainer}>
-            <div className={styles.introTitle}>Hello World,</div>
-            <div className={styles.introTitle}>I&apos;m Youssef!</div>
+            <h1 className={styles.introTitle}>Hello World,</h1>
+            <h1 className={styles.introTitle}>I&apos;m Youssef!</h1>
           </div>
         </div>
       </div>

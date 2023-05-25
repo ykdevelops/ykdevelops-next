@@ -9,7 +9,7 @@ export default function WorkExperience() {
             className={styles.layer}
         >
             <div className={styles.workContainer}>
-                <div className={styles.workTitle}>Work Experience</div>
+                <h1 className={styles.workTitle}>Work Experience</h1>
                 <div className={styles.workCompany}>
                     <Suspense
                         fallback={<div className={styles['loading-image']}></div>}
@@ -23,14 +23,14 @@ export default function WorkExperience() {
                         />
                     </Suspense>
                     <div className={styles.workInfo}>
-                        <div className={styles.workCompany}>
+                        <h1 className={styles.workCompany}>
                             QuoteMedia, Inc. - Intermediate Front End Developer
-                        </div>
-                        <div className={styles.workDate}>August 2022 - March 2023</div>
-                        <div className={styles.workDescription}>
+                        </h1>
+                        <h2 className={styles.workDate}>August 2022 - March 2023</h2>
+                        <p className={styles.workDescription}>
                             Developed responsive web applications using VueJS and
                             customized finacial web widgets (Qmods).
-                        </div>
+                        </p>
                     </div>
                 </div>
                 <div className={styles.workCompany}>
@@ -47,16 +47,16 @@ export default function WorkExperience() {
                     </Suspense>
 
                     <div className={styles.workInfo}>
-                        <div className={styles.workCompany}>
+                        <h1 className={styles.workCompany}>
                             SpeakHabla - Junior Full Stack Developer
-                        </div>
-                        <div className={styles.workDate}>
+                        </h1>
+                        <h2 className={styles.workDate}>
                             April 2022 - September 2022
-                        </div>
-                        <div className={styles.workDescription}>
+                        </h2>
+                        <p className={styles.workDescription}>
                             Developed BELA (Business English Level Assessment), a website
                             english level assesment built using ReactJS and Firebase.
-                        </div>
+                        </p>
                     </div>
                 </div>
                 <div className={styles.workCompany}>
@@ -72,18 +72,18 @@ export default function WorkExperience() {
                         />
                     </Suspense>
                     <div className={styles.workInfo}>
-                        <div className={styles.workCompany}>
+                        <h1 className={styles.workCompany}>
                             IBM/SLiDE - Junior Front End Developer
-                        </div>
-                        <div className={styles.workDate}>
+                        </h1>
+                        <h2 className={styles.workDate}>
                             September 2021 - December 2021
-                        </div>
-                        <div className={styles.workDescription}>
+                        </h2>
+                        <p className={styles.workDescription}>
                             Developed a progressive web application using ReactJS in
                             partnership with NBIFC. Assisted with user testing and
                             provided ongoing maintenance for multiple Wordpress sites for
                             SLiDE clients.
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>

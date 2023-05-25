@@ -20,18 +20,18 @@ export default function Studio() {
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <div className={styles.projectTitle}>3D Studio</div>
+                    <h1 className={styles.projectTitle}>3D Studio</h1>
 
-                    <div className={styles.projectDescription}>
+                    <p className={styles.projectDescription}>
                         This site features an innovative 3D visualization of my
                         workspace . It provides visitors with an
                         engaging interactive experience going beyond the 2D norm of web applications.
-                    </div>
+                    </p>
                 </div>
 
-                <div className={styles.projectLanguages}>
+                <h2 className={styles.projectLanguages}>
                     ReactJS | ThreeJS | Firebase
-                </div>
+                </h2>
                 <div className={styles.projectDescription}>
                     <a
                         href="https://ykdevelops-r3f.vercel.app/"

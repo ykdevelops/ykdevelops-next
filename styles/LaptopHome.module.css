@@ -94,6 +94,9 @@
 /* #region Intro */
 .introTitle {
   font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
 }
 .introDescription {
   font-size: 2rem;
@@ -110,24 +113,27 @@
 }
 .workLogo {
   margin-right: 1rem;
+  margin-top: 1.5rem;
 }
 .workInfo {
   padding: 0rem 0rem 5rem 0rem;
 }
 .workTitle {
   font-size: 4.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  font-weight: normal;
 }
 .workCompany {
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 1rem;
 }
 .workDate {
   font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
 }
 .workDescription {
-  padding: 1rem 0 0 0;
+  padding: 0 0 0 0;
   font-size: 1.4rem;
 }
 
@@ -144,20 +150,18 @@
 }
 .projectSectionTitle {
   font-size: 4.5rem;
-  padding-bottom: 2rem;
+
   transform: translateY(-4rem);
 }
 .projectTitle {
   font-size: 3rem;
-  padding-bottom: 2rem;
+  margin: 0;
 }
 .projectLanguages {
   font-size: 1rem;
-  padding-top: 0rem;
 }
 .projectDescription {
   font-size: 1.5rem;
-  padding-bottom: 1rem;
 }
 .projectLinkIcon {
   padding-right: 4rem;
@@ -200,7 +204,7 @@
 .contactIcon:hover {
   transform: scale(1.5);
   transition: all 0.2s ease-in-out;
-  margin: 2rem;
+  margin: 0 2rem;
 }
 .contactRow {
   display: flex;

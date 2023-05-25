@@ -14,7 +14,7 @@ export default function Contact() {
                     />
                 </Suspense>
                 <div className={styles.contactInfo}>
-                    <div className={styles.contactItem}>Socials </div>
+                    <h1 className={styles.contactItem}>Let&apos;s Connect! </h1>
 
                     <div className={styles.socialIcons}>
                         <abbr title="My LinkedIn">
