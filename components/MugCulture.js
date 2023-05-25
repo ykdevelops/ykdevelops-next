@@ -42,8 +42,20 @@ export default function MugCulture() {
                         NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
                     </div>
                     <div>
-                        <BsLink45Deg className={styles.projectIconLink} />
-                        <BsGithub className={styles.projectIconLink2} />
+                        <a
+                            href="https://mug-culture-shop.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsLink45Deg className={styles.projectIconLink} />
+                        </a>
+                        <a
+                            href="https://github.com/ykdevelops/mug-culture-shop"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsGithub className={styles.projectIconLink2} />
+                        </a>
                     </div>
                 </div>
             </div>

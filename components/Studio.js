@@ -33,8 +33,23 @@ export default function Studio() {
                     ReactJS | ThreeJS | Firebase
                 </div>
                 <div className={styles.projectDescription}>
-                    <BsLink45Deg className={styles.projectIconLink} />
-                    <BsGithub className={styles.projectIconLink2} />
+                    <a
+                        href="https://ykdevelops-r3f.vercel.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <BsLink45Deg className={styles.projectIconLink} />
+                    </a>
+                    <a
+                        href="https://github.com/ykdevelops/ykdevelops-r3f"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <BsGithub className={styles.projectIconLink2} />
+                    </a>
+
+
+
                 </div>
             </div>
         </div>
