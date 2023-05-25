@@ -1,35 +1,14 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import MobileHome from '../components/MobileHome';
-import LaptopHome from '../components/LaptopHome';
-import { useState, useEffect } from 'react';
-
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowSize;
-}
+import Intro from '../components/Intro';
+import Description from '../components/Description';
+import WorkExperience from '../components/WorkExperience';
+import Studio from '../components/Studio';
+import MugCulture from '../components/MugCulture';
+import Contact from '../components/Contact';
+import SpeakButton from '../components/SpeakButton'; // Import the SpeakButton component
 
 export default function Home() {
-  const { width } = useWindowSize();
-  const isMobile = width ? width <= 800 : false;
 
   return (
     <div className={styles.container}>
@@ -43,7 +22,13 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
       </Head>
-      {isMobile ? <MobileHome /> : <LaptopHome />}
+      <SpeakButton />
+      <Intro />
+      <Description />
+      <WorkExperience />
+      <MugCulture />
+      <Studio />
+      <Contact />
     </div>
   );
 }
