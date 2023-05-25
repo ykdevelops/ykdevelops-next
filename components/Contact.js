@@ -25,10 +25,10 @@ export default function Contact() {
                             >
                                 <Suspense fallback={<div className={styles.loaderImage}></div>}>
                                     <Image
-                                        src="/linkedin1.png"
+                                        src="/linkedin2.png"
                                         alt="linkedin"
-                                        width={50}
-                                        height={50}
+                                        width={500}
+                                        height={500}
                                         className={styles.contactIcon}
                                     />
                                 </Suspense>
@@ -44,8 +44,8 @@ export default function Contact() {
                                     <Image
                                         src="/github.png"
                                         alt="github"
-                                        width={50}
-                                        height={50}
+                                        width={500}
+                                        height={500}
                                         className={styles.contactIcon}
                                     />
                                 </Suspense>
@@ -61,8 +61,8 @@ export default function Contact() {
                                     <Image
                                         src="/youtube1.png"
                                         alt="youtube"
-                                        width={50}
-                                        height={50}
+                                        width={500}
+                                        height={500}
                                         className={styles.contactIcon}
                                     />
                                 </Suspense>
