@@ -5,7 +5,7 @@ import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 export default function WorkExperience() {
     return (
-        <div><div // Work Experience
+        <div // Work Experience
             className={styles.layer}
         >
             <div className={styles.workContainer}>
@@ -87,6 +87,6 @@ export default function WorkExperience() {
                     </div>
                 </div>
             </div>
-        </div></div>
+        </div>
     )
 }
