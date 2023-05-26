@@ -14,6 +14,7 @@ const Intro: React.FC = () => {
             alt="headshot"
             width={600}
             height={600}
+            className={styles.introPic}
           />
         </Suspense>
       </div>

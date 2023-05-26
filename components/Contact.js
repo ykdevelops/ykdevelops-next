@@ -11,6 +11,7 @@ export default function Contact() {
                     alt="headshot"
                     width={400}
                     height={400}
+                    className={styles.contactImage}
                 />
             </Suspense>
             <div className={styles.contactInfo}>
