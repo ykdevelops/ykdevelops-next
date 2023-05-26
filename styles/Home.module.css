@@ -198,6 +198,8 @@
   }
   .introDescription {
     font-size: 2rem;
+    width: 100%;
+    max-width: 700px;
   }
   /* #endregion Intro */
 
@@ -210,11 +212,11 @@
     flex-direction: row;
   }
   .workLogo {
-    margin-right: 1rem;
-    margin-top: 1.5rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
   }
   .workInfo {
-    padding: 0rem 0rem 5rem 0rem;
+    padding: 0rem 0rem 2rem 0rem;
   }
   .workTitle {
     font-size: 4.5rem;
@@ -232,7 +234,7 @@
   }
   .workDescription {
     padding: 0 0 0 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   /* #endregion Work Experience */
@@ -260,6 +262,7 @@
   }
   .projectDescription {
     font-size: 1.5rem;
+    max-width: 700px;
   }
   .projectLinkIcon {
     padding-right: 4rem;
@@ -268,6 +271,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    max-width: 700px;
   }
   .projectIconLink {
     margin-right: 1rem;
