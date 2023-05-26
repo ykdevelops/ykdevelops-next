@@ -5,6 +5,9 @@ Contact
 If you have any questions, suggestions, or would like to discuss potential collaborations, please feel free to reach out to me. You can contact me via the following channels:
 
 Email: ykdevelops@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/ykdevelops/
+
 GitHub: https://github.com/ykdevelops
+
 Thank you for visiting my portfolio repository! I look forward to connecting with you soon.
