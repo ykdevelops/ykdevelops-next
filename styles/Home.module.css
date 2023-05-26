@@ -12,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-direction: column-reverse;
+    margin: 2rem 0 2rem 0;
   }
   .leftHalf {
     width: 100%;
@@ -36,7 +36,7 @@
 
   /* #region Intro */
   .introTitle {
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 0;
     margin: 0;
     font-weight: normal;
@@ -71,7 +71,7 @@
     padding: 0rem 0rem 5rem 0rem;
   }
   .workTitle {
-    font-size: 4.5rem;
+    font-size: 3rem;
     padding-bottom: 2rem;
     font-weight: normal;
   }
@@ -146,25 +146,23 @@
     transform: scale(1.5) translateY(-5px);
   }
   /* #endregion Project */
+  /* #region Studio */
 
+  /* #endregion Studio */
   /* #region Contact */
   .contactIcon {
     padding: 1rem 1rem 0 0;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     transition: all 0.2s ease-in-out;
   }
-  .contactIcon:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-    margin: 0 2rem;
-  }
+
   .contactRow {
     display: flex;
     flex-direction: row;
   }
   .contactItem {
-    font-size: 4rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     text-align: center;

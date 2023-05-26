@@ -1,39 +1,46 @@
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import React, { Suspense, useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, useGLTF } from '@react-three/drei'
 
 function Model({ url }) {
-    const { scene } = useGLTF(url);
-    return <primitive object={scene} />;
+    const { scene } = useGLTF(url)
+    return <primitive object={scene} />
 }
 
 function RotatingModel({ url }) {
-    const ref = useRef();
+    const ref = useRef()
     useFrame(({ clock }) => {
-        ref.current.rotation.y += 0.01;
-    });
+        ref.current.rotation.y += 0.01
+    })
 
     return (
         <group ref={ref}>
             <Model url={url} />
         </group>
-    );
+    )
 }
 
 const BoxCanvas = () => {
-    const modelUrl = 'https://ykdevelops.s3.us-east-2.amazonaws.com/deskScene22.gltf';
+    const modelUrl =
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/deskScene22.gltf'
 
     return (
-        <Canvas style={{ height: '100%', width: '100%', paddingRight: '40px', maxWidth: '700px' }} camera={{ position: [0, 2, 30] }}>
+        <Canvas
+            style={{
+                height: '100%',
+                width: '100%',
+                maxWidth: '700px',
+            }}
+            camera={{ position: [0, 2, 30] }}
+        >
             <ambientLight intensity={0.5} />
-            <directionalLight color="white" intensity={1} position={[0, 5, 5]} />
+            <directionalLight color='white' intensity={1} position={[0, 5, 5]} />
             <Suspense fallback={null}>
                 <RotatingModel url={modelUrl} />
             </Suspense>
             <OrbitControls enableZoom={true} />
         </Canvas>
+    )
+}
 
-    );
-};
-
-export default BoxCanvas;
+export default BoxCanvas

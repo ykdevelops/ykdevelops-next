@@ -10,7 +10,6 @@ export default function Studio() {
             className={styles.layer}
         >
             <div className={styles.leftHalf} >
-
                 <Suspense
                     fallback={<div className={styles.loaderImage}></div>}
                 >
