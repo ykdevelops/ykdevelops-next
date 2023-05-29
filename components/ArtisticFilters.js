@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
-export default function MugCulture() {
+export default function ArtisticFilters() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/mugculture.mp4'
     return (

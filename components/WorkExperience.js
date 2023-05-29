@@ -9,7 +9,7 @@ export default function WorkExperience() {
             className={styles.layer}
         >
             <div className={styles.workContainer}>
-                <h1 className={styles.workTitle}>Work Experience</h1>
+
                 <div className={styles.workCompany}>
                     <Suspense
                         fallback={<div className={styles['loading-image']}></div>}

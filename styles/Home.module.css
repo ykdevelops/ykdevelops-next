@@ -15,6 +15,16 @@
     flex-direction: column-reverse;
     margin: 2rem 0 2rem 0;
   }
+  .sectionTitle {
+    font-size: 3rem;
+    padding: 5rem 2rem 5rem 2rem;
+
+    font-weight: normal;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
   .leftHalf {
     width: 100%;
     height: 100%;
@@ -70,11 +80,7 @@
   .workInfo {
     padding: 0rem 0rem 5rem 0rem;
   }
-  .workTitle {
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    font-weight: normal;
-  }
+
   .workCompany {
     font-size: 2rem;
     font-weight: bold;
@@ -194,6 +200,24 @@
   .container {
     width: 100%;
   }
+  .sectionTitleRow {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 5rem 2rem;
+    padding-left: 10rem;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+  .sectionTitleIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .sectionTitle {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+
   .leftHalf {
     width: 50%;
     height: 100%;
@@ -223,7 +247,7 @@
   .introDescription {
     font-size: 2rem;
     width: 100%;
-    max-width: 700px;
+    max-width: 650px;
   }
   /* #endregion Intro */
 
@@ -349,5 +373,3 @@
   }
   /* #endregion Contact */
 }
-
-/* Add additional media queries for other screen sizes as needed */

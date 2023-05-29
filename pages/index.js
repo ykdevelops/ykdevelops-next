@@ -7,6 +7,11 @@ import Studio from '../components/Studio';
 import MugCulture from '../components/MugCulture';
 import Contact from '../components/Contact';
 import SpeakButton from '../components/SpeakButton'; // Import the SpeakButton component
+import ChatApp from '../components/ChatApp';
+import ArtisticFilters from '../components/ArtisticFilters';
+import { MdWorkOutline } from 'react-icons/md'
+import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
+
 
 export default function Home() {
 
@@ -25,7 +30,17 @@ export default function Home() {
       <SpeakButton />
       <Intro />
       <Description />
+      <div className={styles.sectionTitleRow}>
+        <MdWorkOutline className={styles.sectionTitleIcon} />
+        <h1 className={styles.sectionTitle}>Work Experience</h1>
+      </div>
       <WorkExperience />
+      <div className={styles.sectionTitleRow}>
+        <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
+        <h1 className={styles.sectionTitle}>Latest Side Projects</h1>
+      </div>
+      <ChatApp />
+      <ArtisticFilters />
       <MugCulture />
       <Studio />
       <Contact />

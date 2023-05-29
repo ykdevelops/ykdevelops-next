@@ -4,9 +4,9 @@ import styles from '../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
-export default function MugCulture() {
+export default function ChatApp() {
     const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/mugculture.mp4'
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
     return (
 
 
@@ -28,30 +28,26 @@ export default function MugCulture() {
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>MugCulture Beta</h1>
+                    <h1 className={styles.projectTitle}>ChatApp-reactfire</h1>
                     <p className={styles.projectDescription}>
-                        Crafted a high-performance, responsive e-commerce website for
-                        MugCulture using Next.js and Framer Motion, deployed on Vercel. The
-                        site features tailored mugs with a focus on delivering an
-                        exceptional user experience, and seamless adaptability across
-                        various devices.
+                        Created a chat app using reactfire. With a responsive dark theme , the messages get stored in a firebase database.
                     </p>
                 </div>
 
 
                 <h2 className={styles.projectLanguages}>
-                    NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
+                    ReactJS | ReactFire | Framer-Motion | Vercel | Firebase
                 </h2>
                 <div>
                     <a
-                        href="https://mug-culture-shop.vercel.app/"
+                        href="https://chatapp-reactfire.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <BsLink45Deg className={styles.projectIconLink} />
                     </a>
                     <a
-                        href="https://github.com/ykdevelops/mug-culture-shop"
+                        href="https://github.com/ykdevelops/chatapp-reactfire.git"
                         target="_blank"
                         rel="noreferrer"
                     >
