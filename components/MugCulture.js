@@ -30,7 +30,7 @@ export default function MugCulture() {
                 <div className={styles.textContainer}>
                     <h1 className={styles.projectTitle}>MugCulture Beta</h1>
                     <p className={styles.projectDescription}>
-                        Crafted a high-performance, responsive e-commerce website for
+                        A high-performance and responsive e-commerce website for
                         MugCulture using Next.js and Framer Motion, deployed on Vercel. The
                         site features tailored mugs with a focus on delivering an
                         exceptional user experience, and seamless adaptability across

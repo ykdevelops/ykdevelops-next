@@ -28,10 +28,9 @@ export default function ChatApp() {
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>ChatApp-reactfire</h1>
+                    <h1 className={styles.projectTitle}>Chat App</h1>
                     <p className={styles.projectDescription}>
-                        Created a chat app using reactfire. With a responsive dark theme , the messages get stored in a firebase database.
-                    </p>
+                        A sleek and user-friendly chat application utilizing ReactFire. The app features a visually appealing dark theme and employs a Firebase database to store and manage messages seamlessly.                    </p>
                 </div>
 
 
