@@ -1,7 +1,7 @@
 import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
-
+import styles from "../styles/Home.module.css";
 function Model({ url }) {
     const { scene } = useGLTF(url)
     return <primitive object={scene} />
@@ -26,11 +26,8 @@ const BoxCanvas = () => {
 
     return (
         <Canvas
-            style={{
-                height: '100%',
-                width: '100%',
-                maxWidth: '700px',
-            }}
+
+            className={styles.canvasBox}
             camera={{ position: [0, 2, 30] }}
         >
             <ambientLight intensity={0.5} />

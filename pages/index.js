@@ -27,7 +27,11 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
       </Head>
-      <SpeakButton />
+      {/* <div>
+        <div>Listen to Text</div>
+        <SpeakButton />
+      </div> */}
+
       <Intro />
       <Description />
       <div className={styles.sectionTitleRow}>
@@ -37,7 +41,7 @@ export default function Home() {
       <WorkExperience />
       <div className={styles.sectionTitleRow}>
         <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
-        <h1 className={styles.sectionTitle}>Latest Side Projects</h1>
+        <h1 className={styles.sectionTitle}>Side Projects</h1>
       </div>
       <ChatApp />
       <ArtisticFilters />
