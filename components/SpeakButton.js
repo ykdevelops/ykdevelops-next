@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { FaPlay, FaPause } from 'react-icons/fa';
-
+import React, { useEffect, useState, Suspense } from 'react';
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 const SpeakButton = () => {
     const [synth, setSynth] = useState(null);
     const [utterance, setUtterance] = useState(null);
@@ -49,11 +49,26 @@ const SpeakButton = () => {
     return (
         <div className="speak-button">
             <div>{playing ? 'Click to Pause' : 'Click to Play'}</div>
-            <button
-                className="speak-button__button"
-                onClick={playing ? pauseSpeech : playSpeech}
-            >
-                {playing ? <FaPause size={24} /> : <FaPlay size={24} />}
+            <button className="speak-button__button" onClick={playing ? pauseSpeech : playSpeech}>
+                {playing ? (
+
+                    <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                        <Image
+                            src="/playpause.svg"
+                            alt="Pause Icon" width={24} height={24}
+                            className={styles.listenIcon}
+                        />
+                    </Suspense>
+                ) : (
+
+                    <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                        <Image
+                            src="/play.svg"
+                            alt="Play Icon" width={24} height={24}
+                            className={styles.listenIcon}
+                        />
+                    </Suspense>
+                )}
             </button>
 
             <style jsx>{`
