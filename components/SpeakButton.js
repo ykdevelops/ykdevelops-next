@@ -47,16 +47,16 @@ const SpeakButton = () => {
     };
 
     return (
-        <div className="speak-button">
-            <div>{playing ? 'Click to Pause' : 'Click to Play'}</div>
-            <button className="speak-button__button" onClick={playing ? pauseSpeech : playSpeech}>
+        <div className={styles.speakButton} onClick={playing ? pauseSpeech : playSpeech}>
+            <div className={styles.speakTitle} >{playing ? 'Stop Listening' : 'Listen to Text'}</div>
+            <button className="speak-button__button">
                 {playing ? (
 
                     <Suspense fallback={<div className={styles.loaderImage}></div>}>
                         <Image
                             src="/playpause.svg"
                             alt="Pause Icon" width={24} height={24}
-                            className={styles.listenIcon}
+                            className={styles.speakIcon}
                         />
                     </Suspense>
                 ) : (
@@ -65,7 +65,7 @@ const SpeakButton = () => {
                         <Image
                             src="/play.svg"
                             alt="Play Icon" width={24} height={24}
-                            className={styles.listenIcon}
+                            className={styles.speakIcon}
                         />
                     </Suspense>
                 )}
@@ -73,13 +73,7 @@ const SpeakButton = () => {
 
             <style jsx>{`
         .speak-button {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          z-index: 1000;
+
         }
 
         .speak-button__button {
