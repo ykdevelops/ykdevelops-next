@@ -397,3 +397,69 @@
   }
   /* #endregion Contact */
 }
+
+/* #region Scroll */
+.scrollColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.scrollTitle {
+  transform: translateY(-3rem);
+}
+
+.iconScroll,
+.iconScroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.iconScroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px black;
+  border-radius: 25px;
+  border: 1.5px solid;
+}
+
+.iconScroll:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: black;
+  margin-left: -4px;
+  bottom: 8px; /* Change the 'top' value to 'bottom' */
+  border-radius: 4px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Change 'transform' to start from bottom */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-46px); /* Change 'transform' to go up */
+  }
+}
+
+/* #endregion Scroll */
