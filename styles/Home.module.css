@@ -230,6 +230,7 @@
     padding: 5rem 2rem 5rem 2rem;
     padding-left: 10rem;
     width: 90%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
   }

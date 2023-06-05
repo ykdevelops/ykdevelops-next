@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowScrollDown(true)
-    }, 5000)
+    }, 2000)
 
     const handleMouseActivity = () => {
       clearTimeout(timeoutId)

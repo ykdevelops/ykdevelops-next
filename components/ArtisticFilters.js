@@ -20,8 +20,7 @@ export default function ArtisticFilters() {
                         loop
                         muted
                         style={{
-                            maxWidth: '90%',
-                            height: 'auto'
+                            maxHeight: '500px'
                         }}
                     />
                 </div>
