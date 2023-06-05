@@ -10,6 +10,9 @@ const SpeakButton = () => {
     useEffect(() => {
         setSynth(window.speechSynthesis);
         const newUtterance = new SpeechSynthesisUtterance();
+        newUtterance.onend = () => {
+            setPlaying(false);
+        };
         setUtterance(newUtterance);
     }, []);
 
@@ -22,17 +25,12 @@ const SpeakButton = () => {
 
     const playSpeech = () => {
         if (synth && utterance) {
-            // Get the text from all tags in the order they appear in the HTML
             const tags = 'p, h1, h2, h3, h4, h5, h6, li';
             const elements = document.querySelectorAll(tags);
             const text = Array.from(elements).map((el) => el.textContent).join(' ');
 
             utterance.text = text;
-
-            // Stop any ongoing speech
             synth.cancel();
-
-            // Speak the text
             synth.speak(utterance);
 
             setPlaying(true);
@@ -51,7 +49,6 @@ const SpeakButton = () => {
             <div className={styles.speakTitle} >{playing ? 'Stop Listening' : 'Listen to Text'}</div>
             <button className="speak-button__button">
                 {playing ? (
-
                     <Suspense fallback={<div className={styles.loaderImage}></div>}>
                         <Image
                             src="/playpause.svg"
@@ -60,7 +57,6 @@ const SpeakButton = () => {
                         />
                     </Suspense>
                 ) : (
-
                     <Suspense fallback={<div className={styles.loaderImage}></div>}>
                         <Image
                             src="/play.svg"
