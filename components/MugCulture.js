@@ -20,7 +20,8 @@ export default function MugCulture() {
                         loop
                         muted
                         style={{
-                            maxWidth: '500px'
+                            maxWidth: '500px',
+                            width: '90%'
                         }}
                     />
                 </div>
