@@ -9,6 +9,7 @@ import MugCulture from '../components/MugCulture'
 import Contact from '../components/Contact'
 import SpeakButton from '../components/SpeakButton'
 import ChatApp from '../components/ChatApp'
+import Lo2usGallery from '../components/lo2usGallery'
 import ArtisticFilters from '../components/ArtisticFilters'
 import { MdWorkOutline } from 'react-icons/md'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
@@ -60,6 +61,7 @@ export default function Home() {
         <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
         <h1 className={styles.sectionTitle}>Side Projects</h1>
       </div>
+      <Lo2usGallery />
       <ChatApp />
       <ArtisticFilters />
       <MugCulture />

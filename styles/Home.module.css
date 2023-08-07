@@ -485,3 +485,9 @@
   cursor: pointer;
 }
 /* #endregion SpeakButton */
+
+.loaderImage {
+  background-color: grey;
+  width: 300px;
+  height: 300px;
+}
