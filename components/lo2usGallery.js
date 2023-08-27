@@ -28,7 +28,7 @@ export default function lo2usGallery() {
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>dj lo2us Gallery</h1>
+                    <h1 className={styles.projectTitle}>THE DJ LO2US GALLERY</h1>
                     <p className={styles.projectDescription}>
                         An online gallery showcasing a beautiful fusion of music and artificial intelligence,
                         highlighting the limitless possibilities and the ethical considerations that come with this innovative functionality.

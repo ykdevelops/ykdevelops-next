@@ -15,8 +15,8 @@ export default function Contact() {
                 />
             </Suspense>
             <div className={styles.contactInfo}>
-                <h1 className={styles.contactItem}>Thank you for visiting my Portfolio! </h1>
-                <h1 className={styles.contactItem}>Let&apos;s Connect! </h1>
+                <p className={styles.introDescription}>Thank you for taking the time to explore my portfolio.</p>
+                <p className={styles.introDescription}>If you&apos;re looking for a seasoned developer to lead your next project or contribute to your team&apos;s success, I&apos;d love to hear from you.</p>
                 <div className={styles.socialIcons}>
                     <abbr title="My LinkedIn">
                         <a

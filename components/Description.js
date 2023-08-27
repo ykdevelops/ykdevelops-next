@@ -28,9 +28,11 @@ export default function Description() {
                     <p className={styles.introDescription}>
                     </p>
                     <p className={styles.introDescription}>
-                        I harness the power of JavaScript frameworks like  <strong>React</strong> and <strong>Vue</strong> to deliver seamless and responsive experiences across various devices.
+                        As an experienced web developer, I specialize in architecting and scaling applications using JavaScript frameworks like React and Vue.
                     </p>
-
+                    <p className={styles.introDescription}>
+                        My focus is on creating not just functional, but exceptional user experiences that perform seamlessly across various devices.
+                    </p>
                 </div>
             </div>
         </div>
