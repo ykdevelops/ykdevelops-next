@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 export default function Contact() {
     return (
 
@@ -17,7 +18,26 @@ export default function Contact() {
             <div className={styles.contactInfo}>
                 <p className={styles.introDescription}>Thank you for taking the time to explore my portfolio.</p>
                 <p className={styles.introDescription}>If you&apos;re looking for a seasoned developer to lead your next project or contribute to your team&apos;s success, I&apos;d love to hear from you.</p>
+
                 <div className={styles.socialIcons}>
+                    <abbr title="My Resume">
+                        <a
+                            href="/Khalil-Youssef-Resume.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            download
+                        >
+                            <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                                <Image
+                                    src="/resumeIcon.png"
+                                    alt="Resume"
+                                    width={397}
+                                    height={512}
+                                    className={styles.contactIcon}
+                                />
+                            </Suspense>
+                        </a>
+                    </abbr>
                     <abbr title="My LinkedIn">
                         <a
                             href="https://linkedin.com/in/ykdevelops"
