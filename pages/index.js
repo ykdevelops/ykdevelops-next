@@ -41,7 +41,7 @@ export default function Home() {
       <Head>
         <title>YK Portfolio</title>
         <meta name='description' content='Web Developement Portfolio' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon2.ico' />
       </Head>
       {/* <SpeakButton /> */}
       {showScrollDown && (
