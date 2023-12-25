@@ -3,7 +3,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #e2dfdd;
+  background-color: #3f3d6b;
+  color: white;
 }
 
 a {

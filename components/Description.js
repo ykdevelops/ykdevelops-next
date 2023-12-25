@@ -13,7 +13,7 @@ export default function Description() {
                     fallback={<div className={styles.loaderImage}></div>}
                 >
                     <Image
-                        src='/descriptionArt.png'
+                        src='/portfolio-descriptionImage2.png'
                         alt='tech logos'
                         width={500}
                         height={500}
@@ -28,10 +28,7 @@ export default function Description() {
                     <p className={styles.introDescription}>
                     </p>
                     <p className={styles.introDescription}>
-                        As an experienced web developer, I specialize in architecting and scaling applications using JavaScript frameworks like React and Vue.
-                    </p>
-                    <p className={styles.introDescription}>
-                        My focus is on creating not just functional, but exceptional user experiences that perform seamlessly across various devices.
+                        I specialize in Web Developement, with a heavy focus on creating exceptional user experiences across various devices.
                     </p>
                 </div>
             </div>

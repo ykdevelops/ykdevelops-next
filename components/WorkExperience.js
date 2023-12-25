@@ -28,8 +28,23 @@ export default function WorkExperience() {
                         </h1>
                         <h2 className={styles.workDate}>August 2022 - March 2023</h2>
                         <p className={styles.workDescription}>
-                            Developed responsive web applications using VueJS and
-                            customized finacial web widgets (Qmods).
+                            Task :
+                            Collaborate with a 6-member marketing team, transform
+                            Adobe XD designs into functioning applications.
+                        </p>
+                        <p className={styles.workDescription}>
+                            Action :
+                            Employed Astro and Vue.js for creating responsive web
+                            applications and worked closely with the design team to transform their
+                            Adobe XD designs into functional web solutions through Jira tickets.
+
+                        </p>
+                        <p className={styles.workDescription}>
+                            Result :
+                            Successfully translated design concepts into functional code,
+                            contributing to the modernization of the company's marketing websites.
+                            The delivered web applications enhanced user engagement, providing a
+                            more interactive experience.
                         </p>
                     </div>
                 </div>
@@ -54,8 +69,23 @@ export default function WorkExperience() {
                             April 2022 - September 2022
                         </h2>
                         <p className={styles.workDescription}>
-                            Developed BELA (Business English Level Assessment), a website
-                            english level assesment built using ReactJS and Firebase.
+                            Task :
+                            Collaborate with a 6-member marketing team, transform
+                            Adobe XD designs into functioning applications.
+                        </p>
+                        <p className={styles.workDescription}>
+                            Action :
+                            Employed Astro and Vue.js for creating responsive web
+                            applications and worked closely with the design team to transform their
+                            Adobe XD designs into functional web solutions through Jira tickets.
+
+                        </p>
+                        <p className={styles.workDescription}>
+                            Result :
+                            Successfully translated design concepts into functional code,
+                            contributing to the modernization of the company's marketing websites.
+                            The delivered web applications enhanced user engagement, providing a
+                            more interactive experience.
                         </p>
                     </div>
                 </div>
@@ -79,10 +109,23 @@ export default function WorkExperience() {
                             September 2021 - December 2021
                         </h2>
                         <p className={styles.workDescription}>
-                            Developed a progressive web application using ReactJS in
-                            partnership with NBIFC. Assisted with user testing and
-                            provided ongoing maintenance for multiple Wordpress sites for
-                            SLiDE clients.
+                            Task :
+                            Collaborate with a 6-member marketing team, transform
+                            Adobe XD designs into functioning applications.
+                        </p>
+                        <p className={styles.workDescription}>
+                            Action :
+                            Employed Astro and Vue.js for creating responsive web
+                            applications and worked closely with the design team to transform their
+                            Adobe XD designs into functional web solutions through Jira tickets.
+
+                        </p>
+                        <p className={styles.workDescription}>
+                            Result :
+                            Successfully translated design concepts into functional code,
+                            contributing to the modernization of the company's marketing websites.
+                            The delivered web applications enhanced user engagement, providing a
+                            more interactive experience.
                         </p>
                     </div>
                 </div>

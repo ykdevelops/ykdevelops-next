@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
       <div className={styles.leftHalf}>
         <Suspense fallback={<div className={styles.loaderImage}></div>}>
           <Image
-            src="https://ykdevelops.s3.us-east-2.amazonaws.com/aboutImage.png"
+            src="https://ykdevelops.s3.us-east-2.amazonaws.com/aboutImage2.png"
             alt="headshot"
             width={600}
             height={600}
@@ -20,8 +20,8 @@ const Intro: React.FC = () => {
       </div>
       <div className={styles.rightHalf}>
         <div className={styles.textContainer}>
-          <h1 className={styles.introTitle}>Hello World,</h1>
-          <h1 className={styles.introTitle}>I&apos;m Youssef!</h1>
+          <h1 className={styles.introName}>Youssef Khalil</h1>
+          <h1 className={styles.introJobTitle}>Web Developer</h1>
         </div>
       </div>
     </div>
