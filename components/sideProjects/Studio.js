@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
-import BoxCanvas from './BoxCanvas'
+import BoxCanvas from '../sideProjects/BoxCanvas'
 export default function Studio() {
     return (
         <div // MC Video

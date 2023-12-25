@@ -3,13 +3,17 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
+import { MdWorkOutline } from 'react-icons/md'
 export default function WorkExperience() {
     return (
         <div // Work Experience
             className={styles.layer}
         >
             <div className={styles.workContainer}>
-
+                <div className={styles.containerTitleRow}>
+                    <MdWorkOutline className={styles.sectionTitleIcon} />
+                    <div className={styles.sectionTitle}>Professional Experience</div>
+                </div>
                 <div className={styles.workCompany}>
                     <Suspense
                         fallback={<div className={styles['loading-image']}></div>}

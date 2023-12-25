@@ -4,13 +4,13 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
 import Description from '../components/Description'
 import WorkExperience from '../components/WorkExperience'
-import Studio from '../components/Studio'
-import MugCulture from '../components/MugCulture'
+import Studio from '../components/sideProjects/Studio'
+import MugCulture from '../components/sideProjects/MugCulture'
 import Contact from '../components/Contact'
 import SpeakButton from '../components/SpeakButton'
-import ChatApp from '../components/ChatApp'
-import Lo2usGallery from '../components/lo2usGallery'
-import ArtisticFilters from '../components/ArtisticFilters'
+import ChatApp from '../components/sideProjects/ChatApp'
+import Lo2usGallery from '../components/sideProjects/lo2usGallery'
+import ArtisticFilters from '../components/sideProjects/ArtisticFilters'
 import { MdWorkOutline } from 'react-icons/md'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
@@ -39,11 +39,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Ykdevelops</title>
+        <title>YK Portfolio</title>
         <meta name='description' content='Web Developement Portfolio' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <SpeakButton />
+      {/* <SpeakButton /> */}
       {showScrollDown && (
         <div className={styles.scrollColumn}>
           <div className={styles.scrollTitle}>Scroll To Read</div>
@@ -58,11 +58,12 @@ export default function Home() {
         <h1 className={styles.sectionTitle}>Work Experience</h1>
       </div> */}
       <WorkExperience />
-      {/* <div className={styles.sectionTitleRow}>
+      <div className={styles.sectionTitleRow}>
         <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
         <h1 className={styles.sectionTitle}>Side Projects</h1>
-      </div> */}
+      </div>
       {/* <Lo2usGallery /> */}
+
       <ChatApp />
       <ArtisticFilters />
       <MugCulture />

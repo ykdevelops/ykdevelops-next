@@ -1,9 +1,8 @@
 import React, { Suspense, lazy } from 'react'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
-import BoxCanvas from './BoxCanvas'
 export default function lo2usGallery() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/djlo2usGallery.mp4'

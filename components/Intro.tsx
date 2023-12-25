@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
       <div className={styles.leftHalf}>
         <Suspense fallback={<div className={styles.loaderImage}></div>}>
           <Image
-            src="https://ykdevelops.s3.us-east-2.amazonaws.com/aboutImage2.png"
+            src="/introImage.png"
             alt="headshot"
             width={600}
             height={600}

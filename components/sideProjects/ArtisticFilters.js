@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from 'react'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
-export default function ChatApp() {
+export default function ArtisticFilters() {
     const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/artisticImageFilter.mp4'
     return (
 
 
@@ -20,32 +20,34 @@ export default function ChatApp() {
                         loop
                         muted
                         style={{
-                            maxHeight: '500px'
+                            maxHeight: '500px',
+                            width: '90%'
                         }}
                     />
                 </div>
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>Chat App</h1>
+                    <h1 className={styles.projectTitle}>Artistic Image Filters</h1>
                     <p className={styles.projectDescription}>
-                        A sleek and user-friendly chat application utilizing ReactFire. The app features a visually appealing dark theme and employs a Firebase database to store and manage messages seamlessly.                    </p>
+                        An application built using the Streamlit framework and OpenCV library in Python. The application allows users to upload an image, select an artistic filter, and apply it to the image.
+                    </p>
                 </div>
 
 
                 <h2 className={styles.projectLanguages}>
-                    ReactJS | ReactFire | Framer-Motion | Vercel | Firebase
+                    Python | OpenCV | Streamlit
                 </h2>
                 <div>
                     <a
-                        href="https://chatapp-reactfire.vercel.app/"
+                        href="https://ykdevelops-opencv-artistic-image-filte-image-filters-app-3hu91f.streamlit.app/"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <BsLink45Deg className={styles.projectIconLink} />
                     </a>
                     <a
-                        href="https://github.com/ykdevelops/chatapp-reactfire.git"
+                        href="https://github.com/ykdevelops/opencv-artistic-image-filters.git"
                         target="_blank"
                         rel="noreferrer"
                     >
