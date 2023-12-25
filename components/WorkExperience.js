@@ -70,22 +70,23 @@ export default function WorkExperience() {
                         </h2>
                         <p className={styles.workDescription}>
                             Task :
-                            Collaborate with a 6-member marketing team, transform
-                            Adobe XD designs into functioning applications.
+                            Patch runtime errors and glitches in the BELA (Business English
+                            Level Assessment) testing process. Finish administrative portal and
+                            Instructors portal.
                         </p>
                         <p className={styles.workDescription}>
                             Action :
-                            Employed Astro and Vue.js for creating responsive web
-                            applications and worked closely with the design team to transform their
-                            Adobe XD designs into functional web solutions through Jira tickets.
+                            Refactored some of the ReactJS code to resolve runtime errors.
+                            This included fixing undefined variables, null references, and enhancing
+                            data validation.  Additionally, I added new features to the admin portal,
+                            like advanced user management and test result controls.
 
                         </p>
                         <p className={styles.workDescription}>
                             Result :
-                            Successfully translated design concepts into functional code,
-                            contributing to the modernization of the company's marketing websites.
-                            The delivered web applications enhanced user engagement, providing a
-                            more interactive experience.
+                            While BELA accurately assessed business English proficiency, it
+                            received mixed user feedback during its initial stages. Unfortunately, the
+                            project was discontinued due to insufficient funding.
                         </p>
                     </div>
                 </div>
@@ -110,22 +111,23 @@ export default function WorkExperience() {
                         </h2>
                         <p className={styles.workDescription}>
                             Task :
-                            Collaborate with a 6-member marketing team, transform
-                            Adobe XD designs into functioning applications.
+                            Create a more modern design for a web application for NBIFC.
                         </p>
                         <p className={styles.workDescription}>
                             Action :
-                            Employed Astro and Vue.js for creating responsive web
-                            applications and worked closely with the design team to transform their
-                            Adobe XD designs into functional web solutions through Jira tickets.
+                            Created a new and responsive design using AdobeXD, then
+                            brought it to life using ReactJS. Additionally, I conducted user testing for
+                            performance optimization and performed maintanance on multiple
+                            WordPress websites for SLiDE clients.
 
                         </p>
                         <p className={styles.workDescription}>
                             Result :
-                            Successfully translated design concepts into functional code,
-                            contributing to the modernization of the company's marketing websites.
-                            The delivered web applications enhanced user engagement, providing a
-                            more interactive experience.
+                            Successfully delivered a close to production web application,
+                            improving the user experience and modernizing the pages aesthetic and
+                            responsiveness. Conducted user testing for performance optimization
+                            and managed maintenance of multiple WordPress websites for SLiDE
+                            clients.
                         </p>
                     </div>
                 </div>

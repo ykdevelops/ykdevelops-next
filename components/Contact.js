@@ -8,16 +8,16 @@ export default function Contact() {
         <div className={styles.layer}>
             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                 <Image
-                    src="/contactMePic.png"
+                    src="/portfolio-thankyouImage.png"
                     alt="headshot"
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                     className={styles.contactImage}
                 />
             </Suspense>
             <div className={styles.contactInfo}>
                 <p className={styles.introDescription}>Thank you for taking the time to explore my portfolio.</p>
-                <p className={styles.introDescription}>If you&apos;re looking for a seasoned developer to lead your next project or contribute to your team&apos;s success, I&apos;d love to hear from you.</p>
+                <p className={styles.introDescription}>If you&apos;re looking for a web developer to bring your project to life, I&apos;d love to hear from you!</p>
 
                 <div className={styles.socialIcons}>
                     <abbr title="My Resume">
