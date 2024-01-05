@@ -13,11 +13,12 @@ export default function Description() {
                     fallback={<div className={styles.loaderImage}></div>}
                 >
                     <Image
-                        src='/portfolio-descriptionImage2.png'
+                        src='/description4.gif'
                         alt='tech logos'
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         className={styles.descriptionImage}
+                        style={{ borderRadius: "50%", display: "block", marginRight: '50px' }}
                     />
                 </Suspense>
             </div>

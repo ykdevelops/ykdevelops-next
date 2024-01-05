@@ -21,7 +21,8 @@ export default function MugCulture() {
                         muted
                         style={{
                             maxWidth: '500px',
-                            width: '90%'
+                            width: '90%',
+                            borderRadius: '10px'
                         }}
                     />
                 </div>

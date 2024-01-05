@@ -58,12 +58,7 @@ export default function Home() {
         <h1 className={styles.sectionTitle}>Work Experience</h1>
       </div> */}
       <WorkExperience />
-      <div className={styles.sectionTitleRow}>
-        <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
-        <h1 className={styles.sectionTitle}>Side Projects</h1>
-      </div>
       {/* <Lo2usGallery /> */}
-
       <ChatApp />
       <ArtisticFilters />
       <MugCulture />

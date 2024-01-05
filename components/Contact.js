@@ -8,7 +8,7 @@ export default function Contact() {
         <div className={styles.layer}>
             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                 <Image
-                    src="/portfolio-thankyouImage.png"
+                    src="/intro2.gif"
                     alt="headshot"
                     width={500}
                     height={500}
@@ -16,8 +16,7 @@ export default function Contact() {
                 />
             </Suspense>
             <div className={styles.contactInfo}>
-                <p className={styles.introDescription}>Thank you for taking the time to explore my portfolio.</p>
-                <p className={styles.introDescription}>If you&apos;re looking for a web developer to bring your project to life, I&apos;d love to hear from you!</p>
+                <p className={styles.introDescription}>Thank you for taking the time to explore my portfolio. How can I help you?</p>
 
                 <div className={styles.socialIcons}>
                     <abbr title="My Resume">
@@ -85,6 +84,7 @@ export default function Contact() {
                                     width={500}
                                     height={500}
                                     className={styles.contactIcon}
+
                                 />
                             </Suspense>
                         </a>

@@ -13,7 +13,7 @@ export default function Studio() {
                 <Suspense
                     fallback={<div className={styles.loaderImage}></div>}
                 >
-                    <BoxCanvas />
+                    <BoxCanvas className={styles.boxCanvas} />
                 </Suspense>
 
             </div>

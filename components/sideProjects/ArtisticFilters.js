@@ -21,7 +21,8 @@ export default function ArtisticFilters() {
                         muted
                         style={{
                             maxHeight: '500px',
-                            width: '90%'
+                            width: '90%',
+                            borderRadius: '10px'
                         }}
                     />
                 </div>
