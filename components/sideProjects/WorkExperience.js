@@ -56,7 +56,7 @@ export default function WorkExperience() {
                                     Action: Employed Astro and Vue.js for creating responsive web applications and worked closely with the design team to transform their Adobe XD designs into functional web solutions through Jira tickets.
                                 </p>
                                 <p className={styles.workDescription}>
-                                    Result: Successfully translated design concepts into functional code, contributing to the modernization of the company's marketing websites. The delivered web applications enhanced user engagement, providing a more interactive experience.
+                                    Result: Successfully translated design concepts into functional code, contributing to the modernization of the company&apos;s marketing websites. The delivered web applications enhanced user engagement, providing a more interactive experience.
                                 </p>
                             </div>
                         ) : null}
@@ -144,7 +144,7 @@ export default function WorkExperience() {
                                     Action: Created a new and responsive design using AdobeXD, then brought it to life using ReactJS. Additionally, I conducted user testing for performance optimization and performed maintenance on multiple WordPress websites for SLiDE clients.
                                 </p>
                                 <p className={styles.workDescription}>
-                                    Result: Successfully delivered a close to production web application, improving the user experience and modernizing the page's aesthetic and responsiveness. Conducted user testing for performance optimization and managed maintenance of multiple WordPress websites for SLiDE clients.
+                                    Result: Successfully delivered a close to production web application, improving the user experience and modernizing the page&apos;s aesthetic and responsiveness. Conducted user testing for performance optimization and managed maintenance of multiple WordPress websites for SLiDE clients.
                                 </p>
                             </>
                         ) : null}
