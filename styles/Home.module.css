@@ -2,8 +2,9 @@
 @media (max-width: 1024px) {
   .canvasBox {
     display: flex;
-    width: 500px;
-    height: 500px;
+    width: 300px !important;
+    height: 400px !important;
+    margin-right: 0px !important;
   }
   .container {
     display: flex;
@@ -19,7 +20,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    margin-top: 10rem;
   }
   .sectionTitleRow {
     display: flex;
@@ -31,13 +31,13 @@
     align-items: center;
   }
   .sectionTitleIcon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     transform: translateY(-5px);
     margin-right: 10px;
   }
   .sectionTitle {
-    font-size: 3rem;
+    font-size: 7vw;
     /* padding: 5rem 2rem 5rem 2rem; */
     font-weight: normal;
     display: flex;
@@ -92,12 +92,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   /* #endregion Intro */
   /* #region Description */
   .descriptionImage {
     border-radius: 50%;
     display: block;
+    width: 300px;
+    height: 300px;
   }
   /* #endregion Description */
   /* #region Work Experience */
@@ -109,6 +112,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-size: 5vw;
+    font-weight: bold;
   }
   .workLogo {
     margin-right: 0rem;
@@ -121,34 +126,25 @@
     flex-direction: column;
     align-items: center;
   }
-
-  .workCompany {
-    font-size: 2rem;
-    font-weight: bold;
-  }
   .workDate {
-    font-size: 1.3rem;
+    font-size: 3vw;
     padding: 0;
     margin: 0;
   }
   .workDescription {
     padding: 0 0 0 0;
-    font-size: 1.1rem;
+    font-size: 3vw;
     width: 90%;
     overflow-wrap: break-word;
   }
-  .workLearnMoreButton {
-    background-color: transparent;
-    color: white;
-    border: none;
-  }
   .learnMoreButton {
     background-color: transparent;
-    color: whitesmoke;
+    color: rgb(218, 218, 218);
     border: none;
     display: flex;
     margin-top: 20px;
     transform: translateX(-3px);
+    font-size: 3vw;
   }
 
   /* #endregion Work Experience */
@@ -173,17 +169,19 @@
     transform: translateY(-4rem);
   }
   .projectTitle {
-    font-size: 3rem;
+    font-size: 6vw;
     margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 10rem;
   }
   .projectLanguages {
     font-size: 1rem;
+    text-align: center;
   }
   .projectDescription {
-    font-size: 1.5rem;
+    font-size: 6vw;
     text-align: center;
   }
   .projectLinkIcon {
@@ -248,7 +246,11 @@
   .contactImage {
     width: 300px;
     height: 300px;
-    margin-right: 1rem;
+    margin-right: 0rem;
+  }
+  .contactDescription {
+    font-size: 6vw;
+    text-align: center;
   }
   /* #endregion Contact */
 }
@@ -338,11 +340,13 @@
     margin: 0;
     font-weight: normal;
     color: white;
+    text-align: center;
   }
   .introDescription {
     font-size: 2rem;
     width: 100%;
     max-width: 650px;
+    text-align: center;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -355,10 +359,6 @@
   /* #region Work Experience */
   .workContainer {
     max-width: 1100px;
-  }
-  .workCompany {
-    display: flex;
-    flex-direction: row;
   }
   .workLogo {
     margin-right: 2rem;
@@ -375,6 +375,8 @@
   .workCompany {
     font-size: 2rem;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
   }
   .workDate {
     font-size: 1.3rem;
@@ -493,10 +495,15 @@
     margin: 20px 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .contactImage {
     margin-right: 2rem;
+  }
+  .contactDescription {
+    font-size: 30px;
+    text-align: center;
+    max-width: 700px;
   }
   /* #endregion Contact */
 }
