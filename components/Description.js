@@ -18,7 +18,6 @@ export default function Description() {
                         width={400}
                         height={400}
                         className={styles.descriptionImage}
-                        style={{ borderRadius: "50%", display: "block", marginRight: '50px' }}
                     />
                 </Suspense>
             </div>
@@ -29,7 +28,7 @@ export default function Description() {
                     <p className={styles.introDescription}>
                     </p>
                     <p className={styles.introDescription}>
-                        I specialize in Web Developement, with a heavy focus on creating exceptional user experiences across various devices.
+                        I specialize in Web Development, with a heavy focus on creating exceptional user experiences across various devices.
                     </p>
                 </div>
             </div>

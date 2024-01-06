@@ -8,9 +8,17 @@ export default function ChatApp() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
     return (
-        <>
+        <div className={styles.layer}>
             <div className={styles.sectionTitleRow}>
-                <AiOutlineFundProjectionScreen className={styles.sectionTitleIcon} />
+                <Suspense fallback={<div className={styles['loading-image']}></div>}>
+                    <Image
+                        src='/sideProjectsIcon2.gif'
+                        alt='QuoteMediaLogo'
+                        width={150}
+                        height={150}
+                        className={styles.sectionTitleIcon2}
+                    />
+                </Suspense>
                 <h1 className={styles.sectionTitle}>Side Projects</h1>
             </div>
             <div className={styles.layer}>
@@ -58,7 +66,7 @@ export default function ChatApp() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
 
 
     )

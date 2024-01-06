@@ -29,7 +29,16 @@ export default function WorkExperience() {
         >
             <div className={styles.workContainer}>
                 <div className={styles.containerTitleRow}>
-                    <MdWorkOutline className={styles.sectionTitleIcon} />
+
+                    <Suspense fallback={<div className={styles['loading-image']}></div>}>
+                        <Image
+                            src='/workIcon.gif'
+                            alt='workIcon'
+                            width={150}
+                            height={150}
+                            className={styles.sectionTitleIcon}
+                        />
+                    </Suspense>
                     <div className={styles.sectionTitle}>Professional Experience</div>
                 </div>
                 <div className={styles.workCompany}>

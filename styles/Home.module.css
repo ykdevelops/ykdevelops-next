@@ -14,11 +14,11 @@
   .layer {
     width: 90%;
     height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    margin: 2rem 0 2rem 0;
   }
   .sectionTitleRow {
     display: flex;
@@ -32,12 +32,13 @@
   .sectionTitleIcon {
     width: 50px;
     height: 50px;
+    transform: translateY(-5px);
+    margin-right: 10px;
   }
   .sectionTitle {
     font-size: 3rem;
     /* padding: 5rem 2rem 5rem 2rem; */
     font-weight: normal;
-    width: 90%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -51,6 +52,7 @@
     justify-content: center;
     flex-direction: column;
     margin-right: 0rem;
+    margin-top: 2rem;
   }
   .rightHalf {
     width: 100%;
@@ -79,10 +81,16 @@
   }
   .introDescription {
     font-size: 2rem;
+    text-align: center;
   }
   .introPic {
     width: 90%;
     height: auto;
+  }
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -118,7 +126,7 @@
   }
   .workDescription {
     padding: 0 0 0 0;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     width: 90%;
     overflow-wrap: break-word;
   }
@@ -126,6 +134,14 @@
     background-color: transparent;
     color: white;
     border: none;
+  }
+  .learnMoreButton {
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    display: flex;
+    margin-top: 20px;
+    transform: translateX(-3px);
   }
 
   /* #endregion Work Experience */
@@ -153,6 +169,7 @@
   }
   .projectDescription {
     font-size: 1.5rem;
+    text-align: center;
   }
   .projectLinkIcon {
     padding-right: 4rem;
@@ -255,6 +272,13 @@
     width: 50px;
     height: 50px;
     margin-right: 10px;
+    transform: translateY(-5px);
+  }
+  .sectionTitleIcon2 {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    transform: translateY(5px);
   }
   .sectionTitle {
     font-size: 3rem;
@@ -272,7 +296,7 @@
   }
   .rightHalf {
     width: 50%;
-    height: auto;
+    height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -301,7 +325,13 @@
     max-width: 650px;
   }
   /* #endregion Intro */
-
+  /* #region Description */
+  .descriptionImage {
+    border-radius: 50%;
+    display: block;
+    margin-right: 50px;
+  }
+  /* #endregion Description */
   /* #region Work Experience */
   .workContainer {
     max-width: 1100px;
@@ -345,11 +375,17 @@
   }
   .learnMoreButton {
     background-color: transparent;
-    color: white;
+    color: whitesmoke;
     border: none;
     display: flex;
     margin-top: 20px;
     transform: translateX(-3px);
+  }
+  .workDetailsButtonTitle {
+    padding-right: 50px;
+  }
+  .workDescriptionButtonIcon {
+    margin-left: 100px;
   }
 
   /* #endregion Work Experience */

@@ -8,7 +8,7 @@ function Intro() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const textArray = [" Web Developer", " Music Producer", "n A.I Enthusiest"];
+  const textArray = [" Web Developer", " Music Producer", "n A.I Enthusiast"];
   const typingDelay = 1000;
   const deletingDelay = 100;
   const loop = true;
@@ -55,7 +55,9 @@ function Intro() {
         />
       </div>
       <div className={styles.rightHalf}>
+
         <div className={styles.textContainer}>
+          <h1 className={styles.introJobTitle}>Hello, my name is</h1>
           <h1 className={styles.introName}>Youssef Khalil</h1>
           <h1 className={styles.introJobTitle}>
             I am a
