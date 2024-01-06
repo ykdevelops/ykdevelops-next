@@ -28,7 +28,7 @@ export default function WorkExperience() {
             className={styles.layer}
         >
             <div className={styles.workContainer}>
-                <div className={styles.containerTitleRow}>
+                <div className={styles.sectionTitleRow}>
                     <MdWorkOutline className={styles.sectionTitleIcon} />
                     <div className={styles.sectionTitle}>Professional Experience</div>
                 </div>
@@ -151,11 +151,11 @@ export default function WorkExperience() {
                         <button onClick={handleLearnMoreClick3} className={styles.learnMoreButton}>
                             {showDetails3 ? (
                                 <>
-                                    Less Details <IoMdArrowDropup />
+                                    Less Details <IoMdArrowDropup className={styles.workDescriptionButtonIcon} />
                                 </>
                             ) : (
                                 <>
-                                    More Details <IoMdArrowDropdown />
+                                    More Details <IoMdArrowDropdown className={styles.workDescriptionButtonIcon} />
                                 </>
                             )}
                         </button>
