@@ -29,7 +29,7 @@ const BoxCanvas = () => {
 
             className={styles.canvasBox}
             camera={{ position: [0, 2, 10] }}
-            style={{ height: '500px', marginRight: '30px', borderRadius: '10px' }}
+            style={{ height: '500px', width: '400px', marginRight: '30px', borderRadius: '10px' }}
         >
             <ambientLight intensity={0.5} />
             <directionalLight color='white' intensity={1} position={[0, 5, 5]} />

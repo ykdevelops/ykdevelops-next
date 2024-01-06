@@ -8,7 +8,7 @@ export default function ChatApp() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
     return (
-        <div className={styles.layer}>
+        <div className={styles.chatAppLayer}>
             <div className={styles.sectionTitleRow}>
                 <Suspense fallback={<div className={styles['loading-image']}></div>}>
                     <Image

@@ -61,7 +61,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 5rem;
   }
 
   /* #region Intro */
@@ -90,6 +89,7 @@
   .textContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   /* #endregion Intro */
@@ -106,13 +106,19 @@
   .workCompany {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .workLogo {
-    margin-right: 1rem;
+    margin-right: 0rem;
     margin-top: 1.5rem;
   }
   .workInfo {
     padding: 0rem 0rem 5rem 0rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .workCompany {
@@ -147,6 +153,11 @@
   /* #endregion Work Experience */
 
   /* #region Project */
+  .chatAppLayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .projectContainer {
     width: 90%;
     max-width: 800px;
@@ -163,6 +174,9 @@
   .projectTitle {
     font-size: 3rem;
     margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .projectLanguages {
     font-size: 1rem;
@@ -242,7 +256,7 @@
 @media (min-width: 1025px) {
   .canvasBox {
     display: flex;
-    width: 500px;
+    width: 400px;
     height: 500px;
   }
   .layer {
@@ -252,6 +266,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+  }
+  .chatAppLayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .container {
     width: 100%;
