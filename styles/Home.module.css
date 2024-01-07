@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+    margin-bottom: 5rem;
   }
   .sectionTitleRow {
     display: flex;
@@ -31,9 +32,25 @@
     align-items: center;
   }
   .sectionTitleIcon {
-    width: 40px;
-    height: 40px;
-    transform: translateY(-5px);
+    width: 8vw;
+    height: 8vw;
+    margin-right: 10px;
+  }
+  .djLo2usTitleIcon {
+    width: 12vw;
+    height: 12vw;
+    margin-right: 10px;
+    transform: translateY(5px);
+  }
+  .djLo2usLayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sideProjectsTitleIcon {
+    width: 10vw;
+    height: 10vw;
+
     margin-right: 10px;
   }
   .sectionTitle {
@@ -154,6 +171,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
   }
   .projectContainer {
     width: 90%;
@@ -174,7 +192,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 0rem;
   }
   .projectLanguages {
     font-size: 1rem;
@@ -299,6 +317,12 @@
   .sectionTitleIcon2 {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
+    transform: translateY(5px);
+  }
+  .djLo2usTitleIcon {
+    width: 80px;
+    height: 80px;
     margin-right: 10px;
     transform: translateY(5px);
   }
@@ -608,6 +632,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-bottom: 5rem;
   justify-content: center;
+  margin-bottom: 3rem;
 }

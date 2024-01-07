@@ -7,55 +7,68 @@ export default function lo2usGallery() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/djlo2usGallery.mp4'
     return (
-
-
-        <div className={styles.layer}>
-            <div className={styles.leftHalf}>
-                <div className={styles.projectVisual}>
-                    <video
-                        src={videoUrl}
-                        controls
-                        autoPlay
-                        loop
-                        muted
-                        style={{
-                            maxWidth: '500px',
-                            width: '90%'
-                        }}
+        <div className={styles.djLo2usLayer}>
+            <div className={styles.containerTitleRow}>
+                <Suspense fallback={<div className={styles['loading-image']}></div>}>
+                    <Image
+                        src='/sideProjectsIcon2.gif'
+                        alt='side projects logo'
+                        width={150}
+                        height={150}
+                        className={styles.djLo2usTitleIcon}
                     />
-                </div>
+                </Suspense>
+                <h1 className={styles.sectionTitle}>Side Projects</h1>
             </div>
-            <div className={styles.rightHalf}>
-                <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>THE DJ LO2US GALLERY</h1>
-                    <p className={styles.projectDescription}>
-                        An online gallery showcasing a beautiful fusion of music and artificial intelligence,
-                        highlighting the limitless possibilities and the ethical considerations that come with this innovative functionality.
-                    </p>
+            <div className={styles.layer}>
+                <div className={styles.leftHalf}>
+                    <div className={styles.projectVisual}>
+                        <video
+                            src={videoUrl}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            style={{
+                                maxWidth: '500px',
+                                width: '80%'
+                            }}
+                        />
+                    </div>
                 </div>
+                <div className={styles.rightHalf}>
+                    <div className={styles.textContainer}>
+                        <h1 className={styles.projectTitle}>The djlo2us gallery</h1>
+                        <p className={styles.projectDescription}>
+                            An online gallery showcasing a beautiful fusion of music and artificial intelligence,
+                            highlighting the limitless possibilities and the ethical considerations that come with this innovative functionality.
+                        </p>
+                    </div>
 
 
-                <h2 className={styles.projectLanguages}>
-                    NextJS | ReactJS | Vercel | AWS S3
-                </h2>
-                <div>
-                    <a
-                        href="https://djlo2usgallery.vercel.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <BsLink45Deg className={styles.projectIconLink} />
-                    </a>
-                    <a
-                        href="https://github.com/ykdevelops/djlo2usgallery.git"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <BsGithub className={styles.projectIconLink2} />
-                    </a>
+                    <h2 className={styles.projectLanguages}>
+                        NextJS | ReactJS | Vercel | AWS S3
+                    </h2>
+                    <div>
+                        <a
+                            href="https://djlo2usgallery.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsLink45Deg className={styles.projectIconLink} />
+                        </a>
+                        <a
+                            href="https://github.com/ykdevelops/djlo2usgallery.git"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsGithub className={styles.projectIconLink2} />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
 
     )
 }

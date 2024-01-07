@@ -9,18 +9,7 @@ export default function ChatApp() {
         'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
     return (
         <div className={styles.chatAppLayer}>
-            <div className={styles.containerTitleRow}>
-                <Suspense fallback={<div className={styles['loading-image']}></div>}>
-                    <Image
-                        src='/sideProjectsIcon2.gif'
-                        alt='side projects logo'
-                        width={150}
-                        height={150}
-                        className={styles.sectionTitleIcon}
-                    />
-                </Suspense>
-                <h1 className={styles.sectionTitle}>Side Projects</h1>
-            </div>
+
             <div className={styles.layer}>
                 <div className={styles.leftHalf}>
                     <div className={styles.projectVisual}>
