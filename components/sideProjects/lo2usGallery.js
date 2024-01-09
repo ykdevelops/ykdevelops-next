@@ -47,7 +47,7 @@ export default function lo2usGallery() {
 
 
                     <h2 className={styles.projectLanguages}>
-                        NextJS | ReactJS | Vercel | AWS S3
+                        NextJS | ReactJS | Vercel | AWS S3 | Stripe
                     </h2>
                     <div>
                         <a

@@ -1,279 +1,381 @@
-/* Media query for iPad */
-@media (max-width: 1024px) {
-  .canvasBox {
-    display: flex;
-    width: 300px !important;
-    height: 400px !important;
-    margin-right: 0px !important;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .layer {
-    width: 90%;
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-    margin-bottom: 5rem;
-  }
-  .sectionTitleRow {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 0rem 5rem 0rem;
-    /* padding-left: 10rem; */
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-  }
-  .sectionTitleIcon {
-    width: 8vw;
-    height: 8vw;
-    margin-right: 10px;
-  }
-  .djLo2usTitleIcon {
-    width: 12vw;
-    height: 12vw;
-    margin-right: 10px;
-    transform: translateY(5px);
-  }
-  .djLo2usLayer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .sideProjectsTitleIcon {
-    width: 10vw;
-    height: 10vw;
+/* Mobile size */
 
-    margin-right: 10px;
-  }
-  .sectionTitle {
-    font-size: 7vw;
-    /* padding: 5rem 2rem 5rem 2rem; */
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .leftHalf {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 0rem;
-    margin-top: 2rem;
-  }
-  .rightHalf {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  /* #region Intro */
-  .introName {
-    font-size: 3rem;
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    color: white;
-  }
-  .introJobTitle {
-    font-size: 2rem;
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    color: white;
-  }
-  .introDescription {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .introPic {
-    width: 90%;
-    height: auto;
-  }
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  /* #endregion Intro */
-  /* #region Description */
-  .descriptionImage {
-    border-radius: 50%;
-    display: block;
-    width: 300px;
-    height: 300px;
-  }
-  /* #endregion Description */
-  /* #region Work Experience */
-  .workContainer {
-    max-width: 1100px;
-  }
-  .workCompany {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 5vw;
-    font-weight: bold;
-  }
-  .workLogo {
-    margin-right: 0rem;
-    margin-top: 1.5rem;
-  }
-  .workInfo {
-    padding: 0rem 0rem 5rem 0rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .workDate {
-    font-size: 3vw;
-    padding: 0;
-    margin: 0;
-  }
-  .workDescription {
-    padding: 0 0 0 0;
-    font-size: 3vw;
-    width: 90%;
-    overflow-wrap: break-word;
-  }
-  .learnMoreButton {
-    background-color: transparent;
-    color: rgb(218, 218, 218);
-    border: none;
-    display: flex;
-    margin-top: 20px;
-    transform: translateX(-3px);
-    font-size: 3vw;
-  }
-
-  /* #endregion Work Experience */
-
-  /* #region Project */
-  .chatAppLayer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5rem;
-  }
-  .projectContainer {
-    width: 90%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .projectSectionTitle {
-    font-size: 4.5rem;
-
-    transform: translateY(-4rem);
-  }
-  .projectTitle {
-    font-size: 6vw;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0rem;
-  }
-  .projectLanguages {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .projectDescription {
-    font-size: 6vw;
-    text-align: center;
-  }
-  .projectLinkIcon {
-    padding-right: 4rem;
-  }
-  .projectVisual {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-  }
-  .projectIconLink {
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2 {
-    width: 1.8rem;
-    height: 1.8rem;
-    transform: translateY(-7px);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.5) translateY(-5px);
-  }
-  /* #endregion Project */
-  /* #region Studio */
-
-  /* #endregion Studio */
-  /* #region Contact */
-  .contactIcon {
-    padding: 1rem 1rem 0 0;
-    width: 50px;
-    height: 50px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .contactRow {
-    display: flex;
-    flex-direction: row;
-  }
-  .contactItem {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .contactInfo {
-    font-size: 1vw; /* Use 1% of the viewport width for the font size */
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .contactImage {
-    width: 300px;
-    height: 300px;
-    margin-right: 0rem;
-  }
-  .contactDescription {
-    font-size: 6vw;
-    text-align: center;
-  }
-  /* #endregion Contact */
+/* #region general */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.layer {
+  width: 90%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-bottom: 5rem;
+}
+.leftHalf {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 0rem;
+  margin-top: 2rem;
+}
+.rightHalf {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sectionTitleRow {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0rem 5rem 0rem;
+  /* padding-left: 10rem; */
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTitleIcon {
+  width: 8vw;
+  height: 8vw;
+  margin-right: 10px;
+}
+.sectionTitle {
+  font-size: 7vw;
+  /* padding: 5rem 2rem 5rem 2rem; */
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* #region Scroll */
+.scrollColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
 }
 
-/* Media query for laptop */
+.scrollTitle {
+  transform: translateY(-3rem);
+  font-size: 16px;
+  color: #ffff;
+}
+
+.iconScroll,
+.iconScroll:before {
+  position: absolute;
+  left: 50%;
+  color: #ffff;
+}
+
+.iconScroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px black;
+  border-radius: 25px;
+  border: 1.5px solid;
+}
+
+.iconScroll:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ffff;
+  margin-left: -4px;
+  bottom: 8px; /* Change the 'top' value to 'bottom' */
+  border-radius: 4px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Change 'transform' to start from bottom */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-46px); /* Change 'transform' to go up */
+  }
+}
+
+/* #endregion Scroll */
+
+/* #region SpeakButton */
+.speakButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+.speakButton:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+/* #endregion SpeakButton */
+
+.loaderImage {
+  background-color: grey;
+  width: 300px;
+  height: 300px;
+}
+.containerTitleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* #endregion general */
+
+/* #region Intro */
+.introName {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+}
+.introJobTitle {
+  font-size: 7vw;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+.introDescription {
+  font-size: 2rem;
+  text-align: center;
+}
+.introPic {
+  width: 90%;
+  height: auto;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+/* #endregion Intro */
+/* #region Description */
+.descriptionImage {
+  border-radius: 50%;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+/* #endregion Description */
+/* #region Work Experience */
+.workContainer {
+  max-width: 1100px;
+}
+.workCompany {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+}
+.workLogo {
+  margin-right: 0rem;
+  margin-top: 1.5rem;
+}
+.workInfo {
+  padding: 0rem 0rem 5rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.workDate {
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+}
+.workDescription {
+  padding: 0 0 0 0;
+  font-size: 3vw;
+  width: 90%;
+  overflow-wrap: break-word;
+}
+.learnMoreButton {
+  background-color: transparent;
+  color: rgb(218, 218, 218);
+  border: none;
+  display: flex;
+  margin-top: 20px;
+  transform: translateX(-3px);
+  font-size: 3vw;
+}
+
+/* #endregion Work Experience */
+
+/* #region Project */
+.sideProjectsTitleIcon {
+  width: 10vw;
+  height: 10vw;
+
+  margin-right: 10px;
+}
+.chatAppLayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.projectContainer {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.projectSectionTitle {
+  font-size: 4.5rem;
+
+  transform: translateY(-4rem);
+}
+.projectTitle {
+  font-size: 6vw;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0rem;
+}
+.projectLanguages {
+  font-size: 1rem;
+  text-align: center;
+}
+.projectDescription {
+  font-size: 6vw;
+  text-align: center;
+}
+.projectLinkIcon {
+  padding-right: 4rem;
+}
+.projectVisual {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.projectIconLink {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.projectIconLink2 {
+  width: 1.8rem;
+  height: 1.8rem;
+  transform: translateY(-7px);
+  transition: all 0.2s ease-in-out;
+}
+.projectIconLink:hover {
+  transform: scale(1.5);
+  transition: all 0.2s ease-in-out;
+}
+.projectIconLink2:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.5) translateY(-5px);
+}
+.djLo2usTitleIcon {
+  width: 12vw;
+  height: 12vw;
+  margin-right: 10px;
+  transform: translateY(5px);
+}
+.djLo2usLayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* #endregion Project */
+/* #region Studio */
+.canvasBox {
+  display: flex;
+  width: 300px !important;
+  height: 400px !important;
+  margin-right: 0px !important;
+}
+/* #endregion Studio */
+/* #region Contact */
+.contactIcon {
+  padding: 1rem 1rem 0 0;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contactRow {
+  display: flex;
+  flex-direction: row;
+}
+.contactItem {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contactInfo {
+  font-size: 1vw; /* Use 1% of the viewport width for the font size */
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactImage {
+  width: 300px;
+  height: 300px;
+  margin-right: 0rem;
+}
+.contactDescription {
+  font-size: 6vw;
+  text-align: center;
+}
+/* #endregion Contact */
+
+/* Laptop size*/
 @media (min-width: 1025px) {
   .canvasBox {
     display: flex;
@@ -364,13 +466,13 @@
     margin: 0;
     font-weight: normal;
     color: white;
-    text-align: center;
+    text-align: start;
   }
   .introDescription {
     font-size: 2rem;
     width: 100%;
     max-width: 650px;
-    text-align: center;
+    text-align: start;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -471,6 +573,9 @@
     max-width: 700px;
     padding-right: 1rem;
   }
+  .videoVisual {
+    padding-right: 3rem;
+  }
   .projectIconLink {
     margin-right: 1rem;
     margin-top: 1rem;
@@ -526,112 +631,15 @@
   }
   .contactDescription {
     font-size: 30px;
-    text-align: center;
+    text-align: start;
     max-width: 700px;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .socialIcons {
+    width: 100%;
+    padding-top: 2rem;
   }
   /* #endregion Contact */
-}
-
-/* #region Scroll */
-.scrollColumn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: fit-content;
-  padding: 10px 20px;
-  color: black;
-
-  border-radius: 20px;
-  width: 100%;
-  height: 200px;
-  background-color: transparent;
-}
-
-.scrollTitle {
-  transform: translateY(-3rem);
-  font-size: 16px;
-  color: #ffff;
-}
-
-.iconScroll,
-.iconScroll:before {
-  position: absolute;
-  left: 50%;
-  color: #ffff;
-}
-
-.iconScroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px black;
-  border-radius: 25px;
-  border: 1.5px solid;
-}
-
-.iconScroll:before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #ffff;
-  margin-left: -4px;
-  bottom: 8px; /* Change the 'top' value to 'bottom' */
-  border-radius: 4px;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    transform: translateY(0); /* Change 'transform' to start from bottom */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-46px); /* Change 'transform' to go up */
-  }
-}
-
-/* #endregion Scroll */
-
-/* #region SpeakButton */
-.speakButton {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  z-index: 1000;
-  transition: transform 0.2s ease-in-out;
-}
-.speakButton:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-}
-/* #endregion SpeakButton */
-
-.loaderImage {
-  background-color: grey;
-  width: 300px;
-  height: 300px;
-}
-
-.containerTitleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
 }

@@ -19,6 +19,7 @@ export default function ChatApp() {
                             autoPlay
                             loop
                             muted
+                            className={styles.videoVisual}
                             style={{
                                 maxHeight: '500px',
                                 borderRadius: '10px'

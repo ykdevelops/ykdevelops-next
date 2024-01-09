@@ -28,7 +28,7 @@ export default function Description() {
                     <p className={styles.introDescription}>
                     </p>
                     <p className={styles.introDescription}>
-                        I specialize in creating exceptional user experiences across various devices.
+                        Whether it's crafting innovative websites, producing captivating music, or diving into cutting-edge AI research, I am driven by a relentless pursuit of creativity.
                     </p>
                 </div>
             </div>

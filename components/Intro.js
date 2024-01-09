@@ -58,7 +58,7 @@ function Intro() {
 
         <div className={styles.textContainer}>
           <h1 className={styles.introJobTitle}>Hello, my name is</h1>
-          <h1 className={styles.introName}>Youssef Khalil</h1>
+          <h1 className={styles.introJobTitle}>Youssef Khalil</h1>
           <h1 className={styles.introJobTitle}>
             I am a
             <span
