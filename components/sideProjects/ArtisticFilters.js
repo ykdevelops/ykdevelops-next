@@ -5,8 +5,6 @@ import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
 export default function ArtisticFilters() {
-    const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/artisticImageFilter.mp4'
     return (
 
 
@@ -14,7 +12,7 @@ export default function ArtisticFilters() {
             <div className={styles.leftHalf}>
                 <div className={styles.projectVisual}>
                     <video
-                        src={videoUrl}
+                        src='https://ykdevelops.s3.us-east-2.amazonaws.com/projects/artisticImageFilter.mp4'
                         controls
                         autoPlay
                         loop
