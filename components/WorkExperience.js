@@ -39,7 +39,7 @@ export default function WorkExperience() {
                             className={styles.sectionTitleIcon}
                         />
                     </Suspense>
-                    <div className={styles.sectionTitle}>Professional Experience</div>
+                    <h1 className={styles.sectionTitle}>Professional Experience</h1>
                 </div>
                 <div className={styles.workCompany}>
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
