@@ -47,7 +47,7 @@ function Intro() {
     >
       <div className={styles.leftHalf}>
         <Image
-          src="/outro3.gif"
+          src="/introGif.gif"
           alt="headshot"
           width={600}
           height={600}
@@ -57,9 +57,9 @@ function Intro() {
       <div className={styles.rightHalf}>
 
         <div className={styles.textContainer}>
-          <h1 className={styles.introJobTitle}>Hello, my name is</h1>
+          <h2 className={styles.introJobTitle}>Hello, my name is</h2>
           <h1 className={styles.introJobTitle}>Youssef Khalil</h1>
-          <h1 className={styles.introJobTitle}>
+          <h2 className={styles.introJobTitle}>
             I am a
             <span
               className="txt-rotate"
@@ -68,7 +68,7 @@ function Intro() {
             >
               {text}
             </span>
-          </h1>
+          </h2>
         </div>
       </div>
     </div>

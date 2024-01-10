@@ -24,12 +24,9 @@ export default function Description() {
             <div className={styles.rightHalf}>
 
                 <div className={styles.textContainer}>
-
-                    <p className={styles.introDescription}>
-                    </p>
-                    <p className={styles.introDescription}>
+                    <h2 className={styles.introDescription}>
                         Whether it's crafting innovative websites, producing captivating music, or diving into cutting-edge AI research, I am driven by a relentless pursuit of creativity.
-                    </p>
+                    </h2>
                 </div>
             </div>
         </div>

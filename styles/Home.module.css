@@ -1,6 +1,7 @@
 /* Mobile size */
 
 /* #region general */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -50,7 +51,6 @@
   margin-right: 10px;
 }
 .sectionTitle {
-  font-size: 7vw;
   /* padding: 5rem 2rem 5rem 2rem; */
   font-weight: normal;
   display: flex;
@@ -170,7 +170,6 @@
   color: white;
 }
 .introJobTitle {
-  font-size: 7vw;
   padding: 0;
   margin: 0;
   font-weight: normal;
@@ -178,7 +177,6 @@
   text-align: center;
 }
 .introDescription {
-  font-size: 2rem;
   text-align: center;
 }
 .introPic {
@@ -210,12 +208,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 5vw;
   font-weight: bold;
 }
 .workLogo {
   margin-right: 0rem;
-  margin-top: 1.5rem;
 }
 .workInfo {
   padding: 0rem 0rem 5rem 0rem;
@@ -225,13 +221,11 @@
   align-items: center;
 }
 .workDate {
-  font-size: 3vw;
   padding: 0;
   margin: 0;
 }
 .workDescription {
   padding: 0 0 0 0;
-  font-size: 3vw;
   width: 90%;
   overflow-wrap: break-word;
 }
@@ -242,7 +236,6 @@
   display: flex;
   margin-top: 20px;
   transform: translateX(-3px);
-  font-size: 3vw;
 }
 
 /* #endregion Work Experience */
@@ -269,8 +262,6 @@
   justify-content: center;
 }
 .projectSectionTitle {
-  font-size: 4.5rem;
-
   transform: translateY(-4rem);
 }
 .projectTitle {
@@ -428,23 +419,19 @@
     margin-right: 10px;
     transform: translateY(5px);
   }
-  .sectionTitle {
-    font-size: 3rem;
-    font-weight: normal;
-  }
 
   .leftHalf {
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
-    margin-right: 0rem;
+    margin: 0rem;
   }
   .rightHalf {
     width: 50%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -453,6 +440,14 @@
   }
 
   /* #region Intro */
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+  }
   .introName {
     font-size: 4rem;
     padding: 0;
@@ -461,15 +456,14 @@
     color: white;
   }
   .introJobTitle {
-    font-size: 2rem;
-    padding: 1rem 0 0 0.3rem;
+    padding: 0 0 0 0.3rem;
     margin: 0;
     font-weight: normal;
     color: white;
     text-align: start;
+    width: 100%;
   }
   .introDescription {
-    font-size: 2rem;
     width: 100%;
     max-width: 650px;
     text-align: start;
@@ -488,13 +482,14 @@
   }
   .workLogo {
     margin-right: 2rem;
-    margin-top: 1rem;
   }
   .workInfo {
     padding: 0rem 0rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .workTitle {
-    font-size: 4.5rem;
     padding-bottom: 2rem;
     font-weight: normal;
   }
@@ -503,6 +498,8 @@
     font-weight: bold;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 1rem;
   }
   .workDate {
     font-size: 1.3rem;
@@ -511,11 +508,11 @@
   }
   .workDescription {
     padding: 0 0 0 0;
-    font-size: 1.1rem;
     width: 100%;
     max-width: 700px;
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
+    text-align: start;
   }
   .workDescriptionBox {
     padding: 0 0 0 0;
@@ -548,13 +545,14 @@
     justify-content: center;
   }
   .projectSectionTitle {
-    font-size: 4.5rem;
-
     transform: translateY(-4rem);
   }
   .projectTitle {
     font-size: 3rem;
     margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
   }
   .projectLanguages {
     font-size: 1rem;
@@ -562,6 +560,8 @@
   .projectDescription {
     font-size: 1.5rem;
     max-width: 700px;
+    text-align: start;
+    padding: 10px 0 10px 0;
   }
   .projectLinkIcon {
     padding-right: 4rem;
