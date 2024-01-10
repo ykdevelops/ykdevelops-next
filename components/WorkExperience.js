@@ -32,7 +32,7 @@ export default function WorkExperience() {
 
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
-                            src='/workIcon.gif'
+                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/workIcon.gif'
                             alt='workIcon'
                             width={150}
                             height={150}
@@ -44,7 +44,7 @@ export default function WorkExperience() {
                 <div className={styles.workCompany}>
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
-                            src='/qm.jpeg'
+                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/qm.jpeg'
                             alt='QuoteMediaLogo'
                             width={150}
                             height={150}
@@ -86,7 +86,7 @@ export default function WorkExperience() {
                 <div className={styles.workCompany}>
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
-                            src='/speakHablaLogo.jpeg'
+                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/speakHablaLogo.jpeg'
                             alt='speakHablaLogo'
                             width={150}
                             height={150}
@@ -130,7 +130,7 @@ export default function WorkExperience() {
                 <div className={styles.workCompany}>
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
-                            src='/ibm-logo.jpeg'
+                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/ibm-logo.jpeg'
                             alt='IBM_logo'
                             width={150}
                             height={150}

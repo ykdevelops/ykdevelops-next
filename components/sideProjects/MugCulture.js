@@ -6,7 +6,7 @@ import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
 export default function MugCulture() {
     const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/mugculture.mp4'
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/projects/mugculture.mp4'
     return (
 
 

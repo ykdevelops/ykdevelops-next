@@ -22,7 +22,7 @@ function RotatingModel({ url }) {
 
 const BoxCanvas = () => {
     const modelUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/deskScene22.gltf'
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/projects/deskScene22.gltf'
 
     return (
         <Canvas

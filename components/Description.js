@@ -13,7 +13,7 @@ export default function Description() {
                     fallback={<div className={styles.loaderImage}></div>}
                 >
                     <Image
-                        src='/description4.gif'
+                        src='https://ykdevelops.s3.us-east-2.amazonaws.com/description/description4.gif'
                         alt='tech logos'
                         width={400}
                         height={400}

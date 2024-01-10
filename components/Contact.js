@@ -1,14 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 export default function Contact() {
     return (
 
         <div className={styles.layer}>
             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                 <Image
-                    src="/outro4.gif"
+                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/outro4.gif"
                     alt="headshot"
                     width={500}
                     height={500}
@@ -21,14 +20,14 @@ export default function Contact() {
                 <div className={styles.socialIcons}>
                     <abbr title="My Resume">
                         <a
-                            href="/Khalil-Youssef-Resume.pdf"
+                            href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Khalil-Youssef-Resume.pdf"
                             target="_blank"
                             rel="noreferrer"
                             download
                         >
                             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                                 <Image
-                                    src="/resumeIcon.png"
+                                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/resumeIcon.png"
                                     alt="Resume"
                                     width={397}
                                     height={512}
@@ -45,7 +44,7 @@ export default function Contact() {
                         >
                             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                                 <Image
-                                    src="/linkedin2.png"
+                                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/linkedin2.png"
                                     alt="linkedin"
                                     width={500}
                                     height={500}
@@ -56,13 +55,13 @@ export default function Contact() {
                     </abbr>
                     <abbr title="My Github">
                         <a
-                            href="https://github.com/ykdevelops"
+                            href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/github.png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                                 <Image
-                                    src="/github.png"
+                                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/github.png"
                                     alt="github"
                                     width={500}
                                     height={500}
@@ -79,7 +78,7 @@ export default function Contact() {
                         >
                             <Suspense fallback={<div className={styles.loaderImage}></div>}>
                                 <Image
-                                    src="/youtube1.png"
+                                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/youtube1.png"
                                     alt="youtube"
                                     width={500}
                                     height={500}

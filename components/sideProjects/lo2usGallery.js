@@ -4,14 +4,12 @@ import styles from '../../styles/Home.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 export default function lo2usGallery() {
-    const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/djlo2usGallery.mp4'
     return (
         <div className={styles.djLo2usLayer}>
             <div className={styles.containerTitleRow}>
                 <Suspense fallback={<div className={styles['loading-image']}></div>}>
                     <Image
-                        src='/sideProjectsIcon2.gif'
+                        src='https://ykdevelops.s3.us-east-2.amazonaws.com/projects/sideProjectsIcon2.gif'
                         alt='side projects logo'
                         width={150}
                         height={150}
@@ -24,7 +22,7 @@ export default function lo2usGallery() {
                 <div className={styles.leftHalf}>
                     <div className={styles.projectVisual}>
                         <video
-                            src={videoUrl}
+                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/projects/djlo2usGallery.mp4'
                             controls
                             autoPlay
                             loop

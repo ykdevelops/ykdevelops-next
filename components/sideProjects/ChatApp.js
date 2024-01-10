@@ -6,7 +6,7 @@ import { BsGithub } from 'react-icons/bs'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 export default function ChatApp() {
     const videoUrl =
-        'https://ykdevelops.s3.us-east-2.amazonaws.com/chatApp.mp4'
+        'https://ykdevelops.s3.us-east-2.amazonaws.com/projects/chatApp.mp4'
     return (
         <div className={styles.chatAppLayer}>
 

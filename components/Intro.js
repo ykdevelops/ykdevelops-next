@@ -47,7 +47,7 @@ function Intro() {
     >
       <div className={styles.leftHalf}>
         <Image
-          src="/introGif.gif"
+          src="https://ykdevelops.s3.us-east-2.amazonaws.com/intro/introGif.gif"
           alt="headshot"
           width={600}
           height={600}
