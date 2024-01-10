@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
@@ -46,13 +46,22 @@ function Intro() {
       className={styles.layer}
     >
       <div className={styles.leftHalf}>
-        <Image
-          src="https://ykdevelops.s3.us-east-2.amazonaws.com/intro/introGif.gif"
+        <Suspense fallback={<Image
+          src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/introGif-min.png"
           alt="headshot"
-          width={600}
-          height={600}
-          className={styles.introPic}
-        />
+          width={500}
+          height={500}
+          className={styles.contactImage}
+        />}>
+          <Image
+            src="https://ykdevelops.s3.us-east-2.amazonaws.com/intro/introGif.gif"
+            alt="headshot"
+            width={600}
+            height={600}
+            className={styles.introPic}
+          />
+        </Suspense>
+
       </div>
       <div className={styles.rightHalf}>
 

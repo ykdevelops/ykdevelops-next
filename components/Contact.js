@@ -5,7 +5,13 @@ export default function Contact() {
     return (
 
         <div className={styles.layer}>
-            <Suspense fallback={<div className={styles.loaderImage}></div>}>
+            <Suspense fallback={<Image
+                src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/outro4-min.png"
+                alt="headshot"
+                width={500}
+                height={500}
+                className={styles.contactImage}
+            />}>
                 <Image
                     src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/outro4.gif"
                     alt="headshot"
