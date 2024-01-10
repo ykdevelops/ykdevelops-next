@@ -71,13 +71,15 @@ export default function WorkExperience() {
                         ) : null}
                         <button onClick={handleLearnMoreClick1} className={styles.learnMoreButton}>
                             {showDetails1 ? (
-                                <p>
-                                    Less Details <IoMdArrowDropup />
-                                </p>
+                                <>
+                                    <p>Less Details</p>
+                                    <IoMdArrowDropup />
+                                </>
                             ) : (
-                                <p>
-                                    More Details <IoMdArrowDropdown />
-                                </p>
+                                <>
+                                    <p>More Details</p>
+                                    <IoMdArrowDropdown />
+                                </>
                             )}
                         </button>
                     </div>
@@ -115,13 +117,15 @@ export default function WorkExperience() {
                         ) : null}
                         <button onClick={handleLearnMoreClick2} className={styles.learnMoreButton}>
                             {showDetails2 ? (
-                                <p>
-                                    Less Details <IoMdArrowDropup />
-                                </p>
+                                <>
+                                    <p>Less Details</p>
+                                    <IoMdArrowDropup />
+                                </>
                             ) : (
-                                <p>
-                                    More Details <IoMdArrowDropdown />
-                                </p>
+                                <>
+                                    <p>More Details</p>
+                                    <IoMdArrowDropdown />
+                                </>
                             )}
                         </button>
                     </div>
@@ -159,13 +163,15 @@ export default function WorkExperience() {
                         ) : null}
                         <button onClick={handleLearnMoreClick3} className={styles.learnMoreButton}>
                             {showDetails3 ? (
-                                <p>
-                                    Less Details <IoMdArrowDropup />
-                                </p>
+                                <>
+                                    <p>Less Details</p>
+                                    <IoMdArrowDropup />
+                                </>
                             ) : (
-                                <p>
-                                    More Details <IoMdArrowDropdown />
-                                </p>
+                                <>
+                                    <p>More Details</p>
+                                    <IoMdArrowDropdown />
+                                </>
                             )}
                         </button>
                     </div>

@@ -35,9 +35,9 @@ export default function ChatApp() {
                     </div>
 
 
-                    <h2 className={styles.projectLanguages}>
+                    <h3 className={styles.projectLanguages}>
                         ReactJS | ReactFire | Framer-Motion | Vercel | Firebase
-                    </h2>
+                    </h3>
                     <div>
                         <a
                             href="https://chatapp-reactfire.vercel.app/"

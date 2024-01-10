@@ -40,9 +40,9 @@ export default function MugCulture() {
                 </div>
 
 
-                <h2 className={styles.projectLanguages}>
+                <h3 className={styles.projectLanguages}>
                     NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
-                </h2>
+                </h3>
                 <div>
                     <a
                         href="https://mug-culture-shop.vercel.app/"

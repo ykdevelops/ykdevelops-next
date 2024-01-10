@@ -34,9 +34,9 @@ export default function ArtisticFilters() {
                 </div>
 
 
-                <h2 className={styles.projectLanguages}>
+                <h3 className={styles.projectLanguages}>
                     Python | OpenCV | Streamlit
-                </h2>
+                </h3>
                 <div>
                     <a
                         href="https://ykdevelops-opencv-artistic-image-filte-image-filters-app-3hu91f.streamlit.app/"

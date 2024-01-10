@@ -44,9 +44,9 @@ export default function lo2usGallery() {
                     </div>
 
 
-                    <h2 className={styles.projectLanguages}>
+                    <h3 className={styles.projectLanguages}>
                         NextJS | ReactJS | Vercel | AWS S3 | Stripe
-                    </h2>
+                    </h3>
                     <div>
                         <a
                             href="https://djlo2usgallery.vercel.app/"

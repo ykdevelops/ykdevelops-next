@@ -201,7 +201,6 @@
 /* #endregion Description */
 /* #region Work Experience */
 .workContainer {
-  max-width: 1100px;
 }
 .workCompany {
   display: flex;
@@ -431,7 +430,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    margin-left: 1rem;
+    margin-left: 0rem;
   }
 
   /* #region Intro */
@@ -468,12 +467,14 @@
   .descriptionImage {
     border-radius: 50%;
     display: block;
-    margin-right: 50px;
+    margin-right: 5rem;
+    width: 500px;
+    height: 500px;
   }
   /* #endregion Description */
   /* #region Work Experience */
   .workContainer {
-    max-width: 1100px;
+    max-width: 1050px;
   }
   .workLogo {
     margin-right: 2rem;
@@ -495,19 +496,21 @@
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 1rem;
+    width: 100%;
   }
   .workDate {
-    font-size: 1.3rem;
     padding: 0;
     margin: 0;
+    padding-bottom: 1rem;
   }
   .workDescription {
     padding: 0 0 0 0;
     width: 100%;
-    max-width: 700px;
+
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
     text-align: start;
+    padding-bottom: 0.5rem;
   }
   .workDescriptionBox {
     padding: 0 0 0 0;
@@ -518,8 +521,9 @@
     color: whitesmoke;
     border: none;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 20px;
-    transform: translateX(-3px);
   }
   .workDetailsButtonTitle {
     padding-right: 50px;
@@ -619,6 +623,8 @@
   }
   .contactImage {
     margin-right: 2rem;
+    width: 500px;
+    height: 500px;
   }
   .contactDescription {
     text-align: start;
