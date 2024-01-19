@@ -1,6 +1,11 @@
 import React, { Suspense, useState, useEffect } from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
 import styles from "../styles/Home.module.css";
+
+const DynamicImage = dynamic(() =>
+  import("next/image").then((mod) => mod.default)
+);
 
 function Intro() {
   const [text, setText] = useState("");
@@ -42,18 +47,20 @@ function Intro() {
   }, [text, isDeleting, typingSpeed, loopNum]);
 
   return (
-    <div //Intro - image
-      className={styles.layer}
-    >
+    <div className={styles.layer}>
       <div className={styles.leftHalf}>
-        <Suspense fallback={<Image
-          src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/introGif-min.png"
-          alt="headshot"
-          width={500}
-          height={500}
-          className={styles.contactImage}
-        />}>
-          <Image
+        <Suspense
+          fallback={
+            <DynamicImage
+              src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/introGif-min.png"
+              alt="headshot"
+              width={500}
+              height={500}
+              className={styles.contactImage}
+            />
+          }
+        >
+          <DynamicImage
             src="https://ykdevelops.s3.us-east-2.amazonaws.com/intro/introGif.gif"
             alt="headshot"
             width={600}
@@ -61,10 +68,8 @@ function Intro() {
             className={styles.introPic}
           />
         </Suspense>
-
       </div>
       <div className={styles.rightHalf}>
-
         <div className={styles.textContainer}>
           <h2 className={styles.introJobTitle}>Hello, my name is</h2>
           <h1 className={styles.introJobTitle}>Youssef Khalil</h1>
