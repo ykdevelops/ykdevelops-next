@@ -58,10 +58,10 @@ export default function Home() {
         <h1 className={styles.sectionTitle}>Work Experience</h1>
       </div> */}
       <WorkExperience />
-      <Lo2usGallery />
+      {/* <Lo2usGallery />
       <ChatApp />
       <ArtisticFilters />
-      <MugCulture />
+      <MugCulture /> */}
       {/* <Studio /> */}
       <Contact />
     </div>
