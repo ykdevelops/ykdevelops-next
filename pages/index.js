@@ -52,7 +52,7 @@ export default function Home() {
       )}
 
       <Intro />
-      <Description />
+      {/* <Description /> */}
       {/* <div className={styles.sectionTitleRow}>
         <MdWorkOutline className={styles.sectionTitleIcon} />
         <h1 className={styles.sectionTitle}>Work Experience</h1>
