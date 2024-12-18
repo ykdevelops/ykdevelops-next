@@ -25,7 +25,7 @@ export default function Description() {
 
                 <div className={styles.textContainer}>
                     <h3 className={styles.introDescription}>
-                        Whether it's crafting innovative websites, producing captivating music, or diving into cutting-edge AI research, I am driven by a relentless pursuit of creativity.
+                        Whether it's crafting innovative websites or diving into cutting-edge AI research, I am driven by a relentless pursuit of creativity.
                     </h3>
                 </div>
             </div>

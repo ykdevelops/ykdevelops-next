@@ -639,3 +639,13 @@
   }
   /* #endregion Contact */
 }
+
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.details.show {
+  max-height: 500px; /* Adjust this value to fit the expected content height */
+}
