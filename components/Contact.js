@@ -61,7 +61,7 @@ export default function Contact() {
                     </abbr>
                     <abbr title="My Github">
                         <a
-                            href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/github.png"
+                            href="https://github.com/ykdevelops"
                             target="_blank"
                             rel="noreferrer"
                         >
