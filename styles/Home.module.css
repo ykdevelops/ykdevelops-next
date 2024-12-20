@@ -39,7 +39,7 @@
 .sectionTitleRow {
   display: flex;
   flex-direction: column;
-  padding: 5rem 0rem 5rem 0rem;
+  padding: 0rem 0rem 5rem 0rem;
   /* padding-left: 10rem; */
   width: 90%;
   justify-content: center;
@@ -54,8 +54,11 @@
   /* padding: 5rem 2rem 5rem 2rem; */
   font-weight: normal;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: start;
+  align-items: center;
+  font-size: 7vw;
+  height: 100%;
+  padding-top: 5px;
 }
 /* #region Scroll */
 .scrollColumn {
@@ -205,26 +208,28 @@
 .workCompany {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: start;
   font-weight: bold;
+  font-size: 6vw;
+  padding: 0rem 0rem 1rem 0rem;
 }
 .workLogo {
   margin-right: 0rem;
 }
 .workInfo {
-  padding: 0rem 0rem 5rem 0rem;
+  padding: 1rem 0rem 5rem 0rem;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 .workDate {
   padding: 0;
   margin: 0;
 }
 .workDescription {
-  padding: 0 0 0 0;
+  padding: 0 0 20px 0;
   width: 90%;
   overflow-wrap: break-word;
 }
@@ -235,6 +240,7 @@
   display: flex;
   margin-top: 20px;
   transform: translateX(-3px);
+  align-items: center;
 }
 
 /* #endregion Work Experience */
@@ -362,6 +368,15 @@
 
 /* Laptop size*/
 @media (min-width: 1025px) {
+  .sectionTitle {
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 90px;
+    height: 100%;
+  }
   .canvasBox {
     display: flex;
     width: 400px;
@@ -648,4 +663,5 @@
 
 .details.show {
   max-height: 500px; /* Adjust this value to fit the expected content height */
+  padding: 2rem 0rem 0rem 0rem;
 }
