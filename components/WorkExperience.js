@@ -44,13 +44,13 @@ export default function WorkExperience() {
                         <h2 className={styles.workDate}>August 2022 - March 2023</h2>
                         <div className={`${styles.details} ${showDetails1 ? styles.show : ''}`}>
                             <p className={styles.workDescription}>
-                                Task: Collaborate with a 6-member marketing team, transform Adobe XD designs into functioning applications.
+                                Task: Collaborated with a 6-member marketing team to modernize the company's marketing websites by transforming Adobe XD designs into fully functioning applications.
                             </p>
                             <p className={styles.workDescription}>
-                                Action: Employed Astro and Vue.js for creating responsive web applications and worked closely with the design team to transform their Adobe XD designs into functional web solutions through Jira tickets.
+                                Action: Utilized Astro and Vue.js to create responsive and interactive web applications, working through Jira tickets to streamline collaboration with designers and developers.
                             </p>
                             <p className={styles.workDescription}>
-                                Result: Successfully translated design concepts into functional code, contributing to the modernization of the company's marketing websites. The delivered web applications enhanced user engagement, providing a more interactive experience.
+                                Result: Delivered web solutions that significantly enhanced user engagement and provided an improved, interactive experience, aligning with the company's marketing objectives.
                             </p>
                         </div>
                         <button
@@ -88,13 +88,13 @@ export default function WorkExperience() {
                         <h2 className={styles.workDate}>April 2022 - September 2022</h2>
                         <div className={`${styles.details} ${showDetails2 ? styles.show : ''}`}>
                             <p className={styles.workDescription}>
-                                Task: Patch runtime errors and glitches in the BELA (Business English Level Assessment) testing process. Finish administrative portal and Instructors portal.
+                                Task: Resolved runtime errors and glitches in the Business English Level Assessment (BELA) testing process, while completing the development of the administrative and instructors' portals.
                             </p>
                             <p className={styles.workDescription}>
-                                Action: Refactored some of the ReactJS code to resolve runtime errors. This included fixing undefined variables, null references, and enhancing data validation. Additionally, I added new features to the admin portal, like advanced user management and test result controls.
+                                Action: Refactored ReactJS code to fix runtime errors, addressing undefined variables, null references, and enhancing data validation. Added new features to the administrative portal, including advanced user management and test result controls.
                             </p>
                             <p className={styles.workDescription}>
-                                Result: While BELA accurately assessed business English proficiency, it received mixed user feedback during its initial stages. Unfortunately, the project was discontinued due to insufficient funding.
+                                Result: Improved the system's functionality and reliability, enabling BELA to accurately assess business English proficiency. Despite positive technical contributions, the project was ultimately discontinued due to funding challenges.
                             </p>
                         </div>
                         <button
@@ -132,13 +132,13 @@ export default function WorkExperience() {
                         <h2 className={styles.workDate}>September 2021 - December 2021</h2>
                         <div className={`${styles.details} ${showDetails3 ? styles.show : ''}`}>
                             <p className={styles.workDescription}>
-                                Task: Create a more modern design for a web application for NBIFC.
+                                Task: Redesign and modernize a web application for the North Bay Indigenous Friendship Centre (NBIFC).
                             </p>
                             <p className={styles.workDescription}>
-                                Action: Created a new and responsive design using AdobeXD, then brought it to life using ReactJS. Additionally, I conducted user testing for performance optimization and performed maintenance on multiple WordPress websites for SLiDE clients.
+                                Action: Designed a responsive and user-friendly interface using AdobeXD and implemented it with ReactJS. Conducted user testing to optimize performance and ensured smooth functionality. Additionally, provided ongoing maintenance for multiple WordPress websites for SLiDE clients.
                             </p>
                             <p className={styles.workDescription}>
-                                Result: Successfully delivered a close to production web application, improving the user experience and modernizing the page's aesthetic and responsiveness. Conducted user testing for performance optimization and managed maintenance of multiple WordPress websites for SLiDE clients.
+                                Result: Delivered a near-production-quality web application that enhanced user experience through a modernized aesthetic and improved responsiveness. Successfully optimized performance based on user feedback and maintained a portfolio of WordPress sites for client satisfaction.
                             </p>
                         </div>
                         <button
