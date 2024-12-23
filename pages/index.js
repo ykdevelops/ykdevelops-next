@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowScrollDown(true)
-    }, 2000)
+    }, 20000)
 
     const handleMouseActivity = () => {
       clearTimeout(timeoutId)
@@ -40,13 +40,13 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>YK Portfolio</title>
-        <meta name='description' content='Web Developement Portfolio' />
+        <meta name='description' content='Portfolio' />
         <link rel='icon' href='/favicon2.ico' />
       </Head>
       {/* <SpeakButton /> */}
       {showScrollDown && (
         <div className={styles.scrollColumn}>
-          <div className={styles.scrollTitle}>Scroll To Read</div>
+          <div className={styles.scrollTitle}>Scroll for more information</div>
           <div className={styles.iconScroll}></div>
         </div>
       )}

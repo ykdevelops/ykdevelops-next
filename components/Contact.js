@@ -21,7 +21,7 @@ export default function Contact() {
                 />
             </Suspense>
             <div className={styles.contactInfo}>
-                <h3 className={styles.contactDescription}>Thank you for taking the time to explore my portfolio!</h3>
+                <h3 className={styles.contactDescription}>Thank you for exploring my portfolio!</h3>
                 <h2 className={styles.contactDescription}>How can I help you?</h2>
                 <div className={styles.socialIcons}>
                     <abbr title="My Resume">

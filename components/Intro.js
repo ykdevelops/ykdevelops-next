@@ -13,7 +13,7 @@ function Intro() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const textArray = [" Computer Science Student", " Web Developer", "n A.I Enthusiast"];
+  const textArray = ["n Intermediate Web Developer", " Computer Science Student", " Cyber Security Beginner"];
   const typingDelay = 1000;
   const deletingDelay = 100;
   const loop = true;
