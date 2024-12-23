@@ -46,7 +46,7 @@ export default function Home() {
       {/* <SpeakButton /> */}
       {showScrollDown && (
         <div className={styles.scrollColumn}>
-          <div className={styles.scrollTitle}>Scroll for more information</div>
+          <div className={styles.scrollTitle}>Scroll for more</div>
           <div className={styles.iconScroll}></div>
         </div>
       )}
