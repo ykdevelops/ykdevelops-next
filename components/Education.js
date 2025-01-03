@@ -38,7 +38,6 @@ export default function EducationAndCerts() {
               University of Ottawa – BSc of Computer Science
             </h1>
             <h2 className={styles.eduItemDate}>Sep 2024 – Sep 2027</h2>
-            <p className={styles.eduDescription}>Grade: 2nd year</p>
           </div>
         </div>
 
@@ -58,7 +57,6 @@ export default function EducationAndCerts() {
               Algonquin College – Mobile App Design & Development
             </h1>
             <h2 className={styles.eduItemDate}>Sep 2019 – Apr 2022</h2>
-            <p className={styles.eduDescription}>Field: Computer Science</p>
           </div>
         </div>
 
@@ -114,11 +112,9 @@ export default function EducationAndCerts() {
           <div className={styles.eduInfo}>
             <h1 className={styles.eduItemTitle}>Google Cybersecurity Specialization</h1>
             <h2 className={styles.eduItemDate}>Issued Jan 2025</h2>
-            <p className={styles.eduDescription}>
-              Credential ID: O3NKSMQZQF9P
-            </p>
+
             <a
-              href="#"
+              href="https://coursera.org/share/5b806dc8790c26727c4f81e2d6a0f89c"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.eduLink}
@@ -142,7 +138,14 @@ export default function EducationAndCerts() {
           <div className={styles.eduInfo}>
             <h1 className={styles.eduItemTitle}>AWS Certified Cloud Practitioner</h1>
             <h2 className={styles.eduItemDate}>Issued Oct 2023 – Expires Oct 2026</h2>
-            <p className={styles.eduDescription}>Amazon Web Services (AWS)</p>
+            <a
+              href="https://www.credly.com/badges/c2c6ded9-a3f6-4461-9618-7ead3a2d43f9/linked_in_profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.eduLink}
+            >
+              Show Credential
+            </a>
           </div>
         </div>
 
@@ -160,11 +163,9 @@ export default function EducationAndCerts() {
           <div className={styles.eduInfo}>
             <h1 className={styles.eduItemTitle}>OpenCV for Beginners</h1>
             <h2 className={styles.eduItemDate}>Issued May 2023</h2>
-            <p className={styles.eduDescription}>
-              Credential ID: f15b061ca3b24324b49cd000d15a2e40
-            </p>
+
             <a
-              href="#"
+              href="https://courses.opencv.org/certificates/f15b061ca3b24324b49cd000d15a2e40"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.eduLink}
