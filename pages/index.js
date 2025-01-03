@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
-import Description from '../components/Description'
+import Education from '../components/Education'
 import WorkExperience from '../components/WorkExperience'
 import Studio from '../components/sideProjects/Studio'
 import MugCulture from '../components/sideProjects/MugCulture'
@@ -52,17 +52,8 @@ export default function Home() {
       )}
 
       <Intro />
-      {/* <Description /> */}
-      {/* <div className={styles.sectionTitleRow}>
-        <MdWorkOutline className={styles.sectionTitleIcon} />
-        <h1 className={styles.sectionTitle}>Work Experience</h1>
-      </div> */}
       <WorkExperience />
-      {/* <Lo2usGallery />
-      <ChatApp />
-      <ArtisticFilters />
-      <MugCulture /> */}
-      {/* <Studio /> */}
+      <Education />
       <Contact />
     </div>
   )

@@ -1,4 +1,138 @@
 /* Mobile size */
+/* 
+  Outer container for all Education & Certifications content 
+*/
+.eduLayer {
+  width: 90%;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+  Individual container for the "Education" block 
+  and the "Licenses & Certifications" block 
+  (stacked by default on mobile) 
+*/
+.eduContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem; /* space below each section */
+}
+
+/* 
+  Title row: icon + section heading 
+*/
+.eduTitleRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* 
+  Icon next to the section title (e.g., educationIcon.gif, certIcon.gif) 
+  For mobile, keep a relative size
+*/
+.eduTitleIcon {
+  width: 8vw;
+  height: 8vw;
+  margin-right: 10px;
+}
+
+/* 
+  The main section heading text
+  (e.g., "Education" or "Licenses & Certifications") 
+*/
+.eduSectionTitle {
+  font-weight: normal;
+  font-size: 7vw;
+  margin: 0;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+  Each item (e.g., one school or one certification) 
+*/
+.eduItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  font-weight: bold;
+  font-size: 6vw;
+  padding: 0 0 1rem 0; /* spacing below each item */
+}
+
+/* 
+  Logo for each item (university or certification)
+*/
+.eduLogo {
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+}
+
+/* 
+  Container for the text info (title, date, description) 
+*/
+.eduInfo {
+  padding: 1rem 0 3rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 
+  Item title (e.g., "University of Ottawa – BSc Computer Science") 
+*/
+.eduItemTitle {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* 
+  Date line (e.g., "Sep 2024 – Sep 2027")
+*/
+.eduItemDate {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95em;
+  font-weight: normal;
+}
+
+/* 
+  Description text (e.g., "Grade: 2nd year", "Credential ID: ...")
+*/
+.eduDescription {
+  padding: 0 0 1rem 0;
+  width: 90%;
+  font-size: 0.95em;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* 
+  Link for "Show Credential" or external references 
+*/
+.eduLink {
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.95em;
+  color: rgb(218, 218, 218); /* Adjust if needed */
+}
 
 /* #region general */
 
@@ -368,6 +502,85 @@
 
 /* Laptop size*/
 @media (min-width: 1025px) {
+  /* 
+    On desktop, place Education on the left 
+    and Certifications on the right side by side 
+  */
+  .eduLayer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around; /* or space-between */
+  }
+
+  /* 
+    Each section (Education / Certifications) 
+    gets about half the width 
+  */
+  .eduContainer {
+    width: 45%;
+    margin-bottom: 0; /* you can reduce or remove the bottom margin here */
+  }
+
+  .eduTitleRow {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-top: 3rem; /* optional, if you want spacing at the top */
+  }
+
+  .eduTitleIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .eduSectionTitle {
+    font-size: 3rem; /* Instead of 7vw or 90px, a bit smaller for desktop */
+    margin: 0;
+  }
+
+  .eduItem {
+    font-size: 1.4rem;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
+
+  .eduLogo {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    width: 120px;
+    height: 120px;
+    /* Adjust if needed for your design */
+  }
+
+  .eduInfo {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eduItemTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .eduItemDate {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .eduDescription {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .eduLink {
+    font-size: 1rem;
+  }
+
   .sectionTitle {
     padding: 1rem 1rem 1rem 1rem;
     font-weight: normal;
