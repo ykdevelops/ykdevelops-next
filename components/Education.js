@@ -76,13 +76,13 @@ export default function EducationAndCerts() {
               University of Ottawa – BASc Electrical Engineering & BSc Computing Technology
             </h1>
             <h2 className={styles.eduItemDate}>Sep 2015 – Sep 2017</h2>
-            <p className={styles.eduDescription}>Grade: Incomplete</p>
+            <p className={styles.eduDescription}>Incomplete</p>
           </div>
         </div>
       </div>
 
       {/* ================================
-          LICENSES & CERTIFICATIONS
+          CERTIFICATIONS
       ================================ */}
       <div className={styles.eduContainer}>
         <div className={styles.eduTitleRow}>
@@ -95,7 +95,7 @@ export default function EducationAndCerts() {
               className={styles.eduTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.eduSectionTitle}>Licenses & Certifications</h1>
+          <h1 className={styles.eduSectionTitle}>Certifications</h1>
         </div>
 
         {/* Google Cybersecurity Specialization */}
