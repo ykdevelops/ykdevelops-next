@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# (Optional) Add redirects at the infra layer (you can skip for now)
+# [[redirects]]
+#   from = "/old"
+#   to = "/new"
+#   status = 301
