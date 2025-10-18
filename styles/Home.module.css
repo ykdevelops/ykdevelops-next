@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: start;
+  text-align: flex-start;
   font-weight: bold;
   font-size: 6vw;
   padding: 0 0 1rem 0; /* spacing below each item */
@@ -190,7 +190,7 @@
   /* padding: 5rem 2rem 5rem 2rem; */
   font-weight: normal;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   font-size: 7vw;
   height: 100%;
@@ -327,7 +327,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: start;
+  text-align: flex-start;
 }
 /* #endregion Intro */
 /* #region Description */
@@ -345,7 +345,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: start;
+  text-align: flex-start;
   font-weight: bold;
   font-size: 6vw;
   padding: 0rem 0rem 1rem 0rem;
@@ -358,7 +358,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 .workDate {
   padding: 0;
@@ -588,7 +588,7 @@
     padding: 1rem 1rem 1rem 1rem;
     font-weight: normal;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     font-size: 90px;
     height: 100%;
@@ -670,7 +670,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: start;
+    text-align: flex-start;
     width: 100%;
   }
   .introName {
@@ -681,17 +681,19 @@
     color: white;
   }
   .introJobTitle {
+    display: flex;
     padding: 0 0 0 0.3rem;
     margin: 0;
     font-weight: normal;
     color: white;
-    text-align: start;
+    text-align: flex-start;
     width: 100%;
   }
   .introDescription {
+    display: flex;
     width: 100%;
     max-width: 650px;
-    text-align: start;
+    text-align: flex-start;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -735,12 +737,13 @@
     padding-bottom: 1rem;
   }
   .workDescription {
+    display: flex;
     padding: 0 0 0 0;
     width: 100%;
 
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
-    text-align: start;
+    text-align: flex-start;
     padding-bottom: 0.5rem;
   }
   .workDescriptionBox {
@@ -787,8 +790,9 @@
     font-size: 1rem;
   }
   .projectDescription {
+    display: flex;
     max-width: 700px;
-    text-align: start;
+    text-align: flex-start;
     padding: 10px 0 10px 0;
   }
   .projectLinkIcon {
@@ -858,7 +862,8 @@
     height: 500px;
   }
   .contactDescription {
-    text-align: start;
+    display: flex;
+    text-align: flex-start;
     max-width: 700px;
     width: 100%;
     padding-bottom: 0px;
