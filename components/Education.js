@@ -60,25 +60,7 @@ export default function EducationAndCerts() {
           </div>
         </div>
 
-        {/* University of Ottawa (Previous) */}
-        <div className={styles.eduItem}>
-          <Suspense fallback={<div>Loading logo...</div>}>
-            <Image
-              src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/uottawa.png"
-              alt="uOttawaLogo"
-              width={150}
-              height={150}
-              className={styles.eduLogo}
-            />
-          </Suspense>
-          <div className={styles.eduInfo}>
-            <h1 className={styles.eduItemTitle}>
-              University of Ottawa – BASc Electrical Engineering & BSc Computing Technology
-            </h1>
-            <h2 className={styles.eduItemDate}>Sep 2015 – Sep 2017</h2>
-            <p className={styles.eduDescription}>Incomplete</p>
-          </div>
-        </div>
+
       </div>
 
       {/* ================================
