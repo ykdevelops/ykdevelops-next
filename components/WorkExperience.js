@@ -8,9 +8,7 @@ export default function WorkExperience() {
     const [showDetails2, setShowDetails2] = useState(false);
     const [showDetails3, setShowDetails3] = useState(false);
 
-    const toggleDetails = (setShowDetails, showDetails) => {
-        setShowDetails(!showDetails);
-    };
+    const toggleDetails = (setter, value) => setter(!value);
 
     return (
         <div className={styles.layer}>
@@ -19,7 +17,7 @@ export default function WorkExperience() {
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
                             src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/workIcon.gif'
-                            alt='workIcon'
+                            alt='work icon'
                             width={150}
                             height={150}
                             className={styles.sectionTitleIcon}
@@ -33,16 +31,21 @@ export default function WorkExperience() {
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
                             src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/qm.jpeg'
-                            alt='QuoteMediaLogo'
+                            alt='QuoteMedia logo'
                             width={150}
                             height={150}
                             className={styles.workLogo}
                         />
                     </Suspense>
                     <div className={styles.workInfo}>
-                        <h1 className={styles.workCompany}>QuoteMedia, Inc. - Intermediate Front End Developer</h1>
+                        <h1 className={styles.workCompany}>
+                            QuoteMedia, Inc. - Intermediate Front End Developer
+                        </h1>
                         <h2 className={styles.workDate}>August 2022 - March 2023</h2>
-                        <div className={`${styles.details} ${showDetails1 ? styles.show : ''}`}>
+                        <div
+                            id="qm-details"
+                            className={`${styles.details} ${showDetails1 ? styles.show : ''}`}
+                        >
                             <p className={styles.workDescription}>
                                 Task: Collaborated with a 6-member marketing team to modernize the company's marketing websites by transforming Adobe XD designs into fully functioning applications.
                             </p>
@@ -54,18 +57,21 @@ export default function WorkExperience() {
                             </p>
                         </div>
                         <button
+                            type="button"
                             onClick={() => toggleDetails(setShowDetails1, showDetails1)}
                             className={styles.learnMoreButton}
+                            aria-expanded={showDetails1}
+                            aria-controls="qm-details"
                         >
                             {showDetails1 ? (
                                 <>
-                                    <p>Less Details</p>
-                                    <IoMdArrowDropup />
+                                    <span>Less Details</span>
+                                    <IoMdArrowDropup aria-hidden />
                                 </>
                             ) : (
                                 <>
-                                    <p>More Details</p>
-                                    <IoMdArrowDropdown />
+                                    <span>More Details</span>
+                                    <IoMdArrowDropdown aria-hidden />
                                 </>
                             )}
                         </button>
@@ -77,7 +83,7 @@ export default function WorkExperience() {
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
                             src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/speakHablaLogo.jpeg'
-                            alt='speakHablaLogo'
+                            alt='SpeakHabla logo'
                             width={150}
                             height={150}
                             className={styles.workLogo}
@@ -86,7 +92,10 @@ export default function WorkExperience() {
                     <div className={styles.workInfo}>
                         <h1 className={styles.workCompany}>SpeakHabla - Junior Full Stack Developer</h1>
                         <h2 className={styles.workDate}>April 2022 - September 2022</h2>
-                        <div className={`${styles.details} ${showDetails2 ? styles.show : ''}`}>
+                        <div
+                            id="sh-details"
+                            className={`${styles.details} ${showDetails2 ? styles.show : ''}`}
+                        >
                             <p className={styles.workDescription}>
                                 Task: Resolved runtime errors and glitches in the Business English Level Assessment (BELA) testing process, while completing the development of the administrative and instructors' portals.
                             </p>
@@ -98,18 +107,21 @@ export default function WorkExperience() {
                             </p>
                         </div>
                         <button
+                            type="button"
                             onClick={() => toggleDetails(setShowDetails2, showDetails2)}
                             className={styles.learnMoreButton}
+                            aria-expanded={showDetails2}
+                            aria-controls="sh-details"
                         >
                             {showDetails2 ? (
                                 <>
-                                    <p>Less Details</p>
-                                    <IoMdArrowDropup />
+                                    <span>Less Details</span>
+                                    <IoMdArrowDropup aria-hidden />
                                 </>
                             ) : (
                                 <>
-                                    <p>More Details</p>
-                                    <IoMdArrowDropdown />
+                                    <span>More Details</span>
+                                    <IoMdArrowDropdown aria-hidden />
                                 </>
                             )}
                         </button>
@@ -121,7 +133,7 @@ export default function WorkExperience() {
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
                             src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/ibm-logo.jpeg'
-                            alt='IBM_logo'
+                            alt='IBM logo'
                             width={150}
                             height={150}
                             className={styles.workLogo}
@@ -130,7 +142,10 @@ export default function WorkExperience() {
                     <div className={styles.workInfo}>
                         <h1 className={styles.workCompany}>IBM/SLiDE - Junior Front End Developer</h1>
                         <h2 className={styles.workDate}>September 2021 - December 2021</h2>
-                        <div className={`${styles.details} ${showDetails3 ? styles.show : ''}`}>
+                        <div
+                            id="ibm-details"
+                            className={`${styles.details} ${showDetails3 ? styles.show : ''}`}
+                        >
                             <p className={styles.workDescription}>
                                 Task: Redesign and modernize a web application for the North Bay Indigenous Friendship Centre (NBIFC).
                             </p>
@@ -142,18 +157,21 @@ export default function WorkExperience() {
                             </p>
                         </div>
                         <button
+                            type="button"
                             onClick={() => toggleDetails(setShowDetails3, showDetails3)}
                             className={styles.learnMoreButton}
+                            aria-expanded={showDetails3}
+                            aria-controls="ibm-details"
                         >
                             {showDetails3 ? (
                                 <>
-                                    <p>Less Details</p>
-                                    <IoMdArrowDropup />
+                                    <span>Less Details</span>
+                                    <IoMdArrowDropup aria-hidden />
                                 </>
                             ) : (
                                 <>
-                                    <p>More Details</p>
-                                    <IoMdArrowDropdown />
+                                    <span>More Details</span>
+                                    <IoMdArrowDropdown aria-hidden />
                                 </>
                             )}
                         </button>

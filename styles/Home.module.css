@@ -735,18 +735,19 @@
     padding-bottom: 1rem;
   }
   .workDescription {
-    padding: 0 0 0 0;
+    padding: 0;
     width: 100%;
-
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
     text-align: start;
     padding-bottom: 0.5rem;
   }
   .workDescriptionBox {
-    padding: 0 0 0 0;
+    padding: 0;
     width: 100%;
   }
+
+  /* --- Learn more button (updated) --- */
   .learnMoreButton {
     background-color: transparent;
     color: whitesmoke;
@@ -754,8 +755,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 6px; /* nicer spacing between text and icon */
     margin-top: 20px;
+    cursor: pointer; /* <-- key: keeps pointer over the whole button */
   }
+
+  .learnMoreButton * {
+    cursor: inherit; /* children (span, icon) follow the button's cursor */
+  }
+
+  .learnMoreButton:hover {
+    opacity: 0.9;
+  }
+
+  .learnMoreButton:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
   .workDetailsButtonTitle {
     padding-right: 50px;
   }
@@ -763,6 +780,25 @@
     margin-left: 100px;
   }
 
+  /* collapse/expand */
+  .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .details.show {
+    max-height: 500px; /* adjust to fit your content */
+    padding: 2rem 0rem 0rem 0rem;
+  }
+
+  /* motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .details,
+    .workDescription {
+      transition: none;
+    }
+  }
   /* #endregion Work Experience */
 
   /* #region Project */
@@ -869,15 +905,4 @@
     padding-top: 2rem;
   }
   /* #endregion Contact */
-}
-
-.details {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.details.show {
-  max-height: 500px; /* Adjust this value to fit the expected content height */
-  padding: 2rem 0rem 0rem 0rem;
 }
