@@ -26,7 +26,7 @@ export default function Contact() {
                 <div className={styles.socialIcons}>
                     <abbr title="My Resume">
                         <a
-                            href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Youssef-Khalil-2024-Resume_compressed.pdf"
+                            href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Youssef_Khalil_2025_Resume+(3).pdf"
                             target="_blank"
                             rel="noreferrer"
                             download
