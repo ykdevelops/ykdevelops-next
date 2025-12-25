@@ -13,7 +13,7 @@ function Intro() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const textArray = ["n Intermediate Web Developer", " Computer Science Student", " Cyber Security Beginner"];
+  const textArray = ["An Intermediate Web Developer", " A 3rd year CS Student @uOttawa"];
   const typingDelay = 1000;
   const deletingDelay = 100;
   const loop = true;
@@ -71,10 +71,8 @@ function Intro() {
       </div>
       <div className={styles.rightHalf}>
         <div className={styles.textContainer}>
-          <h2 className={styles.introJobTitle}>Hello, my name is</h2>
-          <h1 className={styles.introJobTitle}>Youssef Khalil</h1>
+          <h2 className={styles.introJobTitle}>Hello, I'm <span className={styles.introName}>Youssef Khalil</span></h2>
           <h2 className={styles.introJobTitle}>
-            I am a
             <span
               className="txt-rotate"
               data-period="2000"

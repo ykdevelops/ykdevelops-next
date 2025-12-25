@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
 import Education from '../components/Education'
+import Pitch from '../components/Pitch'
 import WorkExperience from '../components/WorkExperience'
 import Studio from '../components/sideProjects/Studio'
 import MugCulture from '../components/sideProjects/MugCulture'
@@ -54,6 +55,7 @@ export default function Home() {
       <Intro />
       <WorkExperience />
       <Education />
+      <Pitch />
       <Contact />
     </div>
   )

@@ -136,6 +136,43 @@
   text-underline-offset: 4px; /* Adjust the space between text and underline */
 }
 
+/* 
+  Pitch section styles
+*/
+.pitchText {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95em;
+  font-weight: normal;
+  line-height: 1.6;
+  text-align: start;
+  color: rgb(218, 218, 218);
+}
+
+.pitchSubtitle {
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: start;
+}
+
+.pitchList {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.95em;
+  font-weight: normal;
+  line-height: 1.8;
+  text-align: start;
+  color: rgb(218, 218, 218);
+}
+
+.pitchList li {
+  margin-bottom: 0.5rem;
+}
+
 /* #region general */
 
 .container {
@@ -305,8 +342,9 @@
   font-size: 3rem;
   padding: 0;
   margin: 0;
-  font-weight: normal;
+  font-weight: bold;
   color: white;
+  display: inline;
 }
 .introJobTitle {
   padding: 0;
@@ -512,6 +550,8 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around; /* or space-between */
+    max-width: 1200px;
+    width: 90%;
   }
 
   /* 
@@ -532,19 +572,19 @@
   }
 
   .eduTitleIcon {
-    width: 50px;
-    height: 50px;
+    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max (title max is 5rem) */
+    height: clamp(3rem, 1vw, 4.5rem);
     margin-right: 10px;
-    transform: translateY(5px);
+    transform: translateY(0.4rem); /* Lower the icon a bit */
   }
 
   .eduSectionTitle {
-    font-size: 3rem; /* Instead of 7vw or 90px, a bit smaller for desktop */
+    font-size: clamp(3rem, 5vw, 5rem); /* Best practice: rem units, 5vw scaling, max 5rem for ultra-wide */
     margin: 0;
   }
 
   .eduItem {
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 2rem;
@@ -563,25 +603,56 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 100%;
   }
 
   .eduItemTitle {
-    font-size: 1.2rem;
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem); /* H3 equivalent */
     margin-bottom: 0.5rem;
   }
 
   .eduItemDate {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
   }
 
   .eduDescription {
     width: 100%;
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
   }
 
   .eduLink {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
+  }
+
+  .pitchLayer {
+    max-width: 1600px; /* Increased from 1200px to allow more width on wider screens */
+    width: 90%;
+  }
+
+  .pitchContainer {
+    width: 100%;
+    max-width: 1200px; /* Increased from 900px to allow more width and prevent overlap */
+  }
+
+  .pitchText {
+    font-size: clamp(1rem, 1.5vw, 1.125rem); /* Body text best practice */
+    max-width: 100%;
+    line-height: 1.6; /* Improve readability */
+  }
+
+  .pitchSubtitle {
+    font-size: clamp(1.5rem, 2.5vw, 2rem); /* H2 equivalent */
+  }
+
+  .pitchList {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  .wmsIcon {
+    margin-right: 1.5rem; /* More padding on the right side for WMS icon */
   }
 
   .sectionTitle {
@@ -590,7 +661,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: 90px;
+    font-size: clamp(3rem, 5vw, 5rem); /* Best practice: rem units, 5vw scaling, max 5rem */
     height: 100%;
   }
   .canvasBox {
@@ -627,22 +698,23 @@
     max-width: 1000px;
   }
   .sectionTitleIcon {
-    width: 50px;
-    height: 50px;
+    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max (title max is 5rem) */
+    height: clamp(3rem, 1vw, 4.5rem);
     margin-right: 10px;
-    transform: translateY(-5px);
+    transform: translateY(-0.2rem); /* Raise the icon a bit */
+    filter: brightness(0) invert(1); /* Make icon white filled */
   }
   .sectionTitleIcon2 {
-    width: 100px;
-    height: 100px;
+    width: clamp(3.5rem, 1.2vw, 5.5rem); /* Larger max size when title is at max */
+    height: clamp(3.5rem, 1.2vw, 5.5rem);
     margin-right: 10px;
-    transform: translateY(5px);
+    transform: translateY(0.3rem); /* Push down more for better vertical centering */
   }
   .djLo2usTitleIcon {
-    width: 80px;
-    height: 80px;
+    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max */
+    height: clamp(3rem, 1vw, 4.5rem);
     margin-right: 10px;
-    transform: translateY(5px);
+    transform: translateY(0.3rem); /* Push down more for better vertical centering */
   }
 
   .leftHalf {
@@ -674,11 +746,13 @@
     width: 100%;
   }
   .introName {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 4.5vw, 4rem); /* H1 best practice */
     padding: 0;
     margin: 0;
     font-weight: bold;
     color: white;
+    line-height: 1.2;
+    display: inline;
   }
   .introJobTitle {
     padding: 0 0 0 0.3rem;
@@ -687,11 +761,25 @@
     color: white;
     text-align: start;
     width: 100%;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem); /* Slightly smaller than section titles */
+    line-height: 1.4;
+    min-height: 1.4em; /* Prevent layout shift when text wraps */
+  }
+  
+  .introJobTitle .txt-rotate {
+    display: inline-block;
+    min-height: 1.4em; /* Match line-height to prevent layout shift */
+    vertical-align: top;
   }
   .introDescription {
     width: 100%;
     max-width: 650px;
     text-align: start;
+  }
+  .introPic {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -721,18 +809,21 @@
     font-weight: normal;
   }
   .workCompany {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem); /* H2 best practice */
     font-weight: bold;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 1rem;
     width: 100%;
+    line-height: 1.3;
   }
   .workDate {
     padding: 0;
     margin: 0;
     padding-bottom: 1rem;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.5;
   }
   .workDescription {
     padding: 0;
@@ -741,6 +832,8 @@
     transition: opacity 0.5s ease-in-out;
     text-align: start;
     padding-bottom: 0.5rem;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem); /* Body text best practice */
+    line-height: 1.6; /* Improve readability */
   }
   .workDescriptionBox {
     padding: 0;
@@ -820,7 +913,8 @@
     justify-content: flex-start;
   }
   .projectLanguages {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1.5vw, 1rem); /* Small text best practice */
+    line-height: 1.5;
   }
   .projectDescription {
     max-width: 700px;
