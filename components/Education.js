@@ -35,8 +35,9 @@ export default function EducationAndCerts() {
           </Suspense>
           <div className={styles.eduInfo}>
             <h1 className={styles.eduItemTitle}>
-              University of Ottawa – BSc of Computer Science
+              University of Ottawa
             </h1>
+            <h2 className={styles.eduItemDegree}>BSc of Computer Science</h2>
             <h2 className={styles.eduItemDate}>Sep 2024 – Sep 2027</h2>
           </div>
         </div>
@@ -54,8 +55,9 @@ export default function EducationAndCerts() {
           </Suspense>
           <div className={styles.eduInfo}>
             <h1 className={styles.eduItemTitle}>
-              Algonquin College – Mobile App Design & Development
+              Algonquin College
             </h1>
+            <h2 className={styles.eduItemDegree}>Mobile App Design & Development</h2>
             <h2 className={styles.eduItemDate}>Sep 2019 – Apr 2022</h2>
           </div>
         </div>

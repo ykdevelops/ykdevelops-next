@@ -65,8 +65,8 @@
 .eduItem {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: start;
+  align-items: center;
+  text-align: center;
   font-weight: bold;
   font-size: 6vw;
   padding: 0 0 1rem 0; /* spacing below each item */
@@ -89,7 +89,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 /* 
@@ -98,6 +99,19 @@
 .eduItemTitle {
   margin: 0;
   margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* 
+  Degree/Program name (e.g., "BSc of Computer Science")
+*/
+.eduItemDegree {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.85em;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(218, 218, 218);
 }
 
 /* 
@@ -105,9 +119,10 @@
 */
 .eduItemDate {
   margin: 0;
-  margin-bottom: 1rem;
-  font-size: 0.95em;
+  margin-bottom: 0.5rem;
+  font-size: 0.6em;
   font-weight: normal;
+  text-align: center;
 }
 
 /* 
@@ -116,10 +131,11 @@
 .eduDescription {
   padding: 0 0 1rem 0;
   width: 90%;
-  font-size: 0.95em;
+  font-size: 0.75em;
   font-weight: normal;
   overflow-wrap: break-word;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* 
@@ -130,7 +146,7 @@
   margin: 0;
   text-decoration: underline;
   cursor: pointer;
-  font-size: 0.95em;
+  font-size: 0.6em;
   color: rgb(218, 218, 218); /* Adjust if needed */
   text-decoration-thickness: 1px; /* Adjust thickness of the underline */
   text-underline-offset: 4px; /* Adjust the space between text and underline */
@@ -160,6 +176,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   width: 100%;
   margin-bottom: 1rem;
@@ -178,6 +195,8 @@
   flex-direction: column;
   gap: 1.5rem;
   justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .pitchLeftColumnBottom {
@@ -185,6 +204,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
+  text-align: center;
 }
 
 .pitchIcon {
@@ -195,38 +216,36 @@
   margin-right: 1rem;
 }
 
-.pitchTitle {
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: normal;
+
+.pitchParagraphWrapper {
+  position: relative;
   margin: 0;
-  color: white;
-  line-height: 1.2;
+  margin-top: 1.5rem;
 }
 
 .pitchParagraph {
   margin: 0;
-  margin-top: 1.5rem;
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
   color: rgb(218, 218, 218);
   max-width: 600px;
+  text-align: center;
 }
 
-.pitchChips {
+.pitchGifContainer {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.5rem 0;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.pitchChip {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  font-size: 0.9rem;
-  color: rgb(218, 218, 218);
+.pitchGif {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
 }
 
 .pitchCTA {
@@ -294,6 +313,7 @@
   color: rgb(180, 180, 180);
   font-style: italic;
   max-width: 500px;
+  text-align: center;
 }
 
 .pitchRightColumn {
@@ -303,16 +323,9 @@
   gap: 2rem;
 }
 
-.pitchSubtitle {
-  margin: 0;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: bold;
-  color: white;
-}
-
 .pitchExpectationsList {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -513,7 +526,7 @@
 
 /* #region Intro */
 .introName {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -526,6 +539,13 @@
   font-weight: normal;
   color: white;
   text-align: center;
+  min-height: 1.4em;
+}
+
+.introJobTitle .txt-rotate {
+  display: inline-block;
+  min-height: 1.4em;
+  vertical-align: top;
 }
 .introDescription {
   text-align: center;
@@ -552,43 +572,79 @@
 /* #endregion Description */
 /* #region Work Experience */
 .workContainer {
+  width: 100%;
 }
 .workCompany {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: start;
+  align-items: center;
+  text-align: center;
   font-weight: bold;
   font-size: 6vw;
   padding: 0rem 0rem 1rem 0rem;
+  gap: 1rem;
+  width: 100%;
 }
+
+.workCompanyHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
 .workLogo {
   margin-right: 0rem;
+  flex-shrink: 0;
+  width: clamp(80px, 12vw, 150px);
+  height: clamp(80px, 12vw, 150px);
+  object-fit: contain;
 }
+
 .workInfo {
-  padding: 1rem 0rem 5rem 0rem;
-  width: 100%;
+  padding: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+  text-align: start;
 }
+
+.workCompanyTitle {
+  text-align: start;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
 .workDate {
   padding: 0;
   margin: 0;
+  text-align: start;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
 }
 .workDescription {
   padding: 0 0 20px 0;
-  width: 90%;
+  width: 100%;
   overflow-wrap: break-word;
+  text-align: start;
 }
 .learnMoreButton {
   background-color: transparent;
   color: rgb(218, 218, 218);
   border: none;
   display: flex;
-  margin-top: 20px;
-  transform: translateX(-3px);
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 /* #endregion Work Experience */
@@ -706,13 +762,14 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  order: 2;
 }
 
 .contactImage {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  object-fit: cover;
+
+    width: 90%;
+    height: auto;
+  
 }
 
 .contactIconLinks {
@@ -754,6 +811,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  order: 1;
 }
 
 .contactThankYou {
@@ -845,7 +903,6 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3), 0 6px 20px rgba(255, 107, 53, 0.6);
 }
-
 /* #endregion Contact */
 
 /* Laptop size*/
@@ -858,8 +915,6 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around; /* or space-between */
-    max-width: 1200px;
-    width: 90%;
   }
 
   /* 
@@ -880,19 +935,21 @@
   }
 
   .eduTitleIcon {
-    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max (title max is 5rem) */
-    height: clamp(3rem, 1vw, 4.5rem);
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
-    transform: translateY(0.4rem); /* Lower the icon a bit */
+    transform: translateY(5px);
   }
 
   .eduSectionTitle {
-    font-size: clamp(3rem, 5vw, 5rem); /* Best practice: rem units, 5vw scaling, max 5rem for ultra-wide */
+    font-size: 3rem; /* Instead of 7vw or 90px, a bit smaller for desktop */
     margin: 0;
+    text-align: left;
+    justify-content: flex-start;
   }
 
   .eduItem {
-    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    font-size: 1.4rem;
     flex-direction: row;
     align-items: flex-start;
     padding-bottom: 2rem;
@@ -911,21 +968,72 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100%;
   }
 
   .eduItemTitle {
-    font-size: clamp(1.125rem, 1.5vw, 1.5rem); /* H3 equivalent */
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  .eduItemDegree {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: rgb(218, 218, 218);
   }
 
   .eduItemDate {
     margin-bottom: 1rem;
-    font-size: clamp(0.875rem, 1.1vw, 1rem);
+    font-size: 1rem;
   }
 
   .eduDescription {
     width: 100%;
+    font-size: 1rem;
+  }
+
+  .eduLink {
+    font-size: 1rem;
+  }
+
+  .eduLayer {
+    max-width: 1200px;
+    width: 90%;
+  }
+
+  .eduTitleIcon {
+    width: clamp(3rem, 1vw, 4.5rem);
+    height: clamp(3rem, 1vw, 4.5rem);
+    transform: translateY(0.4rem);
+  }
+
+  .eduSectionTitle {
+    font-size: clamp(3rem, 5vw, 5rem);
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .eduItem {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
+  }
+
+  .eduItemTitle {
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-align: left;
+  }
+
+  .eduItemDegree {
+    font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+    text-align: left;
+    color: rgb(218, 218, 218);
+  }
+
+  .eduItemDate {
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
+  }
+
+  .eduDescription {
     font-size: clamp(0.875rem, 1.1vw, 1rem);
   }
 
@@ -940,6 +1048,7 @@
 
   .pitchTitleRow {
     margin-bottom: 2rem;
+    justify-content: flex-start;
   }
 
   .pitchContentRow {
@@ -951,11 +1060,44 @@
   .pitchLeftColumn {
     width: 50%;
     max-width: 550px;
+    align-items: flex-start;
+    text-align: start;
+    order: 2; /* Move to right side on desktop */
+  }
+
+  .pitchParagraphWrapper {
+    text-align: start;
+  }
+
+  .pitchParagraph {
+    text-align: start;
+    max-width: 100%;
+  }
+
+  .pitchGifContainer {
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
+
+  .pitchGif {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .pitchLeftColumnBottom {
+    align-items: flex-start;
+    text-align: start;
+    transform: translateY(-100px);
+  }
+
+  .pitchNote {
+    text-align: start;
   }
 
   .pitchRightColumn {
     width: 50%;
     max-width: 550px;
+    order: 1; /* Move to left side on desktop */
   }
 
   .pitchExpectationsList {
@@ -963,13 +1105,9 @@
     gap: 1.5rem;
   }
 
-  .pitchParagraph {
-    max-width: 100%;
-  }
-
   .pitchIcon {
-    width: clamp(3rem, 1vw, 4.5rem);
-    height: clamp(3rem, 1vw, 4.5rem);
+    width: clamp(4rem, 1.5vw, 6rem);
+    height: clamp(4rem, 1.5vw, 6rem);
     transform: translateY(0.3rem);
     margin-right: 1rem;
   }
@@ -980,7 +1118,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: clamp(3rem, 5vw, 5rem); /* Best practice: rem units, 5vw scaling, max 5rem */
+    font-size: clamp(3rem, 5vw, 5rem);
     height: 100%;
   }
   .canvasBox {
@@ -1017,23 +1155,23 @@
     max-width: 1000px;
   }
   .sectionTitleIcon {
-    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max (title max is 5rem) */
+    width: clamp(3rem, 1vw, 4.5rem);
     height: clamp(3rem, 1vw, 4.5rem);
     margin-right: 10px;
-    transform: translateY(-0.2rem); /* Raise the icon a bit */
-    filter: brightness(0) invert(1); /* Make icon white filled */
+    transform: translateY(-0.2rem);
+    filter: brightness(0) invert(1);
   }
   .sectionTitleIcon2 {
-    width: clamp(3.5rem, 1.2vw, 5.5rem); /* Larger max size when title is at max */
+    width: clamp(3.5rem, 1.2vw, 5.5rem);
     height: clamp(3.5rem, 1.2vw, 5.5rem);
     margin-right: 10px;
-    transform: translateY(0.3rem); /* Push down more for better vertical centering */
+    transform: translateY(0.3rem);
   }
   .djLo2usTitleIcon {
-    width: clamp(3rem, 1vw, 4.5rem); /* Larger max size when title is at max */
-    height: clamp(3rem, 1vw, 4.5rem);
+    width: clamp(2.5rem, 1vw, 4.5rem);
+    height: clamp(2.5rem, 1vw, 4.5rem);
     margin-right: 10px;
-    transform: translateY(0.3rem); /* Push down more for better vertical centering */
+    transform: translateY(0.3rem);
   }
 
   .leftHalf {
@@ -1065,7 +1203,7 @@
     width: 100%;
   }
   .introName {
-    font-size: clamp(2.5rem, 4.5vw, 4rem); /* H1 best practice */
+    font-size: clamp(2rem, 3.5vw, 3rem);
     padding: 0;
     margin: 0;
     font-weight: bold;
@@ -1080,25 +1218,25 @@
     color: white;
     text-align: start;
     width: 100%;
-    font-size: clamp(2.5rem, 4.5vw, 4.5rem); /* Slightly smaller than section titles */
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
     line-height: 1.4;
-    min-height: 1.4em; /* Prevent layout shift when text wraps */
+    min-height: 1.4em;
   }
   
   .introJobTitle .txt-rotate {
     display: inline-block;
-    min-height: 1.4em; /* Match line-height to prevent layout shift */
+    min-height: 1.4em;
     vertical-align: top;
-  }
-  .introDescription {
-    width: 100%;
-    max-width: 650px;
-    text-align: start;
   }
   .introPic {
     max-width: 500px;
     width: 100%;
     height: auto;
+  }
+  .introDescription {
+    width: 100%;
+    max-width: 650px;
+    text-align: start;
   }
   /* #endregion Intro */
   /* #region Description */
@@ -1116,33 +1254,76 @@
   }
   .workLogo {
     margin-right: 2rem;
+    width: clamp(120px, 8vw, 150px);
+    height: clamp(120px, 8vw, 150px);
   }
   .workInfo {
-    padding: 0rem 0rem 2rem 0rem;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    text-align: start;
+    flex: 1;
+    padding: 0rem 0rem 2rem 0rem;
   }
   .workTitle {
     padding-bottom: 2rem;
     font-weight: normal;
   }
   .workCompany {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem); /* H2 best practice */
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     font-weight: bold;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     padding-bottom: 1rem;
     width: 100%;
     line-height: 1.3;
   }
+
+  .workCompanyHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .workCompanyTitle {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    text-align: start;
+  }
+
   .workDate {
     padding: 0;
     margin: 0;
-    padding-bottom: 1rem;
-    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    text-align: start;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    padding-bottom: 0.25rem;
     line-height: 1.5;
+  }
+
+  /* Desktop: Position details and button to align with workInfo content (to the right of logo) */
+  .details {
+    width: calc(100% - 150px - 2rem);
+    margin-left: calc(150px + 2rem);
+    margin-top: 0;
+    transform: translate(10px, -70px);
+    /* Don't override max-height/opacity here - let base styles handle it */
+  }
+
+  .details.show {
+    width: calc(100% - 150px - 2rem);
+    margin-left: calc(150px + 2rem);
+    padding: 1rem 0rem 0rem 0rem;
+    margin-top: 0;
+    transform: translate(10px, -70px);
+    /* Don't override max-height/opacity here - let base styles handle it */
+  }
+
+  .learnMoreButton {
+    width: auto;
+    justify-content: flex-start;
+    margin-left: calc(150px + 2rem);
+    margin-top: 0.25rem;
+    transform: translate(10px, -70px);
   }
   .workDescription {
     padding: 0;
@@ -1151,8 +1332,9 @@
     transition: opacity 0.5s ease-in-out;
     text-align: start;
     padding-bottom: 0.5rem;
-    font-size: clamp(0.875rem, 1.5vw, 1.125rem); /* Body text best practice */
-    line-height: 1.6; /* Improve readability */
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+    transform: translateX(5px);
   }
   .workDescriptionBox {
     padding: 0;
@@ -1160,18 +1342,6 @@
   }
 
   /* --- Learn more button (updated) --- */
-  .learnMoreButton {
-    background-color: transparent;
-    color: whitesmoke;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px; /* nicer spacing between text and icon */
-    margin-top: 20px;
-    cursor: pointer; /* <-- key: keeps pointer over the whole button */
-  }
-
   .learnMoreButton * {
     cursor: inherit; /* children (span, icon) follow the button's cursor */
   }
@@ -1192,17 +1362,157 @@
     margin-left: 100px;
   }
 
-  /* collapse/expand */
+  /* collapse/expand - Base styles (applies to all screen sizes) */
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  width: 100%;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.details.show {
+  max-height: 500px; /* adjust to fit your content */
+  padding: 1rem 0rem 0rem 0rem;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Mobile only: Override base styles to ensure proper collapse/expand */
+@media (max-width: 1024px) {
   .details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+    width: 100% !important;
+    opacity: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
   }
 
   .details.show {
-    max-height: 500px; /* adjust to fit your content */
-    padding: 2rem 0rem 0rem 0rem;
+    max-height: 2000px !important; /* Large enough for content */
+    padding: 1rem 0rem 0rem 0rem !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    display: block !important;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
   }
+
+  .contactWrapper {
+    max-width: 300px !important;
+    width: 90%;
+  }
+
+  .contactRightColumn {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contactForm {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactFormInput,
+  .contactFormTextarea {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactImage {
+    width: clamp(200px, 70vw, 400px) !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .pitchGifContainer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
+  
+  /* Level 1: Main Section Titles (Largest) - 6-7vw */
+  .sectionTitle,
+  .eduSectionTitle {
+    font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
+    line-height: 1.2;
+  }
+
+  /* Level 2: Intro Text (Large) - 4.5-5.5vw */
+  .introName {
+    font-size: clamp(1.5rem, 5vw, 3rem) !important;
+    line-height: 1.3;
+  }
+
+  .introJobTitle {
+    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
+    line-height: 1.4;
+  }
+
+  /* Level 3: Item Titles (Medium-Large) - 3.5-4vw */
+  .eduItemTitle,
+  .workCompanyTitle,
+  .pitchExpectationTitle,
+  .contactHeadline,
+  .contactThankYou {
+    font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    line-height: 1.4;
+  }
+
+  /* Level 4: Body Text (Medium) - 2.75-3.25vw */
+  .pitchParagraph,
+  .workDescription,
+  .eduDescription,
+  .pitchExpectationDescription,
+  .contactFormLabel {
+    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+    line-height: 1.6;
+  }
+
+  /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
+  .eduItemDegree,
+  .pitchNote {
+    font-size: clamp(0.8125rem, 2.625vw, 1.125rem) !important;
+    line-height: 1.5;
+  }
+
+  /* Level 6: Small Text (Dates, Links, etc.) - 2.25-2.5vw */
+  .workDate,
+  .contactFormInput,
+  .contactFormTextarea,
+  .contactIconLabel {
+    font-size: clamp(0.75rem, 2.375vw, 1rem) !important;
+    line-height: 1.5;
+  }
+
+  /* Education Date - Larger for readability */
+  .eduItemDate {
+    font-size: clamp(0.875rem, 2.75vw, 1.125rem) !important;
+    line-height: 1.5;
+  }
+
+  /* Level 7: Smallest Text (Links, Notes) - 2-2.25vw */
+  .eduLink {
+    font-size: clamp(0.8125rem, 2.5vw, 1rem) !important;
+    line-height: 1.4;
+  }
+
+  /* Buttons - 2.75-3.25vw */
+  .pitchCTA,
+  .contactSubmitButton,
+  .learnMoreButton {
+    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+    padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
 
   /* motion preference */
   @media (prefers-reduced-motion: reduce) {
@@ -1232,8 +1542,7 @@
     justify-content: flex-start;
   }
   .projectLanguages {
-    font-size: clamp(0.875rem, 1.5vw, 1rem); /* Small text best practice */
-    line-height: 1.5;
+    font-size: 1rem;
   }
   .projectDescription {
     max-width: 700px;
@@ -1291,6 +1600,7 @@
     width: 50%;
     max-width: 550px;
     align-items: center;
+    order: 1;
   }
 
   .contactImage {
@@ -1312,8 +1622,8 @@
   .contactRightColumn {
     width: 50%;
     max-width: 500px;
+    order: 2;
   }
-
 
   .contactHeadline {
     margin-bottom: 1rem;
@@ -1324,3 +1634,4 @@
   }
   /* #endregion Contact */
 }
+

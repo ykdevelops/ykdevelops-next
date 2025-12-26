@@ -18,16 +18,29 @@ export default function Pitch() {
               className={styles.pitchIcon}
             />
           </Suspense>
-          <h1 className={styles.pitchTitle}>Web Management Service</h1>
+          <h1 className={styles.sectionTitle}>Web Management Service</h1>
         </div>
 
         {/* Content Row - Two Columns */}
         <div className={styles.pitchContentRow}>
           <div className={styles.pitchLeftColumn}>
             {/* Main Paragraph */}
-            <p className={styles.pitchParagraph}>
-              Whether you are starting a new website from an initial conversation or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay tech stress free and focused on your business.
-            </p>
+            <div className={styles.pitchParagraphWrapper}>
+              <p className={styles.pitchParagraph}>
+                Whether you are starting a new website from an initial conversation or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay stress free and focused on your business.
+              </p>
+              <div className={styles.pitchGifContainer}>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Image
+                    src="/ykwebservice.gif"
+                    alt="web service illustration"
+                    width={200}
+                    height={200}
+                    className={styles.pitchGif}
+                  />
+                </Suspense>
+              </div>
+            </div>
 
             {/* Bottom Section */}
             <div className={styles.pitchLeftColumnBottom}>
@@ -80,3 +93,4 @@ export default function Pitch() {
     </div>
   );
 }
+
