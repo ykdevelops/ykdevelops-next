@@ -8,19 +8,75 @@ export default function Contact() {
         email: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+    const [submitMessage, setSubmitMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
+        // Clear status message when user starts typing
+        if (submitStatus) {
+            setSubmitStatus(null);
+            setSubmitMessage('');
+        }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log('Form submitted:', formData);
-        // You can add your form submission logic here
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+        setSubmitMessage('');
+
+        try {
+            // Create a timeout promise
+            const timeoutPromise = new Promise((_, reject) => 
+                setTimeout(() => reject(new Error('Request timeout')), 15000)
+            );
+
+            // Create the fetch promise
+            const fetchPromise = fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Race between fetch and timeout
+            const response = await Promise.race([fetchPromise, timeoutPromise]);
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setSubmitMessage('Thank you! Your message has been sent successfully.');
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
+            } else {
+                setSubmitStatus('error');
+                // Show detailed error message from API
+                const errorMsg = data.message || data.error || 'Failed to send message. Please try again.';
+                console.error('API Error Response:', data);
+                setSubmitMessage(errorMsg);
+            }
+        } catch (error) {
+            setSubmitStatus('error');
+            if (error.message === 'Request timeout') {
+                setSubmitMessage('Request timed out. Please check your connection and try again.');
+            } else {
+                setSubmitMessage('An error occurred. Please try again later.');
+            }
+            console.error('Error submitting form:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -168,9 +224,25 @@ export default function Contact() {
                             />
                         </div>
 
-                        <button type="submit" className={styles.contactSubmitButton}>
-                            Send Message
+                        <button 
+                            type="submit" 
+                            className={styles.contactSubmitButton}
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
                         </button>
+                        
+                        {submitStatus && (
+                            <div 
+                                className={`${styles.contactFormMessage} ${
+                                    submitStatus === 'success' 
+                                        ? styles.contactFormMessageSuccess 
+                                        : styles.contactFormMessageError
+                                }`}
+                            >
+                                {submitMessage}
+                            </div>
+                        )}
                     </form>
                 </div>
             </div>

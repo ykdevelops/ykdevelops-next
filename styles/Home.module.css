@@ -29,7 +29,7 @@
 */
 .eduTitleRow {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
@@ -53,7 +53,7 @@
   font-weight: normal;
   font-size: 7vw;
   margin: 0;
-  padding-top: 5px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,11 +240,15 @@
   width: 100%;
 }
 
-.pitchGif {
-  width: auto;
-  height: auto;
+.pitchGifWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
   max-width: 200px;
   max-height: 200px;
+}
+
+.pitchGif {
   object-fit: contain;
 }
 
@@ -414,7 +418,7 @@
   /* padding: 5rem 2rem 5rem 2rem; */
   font-weight: normal;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   font-size: 7vw;
   height: 100%;
@@ -533,7 +537,7 @@
   color: white;
   display: inline;
 }
-.introJobTitle {
+.introGreeting {
   padding: 0;
   margin: 0;
   font-weight: normal;
@@ -542,13 +546,19 @@
   min-height: 1.4em;
 }
 
-.introJobTitle .txt-rotate {
+.introDescription {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  min-height: 1.4em;
+}
+
+.introDescription .txt-rotate {
   display: inline-block;
   min-height: 1.4em;
   vertical-align: top;
-}
-.introDescription {
-  text-align: center;
 }
 .introPic {
   width: 90%;
@@ -584,6 +594,7 @@
   padding: 0rem 0rem 1rem 0rem;
   gap: 1rem;
   width: 100%;
+  min-height: 0; /* Fix flexbox min-size quirk */
 }
 
 .workCompanyHeader {
@@ -617,17 +628,20 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
 .workDate {
   padding: 0;
   margin: 0;
+  margin-bottom: 0.75rem;
   text-align: start;
   font-size: clamp(1rem, 3.5vw, 1.5rem);
 }
 .workDescription {
-  padding: 0 0 20px 0;
+  padding: 0;
+  margin-top: 0;
   width: 100%;
   overflow-wrap: break-word;
   text-align: start;
@@ -891,6 +905,8 @@
   animation: gradientWave 3s ease infinite;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
   align-self: flex-start;
+  will-change: transform, background-position;
+  backface-visibility: hidden;
 }
 
 .contactSubmitButton:hover {
@@ -903,6 +919,50 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3), 0 6px 20px rgba(255, 107, 53, 0.6);
 }
+
+.contactSubmitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  animation: none !important;
+  pointer-events: none;
+}
+
+.contactFormMessage {
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  text-align: center;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease-in;
+  min-height: 0;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+.contactFormMessageSuccess {
+  background-color: rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.4);
+  color: #4caf50;
+}
+
+.contactFormMessageError {
+  background-color: rgba(244, 67, 54, 0.2);
+  border: 1px solid rgba(244, 67, 54, 0.4);
+  color: #f44336;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* #endregion Contact */
 
 /* Laptop size*/
@@ -1003,8 +1063,8 @@
   }
 
   .eduTitleIcon {
-    width: clamp(3rem, 1vw, 4.5rem);
-    height: clamp(3rem, 1vw, 4.5rem);
+    width: 64px;
+    height: 64px;
     transform: translateY(0.4rem);
   }
 
@@ -1106,20 +1166,24 @@
   }
 
   .pitchIcon {
-    width: clamp(4rem, 1.5vw, 6rem);
-    height: clamp(4rem, 1.5vw, 6rem);
+    width: 64px;
+    height: 64px;
     transform: translateY(0.3rem);
-    margin-right: 1rem;
+    margin-right: 0;
   }
 
   .sectionTitle {
     padding: 1rem 1rem 1rem 1rem;
     font-weight: normal;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     font-size: clamp(3rem, 5vw, 5rem);
     height: 100%;
+  }
+
+  .containerTitleRow {
+    justify-content: flex-start;
   }
   .canvasBox {
     display: flex;
@@ -1155,24 +1219,19 @@
     max-width: 1000px;
   }
   .sectionTitleIcon {
-    width: clamp(3rem, 1vw, 4.5rem);
-    height: clamp(3rem, 1vw, 4.5rem);
+    width: 64px;
+    height: 64px;
     margin-right: 10px;
     transform: translateY(-0.2rem);
     filter: brightness(0) invert(1);
   }
   .sectionTitleIcon2 {
-    width: clamp(3.5rem, 1.2vw, 5.5rem);
-    height: clamp(3.5rem, 1.2vw, 5.5rem);
+    width: 64px;
+    height: 64px;
     margin-right: 10px;
     transform: translateY(0.3rem);
   }
-  .djLo2usTitleIcon {
-    width: clamp(2.5rem, 1vw, 4.5rem);
-    height: clamp(2.5rem, 1vw, 4.5rem);
-    margin-right: 10px;
-    transform: translateY(0.3rem);
-  }
+
 
   .leftHalf {
     width: 50%;
@@ -1197,8 +1256,8 @@
   .textContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: start;
     width: 100%;
   }
@@ -1211,25 +1270,37 @@
     line-height: 1.2;
     display: inline;
   }
-  .introJobTitle {
-    padding: 0 0 0 0.3rem;
+  .introGreeting {
+    padding: 0;
     margin: 0;
     font-weight: normal;
     color: white;
     text-align: start;
     width: 100%;
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    line-height: 1.4;
+    min-height: 1.4em;
+  }
+
+  .introDescription {
+    padding: 1rem 0 0 0;
+    margin: 0;
+    font-weight: normal;
+    color: white;
+    text-align: start;
+    width: 100%;
+    font-size: clamp(0.875rem, 2.5vw, 2.5rem);
     line-height: 1.4;
     min-height: 1.4em;
   }
   
-  .introJobTitle .txt-rotate {
+  .introDescription .txt-rotate {
     display: inline-block;
     min-height: 1.4em;
     vertical-align: top;
   }
   .introPic {
-    max-width: 500px;
+    max-width: 650px;
     width: 100%;
     height: auto;
   }
@@ -1289,27 +1360,21 @@
   .workCompanyTitle {
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     text-align: start;
+    margin-bottom: 0.5rem;
   }
 
   .workDate {
     padding: 0;
     margin: 0;
+    margin-bottom: 1rem;
     text-align: start;
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    padding-bottom: 0.25rem;
     line-height: 1.5;
   }
 
-  /* Desktop: Position details and button to align with workInfo content (to the right of logo) */
-  .details {
-    width: calc(100% - 150px - 2rem);
-    margin-left: calc(150px + 2rem);
-    margin-top: 0;
-    transform: translate(10px, -70px);
-    /* Don't override max-height/opacity here - let base styles handle it */
-  }
+  
 
-  .details.show {
+  .details.detailsShow {
     width: calc(100% - 150px - 2rem);
     margin-left: calc(150px + 2rem);
     padding: 1rem 0rem 0rem 0rem;
@@ -1327,11 +1392,11 @@
   }
   .workDescription {
     padding: 0;
+    margin-top: 0;
     width: 100%;
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
     text-align: start;
-    padding-bottom: 0.5rem;
     font-size: clamp(0.875rem, 1.5vw, 1.125rem);
     line-height: 1.6;
     transform: translateX(5px);
@@ -1363,43 +1428,54 @@
   }
 
   /* collapse/expand - Base styles (applies to all screen sizes) */
+.show {
+  /* Standalone show class for CSS Modules export - used as a modifier class */
+  /* The actual styles are applied via .details.detailsShow compound selector */
+  display: block;
+}
+
 .details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  width: 100%;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   padding: 0;
-  margin: 0;
+  width: calc(100% - 150px - 2rem);
+  margin-left: calc(150px + 2rem);
+  margin-top: 0;
+  transform: translate(10px, -70px);
+  min-height: 0; /* Critical for flex items - allows shrinking below content size */
+  min-width: 0; /* Also add this for safety */
 }
 
-.details.show {
+/* Open state - only when BOTH classes are present */
+.details.detailsShow {
   max-height: 500px; /* adjust to fit your content */
   padding: 1rem 0rem 0rem 0rem;
   width: 100%;
   opacity: 1;
+  overflow: hidden;
 }
 
 /* Mobile only: Override base styles to ensure proper collapse/expand */
 @media (max-width: 1024px) {
+  /* Base details - hidden by default */
   .details {
-    max-height: 0 !important;
-    overflow: hidden !important;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
-    width: 100% !important;
-    opacity: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: block !important;
+    width: 100%;
+    margin: 0;
+    margin-left: 0;
+    transform: none;
   }
 
-  .details.show {
-    max-height: 2000px !important; /* Large enough for content */
-    padding: 1rem 0rem 0rem 0rem !important;
-    width: 100% !important;
-    opacity: 1 !important;
-    display: block !important;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+  /* Show state - visible when BOTH classes are present */
+  .details.detailsShow {
+    max-height: 2000px; /* Large enough for content */
+    padding: 1rem 0rem 0rem 0rem;
+    width: 100%;
+    opacity: 1;
+    overflow: hidden;
+    margin-left: 0;
+    transform: none;
   }
 
   .contactWrapper {
@@ -1452,9 +1528,18 @@
     line-height: 1.3;
   }
 
-  .introJobTitle {
+  .introGreeting {
     font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
     line-height: 1.4;
+  }
+
+  .introDescription {
+    font-size: clamp(0.875rem, 3.25vw, 1.5rem) !important;
+    line-height: 1.4;
+  }
+
+  .introDescription .txt-rotate {
+    font-size: clamp(0.875rem, 3.25vw, 1.5rem) !important;
   }
 
   /* Level 3: Item Titles (Medium-Large) - 3.5-4vw */

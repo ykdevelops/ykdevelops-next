@@ -31,13 +31,15 @@ export default function Pitch() {
               </p>
               <div className={styles.pitchGifContainer}>
                 <Suspense fallback={<div>Loading...</div>}>
-                  <Image
-                    src="/ykwebservice.gif"
-                    alt="web service illustration"
-                    width={200}
-                    height={200}
-                    className={styles.pitchGif}
-                  />
+                  <div className={styles.pitchGifWrapper}>
+                    <Image
+                      src="/ykwebservice.gif"
+                      alt="web service illustration"
+                      fill
+                      className={styles.pitchGif}
+                      sizes="(max-width: 768px) 250px, 200px"
+                    />
+                  </div>
                 </Suspense>
               </div>
             </div>
