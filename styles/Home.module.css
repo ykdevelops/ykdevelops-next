@@ -137,40 +137,214 @@
 }
 
 /* 
-  Pitch section styles
+  Pitch section styles - New two-column layout
 */
-.pitchText {
-  margin: 0;
-  margin-bottom: 1.5rem;
-  font-size: 0.95em;
+.pitchSection {
+  width: 100%;
+  padding: 5rem 0;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pitchWrapper {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pitchTitleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.pitchContentRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pitchLeftColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.pitchLeftColumnBottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pitchIcon {
+  width: clamp(3rem, 1vw, 4.5rem);
+  height: clamp(3rem, 1vw, 4.5rem);
+  flex-shrink: 0;
+  transform: translateY(0.3rem);
+  margin-right: 1rem;
+}
+
+.pitchTitle {
+  font-size: clamp(3rem, 5vw, 5rem);
   font-weight: normal;
+  margin: 0;
+  color: white;
+  line-height: 1.2;
+}
+
+.pitchParagraph {
+  margin: 0;
+  margin-top: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
-  text-align: start;
   color: rgb(218, 218, 218);
+  max-width: 600px;
+}
+
+.pitchChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.pitchChip {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: rgb(218, 218, 218);
+}
+
+.pitchCTA {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: gradientWave 3s ease infinite;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.pitchCTA::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 2s infinite;
+}
+
+.pitchCTA:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  animation-duration: 2s;
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.pitchNote {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgb(180, 180, 180);
+  font-style: italic;
+  max-width: 500px;
+}
+
+.pitchRightColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .pitchSubtitle {
   margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.2em;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: bold;
-  text-align: start;
+  color: white;
 }
 
-.pitchList {
+.pitchExpectationsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pitchExpectationItem {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pitchExpectationItem:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pitchExpectationTitle {
+  margin: 0 0 0.75rem 0;
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  color: white;
+}
+
+.pitchExpectationDescription {
   margin: 0;
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.95em;
-  font-weight: normal;
-  line-height: 1.8;
-  text-align: start;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  line-height: 1.6;
   color: rgb(218, 218, 218);
-}
-
-.pitchList li {
-  margin-bottom: 0.5rem;
 }
 
 /* #region general */
@@ -508,36 +682,170 @@
 }
 /* #endregion Studio */
 /* #region Contact */
-.contactIcon {
-  padding: 1rem 1rem 0 0;
-  width: 50px;
-  height: 50px;
-  transition: all 0.2s ease-in-out;
-}
-
-.contactRow {
-  display: flex;
-  flex-direction: row;
-}
-.contactItem {
+.contactSection {
+  width: 100%;
+  padding: 2.5rem 0;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
-.contactInfo {
-  margin: 20px 0;
+
+.contactWrapper {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.contactLeftColumn {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
+
 .contactImage {
-  width: 300px;
-  height: 300px;
-  margin-right: 0rem;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.contactDescription {
+
+.contactIconLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.contactIconLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contactIconLink:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.2));
+}
+
+.contactIconSmall {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contactIconLabel {
+  font-size: 0.875rem;
+  color: rgb(218, 218, 218);
   text-align: center;
 }
+
+.contactRightColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactThankYou {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: rgb(218, 218, 218);
+  font-weight: normal;
+}
+
+.contactHeadline {
+  margin: 0;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: white;
+  font-weight: normal;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+.contactFormField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.contactFormLabel {
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  color: rgb(218, 218, 218);
+  font-weight: 500;
+}
+
+.contactFormInput,
+.contactFormTextarea {
+  padding: 0.625rem 0.875rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  color: white;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.contactFormInput:focus,
+.contactFormTextarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.contactFormTextarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.contactSubmitButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: gradientWave 3s ease infinite;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  align-self: flex-start;
+}
+
+.contactSubmitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  animation-duration: 2s;
+}
+
+.contactSubmitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3), 0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
 /* #endregion Contact */
 
 /* Laptop size*/
@@ -625,34 +933,45 @@
     font-size: clamp(0.875rem, 1.1vw, 1rem);
   }
 
-  .pitchLayer {
-    max-width: 1600px; /* Increased from 1200px to allow more width on wider screens */
-    width: 90%;
+  /* Pitch section - Desktop two-column layout */
+  .pitchSection {
+    padding: 6rem 0;
   }
 
-  .pitchContainer {
-    width: 100%;
-    max-width: 1200px; /* Increased from 900px to allow more width and prevent overlap */
+  .pitchTitleRow {
+    margin-bottom: 2rem;
   }
 
-  .pitchText {
-    font-size: clamp(1rem, 1.5vw, 1.125rem); /* Body text best practice */
+  .pitchContentRow {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4rem;
+  }
+
+  .pitchLeftColumn {
+    width: 50%;
+    max-width: 550px;
+  }
+
+  .pitchRightColumn {
+    width: 50%;
+    max-width: 550px;
+  }
+
+  .pitchExpectationsList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pitchParagraph {
     max-width: 100%;
-    line-height: 1.6; /* Improve readability */
   }
 
-  .pitchSubtitle {
-    font-size: clamp(1.5rem, 2.5vw, 2rem); /* H2 equivalent */
-  }
-
-  .pitchList {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
-    max-width: 100%;
-    line-height: 1.6;
-  }
-
-  .wmsIcon {
-    margin-right: 1.5rem; /* More padding on the right side for WMS icon */
+  .pitchIcon {
+    width: clamp(3rem, 1vw, 4.5rem);
+    height: clamp(3rem, 1vw, 4.5rem);
+    transform: translateY(0.3rem);
+    margin-right: 1rem;
   }
 
   .sectionTitle {
@@ -958,45 +1277,50 @@
   /* #endregion Project */
 
   /* #region Contact */
-  .contactIcon {
-    padding: 1rem 1rem 0 0;
-    width: 100px;
-    height: 100px;
-    transition: all 0.2s ease-in-out;
+  .contactSection {
+    padding: 3rem 0;
   }
-  .contactIcon:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-    margin: 0 2rem;
-  }
-  .contactRow {
-    display: flex;
+
+  .contactWrapper {
     flex-direction: row;
+    align-items: center;
+    gap: 3rem;
   }
-  .contactItem {
-    margin-top: 0;
-  }
-  .contactInfo {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
+
+  .contactLeftColumn {
+    width: 50%;
+    max-width: 550px;
     align-items: center;
   }
+
   .contactImage {
-    margin-right: 2rem;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
   }
-  .contactDescription {
-    text-align: start;
-    max-width: 700px;
-    width: 100%;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+
+  .contactIconLinks {
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    justify-content: center;
   }
-  .socialIcons {
-    width: 100%;
-    padding-top: 2rem;
+
+  .contactIconSmall {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contactRightColumn {
+    width: 50%;
+    max-width: 500px;
+  }
+
+
+  .contactHeadline {
+    margin-bottom: 1rem;
+  }
+
+  .contactForm {
+    gap: 0.875rem;
   }
   /* #endregion Contact */
 }
