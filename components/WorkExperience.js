@@ -10,7 +10,7 @@ export default function WorkExperience() {
                 <div className={styles.containerTitleRow}>
                     <Suspense fallback={<div className={styles['loading-image']}></div>}>
                         <Image
-                            src='https://ykdevelops.s3.us-east-2.amazonaws.com/work/workIcon.gif'
+                            src='/suitcase.svg'
                             alt='work icon'
                             width={150}
                             height={150}

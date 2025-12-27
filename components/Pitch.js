@@ -4,6 +4,17 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Pitch() {
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
@@ -15,51 +26,16 @@ export default function Pitch() {
               alt="webManagementIcon"
               width={150}
               height={150}
-              className={styles.pitchIcon}
+              className={styles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.sectionTitle}>Web Management Service</h1>
+          <h1 className={styles.sectionTitle}>Website Service</h1>
         </div>
 
         {/* Content Row - Two Columns */}
         <div className={styles.pitchContentRow}>
+          {/* Left Column - Expectations (appears on left on desktop) */}
           <div className={styles.pitchLeftColumn}>
-            {/* Main Paragraph */}
-            <div className={styles.pitchParagraphWrapper}>
-              <p className={styles.pitchParagraph}>
-                Whether you are starting a new website from an initial conversation or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay stress free and focused on your business.
-              </p>
-              <div className={styles.pitchGifContainer}>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <div className={styles.pitchGifWrapper}>
-                    <Image
-                      src="/ykwebservice.gif"
-                      alt="web service illustration"
-                      fill
-                      className={styles.pitchGif}
-                      sizes="(max-width: 768px) 250px, 200px"
-                    />
-                  </div>
-                </Suspense>
-              </div>
-            </div>
-
-            {/* Bottom Section */}
-            <div className={styles.pitchLeftColumnBottom}>
-              {/* CTA Button */}
-              <Link href="#contact" className={styles.pitchCTA}>
-                Get in touch
-              </Link>
-
-              {/* Small note */}
-              <p className={styles.pitchNote}>
-                Best for small businesses that want peace of mind and one person responsible for the website.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div className={styles.pitchRightColumn}>
             <div className={styles.pitchExpectationsList}>
               <div className={styles.pitchExpectationItem}>
                 <h3 className={styles.pitchExpectationTitle}>Reliable updates</h3>
@@ -88,6 +64,42 @@ export default function Pitch() {
                   Available when you need changes or have questions.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Right Column - Content with paragraph, button, and image (appears on right on desktop) */}
+          <div className={styles.pitchRightColumn}>
+            {/* Main Paragraph */}
+            <div className={styles.pitchParagraphWrapper}>
+              <p className={styles.pitchParagraph}>
+                Whether you are starting a new website or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay stress free and focused on your business.
+              </p>
+            </div>
+
+            {/* Button and Image Row (mobile) / Bottom Section (desktop) */}
+            <div className={styles.pitchButtonImageRow}>
+              {/* CTA Button */}
+              <a href="#contact" onClick={handleScrollToContact} className={styles.pitchCTA}>
+                Get in touch
+              </a>
+
+              <div className={styles.pitchGifContainer}>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <div className={styles.pitchGifWrapper}>
+                    <Image
+                      src="/ykwebservice.gif"
+                      alt="web service illustration"
+                      fill
+                      className={styles.pitchGif}
+                      sizes="(max-width: 768px) 250px, 200px"
+                    />
+                  </div>
+                </Suspense>
+              </div>
+            </div>
+
+            {/* Small note */}
+            <div className={styles.pitchRightColumnBottom}>
             </div>
           </div>
         </div>

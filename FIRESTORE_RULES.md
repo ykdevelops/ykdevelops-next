@@ -71,3 +71,5 @@ After setting up the rules, try submitting the contact form again. The data shou
 - Consider adding rate limiting or App Check for additional protection in production
 - Never allow client-side updates or deletes of contact submissions
 
+
+

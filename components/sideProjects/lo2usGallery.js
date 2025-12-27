@@ -13,7 +13,7 @@ export default function lo2usGallery() {
                         alt='side projects logo'
                         width={150}
                         height={150}
-                        className={styles.djLo2usTitleIcon}
+                        className={styles.sectionTitleIcon}
                     />
                 </Suspense>
                 <h1 className={styles.sectionTitle}>Side Projects</h1>

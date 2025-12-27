@@ -16,10 +16,10 @@ export default function EducationAndCerts() {
               alt="educationIcon"
               width={150}
               height={150}
-              className={styles.eduTitleIcon}
+              className={styles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.eduSectionTitle}>Education</h1>
+          <h1 className={styles.sectionTitle}>Education</h1>
         </div>
 
         {/* University of Ottawa (Current) */}
@@ -34,10 +34,11 @@ export default function EducationAndCerts() {
             />
           </Suspense>
           <div className={styles.eduInfo}>
+          <h2 className={styles.eduItemDegree}>Honours BSc Computer Science</h2>
             <h1 className={styles.eduItemTitle}>
               University of Ottawa
             </h1>
-            <h2 className={styles.eduItemDegree}>BSc of Computer Science</h2>
+            
             <h2 className={styles.eduItemDate}>Sep 2024 – Sep 2027</h2>
           </div>
         </div>
@@ -54,10 +55,11 @@ export default function EducationAndCerts() {
             />
           </Suspense>
           <div className={styles.eduInfo}>
+          <h2 className={styles.eduItemDegree}>Mobile App Design & Development</h2>
             <h1 className={styles.eduItemTitle}>
               Algonquin College
             </h1>
-            <h2 className={styles.eduItemDegree}>Mobile App Design & Development</h2>
+            
             <h2 className={styles.eduItemDate}>Sep 2019 – Apr 2022</h2>
           </div>
         </div>
@@ -76,10 +78,10 @@ export default function EducationAndCerts() {
               alt="certIcon"
               width={150}
               height={150}
-              className={styles.eduTitleIcon}
+              className={styles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.eduSectionTitle}>Certifications</h1>
+          <h1 className={styles.sectionTitle}>Certifications</h1>
         </div>
 
         {/* Google Cybersecurity Specialization */}
@@ -103,7 +105,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential
+              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>
@@ -128,7 +130,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential
+              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>
@@ -154,7 +156,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential
+              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>

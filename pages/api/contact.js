@@ -1,5 +1,6 @@
 import { db } from '../../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { sendEmail, isSESConfigured } from '../../lib/aws-ses';
 
 export default async function handler(req, res) {
   console.log('=== Contact API Request ===');
@@ -9,25 +10,6 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
-  // Check if Firebase is configured
-  if (!db) {
-    console.error('Firebase is not configured. Please check your .env.local file.');
-    console.error('Environment variables check:', {
-      apiKey: !!process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-      authDomain: !!process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-      projectId: !!process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-      storageBucket: !!process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-      messagingSenderId: !!process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-      appId: !!process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-    });
-    return res.status(500).json({ 
-      error: 'Server configuration error',
-      message: 'Firebase is not configured. Please check your .env.local file and restart the server.' 
-    });
-  }
-  
-  console.log('Firebase is configured');
 
   try {
     const { name, email, message } = req.body;
@@ -43,50 +25,158 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // Add document to Firestore with timeout
-    const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Request timeout')), 10000)
-    );
+    // Sanitize inputs
+    const sanitizedName = name.trim();
+    const sanitizedEmail = email.trim();
+    const sanitizedMessage = message.trim();
 
-    const addDocPromise = addDoc(collection(db, 'contacts'), {
-      name: name.trim(),
-      email: email.trim(),
-      message: message.trim(),
-      timestamp: serverTimestamp(),
-      read: false,
-    });
+    const results = {
+      firestore: null,
+      ses: null,
+    };
 
-    const docRef = await Promise.race([addDocPromise, timeoutPromise]);
+    // Try to save to Firestore (if configured)
+    if (db) {
+      try {
+        const timeoutPromise = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Request timeout')), 10000)
+        );
 
+        const addDocPromise = addDoc(collection(db, 'contacts'), {
+          name: sanitizedName,
+          email: sanitizedEmail,
+          message: sanitizedMessage,
+          timestamp: serverTimestamp(),
+          read: false,
+        });
+
+        const docRef = await Promise.race([addDocPromise, timeoutPromise]);
+        results.firestore = { success: true, id: docRef.id };
+        console.log('Saved to Firestore:', docRef.id);
+      } catch (error) {
+        console.error('Firestore error:', error);
+        results.firestore = { success: false, error: error.message };
+      }
+    }
+
+    // Try to send email via AWS SES (if configured)
+    if (isSESConfigured()) {
+      try {
+        const subject = `New Contact Form Submission from ${sanitizedName}`;
+        const htmlBody = `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8">
+              <style>
+                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+                .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+                .header { background-color: #3f3d6b; color: white; padding: 20px; text-align: center; }
+                .content { background-color: #f9f9f9; padding: 20px; margin-top: 20px; }
+                .field { margin-bottom: 15px; }
+                .label { font-weight: bold; color: #3f3d6b; }
+                .value { margin-top: 5px; padding: 10px; background-color: white; border-left: 3px solid #3f3d6b; }
+                .footer { margin-top: 20px; padding: 10px; text-align: center; color: #666; font-size: 12px; }
+              </style>
+            </head>
+            <body>
+              <div class="container">
+                <div class="header">
+                  <h1>New Contact Form Submission</h1>
+                </div>
+                <div class="content">
+                  <div class="field">
+                    <div class="label">Name:</div>
+                    <div class="value">${sanitizedName}</div>
+                  </div>
+                  <div class="field">
+                    <div class="label">Email:</div>
+                    <div class="value"><a href="mailto:${sanitizedEmail}">${sanitizedEmail}</a></div>
+                  </div>
+                  <div class="field">
+                    <div class="label">Message:</div>
+                    <div class="value">${sanitizedMessage.replace(/\n/g, '<br>')}</div>
+                  </div>
+                </div>
+                <div class="footer">
+                  <p>This email was sent from your portfolio contact form.</p>
+                  <p>Timestamp: ${new Date().toLocaleString()}</p>
+                </div>
+              </div>
+            </body>
+          </html>
+        `;
+
+        const textBody = `
+New Contact Form Submission
+
+Name: ${sanitizedName}
+Email: ${sanitizedEmail}
+Message: ${sanitizedMessage}
+
+Timestamp: ${new Date().toLocaleString()}
+        `.trim();
+
+        const sesResult = await sendEmail({
+          to: process.env.AWS_SES_TO_EMAIL,
+          from: process.env.AWS_SES_FROM_EMAIL,
+          subject: subject,
+          htmlBody: htmlBody,
+          textBody: textBody,
+        });
+
+        results.ses = { success: true, messageId: sesResult.messageId };
+        console.log('Email sent via SES:', sesResult.messageId);
+      } catch (error) {
+        console.error('SES error:', error);
+        results.ses = { success: false, error: error.message };
+      }
+    }
+
+    // Check if at least one method succeeded
+    const hasSuccess = results.firestore?.success || results.ses?.success;
+
+    if (!hasSuccess) {
+      // If neither method is configured or both failed
+      if (!db && !isSESConfigured()) {
+        return res.status(500).json({ 
+          error: 'Server configuration error',
+          message: 'Neither Firestore nor AWS SES is configured. Please check your .env.local file.' 
+        });
+      }
+
+      // If both methods failed
+      return res.status(500).json({ 
+        error: 'Failed to submit contact form',
+        message: 'Unable to save your message. Please try again later.',
+        details: {
+          firestore: results.firestore,
+          ses: results.ses,
+        }
+      });
+    }
+
+    // Success - at least one method worked
     return res.status(200).json({ 
       success: true, 
-      id: docRef.id,
-      message: 'Contact form submitted successfully' 
+      message: 'Contact form submitted successfully. We will get back to you soon!',
+      results: {
+        firestore: results.firestore,
+        ses: results.ses,
+      }
     });
   } catch (error) {
-    // Log full error details for debugging
     console.error('=== Contact Form Error ===');
     console.error('Error message:', error.message);
     console.error('Error code:', error.code);
-    console.error('Error name:', error.name);
-    console.error('Full error:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
     console.error('Stack trace:', error.stack);
     console.error('========================');
     
-    // Provide more specific error messages
     let errorMessage = 'Failed to submit contact form';
     let statusCode = 500;
     
     if (error.message === 'Request timeout') {
       errorMessage = 'Request timed out. Please try again.';
-    } else if (error.code === 'permission-denied') {
-      errorMessage = 'Permission denied. Please check Firestore security rules.';
-      statusCode = 403;
-    } else if (error.code === 'unavailable') {
-      errorMessage = 'Firestore service is unavailable. Please try again later.';
-      statusCode = 503;
-    } else if (error.code === 'failed-precondition') {
-      errorMessage = 'Firestore operation failed. Please check your database configuration.';
     } else if (error.message) {
       errorMessage = error.message;
     }
@@ -94,9 +184,7 @@ export default async function handler(req, res) {
     return res.status(statusCode).json({ 
       error: 'Failed to submit contact form',
       message: errorMessage,
-      code: error.code || 'unknown',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      code: error.code || 'unknown'
     });
   }
 }
-
