@@ -224,13 +224,15 @@ export default function Contact() {
                             />
                         </div>
 
-                        <button 
-                            type="submit" 
-                            className={styles.contactSubmitButton}
-                            disabled={isSubmitting}
-                        >
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
-                        </button>
+                        <div className={styles.contactSubmitButtonContainer}>
+                            <button 
+                                type="submit" 
+                                className={styles.contactSubmitButton}
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                        </div>
                         
                         {submitStatus && (
                             <div 

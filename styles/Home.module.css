@@ -102,7 +102,7 @@
   margin: 0;
   margin-bottom: 0.5rem;
   text-align: center;
-  font-size: 0.5em;
+  font-size: 1em;
 }
 
 /* 
@@ -916,6 +916,12 @@
   min-height: 80px;
 }
 
+.contactSubmitButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
 .contactSubmitButton {
   padding: 1rem 2rem;
   background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
@@ -927,12 +933,10 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 0.5rem;
   position: relative;
   overflow: hidden;
   animation: gradientWave 3s ease infinite;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-  align-self: flex-start;
   will-change: transform, background-position;
   backface-visibility: hidden;
 }
@@ -1544,6 +1548,10 @@
     box-sizing: border-box;
   }
 
+  .contactSubmitButtonContainer {
+    justify-content: center !important;
+  }
+
   .contactImage {
     width: clamp(200px, 70vw, 400px) !important;
     height: auto !important;
@@ -1621,13 +1629,18 @@
   }
 
   /* Level 3: Item Titles (Medium-Large) - 3.5-4vw */
-  .eduItemTitle,
-  .eduItemDegree,
   .workCompanyTitle,
   .pitchExpectationTitle,
   .contactHeadline,
   .contactThankYou {
     font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    line-height: 1.4;
+  }
+
+  /* Education and Certification Titles - Increased for mobile */
+  .eduItemTitle,
+  .eduItemDegree {
+    font-size: clamp(1.5rem, 5vw, 2.25rem) !important;
     line-height: 1.4;
   }
 
@@ -1656,15 +1669,15 @@
     line-height: 1.5;
   }
 
-  /* Education Date - Larger for readability */
+  /* Education Date - Increased for mobile readability */
   .eduItemDate {
-    font-size: clamp(0.875rem, 2.75vw, 1.125rem) !important;
+    font-size: clamp(1.25rem, 3.75vw, 1.625rem) !important;
     line-height: 1.5;
   }
 
-  /* Level 7: Smallest Text (Links, Notes) - 2-2.25vw */
+  /* Education Link - Increased for mobile */
   .eduLink {
-    font-size: clamp(0.875rem, 2.75vw, 1.125rem) !important;
+    font-size: clamp(1.25rem, 3.75vw, 1.625rem) !important;
     line-height: 1.5;
   }
 
@@ -1674,6 +1687,13 @@
   .learnMoreButton {
     font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
+
+/* Very small screens - Change 2x2 boxes to rows in Website Service */
+@media (max-width: 411px) {
+  .pitchExpectationsList {
+    grid-template-columns: 1fr !important;
   }
 }
 
