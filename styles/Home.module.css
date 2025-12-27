@@ -95,26 +95,74 @@
   overflow: visible;
 }
 
-/* 
-  Item title (e.g., "University of Ottawa – BSc Computer Science") 
-*/
-.eduItemTitle {
-  margin: 0;
+/* ============================================
+   STANDARDIZED TEXT HIERARCHY SYSTEM
+   Brightest → Darkest, Largest → Smallest
+   ============================================ */
+
+/* Level 1: TOP ROW - Largest, Brightest White */
+.itemLevel1 {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+/* Level 2: SECOND ROW - Medium, Light Grey */
+.itemLevel2 {
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  color: rgb(240, 240, 240);
+  font-weight: normal;
   margin-bottom: 0.5rem;
-  text-align: center;
-  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* Level 3: THIRD ROW - Smaller, Medium Grey */
+.itemLevel3 {
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  color: rgb(218, 218, 218);
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Level 4: BOTTOM ROW - Smallest, Darkest Grey */
+.itemLevel4 {
+  font-size: clamp(0.6875rem, 2vw, 0.875rem);
+  color: rgb(180, 180, 180);
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 /* 
-  Degree/Program name (e.g., "BSc of Computer Science")
+  Item title (e.g., "University of Ottawa – BSc Computer Science") 
 */
-.eduItemDegree {
+/* 
+  Degree/Program name (e.g., "BSc of Computer Science") - First in Education
+  OR Certification Title - First in Certifications
+*/
+.eduItemDegree,
+.eduItemTitle {
   margin: 0;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  /* Uses itemLevel1 base styles - First element in column */
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+/* 
+  School name in Education - Second element (comes after eduItemDegree)
+*/
+.eduItemDegree + .eduItemTitle {
+  /* Uses itemLevel2 base styles - Second in column */
   font-size: 0.5em;
   font-weight: normal;
-  text-align: center;
-
+  color: rgb(240, 240, 240);
+  margin-bottom: 0.5rem;
 }
 
 /* 
@@ -122,10 +170,12 @@
 */
 .eduItemDate {
   margin: 0;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  /* Uses itemLevel3 base styles */
   font-size: 0.4em;
   font-weight: normal;
-  text-align: center;
+  color: rgb(218, 218, 218);
+  margin-bottom: 0.75rem;
 }
 
 /* 
@@ -149,23 +199,40 @@
   margin: 0;
   text-decoration: underline;
   cursor: pointer;
-  font-size: 0.4em;
-  color: rgb(218, 218, 218); /* Adjust if needed */
-  text-decoration-thickness: 1px; /* Adjust thickness of the underline */
-  text-underline-offset: 4px; /* Adjust the space between text and underline */
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.25em;
   overflow: visible;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  /* Uses itemLevel4 base styles */
+  font-size: 0.35em;
+  color: rgb(180, 180, 180);
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.eduLink:hover {
+  opacity: 1;
 }
 
 .eduLink img {
   display: flex;
   align-items: center;
-  filter: brightness(0.855);
-  transform: translateY(1px);
+  filter: brightness(0) invert(0.85);
+  opacity: 0.6;
+  transform: translateY(3px);
+  transition: opacity 0.2s ease;
+  width: 18px !important;
+  height: 12px !important;
+}
+
+.eduLink:hover img {
+  opacity: 1;
 }
 
 /* 
@@ -353,10 +420,14 @@
 
 
 .pitchExpectationsList {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pitchExpectationItem {
@@ -364,29 +435,30 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pitchExpectationItem:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  cursor: default;
+  width: 100%;
 }
 
 .pitchExpectationTitle {
-  margin: 0 0 0.75rem 0;
-  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-  font-weight: 600;
+  margin: 0;
+  /* Uses itemLevel1 base styles */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-weight: bold;
   color: white;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
 }
 
 .pitchExpectationDescription {
   margin: 0;
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
-  line-height: 1.6;
+  /* Uses itemLevel3 base styles */
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  line-height: 1.5;
   color: rgb(218, 218, 218);
+  font-weight: normal;
+  margin-bottom: 0.75rem;
 }
 
 /* #region general */
@@ -652,20 +724,40 @@
 
 .workCompanyTitle {
   text-align: start;
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 0.5rem;
+  /* Uses itemLevel1 base styles */
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  color: white;
   font-weight: bold;
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.workPositionTitle {
+  text-align: start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* Uses itemLevel2 base styles */
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  color: rgb(240, 240, 240);
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .workDate {
   padding: 0;
   margin: 0;
-  margin-bottom: 0.75rem;
   text-align: start;
-  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  /* Uses itemLevel3 base styles */
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  color: rgb(218, 218, 218);
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 .workDescription {
   padding: 0;
@@ -1063,22 +1155,34 @@
     overflow: visible;
   }
 
+  /* Level 1 - Desktop - First element (Degree in Education, Title in Certifications) */
+  .eduItemDegree,
   .eduItemTitle {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    margin-bottom: 0.25rem;
     text-align: left;
+    color: white;
+    font-weight: bold;
+    line-height: 1.4;
   }
 
-  .eduItemDegree {
-    font-size: 1.2rem;
+  /* Level 2 - Desktop - School name in Education (comes after eduItemDegree) */
+  .eduItemDegree + .eduItemTitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
     margin-bottom: 0.5rem;
     text-align: left;
-    color: rgb(218, 218, 218);
+    color: rgb(240, 240, 240);
+    font-weight: normal;
+    line-height: 1.4;
   }
 
   .eduItemDate {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    /* Level 3 - Desktop */
+    font-size: clamp(1rem, 1.75vw, 1.25rem);
+    color: rgb(218, 218, 218);
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
   }
 
   .eduDescription {
@@ -1087,7 +1191,11 @@
   }
 
   .eduLink {
-    font-size: 1rem;
+    /* Level 4 - Desktop */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: rgb(180, 180, 180);
+    font-weight: normal;
+    line-height: 1.5;
   }
 
   .eduLayer {
@@ -1111,27 +1219,18 @@
     font-size: clamp(1rem, 1.2vw, 1.25rem);
   }
 
-  .eduItemTitle {
-    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-    text-align: left;
-  }
-
-  .eduItemDegree {
-    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
-    text-align: left;
-    color: rgb(218, 218, 218);
-  }
-
-  .eduItemDate {
-    font-size: clamp(0.875rem, 1.1vw, 1rem);
-  }
+  /* Note: eduItemTitle, eduItemDegree, eduItemDate styles are defined earlier in this media query */
 
   .eduDescription {
     font-size: clamp(0.875rem, 1.1vw, 1rem);
   }
 
   .eduLink {
-    font-size: clamp(0.875rem, 1.1vw, 1rem);
+    /* Level 4 - Desktop (larger viewport) */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: rgb(180, 180, 180);
+    font-weight: normal;
+    line-height: 1.5;
   }
 
   /* Pitch section - Desktop two-column layout */
@@ -1153,7 +1252,7 @@
   .pitchLeftColumn {
     width: 50%;
     max-width: 550px;
-    order: 1; /* Appears on left side on desktop */
+    order: 2; /* Appears on left side on desktop (swapped via order since HTML order is reversed) */
   }
 
   .pitchParagraphWrapper {
@@ -1192,7 +1291,7 @@
     max-width: 550px;
     align-items: flex-start;
     text-align: start;
-    order: 2; /* Appears on right side on desktop */
+    order: 1; /* Appears on right side on desktop */
   }
 
   .pitchRightColumnBottom {
@@ -1205,10 +1304,20 @@
     text-align: start;
   }
 
-
+  /* Desktop: 2x2 grid layout for expectations */
   .pitchExpectationsList {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pitchExpectationItem {
+    flex: 0 0 auto !important;
+    width: 100% !important;
   }
 
   .pitchIcon {
@@ -1406,17 +1515,34 @@
   }
 
   .workCompanyTitle {
+    /* Level 1 - Desktop */
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     text-align: start;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .workPositionTitle {
+    /* Level 2 - Desktop */
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    text-align: start;
+    color: rgb(240, 240, 240);
+    font-weight: normal;
     margin-bottom: 0.5rem;
+    line-height: 1.4;
   }
 
   .workDate {
+    /* Level 3 - Desktop */
     padding: 0;
     margin: 0;
-    margin-bottom: 1rem;
     text-align: start;
-    font-size: clamp(1.25rem, 2vw, 1.875rem);
+    font-size: clamp(1rem, 1.75vw, 1.25rem);
+    color: rgb(218, 218, 218);
+    font-weight: normal;
+    margin-bottom: 0.75rem;
     line-height: 1.5;
   }
 
@@ -1564,13 +1690,6 @@
     flex-direction: column !important;
   }
 
-  .pitchLeftColumn {
-    order: 1 !important;
-  }
-
-  .pitchRightColumn {
-    order: 2 !important;
-  }
 
   .pitchButtonImageRow {
     display: flex !important;
@@ -1597,6 +1716,20 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+
+  /* Change 2x2 boxes to 1x4 column on mobile */
+  .pitchExpectationsList {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .pitchExpectationItem {
+    width: 100% !important;
+    flex: 0 0 auto !important;
   }
 
   /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
@@ -1628,27 +1761,45 @@
     font-size: clamp(0.875rem, 3.25vw, 1.5rem) !important;
   }
 
-  /* Level 3: Item Titles (Medium-Large) - 3.5-4vw */
+  /* Level 1: Primary Titles - Mobile */
   .workCompanyTitle,
   .pitchExpectationTitle,
   .contactHeadline,
-  .contactThankYou {
+  .contactThankYou,
+  .eduItemDegree,
+  .eduItemTitle {
     font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    color: white !important;
+    font-weight: bold !important;
     line-height: 1.4;
+    margin-bottom: 0.25rem !important;
   }
 
-  /* Education and Certification Titles - Increased for mobile */
-  .eduItemTitle,
-  .eduItemDegree {
-    font-size: clamp(1.5rem, 5vw, 2.25rem) !important;
+  /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
+  .workPositionTitle,
+  .eduItemDegree + .eduItemTitle {
+    font-size: clamp(0.875rem, 3.25vw, 1.375rem) !important;
+    color: rgb(240, 240, 240) !important;
+    font-weight: normal !important;
     line-height: 1.4;
+    margin-bottom: 0.5rem !important;
   }
 
-  /* Level 4: Body Text (Medium) - 2.75-3.25vw */
+  /* Level 3: Tertiary Text - Mobile */
+  .workDate,
+  .pitchExpectationDescription,
+  .eduItemDate {
+    font-size: clamp(0.875rem, 2.75vw, 1.125rem) !important;
+    color: rgb(218, 218, 218) !important;
+    font-weight: normal !important;
+    line-height: 1.5;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Level 4: Body Text - Mobile */
   .pitchParagraph,
   .workDescription,
   .eduDescription,
-  .pitchExpectationDescription,
   .contactFormLabel {
     font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
     line-height: 1.6;
@@ -1660,24 +1811,14 @@
     line-height: 1.5;
   }
 
-  /* Level 6: Small Text (Dates, Links, etc.) - 2.25-2.5vw */
-  .workDate,
+  /* Level 4: Smallest Text - Mobile */
   .contactFormInput,
   .contactFormTextarea,
-  .contactIconLabel {
-    font-size: clamp(0.6875rem, 2vw, 0.875rem) !important;
-    line-height: 1.5;
-  }
-
-  /* Education Date - Increased for mobile readability */
-  .eduItemDate {
-    font-size: clamp(1.25rem, 3.75vw, 1.625rem) !important;
-    line-height: 1.5;
-  }
-
-  /* Education Link - Increased for mobile */
+  .contactIconLabel,
   .eduLink {
-    font-size: clamp(1.25rem, 3.75vw, 1.625rem) !important;
+    font-size: clamp(0.75rem, 2.5vw, 1rem) !important;
+    color: rgb(180, 180, 180) !important;
+    font-weight: normal !important;
     line-height: 1.5;
   }
 
@@ -1690,12 +1831,7 @@
   }
 }
 
-/* Very small screens - Change 2x2 boxes to rows in Website Service */
-@media (max-width: 411px) {
-  .pitchExpectationsList {
-    grid-template-columns: 1fr !important;
-  }
-}
+
 
   /* motion preference */
   @media (prefers-reduced-motion: reduce) {

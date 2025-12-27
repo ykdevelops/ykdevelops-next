@@ -1,20 +1,8 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Pitch() {
-  const handleScrollToContact = (e) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <div className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
@@ -34,7 +22,38 @@ export default function Pitch() {
 
         {/* Content Row - Two Columns */}
         <div className={styles.pitchContentRow}>
-          {/* Left Column - Expectations (appears on left on desktop) */}
+          {/* Right Column - Content with paragraph, button, and image (appears on right on desktop, first on mobile) */}
+          <div className={styles.pitchRightColumn}>
+            {/* Main Paragraph */}
+            <div className={styles.pitchParagraphWrapper}>
+              <p className={styles.pitchParagraph}>
+                Whether you are starting a new website or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay stress free and focused on your business.
+              </p>
+            </div>
+
+            {/* Image Row (mobile) / Bottom Section (desktop) */}
+            <div className={styles.pitchButtonImageRow}>
+              <div className={styles.pitchGifContainer}>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <div className={styles.pitchGifWrapper}>
+                    <Image
+                      src="/ykwebservice.gif"
+                      alt="web service illustration"
+                      fill
+                      className={styles.pitchGif}
+                      sizes="(max-width: 768px) 250px, 200px"
+                    />
+                  </div>
+                </Suspense>
+              </div>
+            </div>
+
+            {/* Small note */}
+            <div className={styles.pitchRightColumnBottom}>
+            </div>
+          </div>
+
+          {/* Left Column - Expectations (appears on left on desktop, second on mobile) */}
           <div className={styles.pitchLeftColumn}>
             <div className={styles.pitchExpectationsList}>
               <div className={styles.pitchExpectationItem}>
@@ -64,42 +83,6 @@ export default function Pitch() {
                   Available when you need changes or have questions.
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Right Column - Content with paragraph, button, and image (appears on right on desktop) */}
-          <div className={styles.pitchRightColumn}>
-            {/* Main Paragraph */}
-            <div className={styles.pitchParagraphWrapper}>
-              <p className={styles.pitchParagraph}>
-                Whether you are starting a new website or maintaining and securing an existing one, I take full responsibility for the technical side and ongoing upkeep so you can stay stress free and focused on your business.
-              </p>
-            </div>
-
-            {/* Button and Image Row (mobile) / Bottom Section (desktop) */}
-            <div className={styles.pitchButtonImageRow}>
-              {/* CTA Button */}
-              <a href="#contact" onClick={handleScrollToContact} className={styles.pitchCTA}>
-                Get in touch
-              </a>
-
-              <div className={styles.pitchGifContainer}>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <div className={styles.pitchGifWrapper}>
-                    <Image
-                      src="/ykwebservice.gif"
-                      alt="web service illustration"
-                      fill
-                      className={styles.pitchGif}
-                      sizes="(max-width: 768px) 250px, 200px"
-                    />
-                  </div>
-                </Suspense>
-              </div>
-            </div>
-
-            {/* Small note */}
-            <div className={styles.pitchRightColumnBottom}>
             </div>
           </div>
         </div>

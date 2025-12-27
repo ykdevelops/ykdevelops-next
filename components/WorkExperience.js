@@ -34,12 +34,10 @@ export default function WorkExperience() {
                         </Suspense>
                         <div className={styles.workInfo}>
                             <h1 className={styles.workCompanyTitle}>
-                                QuoteMedia, Inc. - Intermediate Front End Developer
+                                QuoteMedia, Inc.
                             </h1>
+                            <h2 className={styles.workPositionTitle}>Intermediate Front End Developer</h2>
                             <h2 className={styles.workDate}>August 2022 - March 2023</h2>
-                            <p className={styles.workDescription}>
-                                Delivered web solutions that significantly enhanced user engagement and provided an improved, interactive experience, aligning with the company's marketing objectives.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -57,11 +55,9 @@ export default function WorkExperience() {
                             />
                         </Suspense>
                         <div className={styles.workInfo}>
-                            <h1 className={styles.workCompanyTitle}>SpeakHabla - Junior Full Stack Developer</h1>
+                            <h1 className={styles.workCompanyTitle}>SpeakHabla</h1>
+                            <h2 className={styles.workPositionTitle}>Junior Full Stack Developer</h2>
                             <h2 className={styles.workDate}>April 2022 - September 2022</h2>
-                            <p className={styles.workDescription}>
-                                Improved the system's functionality and reliability, enabling BELA to accurately assess business English proficiency. Despite positive technical contributions, the project was ultimately discontinued due to funding challenges.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -79,11 +75,9 @@ export default function WorkExperience() {
                             />
                         </Suspense>
                         <div className={styles.workInfo}>
-                            <h1 className={styles.workCompanyTitle}>IBM/SLiDE - Junior Front End Developer</h1>
+                            <h1 className={styles.workCompanyTitle}>IBM/SLiDE</h1>
+                            <h2 className={styles.workPositionTitle}>Junior Front End Developer</h2>
                             <h2 className={styles.workDate}>September 2021 - December 2021</h2>
-                            <p className={styles.workDescription}>
-                                Delivered a quality web application that enhanced user experience through a modernized aesthetic and improved responsiveness. Successfully optimized performance based on user feedback and maintained a portfolio of WordPress sites for client satisfaction.
-                            </p>
                         </div>
                     </div>
                 </div>

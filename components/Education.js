@@ -55,7 +55,7 @@ export default function EducationAndCerts() {
             />
           </Suspense>
           <div className={styles.eduInfo}>
-          <h2 className={styles.eduItemDegree}>Mobile App Design & Development</h2>
+          <h2 className={styles.eduItemDegree}>Mobile Application Design & Development</h2>
             <h1 className={styles.eduItemTitle}>
               Algonquin College
             </h1>
@@ -105,7 +105,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+              Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+              Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function EducationAndCerts() {
               rel="noopener noreferrer"
               className={styles.eduLink}
             >
-              Show Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+              Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
             </a>
           </div>
         </div>
