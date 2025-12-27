@@ -1,21 +1,8 @@
 /* Mobile size */
 /* 
-  Outer container for all Education & Certifications content 
-*/
-.eduLayer {
-  width: 90%;
-  min-height: 100vh;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 
   Individual container for the "Education" block 
   and the "Licenses & Certifications" block 
-  (stacked by default on mobile) 
+  (each now uses .layer class as a separate section)
 */
 .eduContainer {
   width: 100%;
@@ -146,12 +133,14 @@
 .eduItemDegree,
 .eduItemTitle {
   margin: 0;
-  text-align: center;
+  text-align: start;
+  width: 100%;
   /* Uses itemLevel1 base styles - First element in column */
-  font-size: 1em;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   font-weight: bold;
   color: white;
   margin-bottom: 0.25rem;
+  line-height: 1.4;
 }
 
 /* 
@@ -159,10 +148,11 @@
 */
 .eduItemDegree + .eduItemTitle {
   /* Uses itemLevel2 base styles - Second in column */
-  font-size: 0.5em;
+  font-size: clamp(0.875rem, 3.25vw, 1.375rem);
   font-weight: normal;
   color: rgb(240, 240, 240);
   margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 /* 
@@ -170,12 +160,14 @@
 */
 .eduItemDate {
   margin: 0;
-  text-align: center;
+  text-align: start;
+  width: 100%;
   /* Uses itemLevel3 base styles */
-  font-size: 0.4em;
+  font-size: clamp(0.875rem, 2.75vw, 1.125rem);
   font-weight: normal;
   color: rgb(218, 218, 218);
   margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 /* 
@@ -204,13 +196,14 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: start;
   gap: 0.25em;
   overflow: visible;
   opacity: 0.6;
   transition: opacity 0.2s ease;
   /* Uses itemLevel4 base styles */
-  font-size: 0.35em;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
   color: rgb(180, 180, 180);
   font-weight: normal;
   line-height: 1.5;
@@ -276,14 +269,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0rem;
 }
 
 .pitchRightColumn {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0rem;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -310,7 +303,7 @@
 .pitchParagraphWrapper {
   position: relative;
   margin: 0;
-  margin-top: 1.5rem;
+  margin-top: 0rem;
 }
 
 .pitchParagraph {
@@ -951,7 +944,7 @@
 .contactThankYou {
   margin: 0;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: rgb(218, 218, 218);
+  color: white;
   font-weight: normal;
 }
 
@@ -1092,22 +1085,12 @@
 /* Laptop size*/
 @media (min-width: 1025px) {
   /* 
-    On desktop, place Education on the left 
-    and Certifications on the right side by side 
-  */
-  .eduLayer {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around; /* or space-between */
-  }
-
-  /* 
-    Each section (Education / Certifications) 
-    gets about half the width 
+    Education and Certifications are now separate sections
+    Each uses the .layer class, so they stack vertically
   */
   .eduContainer {
-    width: 45%;
-    margin-bottom: 0; /* you can reduce or remove the bottom margin here */
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .eduTitleRow {
@@ -1198,10 +1181,6 @@
     line-height: 1.5;
   }
 
-  .eduLayer {
-    max-width: 1200px;
-    width: 90%;
-  }
 
   .eduTitleIcon {
     width: 64px;
@@ -1253,6 +1232,7 @@
     width: 50%;
     max-width: 550px;
     order: 2; /* Appears on left side on desktop (swapped via order since HTML order is reversed) */
+    gap: 1rem;
   }
 
   .pitchParagraphWrapper {
@@ -1308,7 +1288,7 @@
   .pitchExpectationsList {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 1.5rem !important;
+    gap: 1rem !important;
     max-width: 600px;
     width: 100%;
     margin-left: auto;
@@ -1690,6 +1670,12 @@
     flex-direction: column !important;
   }
 
+  .pitchRightColumn {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    gap: 0 !important;
+  }
+
 
   .pitchButtonImageRow {
     display: flex !important;
@@ -1719,13 +1705,7 @@
   }
 
   /* Change 2x2 boxes to 1x4 column on mobile */
-  .pitchExpectationsList {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: nowrap !important;
-    gap: 1.5rem !important;
-    width: 100% !important;
-  }
+
 
   .pitchExpectationItem {
     width: 100% !important;
@@ -1946,6 +1926,15 @@
 
   .contactHeadline {
     margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: bold;
+    color: white;
+  }
+
+  .contactThankYou {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: normal;
+    color: white;
   }
 
   .contactForm {
