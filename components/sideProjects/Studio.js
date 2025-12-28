@@ -7,16 +7,17 @@ import BoxCanvas from './BoxCanvas'
 export default function Studio() {
     return (
         <div className={styles.layer}>
-            <div className={styles.leftHalf} >
-                <Suspense
-                    fallback={<div className={styles.loaderImage}></div>}
-                >
-                    <BoxCanvas className={styles.boxCanvas} />
-                </Suspense>
-            </div>
-            <div className={styles.rightHalf}>
-                <div className={styles.textContainer}>
-                    <div>
+            <div className={styles.caseTopHalf}>
+                <div className={styles.caseTopStack}>
+                    <div className={styles.caseMediaBox}>
+                        <Suspense
+                            className={styles.caseStudiesItemSuspense}
+                            fallback={<div className={styles.loaderImage}></div>}
+                        >
+                            <BoxCanvas className={styles.boxCanvas} />
+                        </Suspense>
+                    </div>
+                    <div className={styles.caseTitle}>
                         <h1 className={styles.caseProjectTitle}>3D Studio</h1>
                         <div>
                             <a
@@ -35,6 +36,10 @@ export default function Studio() {
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={styles.caseBottomHalf}>
+                <div className={styles.caseDescription}>
                     <p className={styles.projectDescription}>
                         Crafted an innovative 3D visualization of my
                         workspace . It provides visitors with an

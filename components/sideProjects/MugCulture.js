@@ -11,25 +11,23 @@ export default function MugCulture() {
 
 
         <div className={styles.layer}>
-            <div className={styles.leftHalf}>
-                <div className={styles.projectVisual}>
-                    <video
-                        src={videoUrl}
-                        controls
-                        autoPlay
-                        loop
-                        muted
-                        style={{
-                            maxWidth: '500px',
-                            width: '90%',
-                            borderRadius: '10px'
-                        }}
-                    />
-                </div>
-            </div>
-            <div className={styles.rightHalf}>
-                <div className={styles.textContainer}>
-                    <div>
+            <div className={styles.caseTopHalf}>
+                <div className={styles.caseTopStack}>
+                    <div className={styles.caseMediaBox}>
+                        <video
+                            src={videoUrl}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                            style={{
+                                maxWidth: '100%',
+                                maxHeight: '100%',
+                                borderRadius: '10px'
+                            }}
+                        />
+                    </div>
+                    <div className={styles.caseTitle}>
                         <h1 className={styles.caseProjectTitle}>MugCulture Beta</h1>
                         <div>
                             <a
@@ -48,6 +46,10 @@ export default function MugCulture() {
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={styles.caseBottomHalf}>
+                <div className={styles.caseDescription}>
                     <p className={styles.projectDescription}>
                         A high-performance and responsive e-commerce website for
                         MugCulture using Next.js and Framer Motion, deployed on Vercel. The

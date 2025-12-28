@@ -1083,6 +1083,55 @@
 /* #endregion Contact */
 
 /* #region Case Studies */
+.caseLayer {
+  width: 90%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-bottom: 5rem;
+}
+
+.caseWorkContainer {
+  width: 100%;
+}
+
+.caseContainerTitleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.caseSectionTitleIcon {
+  width: 8vw;
+  height: 8vw;
+  margin-right: 10px;
+  animation: none !important;
+  transform: none !important;
+  will-change: auto;
+}
+
+.caseSectionTitle {
+  font-weight: normal;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 7vw;
+  margin: 0;
+  height: 100%;
+  padding-top: 5px;
+}
+
+.caseLoadingImage {
+  background-color: grey;
+  width: 150px;
+  height: 150px;
+}
+
 .caseStudiesGrid {
   display: flex;
   flex-direction: column;
@@ -1096,95 +1145,252 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  min-height: 500px;
+  max-height: 500px;
+  box-sizing: border-box;
 }
 
 .caseStudyItem .layer {
   min-height: auto !important;
-  padding: 1.25rem 0;
-  height: auto;
+  padding: 0 !important;
+  height: 100% !important;
   flex-direction: column !important;
   display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  gap: 0 !important;
 }
 
-.caseStudyItem .chatAppLayer {
-  width: 100%;
-}
+/* chatAppLayer wrapper removed from ChatApp component - no special case needed */
 
-.caseStudyItem .chatAppLayer .layer {
-  min-height: auto !important;
-  flex-direction: column !important;
+.caseTopHalf {
+  width: 100% !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
   display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  flex: 0 0 50% !important;
+  position: relative !important;
 }
 
+.caseTopHalf::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.caseTopStack {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.75rem !important;
+  padding-bottom: 0.5rem !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+.caseBottomHalf {
+  width: 100% !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 1rem 0 0 0 !important;
+  box-sizing: border-box !important;
+  flex: 0 0 50% !important;
+  overflow-y: auto !important;
+}
+
+.caseMediaBox {
+  width: 90% !important;
+  max-width: 400px !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  border: 1px inset rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+.caseMediaBox video,
+.caseMediaBox .videoVisual {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ChatApp video override removed - all case study media follows same rules */
+
+.caseMediaBox .boxCanvas,
+.caseMediaBox .canvasBox {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.caseTitle {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  gap: 0.75rem !important;
+  box-sizing: border-box !important;
+}
+
+.caseTitle > div {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  align-items: center !important;
+}
+
+.caseDescription {
+  width: 100% !important;
+  max-width: 600px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+.caseDescription p {
+  text-align: left !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Legacy support for existing components */
 .caseStudyItem .leftHalf {
   width: 100% !important;
   align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
-  padding-bottom: 0.5rem;
+  padding: 0 !important;
   display: flex !important;
-  height: 160px !important;
-  min-height: 160px !important;
-  max-height: 160px !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
+  flex: 0 0 50% !important;
 }
 
 .caseStudyItem .rightHalf {
   width: 100% !important;
-  align-items: flex-start !important;
+  align-items: center !important;
   justify-content: flex-start !important;
   margin: 0 !important;
+  padding: 0 !important;
   text-align: center !important;
   display: flex !important;
   flex-direction: column !important;
+  box-sizing: border-box !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
+  flex: 0 0 50% !important;
 }
 
 .caseStudyItem .textContainer {
   align-items: center !important;
   text-align: center !important;
   width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
 }
 
-.caseStudyItem .projectVisual {
+.caseTitle {
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  height: 160px !important;
-  min-height: 160px !important;
-  max-height: 160px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0.75rem !important;
 }
 
-.caseStudyItem .projectVisual video,
-.caseStudyItem .videoVisual {
-  max-height: 160px !important;
-  height: auto !important;
-  max-width: 100% !important;
-  width: auto !important;
-  object-fit: contain !important;
-}
-
-.caseStudyItem .canvasBox {
-  height: 160px !important;
+.caseDescription {
   width: 100% !important;
-  margin-right: 0 !important;
+  max-width: 600px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  height: 100% !important;
+  overflow-y: visible !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
 }
 
-.caseStudyItem .boxCanvas {
+.caseDescription p {
+  text-align: left !important;
   width: 100% !important;
-  height: 160px !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+  padding-top: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .caseProjectTitle {
   font-size: clamp(1rem, 3.5vw, 1.5rem) !important;
   margin: 0 !important;
+  margin-top: 0 !important;
   padding: 0 !important;
   font-weight: bold !important;
   color: white !important;
-  padding-top: 0.5rem;
   display: inline-block !important;
   line-height: 1.4 !important;
   vertical-align: middle !important;
+  box-sizing: border-box !important;
 }
 
 .caseStudyItem .projectTitle {
@@ -1300,56 +1506,123 @@
     flex: 1 1 calc(33.333% - 0.667rem);
     min-width: 0;
     max-width: calc(33.333% - 0.667rem);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    height: 500px !important;
+    min-height: 500px !important;
+    max-height: 500px !important;
   }
 
   .caseStudyItem .layer {
     min-height: auto !important;
-    padding: 0.75rem 0;
-    height: auto;
+    padding: 0 !important;
+    height: 100% !important;
     flex-direction: column !important;
     display: flex !important;
+    align-items: stretch !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
+.caseTopHalf {
+  width: 100% !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  flex: 0 0 50% !important;
+  position: relative !important;
+}
+
+.caseTopHalf::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.caseTopStack {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.75rem !important;
+  padding-bottom: 0.5rem !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+.caseBottomHalf {
+  width: 100% !important;
+  height: 50% !important;
+  min-height: 50% !important;
+  max-height: 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 1rem 0 0 0 !important;
+  box-sizing: border-box !important;
+  flex: 0 0 50% !important;
+  overflow-y: auto !important;
+}
+
+  /* Legacy support */
   .caseStudyItem .leftHalf {
     width: 100% !important;
-    height: 200px !important;
-    min-height: 200px !important;
-    max-height: 200px !important;
-    padding-bottom: 0.75rem !important;
+    height: 50% !important;
+    min-height: 50% !important;
+    max-height: 50% !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 50% !important;
   }
 
   .caseStudyItem .rightHalf {
     width: 100% !important;
-    align-items: flex-start !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 50% !important;
+    min-height: 50% !important;
+    max-height: 50% !important;
+    flex: 0 0 50% !important;
   }
 
-  .caseStudyItem .projectVisual {
-    height: 160px !important;
-    min-height: 160px !important;
-    max-height: 160px !important;
-  }
-
-  .caseStudyItem .projectVisual video,
-  .caseStudyItem .videoVisual {
-    max-height: 160px !important;
-    height: auto !important;
-    max-width: 100% !important;
-    width: auto !important;
-    object-fit: contain !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .caseStudyItem .canvasBox {
-    height: 160px !important;
+  .caseStudyItem .textContainer {
+    align-items: center !important;
+    text-align: center !important;
     width: 100% !important;
-    margin-right: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  .caseStudyItem .boxCanvas {
-    width: 100% !important;
-    height: 160px !important;
+  .caseStudyItem .textContainer > div:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   .caseStudyItem .textContainer > div:first-child {
@@ -1359,10 +1632,12 @@
   }
 
   .caseProjectTitle {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem) !important;
+    font-size: clamp(1rem, 1.5vw, 1.25rem) !important;
     font-weight: bold !important;
     color: white !important;
-    padding-top: 0.75rem;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.4 !important;
   }
 
   .caseStudyItem .projectTitle {
@@ -1374,7 +1649,39 @@
   .caseStudyItem .projectDescription {
     font-size: clamp(0.875rem, 1.1vw, 1rem) !important;
   }
+
+
+  .caseContainerTitleRow {
+    justify-content: flex-start;
+  }
+
+  .caseSectionTitleIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transform: translateY(5px);
+  }
+
+  .caseSectionTitle {
+    font-size: 3rem;
+    margin: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
 }
+
+.caseStudiesItemSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
+
+.caseStudiesHeaderIconSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
+
 /* #endregion Case Studies */
 
 @media (min-width: 1025px) {
