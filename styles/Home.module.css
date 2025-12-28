@@ -1185,16 +1185,6 @@
   position: relative !important;
 }
 
-.caseTopHalf::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 1;
-}
 
 .caseTopStack {
   width: 100% !important;
@@ -1546,16 +1536,6 @@
   position: relative !important;
 }
 
-.caseTopHalf::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 1;
-}
 
 .caseTopStack {
   width: 100% !important;
