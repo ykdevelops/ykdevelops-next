@@ -333,10 +333,10 @@
 
 .pitchGifWrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
-  max-width: 200px;
-  max-height: 200px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .pitchGif {
@@ -416,7 +416,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-top: 1rem;
   max-width: 600px;
   width: 100%;
   margin-left: auto;
@@ -1081,8 +1080,6 @@
 }
 
 /* #endregion Contact */
-
-/* Laptop size*/
 @media (min-width: 1025px) {
   /* 
     Education and Certifications are now separate sections
@@ -1262,8 +1259,8 @@
   }
 
   .pitchGif {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 350px;
+    max-height: 350px;
   }
 
   .pitchRightColumn {
@@ -1284,7 +1281,7 @@
     text-align: start;
   }
 
-  /* Desktop: 2x2 grid layout for expectations */
+  /* Desktop: 2x2 grid layout for client process */
   .pitchExpectationsList {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -1611,8 +1608,140 @@
   overflow: hidden;
 }
 
-/* Mobile only: Override base styles to ensure proper collapse/expand */
+
+  /* motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .details,
+    .workDescription {
+      transition: none;
+    }
+  }
+  /* #endregion Work Experience */
+
+  /* #region Project */
+  .projectContainer {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .projectSectionTitle {
+    transform: translateY(-4rem);
+  }
+  .projectTitle {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .projectLanguages {
+    font-size: 1rem;
+  }
+  .projectDescription {
+    max-width: 700px;
+    text-align: start;
+    padding: 10px 0 10px 0;
+  }
+  .projectLinkIcon {
+    padding-right: 4rem;
+  }
+  .projectVisual {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 700px;
+    padding-right: 1rem;
+  }
+  .videoVisual {
+    padding-right: 3rem;
+  }
+  .projectIconLink {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: all 0.2s ease-in-out;
+  }
+  .projectIconLink2 {
+    width: 1.8rem;
+    height: 1.8rem;
+    transform: translateY(-7px);
+    transition: all 0.2s ease-in-out;
+  }
+  .projectIconLink:hover {
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out;
+  }
+  .projectIconLink2:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.5) translateY(-5px);
+  }
+  /* #endregion Project */
+
+  /* #region Contact */
+  .contactSection {
+    padding: 3rem 0;
+  }
+
+  .contactWrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .contactLeftColumn {
+    width: 50%;
+    max-width: 550px;
+    align-items: center;
+    order: 1;
+  }
+
+  .contactImage {
+    width: 600px;
+    height: 600px;
+  }
+
+  .contactIconLinks {
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  .contactIconSmall {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contactRightColumn {
+    width: 50%;
+    max-width: 600px;
+    order: 2;
+  }
+
+  .contactHeadline {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: bold;
+    color: white;
+  }
+
+  .contactThankYou {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: normal;
+    color: white;
+    width: 100%;
+  }
+
+  .contactForm {
+    gap: 0.875rem;
+  }
+  /* #endregion Contact */
+}
+
 @media (max-width: 1024px) {
+
   /* Base details - hidden by default */
   .details {
     width: 100%;
@@ -1632,14 +1761,13 @@
     transform: none;
   }
 
-  .contactWrapper {
-    max-width: 300px !important;
-    width: 90%;
-  }
+ 
 
   .contactRightColumn {
     max-width: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .contactForm {
@@ -1753,6 +1881,11 @@
     font-weight: bold !important;
     line-height: 1.4;
     margin-bottom: 0.25rem !important;
+
+  }
+  .contactThankYou, .contactHeadline{
+    display: flex;
+    justify-content: center;
   }
 
   /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
@@ -1810,136 +1943,3 @@
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
   }
 }
-
-
-
-  /* motion preference */
-  @media (prefers-reduced-motion: reduce) {
-    .details,
-    .workDescription {
-      transition: none;
-    }
-  }
-  /* #endregion Work Experience */
-
-  /* #region Project */
-  .projectContainer {
-    width: 90%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .projectSectionTitle {
-    transform: translateY(-4rem);
-  }
-  .projectTitle {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .projectLanguages {
-    font-size: 1rem;
-  }
-  .projectDescription {
-    max-width: 700px;
-    text-align: start;
-    padding: 10px 0 10px 0;
-  }
-  .projectLinkIcon {
-    padding-right: 4rem;
-  }
-  .projectVisual {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    max-width: 700px;
-    padding-right: 1rem;
-  }
-  .videoVisual {
-    padding-right: 3rem;
-  }
-  .projectIconLink {
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2 {
-    width: 1.8rem;
-    height: 1.8rem;
-    transform: translateY(-7px);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.5) translateY(-5px);
-  }
-  /* #endregion Project */
-
-  /* #region Contact */
-  .contactSection {
-    padding: 3rem 0;
-  }
-
-  .contactWrapper {
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .contactLeftColumn {
-    width: 50%;
-    max-width: 550px;
-    align-items: center;
-    order: 1;
-  }
-
-  .contactImage {
-    width: 600px;
-    height: 600px;
-  }
-
-  .contactIconLinks {
-    flex-wrap: nowrap;
-    gap: 1.25rem;
-    justify-content: center;
-  }
-
-  .contactIconSmall {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contactRightColumn {
-    width: 50%;
-    max-width: 500px;
-    order: 2;
-  }
-
-  .contactHeadline {
-    margin-bottom: 1rem;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: bold;
-    color: white;
-  }
-
-  .contactThankYou {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: normal;
-    color: white;
-  }
-
-  .contactForm {
-    gap: 0.875rem;
-  }
-  /* #endregion Contact */
-}
-

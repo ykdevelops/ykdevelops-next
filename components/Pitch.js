@@ -53,34 +53,34 @@ export default function Pitch() {
             </div>
           </div>
 
-          {/* Left Column - Expectations (appears on left on desktop, second on mobile) */}
+          {/* Left Column - Client Process (appears on left on desktop, second on mobile) */}
           <div className={styles.pitchLeftColumn}>
             <div className={styles.pitchExpectationsList}>
               <div className={styles.pitchExpectationItem}>
-                <h3 className={styles.pitchExpectationTitle}>Reliable updates</h3>
+                <h3 className={styles.pitchExpectationTitle}>Strategy session</h3>
                 <p className={styles.pitchExpectationDescription}>
-                  Regular content updates and security patches.
+                  Goals, brand, and user journey, plus a clear plan for what we are improving first.
                 </p>
               </div>
               
               <div className={styles.pitchExpectationItem}>
-                <h3 className={styles.pitchExpectationTitle}>Fixes when things break</h3>
+                <h3 className={styles.pitchExpectationTitle}>Technical and content audit</h3>
                 <p className={styles.pitchExpectationDescription}>
-                  Quick response to technical issues and errors.
+                  A focused review, with recommendations ranked by research and impact.
                 </p>
               </div>
               
               <div className={styles.pitchExpectationItem}>
-                <h3 className={styles.pitchExpectationTitle}>Ongoing upkeep</h3>
+                <h3 className={styles.pitchExpectationTitle}>Build, polish, launch</h3>
                 <p className={styles.pitchExpectationDescription}>
-                  Continuous monitoring and maintenance.
+                  Implementation, QA, and a clean rollout.
                 </p>
               </div>
               
               <div className={styles.pitchExpectationItem}>
-                <h3 className={styles.pitchExpectationTitle}>Reliability and availability</h3>
+                <h3 className={styles.pitchExpectationTitle}>Website care</h3>
                 <p className={styles.pitchExpectationDescription}>
-                  Available when you need changes or have questions.
+                  Proactive upkeep, quick fixes, and ongoing updates when your business changes.
                 </p>
               </div>
             </div>
