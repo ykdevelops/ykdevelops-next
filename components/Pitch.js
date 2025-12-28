@@ -3,6 +3,17 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function Pitch() {
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
@@ -31,7 +42,7 @@ export default function Pitch() {
               </p>
             </div>
 
-            {/* Image Row (mobile) / Bottom Section (desktop) */}
+            {/* Button and Image Row (mobile) / Bottom Section (desktop) */}
             <div className={styles.pitchButtonImageRow}>
               <div className={styles.pitchGifContainer}>
                 <Suspense fallback={<div>Loading...</div>}>
@@ -46,6 +57,11 @@ export default function Pitch() {
                   </div>
                 </Suspense>
               </div>
+
+              {/* CTA Button */}
+              <a href="#contact" onClick={handleScrollToContact} className={styles.pitchCTA}>
+                Get in touch
+              </a>
             </div>
 
             {/* Small note */}

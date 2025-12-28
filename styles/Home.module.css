@@ -1826,8 +1826,8 @@
   }
 
   .pitchButtonImageRow {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 
     width: 100%;
   }
@@ -2394,9 +2394,9 @@
 
   .pitchButtonImageRow {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     width: 100% !important;
   }
 
@@ -2434,12 +2434,14 @@
   .eduSectionTitle {
     font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
     line-height: 1.2;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   /* Level 2: Intro Text (Large) - 4.5-5.5vw */
   .introName {
-    font-size: clamp(1.5rem, 5vw, 3rem) !important;
-    line-height: 1.3;
+    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
+    line-height: 1.4;
   }
 
   .introGreeting {
