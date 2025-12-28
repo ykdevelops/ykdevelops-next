@@ -1,35 +1,64 @@
-# Portfolio Website
+# YKDevelops Portfolio Website
 
-Welcome to my portfolio repository! This project showcases my development skills and serves as a comprehensive overview of my work and expertise.
-
-This portfolio website is designed to provide visitors with an engaging and informative experience, while effectively highlighting my skills, projects, and achievements. It offers a user-friendly interface and a seamless browsing experience to showcase my expertise in various technologies and programming languages.
-
-## Technologies Used
-
-- **Next.js 13** - React framework for production
-- **React 18** - UI library
-- **CSS Modules** - Component-scoped styling
-- **AWS SES** - Email service for contact form
-- **Firebase** - Backend services
-- **Framer Motion** - Animation library
-- **Three.js** - 3D graphics
+A modern, responsive portfolio website built with Next.js showcasing my projects, experience, and skills.
 
 ## Features
 
-- **Professional Experience Section** - Showcases work history with detailed descriptions
-- **Education & Certifications** - Displays academic background and professional certifications with external credential links
-- **Website Service Section** - Highlights web management services with responsive design
-- **Side Projects Gallery** - Interactive showcase of personal projects
-- **Contact Form** - Integrated contact form with AWS SES backend
-- **Responsive Design** - Fully responsive layout optimized for mobile and desktop
+- **Responsive Design**: Fully responsive layout that works seamlessly on mobile and desktop
+- **Case Studies Section**: Showcase of featured projects including MugCulture Beta, Chat App, and 3D Studio
+- **Work Experience**: Professional experience timeline
+- **Education**: Academic background and certifications
+- **Contact Form**: Integrated contact form with AWS SES backend
+- **3D Visualizations**: Interactive 3D workspace visualization using React Three Fiber
+- **Smooth Animations**: Framer Motion animations for enhanced user experience
+
+## Tech Stack
+
+- **Framework**: Next.js 13.3.0
+- **React**: 18.2.0
+- **Styling**: CSS Modules
+- **3D Graphics**: React Three Fiber, Three.js, @react-three/drei
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Backend**: AWS SES (for contact form)
+- **Analytics**: Vercel Analytics & Speed Insights
+
+## Project Structure
+
+```
+ykdevelops-next/
+├── components/
+│   ├── CaseStudies.js          # Case studies showcase section
+│   ├── Certifications.js        # Certifications display
+│   ├── Contact.js               # Contact form component
+│   ├── Education.js            # Education section
+│   ├── Intro.js                # Introduction section
+│   ├── Pitch.js                # Website service pitch section
+│   ├── WorkExperience.js       # Work experience timeline
+│   └── sideProjects/           # Individual project components
+│       ├── BoxCanvas.js        # 3D workspace visualization
+│       ├── ChatApp.js          # Chat app case study
+│       ├── MugCulture.js       # MugCulture e-commerce case study
+│       └── Studio.js            # 3D Studio case study
+├── pages/
+│   ├── index.js                # Main page
+│   └── api/                    # API routes
+│       └── contact-ses.js      # Contact form handler
+├── styles/
+│   ├── Home.module.css         # Main stylesheet with responsive design
+│   └── globals.css             # Global styles
+└── public/                     # Static assets
+    ├── puzzle-svgrepo-com.svg  # Case studies icon
+    └── website-program-svgrepo-com.svg
+```
 
 ## Recent Updates
 
-- Standardized section icons and titles across all components
-- Improved mobile responsiveness with column reordering
-- Added external link indicators to certification credentials
-- Enhanced visual consistency across education and certification sections
-- Optimized layout for better mobile user experience
+- Added Case Studies section with featured projects
+- Implemented responsive typography matching education hierarchy
+- Updated case study icons and styling
+- Improved mobile layout and alignment for case studies
+- Enhanced visual consistency across all sections
 
 ## Getting Started
 
@@ -59,28 +88,10 @@ npm run build
 npm start
 ```
 
-## Project Structure
+## Deployment
 
-```
-ykdevelops-next/
-├── components/          # React components
-│   ├── Contact.js      # Contact form component
-│   ├── Education.js    # Education and certifications
-│   ├── Pitch.js        # Website service section
-│   ├── WorkExperience.js # Professional experience
-│   └── sideProjects/   # Side project components
-├── pages/              # Next.js pages and API routes
-├── styles/             # CSS modules
-├── public/             # Static assets
-└── lib/                # Utility functions
-```
+The site is deployed on Vercel. See deployment documentation for details.
 
-## Contact
+## License
 
-If you have any questions, suggestions, or would like to discuss potential collaborations, please feel free to reach out to me. You can contact me via the following channels:
-
-- **Email**: ykdevelops@gmail.com
-- **LinkedIn**: [https://www.linkedin.com/in/ykdevelops/](https://www.linkedin.com/in/ykdevelops/)
-- **GitHub**: [https://github.com/ykdevelops](https://github.com/ykdevelops)
-
-Thank you for visiting my portfolio repository! I look forward to connecting with you soon.
+Private project - All rights reserved

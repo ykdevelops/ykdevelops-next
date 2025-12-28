@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
 import Education from '../components/Education'
 import Certifications from '../components/Certifications'
+import CaseStudies from '../components/CaseStudies'
 import Pitch from '../components/Pitch'
 import WorkExperience from '../components/WorkExperience'
 import Studio from '../components/sideProjects/Studio'
@@ -58,6 +59,7 @@ export default function Home() {
       <WorkExperience />
       <Education />
       <Certifications />
+      <CaseStudies />
       <Contact />
     </div>
   )

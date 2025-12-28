@@ -29,30 +29,27 @@ export default function ChatApp() {
                 </div>
                 <div className={styles.rightHalf}>
                     <div className={styles.textContainer}>
-                        <h1 className={styles.projectTitle}>Chat App</h1>
+                        <div>
+                            <h1 className={styles.caseProjectTitle}>Chat App</h1>
+                            <div>
+                                <a
+                                    href="https://chatapp-reactfire.vercel.app/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <BsLink45Deg className={styles.projectIconLink} />
+                                </a>
+                                <a
+                                    href="https://github.com/ykdevelops/chatapp-reactfire.git"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <BsGithub className={styles.projectIconLink2} />
+                                </a>
+                            </div>
+                        </div>
                         <p className={styles.projectDescription}>
                             A sleek and user-friendly chat application utilizing ReactFire. The app features a visually appealing dark theme and employs a Firebase database to store and manage messages seamlessly.                    </p>
-                    </div>
-
-
-                    <h3 className={styles.projectLanguages}>
-                        ReactJS | ReactFire | Framer-Motion | Vercel | Firebase
-                    </h3>
-                    <div>
-                        <a
-                            href="https://chatapp-reactfire.vercel.app/"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <BsLink45Deg className={styles.projectIconLink} />
-                        </a>
-                        <a
-                            href="https://github.com/ykdevelops/chatapp-reactfire.git"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <BsGithub className={styles.projectIconLink2} />
-                        </a>
                     </div>
                 </div>
             </div>

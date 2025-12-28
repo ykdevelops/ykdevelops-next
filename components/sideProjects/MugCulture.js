@@ -29,7 +29,25 @@ export default function MugCulture() {
             </div>
             <div className={styles.rightHalf}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.projectTitle}>MugCulture Beta</h1>
+                    <div>
+                        <h1 className={styles.caseProjectTitle}>MugCulture Beta</h1>
+                        <div>
+                            <a
+                                href="https://mug-culture-shop.vercel.app/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <BsLink45Deg className={styles.projectIconLink} />
+                            </a>
+                            <a
+                                href="https://github.com/ykdevelops/mug-culture-shop"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <BsGithub className={styles.projectIconLink2} />
+                            </a>
+                        </div>
+                    </div>
                     <p className={styles.projectDescription}>
                         A high-performance and responsive e-commerce website for
                         MugCulture using Next.js and Framer Motion, deployed on Vercel. The
@@ -37,27 +55,6 @@ export default function MugCulture() {
                         exceptional user experience, and seamless adaptability across
                         various devices.
                     </p>
-                </div>
-
-
-                <h3 className={styles.projectLanguages}>
-                    NextJS | ReactJS | Framer-Motion | Vercel | AWS S3
-                </h3>
-                <div>
-                    <a
-                        href="https://mug-culture-shop.vercel.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <BsLink45Deg className={styles.projectIconLink} />
-                    </a>
-                    <a
-                        href="https://github.com/ykdevelops/mug-culture-shop"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <BsGithub className={styles.projectIconLink2} />
-                    </a>
                 </div>
             </div>
         </div>
