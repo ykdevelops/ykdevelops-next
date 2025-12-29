@@ -1079,7 +1079,7 @@
   font-weight: normal;
   line-height: 1.0;
   letter-spacing: -0.015em;
-  text-align: center;
+  text-align: left;
 }
 
 .contactHeadline {
@@ -2454,6 +2454,7 @@
     font-weight: normal;
     color: white;
     width: 100%;
+    text-align: left !important;
   }
 
   .contactForm {
@@ -2463,6 +2464,11 @@
 }
 
 @media (max-width: 1024px) {
+
+  .pitchParagraphWrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 
   /* Base details - hidden by default */
   .details {
@@ -2612,6 +2618,7 @@
   .contactThankYou, .contactHeadline{
     display: flex;
     justify-content: center;
+    text-align: center !important;
   }
 
   /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
@@ -2667,5 +2674,20 @@
   .learnMoreButton {
     font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
+
+/* Extra small mobile devices - width less than 350px */
+@media (max-width: 350px) {
+  .sectionTitle {
+    font-size: clamp(1.25rem, 5vw, 2.5rem) !important;
+  }
+
+  .pitchWrapper {
+    gap: 0 !important;
+  }
+
+  .pitchContentRow {
+    gap: 0 !important;
   }
 }
