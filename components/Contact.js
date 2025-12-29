@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
@@ -13,6 +13,19 @@ export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
     const [submitMessage, setSubmitMessage] = useState('');
+
+    // Auto-hide message after 5 seconds
+    useEffect(() => {
+        if (submitStatus) {
+            const timer = setTimeout(() => {
+                setSubmitStatus(null);
+                setSubmitMessage('');
+            }, 5000);
+
+            // Cleanup timer on unmount or when status changes
+            return () => clearTimeout(timer);
+        }
+    }, [submitStatus]);
 
     const handleChange = (e) => {
         setFormData({

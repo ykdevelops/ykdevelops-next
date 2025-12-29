@@ -1,57 +1,17 @@
-import React, { Suspense, useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+import React, { Suspense } from "react";
+import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
 
-const DynamicImage = dynamic(() =>
-  import("next/image").then((mod) => mod.default)
-);
-
 function Intro() {
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(150);
-
-  const textArray = ["n Intermediate Web Developer", " third year CS Student @uOttawa"];
-  const typingDelay = 1000;
-  const deletingDelay = 100;
-  const loop = true;
-
-  useEffect(() => {
-    const handleType = () => {
-      const i = loopNum % textArray.length;
-      const fullText = textArray[i];
-
-      setText(
-        isDeleting
-          ? fullText.substring(0, text.length - 1)
-          : fullText.substring(0, text.length + 1)
-      );
-
-      setTypingSpeed(
-        isDeleting ? deletingDelay : typingSpeed
-      );
-
-      if (!isDeleting && text === fullText) {
-        setTimeout(() => setIsDeleting(true), typingDelay);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-      }
-    };
-
-    const typingTimer = setTimeout(handleType, typingSpeed);
-
-    return () => clearTimeout(typingTimer);
-  }, [text, isDeleting, typingSpeed, loopNum]);
+  const textArray = ["Intermediate Web Developer", "Third year Computer Science @uOttawa"];
 
   return (
     <div className={styles.layer}>
       <div className={styles.leftHalf}>
         <Suspense
           fallback={
-            <DynamicImage
+            <Image
               src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/introGif-min.png"
               alt="headshot"
               width={500}
@@ -60,7 +20,7 @@ function Intro() {
             />
           }
         >
-          <DynamicImage
+          <Image
             src="https://ykdevelops.s3.us-east-2.amazonaws.com/intro/introGif.gif"
             alt="headshot"
             width={600}
@@ -72,16 +32,14 @@ function Intro() {
       </div>
       <div className={styles.rightHalf}>
         <div className={styles.textContainer}>
-          <h2 className={styles.introGreeting}>Hello, I'm <span className={styles.introName}>Youssef Khalil</span></h2>
-          <h2 className={styles.introDescription}>
-            A<span
-              className="txt-rotate"
-              data-period="2000"
-              data-rotate={JSON.stringify(textArray)}
-            >
-              {text}
-            </span>
-          </h2>
+         <span className={styles.introName}>Youssef Khalil</span>
+          <div className={styles.introDescription}>
+            {textArray.map((text, index) => (
+              <h2 key={index} className={styles.introDescriptionLine}>
+                {text}
+              </h2>
+            ))}
+          </div>
         </div>
       </div>
     </div>

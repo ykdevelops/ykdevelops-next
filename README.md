@@ -29,9 +29,8 @@ A modern, responsive portfolio website built with Next.js showcasing my projects
 ykdevelops-next/
 ├── components/
 │   ├── CaseStudies.js          # Case studies showcase section
-│   ├── Certifications.js        # Certifications display
 │   ├── Contact.js               # Contact form component
-│   ├── Education.js            # Education section
+│   ├── Education.js            # Education section (includes certifications)
 │   ├── Intro.js                # Introduction section
 │   ├── Pitch.js                # Website service pitch section
 │   ├── WorkExperience.js       # Work experience timeline
@@ -58,6 +57,12 @@ ykdevelops-next/
 ## Recent Updates
 
 - ✅ **AWS SES Integration**: Fully integrated contact form with AWS SES email delivery
+- ✅ **Typography Improvements**: Applied Noto Kufi Arabic font to section titles and name
+- ✅ **Design System**: Implemented 8pt grid spacing system and improved typography hierarchy
+- ✅ **Component Updates**: Merged certifications into Education section
+- ✅ **Intro Section**: Removed rotating text animation, stacked text vertically
+- ✅ **Pitch Section**: Added bold and underlined emphasis to key phrases
+- ✅ **Case Studies**: Unified title styling with other sections
 - Added Case Studies section with featured projects
 - Implemented responsive typography matching education hierarchy
 - Updated case study icons and styling

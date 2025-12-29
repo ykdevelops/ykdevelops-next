@@ -6,7 +6,7 @@ import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
 export default function Studio() {
     return (
-        <div className={styles.layer}>
+        <>
             <div className={styles.caseTopHalf}>
                 <div className={styles.caseTopStack}>
                     <div className={styles.caseMediaBox}>
@@ -17,36 +17,35 @@ export default function Studio() {
                             <BoxCanvas className={styles.boxCanvas} />
                         </Suspense>
                     </div>
-                    <div className={styles.caseTitle}>
-                        <h1 className={styles.caseProjectTitle}>3D Studio</h1>
-                        <div>
-                            <a
-                                href="https://ykdevelops-r3f.vercel.app/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsLink45Deg className={styles.projectIconLink} />
-                            </a>
-                            <a
-                                href="https://github.com/ykdevelops/ykdevelops-r3f"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsGithub className={styles.projectIconLink2} />
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className={styles.caseBottomHalf}>
+                <div className={styles.caseTitle}>
+                    <h1 className={styles.caseProjectTitle}>3D Studio</h1>
+                    <div>
+                        <a
+                            href="https://ykdevelops-r3f.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsLink45Deg className={styles.projectIconLink} />
+                        </a>
+                        <a
+                            href="https://github.com/ykdevelops/ykdevelops-r3f"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsGithub className={styles.projectIconLink2} />
+                        </a>
+                    </div>
+                </div>
                 <div className={styles.caseDescription}>
                     <p className={styles.projectDescription}>
-                        Crafted an innovative 3D visualization of my
-                        workspace . It provides visitors with an
-                        engaging interactive experience going beyond the 2D norm of web applications.
+                        3D visualization of my
+                        workstation using React Three Fiber. 
                     </p>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

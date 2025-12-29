@@ -16,7 +16,7 @@ export default function CaseStudies() {
     <div className={styles.layer}>
       <div className={styles.workContainer}>
         {/* Header Section */}
-        <div className={styles.caseContainerTitleRow}>
+        <div className={styles.containerTitleRow}>
           <Suspense 
             className={styles.caseStudiesHeaderIconSuspense} 
             fallback={<div className={styles.caseLoadingImage}></div>}
@@ -26,10 +26,10 @@ export default function CaseStudies() {
               alt="Case studies icon"
               width={150}
               height={150}
-              className={styles.caseSectionTitleIcon}
+              className={styles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.caseSectionTitle}>Case Studies</h1>
+          <h1 className={styles.sectionTitle}>Case Studies</h1>
         </div>
 
         {/* Case Studies Grid */}

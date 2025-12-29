@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem; /* space below each section */
+  position: relative;
+  padding: 3rem 2rem;
 }
 
 /* 
@@ -20,6 +22,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind title */
+  padding: 1.5rem;
+  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.55) 0%, rgba(63, 61, 107, 0.25) 60%, transparent 100%);
+  border-radius: 8px;
 }
 
 /* 
@@ -80,6 +87,11 @@
   align-items: center;
   text-align: center;
   overflow: visible;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind education items */
+  padding: 2rem 1.5rem;
+  background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 55%, transparent 100%);
+  border-radius: 8px;
 }
 
 /* ============================================
@@ -176,10 +188,12 @@
 .eduDescription {
   padding: 0 0 1rem 0;
   width: 90%;
+  max-width: 650px;
   font-size: 0.75em;
   font-weight: normal;
   overflow-wrap: break-word;
-  line-height: 1.4;
+  line-height: 1.5;
+  letter-spacing: 0;
   text-align: center;
 }
 
@@ -238,6 +252,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .pitchWrapper {
@@ -245,7 +260,7 @@
   max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem; /* 32px - 8pt grid double spacing */
 }
 
 .pitchTitleRow {
@@ -253,16 +268,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1rem; /* 16px - 8pt grid base spacing */
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
+  position: relative;
+  /* Soft radial gradient to fade out dots behind title */
+  padding: 1.5rem;
+  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.2) 60%, transparent 100%);
+  border-radius: 8px;
 }
 
 .pitchContentRow {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem; /* 32px - 8pt grid double spacing */
 }
 
 .pitchLeftColumn {
@@ -270,6 +290,14 @@
   display: flex;
   flex-direction: column;
   gap: 0rem;
+  align-items: center;
+}
+
+.pitchCTAContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* 32px - 8pt grid double spacing */
+  width: 100%;
 }
 
 .pitchRightColumn {
@@ -304,6 +332,12 @@
   position: relative;
   margin: 0;
   margin-top: 0rem;
+  padding-top: 1rem; /* 16px - 8pt grid base spacing */
+  margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
+  /* Soft radial gradient to fade out dots behind text */
+  background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 60%, transparent 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
 }
 
 .pitchParagraph {
@@ -311,8 +345,16 @@
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   line-height: 1.6;
   color: rgb(218, 218, 218);
-  max-width: 600px;
+  max-width: 650px;
   text-align: center;
+  letter-spacing: 0;
+}
+
+.pitchParagraph strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .pitchButtonImageRow {
@@ -362,6 +404,7 @@
   overflow: hidden;
   animation: gradientWave 3s ease infinite;
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  letter-spacing: 0.05em;
 }
 
 .pitchCTA::before {
@@ -415,22 +458,74 @@
 .pitchExpectationsList {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem; /* 16px - 8pt grid base spacing */
   max-width: 600px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind cards */
+  padding: 2rem 1rem;
+  background: radial-gradient(ellipse 150% 120% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 50%, transparent 100%);
+  border-radius: 8px;
 }
 
 .pitchExpectationItem {
-  padding: 1.5rem;
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.pitchCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pitchExpectationItem.flipped .pitchCardInner {
+  transform: rotateY(180deg);
+}
+
+.pitchCardFront,
+.pitchCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* 16px - 8pt grid base spacing */
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  pointer-events: none;
-  cursor: default;
-  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.pitchCardFront {
+  transform: rotateY(0deg);
+}
+
+.pitchCardBack {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.pitchExpectationItem:hover .pitchCardFront,
+.pitchExpectationItem:hover .pitchCardBack {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .pitchExpectationTitle {
@@ -439,8 +534,9 @@
   font-size: clamp(1rem, 3.5vw, 1.5rem);
   font-weight: bold;
   color: white;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+  text-align: center;
 }
 
 .pitchExpectationDescription {
@@ -450,7 +546,9 @@
   line-height: 1.5;
   color: rgb(218, 218, 218);
   font-weight: normal;
-  margin-bottom: 0.75rem;
+  text-align: center;
+  letter-spacing: 0;
+  max-width: 100%;
 }
 
 /* #region general */
@@ -470,6 +568,7 @@
   align-items: center;
   flex-direction: column-reverse;
   margin-bottom: 5rem;
+  position: relative;
 }
 .leftHalf {
   width: 100%;
@@ -488,6 +587,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind text */
+  padding: 2rem 1.5rem;
+  background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.65) 0%, rgba(63, 61, 107, 0.35) 55%, transparent 100%);
+  border-radius: 8px;
 }
 .sectionTitleRow {
   display: flex;
@@ -508,13 +612,18 @@
 }
 .sectionTitle {
   /* padding: 5rem 2rem 5rem 2rem; */
-  font-weight: normal;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 7vw;
   height: 100%;
   padding-top: 5px;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
 }
 /* #region Scroll */
 .scrollColumn {
@@ -622,12 +731,17 @@
 
 /* #region Intro */
 .introName {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
   padding: 0;
   margin: 0;
-  font-weight: bold;
   color: white;
   display: inline;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
 }
 .introGreeting {
   padding: 0;
@@ -636,6 +750,8 @@
   color: white;
   text-align: center;
   min-height: 1.4em;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
 }
 
 .introDescription {
@@ -644,13 +760,18 @@
   font-weight: normal;
   color: white;
   text-align: center;
-  min-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.introDescription .txt-rotate {
-  display: inline-block;
-  min-height: 1.4em;
-  vertical-align: top;
+.introDescriptionLine {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: white;
+  line-height: 1.4;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
 }
 .introPic {
   width: 90%;
@@ -755,8 +876,11 @@
   padding: 0;
   margin-top: 0;
   width: 100%;
+  max-width: 650px;
   overflow-wrap: break-word;
   text-align: start;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 .learnMoreButton {
   background-color: transparent;
@@ -813,6 +937,7 @@
 .projectDescription {
   text-align: center;
   max-width: 600px;
+  padding-top: 3rem;
 }
 .projectLinkIcon {
   padding-right: 4rem;
@@ -872,6 +997,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .contactWrapper {
@@ -939,6 +1065,11 @@
   flex-direction: column;
   gap: 1rem;
   order: 1;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind form */
+  padding: 2rem 1.5rem;
+  background: radial-gradient(ellipse 130% 110% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 55%, transparent 100%);
+  border-radius: 8px;
 }
 
 .contactThankYou {
@@ -946,20 +1077,25 @@
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: white;
   font-weight: normal;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
+  text-align: center;
 }
 
 .contactHeadline {
   margin: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem; /* 16px - 8pt grid base spacing */
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: white;
   font-weight: normal;
+  line-height: 1.0;
+  letter-spacing: -0.015em;
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 0.875rem;
+  gap: 1rem; /* 16px - 8pt grid base spacing */
   width: 100%;
 }
 
@@ -1024,6 +1160,7 @@
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
   will-change: transform, background-position;
   backface-visibility: hidden;
+  letter-spacing: 0.05em;
 }
 
 .contactSubmitButton:hover {
@@ -1092,10 +1229,16 @@
   align-items: center;
   flex-direction: column-reverse;
   margin-bottom: 5rem;
+  position: relative;
 }
 
 .caseWorkContainer {
   width: 100%;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind case studies */
+  padding: 2rem 1rem;
+  background: radial-gradient(ellipse 140% 120% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.25) 50%, transparent 100%);
+  border-radius: 8px;
 }
 
 .caseContainerTitleRow {
@@ -1104,6 +1247,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind title */
+  padding: 1.5rem;
+  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 60%, transparent 100%);
+  border-radius: 8px;
 }
 
 .caseSectionTitleIcon {
@@ -1151,20 +1299,11 @@
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 500px;
-  min-height: 500px;
-  max-height: 500px;
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
   box-sizing: border-box;
-}
-
-.caseStudyItem .layer {
-  min-height: auto !important;
-  padding: 0 !important;
-  height: 100% !important;
   flex-direction: column !important;
-  display: flex !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
   gap: 0 !important;
 }
 
@@ -1176,10 +1315,10 @@
   min-height: 50% !important;
   max-height: 50% !important;
   display: flex !important;
-  align-items: flex-end !important;
+  align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0.5rem !important;
   box-sizing: border-box !important;
   flex: 0 0 50% !important;
   position: relative !important;
@@ -1188,12 +1327,13 @@
 
 .caseTopStack {
   width: 100% !important;
+  height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 0.75rem !important;
-  padding-bottom: 0.5rem !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
   margin: 0 !important;
   flex: 1 1 auto !important;
@@ -1202,37 +1342,38 @@
 
 .caseBottomHalf {
   width: 100% !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
+  height: 35% !important;
+  min-height: 35% !important;
+  max-height: 35% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
   justify-content: flex-start !important;
   margin: 0 !important;
-  padding: 1rem 0 0 0 !important;
+  padding: 0.75rem 0 0 0 !important;
   box-sizing: border-box !important;
-  flex: 0 0 50% !important;
+  flex: 0 0 35% !important;
   overflow-y: auto !important;
 }
 
 .caseMediaBox {
-  width: 90% !important;
-  max-width: 400px !important;
-  aspect-ratio: 16 / 9 !important;
-  height: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
   min-height: 0 !important;
-  max-height: none !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  flex-shrink: 0 !important;
-  margin: 0 auto !important;
+  flex-shrink: 1 !important;
+  flex-grow: 1 !important;
+  margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
-  background-color: rgba(0, 0, 0, 0.15) !important;
-  border: 1px inset rgba(255, 255, 255, 0.1) !important;
+  background-color: transparent !important;
+  border: none !important;
   border-radius: 4px !important;
+  aspect-ratio: 16 / 9 !important;
 }
 
 .caseMediaBox video,
@@ -1264,7 +1405,7 @@
   justify-content: center !important;
   align-items: center !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 0 0.75rem 0 !important;
   flex-shrink: 0 !important;
   gap: 0.75rem !important;
   box-sizing: border-box !important;
@@ -1290,7 +1431,7 @@
 }
 
 .caseDescription p {
-  text-align: left !important;
+  text-align: center !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -1342,7 +1483,7 @@
   justify-content: center !important;
   align-items: center !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 0 0.75rem 0 !important;
   gap: 0.75rem !important;
 }
 
@@ -1361,7 +1502,7 @@
 }
 
 .caseDescription p {
-  text-align: left !important;
+  text-align: center !important;
   width: 100% !important;
   margin: 0 !important;
   margin-top: 0 !important;
@@ -1384,7 +1525,7 @@
 }
 
 .caseStudyItem .projectTitle {
-  font-size: clamp(1rem, 3.5vw, 1.5rem) !important;
+  font-size: 1.25rem !important;
   margin: 0 !important;
   font-weight: bold !important;
   color: white !important;
@@ -1448,7 +1589,7 @@
 }
 
 .caseStudyItem .projectDescription {
-  font-size: 0.75em !important;
+  font-size: 0.875rem !important;
   line-height: 1.4 !important;
 }
 
@@ -1464,16 +1605,16 @@
   }
 
   .caseProjectTitle {
-    font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    font-size: 1.25rem !important;
     padding-top: 0.5rem;
   }
 
   .caseStudyItem .projectTitle {
-    font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    font-size: 1.25rem !important;
   }
 
   .caseStudyItem .projectDescription {
-    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+    font-size: 0.875rem !important;
   }
 
   .caseStudyItem .rightHalf {
@@ -1504,22 +1645,11 @@
     padding: 1.5rem !important;
     background-color: rgba(255, 255, 255, 0.05) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    height: 500px !important;
-    min-height: 500px !important;
-    max-height: 500px !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
   }
 
-  .caseStudyItem .layer {
-    min-height: auto !important;
-    padding: 0 !important;
-    height: 100% !important;
-    flex-direction: column !important;
-    display: flex !important;
-    align-items: stretch !important;
-    flex: 1 1 auto !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
 
 .caseTopHalf {
   width: 100% !important;
@@ -1527,10 +1657,10 @@
   min-height: 50% !important;
   max-height: 50% !important;
   display: flex !important;
-  align-items: flex-end !important;
+  align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0.5rem !important;
   box-sizing: border-box !important;
   flex: 0 0 50% !important;
   position: relative !important;
@@ -1539,12 +1669,13 @@
 
 .caseTopStack {
   width: 100% !important;
+  height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 0.75rem !important;
-  padding-bottom: 0.5rem !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
   margin: 0 !important;
   flex: 1 1 auto !important;
@@ -1561,7 +1692,7 @@
   align-items: flex-start !important;
   justify-content: flex-start !important;
   margin: 0 !important;
-  padding: 1rem 0 0 0 !important;
+  padding: 0.75rem 0 0 0 !important;
   box-sizing: border-box !important;
   flex: 0 0 50% !important;
   overflow-y: auto !important;
@@ -1612,7 +1743,7 @@
   }
 
   .caseProjectTitle {
-    font-size: clamp(1rem, 1.5vw, 1.25rem) !important;
+    font-size: 1.25rem !important;
     font-weight: bold !important;
     color: white !important;
     padding-top: 0 !important;
@@ -1621,13 +1752,13 @@
   }
 
   .caseStudyItem .projectTitle {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem) !important;
+    font-size: 1.25rem !important;
     font-weight: bold !important;
     color: white !important;
   }
 
   .caseStudyItem .projectDescription {
-    font-size: clamp(0.875rem, 1.1vw, 1rem) !important;
+    font-size: 0.875rem !important;
   }
 
 
@@ -1980,7 +2111,7 @@
     width: 100%;
   }
   .introName {
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(3rem, 5.5vw, 5rem);
     padding: 0;
     margin: 0;
     font-weight: bold;
@@ -2007,15 +2138,19 @@
     color: white;
     text-align: start;
     width: 100%;
-    font-size: clamp(0.875rem, 2.5vw, 2.5rem);
-    line-height: 1.4;
-    min-height: 1.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
   
-  .introDescription .txt-rotate {
-    display: inline-block;
-    min-height: 1.4em;
-    vertical-align: top;
+  .introDescriptionLine {
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5rem;
+    font-weight: normal;
+    color: white;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    line-height: 1.4;
   }
   .introPic {
     max-width: 650px;
@@ -2226,7 +2361,7 @@
   .projectDescription {
     max-width: 700px;
     text-align: start;
-    padding: 10px 0 10px 0;
+    padding: 3rem 0 10px 0;
   }
   .projectLinkIcon {
     padding-right: 4rem;
@@ -2440,7 +2575,7 @@
 
   /* Level 2: Intro Text (Large) - 4.5-5.5vw */
   .introName {
-    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
+    font-size: clamp(2rem, 6vw, 3.5rem) !important;
     line-height: 1.4;
   }
 
@@ -2450,12 +2585,14 @@
   }
 
   .introDescription {
-    font-size: clamp(0.875rem, 3.25vw, 1.5rem) !important;
-    line-height: 1.4;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
   }
 
-  .introDescription .txt-rotate {
-    font-size: clamp(0.875rem, 3.25vw, 1.5rem) !important;
+  .introDescriptionLine {
+    font-size: clamp(0.75rem, 2.5vw, 1.25rem) !important;
+    line-height: 1.4 !important;
   }
 
   /* Level 1: Primary Titles - Mobile */

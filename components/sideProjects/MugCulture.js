@@ -8,9 +8,7 @@ export default function MugCulture() {
     const videoUrl =
         'https://ykdevelops.s3.us-east-2.amazonaws.com/projects/mugculture.mp4'
     return (
-
-
-        <div className={styles.layer}>
+        <>
             <div className={styles.caseTopHalf}>
                 <div className={styles.caseTopStack}>
                     <div className={styles.caseMediaBox}>
@@ -27,39 +25,35 @@ export default function MugCulture() {
                             }}
                         />
                     </div>
-                    <div className={styles.caseTitle}>
-                        <h1 className={styles.caseProjectTitle}>MugCulture Beta</h1>
-                        <div>
-                            <a
-                                href="https://mug-culture-shop.vercel.app/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsLink45Deg className={styles.projectIconLink} />
-                            </a>
-                            <a
-                                href="https://github.com/ykdevelops/mug-culture-shop"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsGithub className={styles.projectIconLink2} />
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className={styles.caseBottomHalf}>
+                <div className={styles.caseTitle}>
+                    <h1 className={styles.caseProjectTitle}>MugCulture Beta</h1>
+                    <div>
+                        <a
+                            href="https://mug-culture-shop.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsLink45Deg className={styles.projectIconLink} />
+                        </a>
+                        <a
+                            href="https://github.com/ykdevelops/mug-culture-shop"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <BsGithub className={styles.projectIconLink2} />
+                        </a>
+                    </div>
+                </div>
                 <div className={styles.caseDescription}>
                     <p className={styles.projectDescription}>
-                        A high-performance and responsive e-commerce website for
-                        MugCulture using Next.js and Framer Motion, deployed on Vercel. The
-                        site features tailored mugs with a focus on delivering an
-                        exceptional user experience, and seamless adaptability across
-                        various devices.
+                        Responsive e-commerce website
+                        using Next.js and Framer Motion.
                     </p>
                 </div>
             </div>
-        </div>
-
+        </>
     )
 }

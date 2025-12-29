@@ -3,7 +3,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro'
 import Education from '../components/Education'
-import Certifications from '../components/Certifications'
 import CaseStudies from '../components/CaseStudies'
 import Pitch from '../components/Pitch'
 import WorkExperience from '../components/WorkExperience'
@@ -58,7 +57,6 @@ export default function Home() {
       <Pitch />
       <WorkExperience />
       <Education />
-      <Certifications />
       <CaseStudies />
       <Contact />
     </div>
