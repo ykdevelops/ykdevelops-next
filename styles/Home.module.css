@@ -101,7 +101,7 @@
 
 /* Level 1: TOP ROW - Largest, Brightest White */
 .itemLevel1 {
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
   color: white;
   font-weight: bold;
   margin-bottom: 0.25rem;
@@ -110,7 +110,7 @@
 
 /* Level 2: SECOND ROW - Medium, Light Grey */
 .itemLevel2 {
-  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: rgb(240, 240, 240);
   font-weight: normal;
   margin-bottom: 0.5rem;
@@ -119,7 +119,7 @@
 
 /* Level 3: THIRD ROW - Smaller, Medium Grey */
 .itemLevel3 {
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   color: rgb(218, 218, 218);
   font-weight: normal;
   margin-bottom: 0.75rem;
@@ -128,7 +128,7 @@
 
 /* Level 4: BOTTOM ROW - Smallest, Darkest Grey */
 .itemLevel4 {
-  font-size: clamp(0.6875rem, 2vw, 0.875rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: rgb(180, 180, 180);
   font-weight: normal;
   margin-bottom: 0;
@@ -148,7 +148,7 @@
   text-align: start;
   width: 100%;
   /* Uses itemLevel1 base styles - First element in column */
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
   font-weight: bold;
   color: white;
   margin-bottom: 0.25rem;
@@ -160,7 +160,7 @@
 */
 .eduItemDegree + .eduItemTitle {
   /* Uses itemLevel2 base styles - Second in column */
-  font-size: clamp(0.875rem, 3.25vw, 1.375rem);
+  font-size: clamp(1.25rem, 3.25vw, 1.5rem);
   font-weight: normal;
   color: rgb(240, 240, 240);
   margin-bottom: 0.5rem;
@@ -175,7 +175,7 @@
   text-align: start;
   width: 100%;
   /* Uses itemLevel3 base styles */
-  font-size: clamp(0.875rem, 2.75vw, 1.125rem);
+  font-size: clamp(1.25rem, 2.75vw, 1.5rem);
   font-weight: normal;
   color: rgb(218, 218, 218);
   margin-bottom: 0.75rem;
@@ -189,7 +189,7 @@
   padding: 0 0 1rem 0;
   width: 90%;
   max-width: 650px;
-  font-size: 0.75em;
+  font-size: 1.25rem;
   font-weight: normal;
   overflow-wrap: break-word;
   line-height: 1.5;
@@ -217,7 +217,7 @@
   opacity: 0.6;
   transition: opacity 0.2s ease;
   /* Uses itemLevel4 base styles */
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   color: rgb(180, 180, 180);
   font-weight: normal;
   line-height: 1.5;
@@ -260,7 +260,7 @@
   max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* 32px - 8pt grid double spacing */
+  gap: 0;
 }
 
 .pitchTitleRow {
@@ -273,7 +273,7 @@
   margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
   position: relative;
   /* Soft radial gradient to fade out dots behind title */
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.2) 60%, transparent 100%);
   border-radius: 8px;
 }
@@ -298,6 +298,7 @@
   justify-content: center;
   margin-top: 2rem; /* 32px - 8pt grid double spacing */
   width: 100%;
+  order: 2; /* Appears below video */
 }
 
 .pitchRightColumn {
@@ -332,17 +333,16 @@
   position: relative;
   margin: 0;
   margin-top: 0rem;
-  padding-top: 1rem; /* 16px - 8pt grid base spacing */
   margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
   /* Soft radial gradient to fade out dots behind text */
   background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 60%, transparent 100%);
-  padding: 2rem 1.5rem;
+  padding: 0;
   border-radius: 8px;
 }
 
 .pitchParagraph {
   margin: 0;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
   line-height: 1.6;
   color: rgb(218, 218, 218);
   max-width: 650px;
@@ -392,7 +392,7 @@
   background-size: 300% 100%;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: white;
   text-decoration: none;
@@ -447,7 +447,7 @@
 
 .pitchNote {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: rgb(180, 180, 180);
   font-style: italic;
   max-width: 500px;
@@ -468,6 +468,7 @@
   padding: 2rem 1rem;
   background: radial-gradient(ellipse 150% 120% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 50%, transparent 100%);
   border-radius: 8px;
+  order: 2; /* Appears below paragraph */
 }
 
 .pitchExpectationItem {
@@ -500,6 +501,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  min-height: 120px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   display: flex;
@@ -511,6 +513,12 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .pitchCardFront {
@@ -531,7 +539,7 @@
 .pitchExpectationTitle {
   margin: 0;
   /* Uses itemLevel1 base styles */
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
   font-weight: bold;
   color: white;
   line-height: 1.0;
@@ -542,8 +550,8 @@
 .pitchExpectationDescription {
   margin: 0;
   /* Uses itemLevel3 base styles */
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
-  line-height: 1.5;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.4;
   color: rgb(218, 218, 218);
   font-weight: normal;
   text-align: center;
@@ -647,7 +655,7 @@
 
 .scrollTitle {
   transform: translateY(-3rem);
-  font-size: 16px;
+  font-size: 1.25rem;
   color: #ffff;
 }
 
@@ -771,7 +779,7 @@
   font-weight: normal;
   color: white;
   line-height: 1.4;
-  font-size: clamp(0.75rem, 2vw, 1.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 .introPic {
   width: 90%;
@@ -841,7 +849,7 @@
   margin: 0;
   padding: 0;
   /* Uses itemLevel1 base styles */
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
   color: white;
   font-weight: bold;
   margin-bottom: 0.25rem;
@@ -854,7 +862,7 @@
   margin: 0;
   padding: 0;
   /* Uses itemLevel2 base styles */
-  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: rgb(240, 240, 240);
   font-weight: normal;
   margin-bottom: 0.5rem;
@@ -866,7 +874,7 @@
   margin: 0;
   text-align: start;
   /* Uses itemLevel3 base styles */
-  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   color: rgb(218, 218, 218);
   font-weight: normal;
   margin-bottom: 0.75rem;
@@ -931,7 +939,7 @@
   margin-top: 0rem;
 }
 .projectLanguages {
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 .projectDescription {
@@ -1054,7 +1062,7 @@
 }
 
 .contactIconLabel {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: rgb(218, 218, 218);
   text-align: center;
 }
@@ -1106,7 +1114,7 @@
 }
 
 .contactFormLabel {
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
   color: rgb(218, 218, 218);
   font-weight: 500;
 }
@@ -1117,7 +1125,7 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
   color: white;
   font-family: inherit;
   transition: all 0.2s ease;
@@ -1185,7 +1193,7 @@
 .contactFormMessage {
   padding: 0.875rem 1rem;
   border-radius: 8px;
-  font-size: clamp(0.875rem, 1.2vw, 1rem);
+  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
   text-align: center;
   margin-top: 0.5rem;
   animation: fadeIn 0.3s ease-in;
@@ -1219,7 +1227,7 @@
 
 /* #endregion Contact */
 
-/* #region Case Studies */
+/* #region Personal Projects */
 .caseLayer {
   width: 90%;
   height: 100%;
@@ -1235,7 +1243,7 @@
 .caseWorkContainer {
   width: 100%;
   position: relative;
-  /* Soft radial gradient to fade out dots behind case studies */
+  /* Soft radial gradient to fade out dots behind personal projects */
   padding: 2rem 1rem;
   background: radial-gradient(ellipse 140% 120% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.25) 50%, transparent 100%);
   border-radius: 8px;
@@ -1274,13 +1282,13 @@
   padding-top: 5px;
 }
 
-.caseLoadingImage {
+.personalProjectsLoadingImage {
   background-color: grey;
   width: 150px;
   height: 150px;
 }
 
-.caseStudiesGrid {
+.personalProjectsGrid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1289,7 +1297,7 @@
   align-items: center;
 }
 
-.caseStudyItem {
+.personalProjectItem {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1299,9 +1307,9 @@
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 400px;
-  min-height: 400px;
-  max-height: 400px;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
   box-sizing: border-box;
   flex-direction: column !important;
   gap: 0 !important;
@@ -1309,23 +1317,23 @@
 
 /* chatAppLayer wrapper removed from ChatApp component - no special case needed */
 
-.caseTopHalf {
+.projectTopHalf {
   width: 100% !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
+  height: 80% !important;
+  min-height: 80% !important;
+  max-height: 80% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
   padding: 0.5rem !important;
   box-sizing: border-box !important;
-  flex: 0 0 50% !important;
+  flex: 0 0 80% !important;
   position: relative !important;
 }
 
 
-.caseTopStack {
+.projectTopStack {
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
@@ -1340,11 +1348,11 @@
   min-height: 0 !important;
 }
 
-.caseBottomHalf {
+.projectBottomHalf {
   width: 100% !important;
-  height: 35% !important;
-  min-height: 35% !important;
-  max-height: 35% !important;
+  height: 20% !important;
+  min-height: 20% !important;
+  max-height: 20% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
@@ -1352,11 +1360,11 @@
   margin: 0 !important;
   padding: 0.75rem 0 0 0 !important;
   box-sizing: border-box !important;
-  flex: 0 0 35% !important;
+  flex: 0 0 20% !important;
   overflow-y: auto !important;
 }
 
-.caseMediaBox {
+.projectMediaBox {
   width: 100% !important;
   max-width: 100% !important;
   height: 100% !important;
@@ -1376,8 +1384,8 @@
   aspect-ratio: 16 / 9 !important;
 }
 
-.caseMediaBox video,
-.caseMediaBox .videoVisual {
+.projectMediaBox video,
+.projectMediaBox .videoVisual {
   width: 100% !important;
   height: 100% !important;
   max-width: 100% !important;
@@ -1389,8 +1397,8 @@
 
 /* ChatApp video override removed - all case study media follows same rules */
 
-.caseMediaBox .boxCanvas,
-.caseMediaBox .canvasBox {
+.projectMediaBox .boxCanvas,
+.projectMediaBox .canvasBox {
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
@@ -1399,19 +1407,19 @@
   box-sizing: border-box !important;
 }
 
-.caseTitle {
+.projectTitleRow {
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   margin: 0 !important;
-  padding: 0 0 0.75rem 0 !important;
+  padding: 0 !important;
   flex-shrink: 0 !important;
   gap: 0.75rem !important;
   box-sizing: border-box !important;
 }
 
-.caseTitle > div {
+.projectTitleRow > div {
   display: flex !important;
   flex-direction: row !important;
   gap: 0.5rem !important;
@@ -1439,7 +1447,7 @@
 }
 
 /* Legacy support for existing components */
-.caseStudyItem .leftHalf {
+.personalProjectItem .leftHalf {
   width: 100% !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1452,7 +1460,7 @@
   flex: 0 0 50% !important;
 }
 
-.caseStudyItem .rightHalf {
+.personalProjectItem .rightHalf {
   width: 100% !important;
   align-items: center !important;
   justify-content: flex-start !important;
@@ -1468,7 +1476,7 @@
   flex: 0 0 50% !important;
 }
 
-.caseStudyItem .textContainer {
+.personalProjectItem .textContainer {
   align-items: center !important;
   text-align: center !important;
   width: 100% !important;
@@ -1477,13 +1485,13 @@
   gap: 0.75rem !important;
 }
 
-.caseTitle {
+.projectTitleRow {
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   margin: 0 !important;
-  padding: 0 0 0.75rem 0 !important;
+  padding: 0 !important;
   gap: 0.75rem !important;
 }
 
@@ -1511,8 +1519,8 @@
   box-sizing: border-box !important;
 }
 
-.caseProjectTitle {
-  font-size: clamp(1rem, 3.5vw, 1.5rem) !important;
+.projectTitleHeading {
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem) !important;
   margin: 0 !important;
   margin-top: 0 !important;
   padding: 0 !important;
@@ -1524,14 +1532,14 @@
   box-sizing: border-box !important;
 }
 
-.caseStudyItem .projectTitle {
+.personalProjectItem .projectTitle {
   font-size: 1.25rem !important;
   margin: 0 !important;
   font-weight: bold !important;
   color: white !important;
 }
 
-.caseStudyItem .textContainer > div:first-child {
+.personalProjectItem .textContainer > div:first-child {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -1542,7 +1550,7 @@
   margin-bottom: 0.5rem;
 }
 
-.caseStudyItem .textContainer > div:first-child h1 {
+.personalProjectItem .textContainer > div:first-child h1 {
   margin: 0 !important;
   white-space: nowrap;
   flex-shrink: 0;
@@ -1553,7 +1561,7 @@
   vertical-align: middle !important;
 }
 
-.caseStudyItem .textContainer > div:first-child > div:last-child {
+.personalProjectItem .textContainer > div:first-child > div:last-child {
   display: flex !important;
   flex-direction: row !important;
   gap: 0.5rem !important;
@@ -1562,8 +1570,8 @@
   align-self: center !important;
 }
 
-.caseStudyItem .projectIconLink,
-.caseStudyItem .projectIconLink2 {
+.personalProjectItem .projectIconLink,
+.personalProjectItem .projectIconLink2 {
   width: 1.25rem !important;
   height: 1.25rem !important;
   transition: all 0.2s ease-in-out;
@@ -1576,55 +1584,55 @@
   vertical-align: middle !important;
 }
 
-.caseStudyItem .projectIconLink2 {
+.personalProjectItem .projectIconLink2 {
   transform: none !important;
 }
 
-.caseStudyItem .projectIconLink:hover {
+.personalProjectItem .projectIconLink:hover {
   transform: scale(1.2);
 }
 
-.caseStudyItem .projectIconLink2:hover {
+.personalProjectItem .projectIconLink2:hover {
   transform: scale(1.2);
 }
 
-.caseStudyItem .projectDescription {
-  font-size: 0.875rem !important;
+.personalProjectItem .projectDescription {
+  font-size: 1.25rem !important;
   line-height: 1.4 !important;
 }
 
-.caseStudyItem .projectLanguages {
+.personalProjectItem .projectLanguages {
   display: none !important;
 }
 
 @media (max-width: 1024px) {
-  .caseStudyItem .textContainer > div:first-child {
+  .personalProjectItem .textContainer > div:first-child {
     justify-content: center !important;
     align-items: center !important;
     gap: 0.5rem !important;
   }
 
-  .caseProjectTitle {
+  .projectTitleHeading {
     font-size: 1.25rem !important;
     padding-top: 0.5rem;
   }
 
-  .caseStudyItem .projectTitle {
+  .personalProjectItem .projectTitle {
     font-size: 1.25rem !important;
   }
 
-  .caseStudyItem .projectDescription {
-    font-size: 0.875rem !important;
+  .personalProjectItem .projectDescription {
+    font-size: 1.25rem !important;
   }
 
-  .caseStudyItem .rightHalf {
+  .personalProjectItem .rightHalf {
     align-items: center !important;
     text-align: center !important;
   }
 }
 
 @media (min-width: 1025px) {
-  .caseStudiesGrid {
+  .personalProjectsGrid {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1633,7 +1641,7 @@
     width: 100%;
   }
 
-  .caseStudyItem {
+  .personalProjectItem {
     flex: 1 1 calc(33.333% - 0.667rem);
     min-width: 0;
     max-width: calc(33.333% - 0.667rem);
@@ -1645,29 +1653,29 @@
     padding: 1.5rem !important;
     background-color: rgba(255, 255, 255, 0.05) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    height: 400px !important;
-    min-height: 400px !important;
-    max-height: 400px !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
   }
 
 
-.caseTopHalf {
+.projectTopHalf {
   width: 100% !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
+  height: 80% !important;
+  min-height: 80% !important;
+  max-height: 80% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin: 0 !important;
   padding: 0.5rem !important;
   box-sizing: border-box !important;
-  flex: 0 0 50% !important;
+  flex: 0 0 80% !important;
   position: relative !important;
 }
 
 
-.caseTopStack {
+.projectTopStack {
   width: 100% !important;
   height: 100% !important;
   display: flex !important;
@@ -1682,11 +1690,11 @@
   min-height: 0 !important;
 }
 
-.caseBottomHalf {
+.projectBottomHalf {
   width: 100% !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
+  height: 20% !important;
+  min-height: 20% !important;
+  max-height: 20% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
@@ -1694,12 +1702,12 @@
   margin: 0 !important;
   padding: 0.75rem 0 0 0 !important;
   box-sizing: border-box !important;
-  flex: 0 0 50% !important;
+  flex: 0 0 20% !important;
   overflow-y: auto !important;
 }
 
   /* Legacy support */
-  .caseStudyItem .leftHalf {
+  .personalProjectItem .leftHalf {
     width: 100% !important;
     height: 50% !important;
     min-height: 50% !important;
@@ -1711,7 +1719,7 @@
     flex: 0 0 50% !important;
   }
 
-  .caseStudyItem .rightHalf {
+  .personalProjectItem .rightHalf {
     width: 100% !important;
     align-items: center !important;
     text-align: center !important;
@@ -1723,7 +1731,7 @@
     flex: 0 0 50% !important;
   }
 
-  .caseStudyItem .textContainer {
+  .personalProjectItem .textContainer {
     align-items: center !important;
     text-align: center !important;
     width: 100% !important;
@@ -1731,18 +1739,18 @@
     margin: 0 !important;
   }
 
-  .caseStudyItem .textContainer > div:first-child {
+  .personalProjectItem .textContainer > div:first-child {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 
-  .caseStudyItem .textContainer > div:first-child {
+  .personalProjectItem .textContainer > div:first-child {
     justify-content: center !important;
     align-items: center !important;
     gap: 0.5rem !important;
   }
 
-  .caseProjectTitle {
+  .projectTitleHeading {
     font-size: 1.25rem !important;
     font-weight: bold !important;
     color: white !important;
@@ -1751,14 +1759,14 @@
     line-height: 1.4 !important;
   }
 
-  .caseStudyItem .projectTitle {
+  .personalProjectItem .projectTitle {
     font-size: 1.25rem !important;
     font-weight: bold !important;
     color: white !important;
   }
 
-  .caseStudyItem .projectDescription {
-    font-size: 0.875rem !important;
+  .personalProjectItem .projectDescription {
+    font-size: 1.25rem !important;
   }
 
 
@@ -1781,19 +1789,19 @@
   }
 }
 
-.caseStudiesItemSuspense {
+.personalProjectsItemSuspense {
   height: 300px !important;
   min-height: 300px !important;
   max-height: 300px !important;
 }
 
-.caseStudiesHeaderIconSuspense {
+.personalProjectsHeaderIconSuspense {
   height: 300px !important;
   min-height: 300px !important;
   max-height: 300px !important;
 }
 
-/* #endregion Case Studies */
+/* #endregion Personal Projects */
 
 @media (min-width: 1025px) {
   /* 
@@ -1863,7 +1871,7 @@
 
   /* Level 2 - Desktop - School name in Education (comes after eduItemDegree) */
   .eduItemDegree + .eduItemTitle {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     margin-bottom: 0.5rem;
     text-align: left;
     color: rgb(240, 240, 240);
@@ -1873,7 +1881,7 @@
 
   .eduItemDate {
     /* Level 3 - Desktop */
-    font-size: clamp(1rem, 1.75vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.75vw, 1.5rem);
     color: rgb(218, 218, 218);
     font-weight: normal;
     margin-bottom: 0.75rem;
@@ -1882,12 +1890,12 @@
 
   .eduDescription {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .eduLink {
     /* Level 4 - Desktop */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     color: rgb(180, 180, 180);
     font-weight: normal;
     line-height: 1.5;
@@ -1907,18 +1915,18 @@
   }
 
   .eduItem {
-    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.2vw, 1.5rem);
   }
 
   /* Note: eduItemTitle, eduItemDegree, eduItemDate styles are defined earlier in this media query */
 
   .eduDescription {
-    font-size: clamp(0.875rem, 1.1vw, 1rem);
+    font-size: clamp(1.25rem, 1.1vw, 1.5rem);
   }
 
   .eduLink {
     /* Level 4 - Desktop (larger viewport) */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     color: rgb(180, 180, 180);
     font-weight: normal;
     line-height: 1.5;
@@ -1938,17 +1946,19 @@
     flex-direction: row;
     align-items: stretch;
     gap: 4rem;
+    padding-top: 2rem;
   }
 
   .pitchLeftColumn {
     width: 50%;
     max-width: 550px;
-    order: 2; /* Appears on left side on desktop (swapped via order since HTML order is reversed) */
+    order: 1; /* Appears on left side on desktop */
     gap: 1rem;
   }
 
   .pitchParagraphWrapper {
     text-align: start;
+    order: 1; /* Paragraph appears first on desktop */
   }
 
   .pitchParagraph {
@@ -1959,8 +1969,16 @@
   .pitchButtonImageRow {
     flex-direction: column;
     align-items: center;
-
     width: 100%;
+    order: 1; /* Video/GIF appears first on desktop (above button) */
+  }
+
+  .pitchCTAContainer {
+    order: 2; /* Button appears below video on desktop */
+  }
+
+  .pitchExpectationsList {
+    order: 2; /* 2x2 cards appear below paragraph on desktop */
   }
 
   .pitchButtonImageRow .pitchGifContainer {
@@ -1983,7 +2001,7 @@
     max-width: 550px;
     align-items: flex-start;
     text-align: start;
-    order: 1; /* Appears on right side on desktop */
+    order: 2; /* Appears on right side on desktop */
   }
 
   .pitchRightColumnBottom {
@@ -2000,16 +2018,19 @@
   .pitchExpectationsList {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto !important;
     gap: 1rem !important;
     max-width: 600px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    align-items: start !important;
   }
 
   .pitchExpectationItem {
     flex: 0 0 auto !important;
     width: 100% !important;
+    height: auto !important;
   }
 
   .pitchIcon {
@@ -2126,7 +2147,7 @@
     color: white;
     text-align: start;
     width: 100%;
-    font-size: clamp(1rem, 3.5vw, 3.5rem);
+    font-size: clamp(1.25rem, 3.5vw, 3.5rem);
     line-height: 1.4;
     min-height: 1.4em;
   }
@@ -2149,7 +2170,7 @@
     padding-left: 0.5rem;
     font-weight: normal;
     color: white;
-    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     line-height: 1.4;
   }
   .introPic {
@@ -2267,7 +2288,7 @@
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
     text-align: start;
-    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     line-height: 1.6;
     transform: translateX(5px);
   }
@@ -2356,7 +2377,7 @@
     justify-content: flex-start;
   }
   .projectLanguages {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .projectDescription {
     max-width: 700px;
@@ -2468,6 +2489,20 @@
   .pitchParagraphWrapper {
     padding: 0 !important;
     margin: 0 !important;
+    order: 1; /* Paragraph appears first on mobile */
+  }
+
+  .pitchExpectationsList {
+    order: 2; /* 2x2 cards appear below paragraph on mobile */
+  }
+
+  .pitchCTAContainer {
+    order: 2; /* Button appears below video on mobile */
+  }
+
+  /* Hide 2x2 boxes on mobile */
+  .pitchExpectationsList {
+    display: none !important;
   }
 
   /* Base details - hidden by default */
@@ -2539,6 +2574,7 @@
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
+    order: 1; /* Video/GIF appears first on mobile */
   }
 
   .pitchButtonImageRow .pitchCTA {
@@ -2597,7 +2633,7 @@
   }
 
   .introDescriptionLine {
-    font-size: clamp(0.75rem, 2.5vw, 1.25rem) !important;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
     line-height: 1.4 !important;
   }
 
@@ -2608,7 +2644,7 @@
   .contactThankYou,
   .eduItemDegree,
   .eduItemTitle {
-    font-size: clamp(1rem, 3.75vw, 1.75rem) !important;
+    font-size: clamp(1.25rem, 3.75vw, 1.75rem) !important;
     color: white !important;
     font-weight: bold !important;
     line-height: 1.4;
@@ -2624,7 +2660,7 @@
   /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
   .workPositionTitle,
   .eduItemDegree + .eduItemTitle {
-    font-size: clamp(0.875rem, 3.25vw, 1.375rem) !important;
+    font-size: clamp(1.25rem, 3.25vw, 1.5rem) !important;
     color: rgb(240, 240, 240) !important;
     font-weight: normal !important;
     line-height: 1.4;
@@ -2635,7 +2671,7 @@
   .workDate,
   .pitchExpectationDescription,
   .eduItemDate {
-    font-size: clamp(0.875rem, 2.75vw, 1.125rem) !important;
+    font-size: clamp(1.25rem, 2.75vw, 1.5rem) !important;
     color: rgb(218, 218, 218) !important;
     font-weight: normal !important;
     line-height: 1.5;
@@ -2647,13 +2683,13 @@
   .workDescription,
   .eduDescription,
   .contactFormLabel {
-    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     line-height: 1.6;
   }
 
   /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
   .pitchNote {
-    font-size: clamp(0.8125rem, 2.625vw, 1.125rem) !important;
+    font-size: clamp(1.25rem, 2.625vw, 1.5rem) !important;
     line-height: 1.5;
   }
 
@@ -2662,7 +2698,7 @@
   .contactFormTextarea,
   .contactIconLabel,
   .eduLink {
-    font-size: clamp(0.75rem, 2.5vw, 1rem) !important;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
     color: rgb(180, 180, 180) !important;
     font-weight: normal !important;
     line-height: 1.5;
@@ -2672,7 +2708,7 @@
   .pitchCTA,
   .contactSubmitButton,
   .learnMoreButton {
-    font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
   }
 }

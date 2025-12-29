@@ -7,11 +7,11 @@ import BoxCanvas from './BoxCanvas'
 export default function Studio() {
     return (
         <>
-            <div className={styles.caseTopHalf}>
-                <div className={styles.caseTopStack}>
-                    <div className={styles.caseMediaBox}>
+            <div className={styles.projectTopHalf}>
+                <div className={styles.projectTopStack}>
+                    <div className={styles.projectMediaBox}>
                         <Suspense
-                            className={styles.caseStudiesItemSuspense}
+                            className={styles.personalProjectsItemSuspense}
                             fallback={<div className={styles.loaderImage}></div>}
                         >
                             <BoxCanvas className={styles.boxCanvas} />
@@ -19,9 +19,9 @@ export default function Studio() {
                     </div>
                 </div>
             </div>
-            <div className={styles.caseBottomHalf}>
-                <div className={styles.caseTitle}>
-                    <h1 className={styles.caseProjectTitle}>3D Studio</h1>
+            <div className={styles.projectBottomHalf}>
+                <div className={styles.projectTitleRow}>
+                    <h1 className={styles.projectTitleHeading}>3D Studio</h1>
                     <div>
                         <a
                             href="https://ykdevelops-r3f.vercel.app/"
@@ -38,12 +38,6 @@ export default function Studio() {
                             <BsGithub className={styles.projectIconLink2} />
                         </a>
                     </div>
-                </div>
-                <div className={styles.caseDescription}>
-                    <p className={styles.projectDescription}>
-                        3D visualization of my
-                        workstation using React Three Fiber. 
-                    </p>
                 </div>
             </div>
         </>

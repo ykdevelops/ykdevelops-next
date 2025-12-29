@@ -5,7 +5,7 @@ A modern, responsive portfolio website built with Next.js showcasing my projects
 ## Features
 
 - **Responsive Design**: Fully responsive layout that works seamlessly on mobile and desktop
-- **Case Studies Section**: Showcase of featured projects including MugCulture Beta, Chat App, and 3D Studio
+- **Personal Projects Section**: Showcase of featured projects including MugCulture Beta, Chat App, and 3D Studio
 - **Work Experience**: Professional experience timeline
 - **Education**: Academic background and certifications
 - **Contact Form**: Integrated contact form with AWS SES backend
@@ -28,7 +28,7 @@ A modern, responsive portfolio website built with Next.js showcasing my projects
 ```
 ykdevelops-next/
 ├── components/
-│   ├── CaseStudies.js          # Case studies showcase section
+│   ├── PersonalProjects.js     # Personal projects showcase section
 │   ├── Contact.js               # Contact form component
 │   ├── Education.js            # Education section (includes certifications)
 │   ├── Intro.js                # Introduction section
@@ -50,7 +50,7 @@ ykdevelops-next/
 │   ├── Home.module.css         # Main stylesheet with responsive design
 │   └── globals.css             # Global styles
 └── public/                     # Static assets
-    ├── puzzle-svgrepo-com.svg  # Case studies icon
+    ├── puzzle-svgrepo-com.svg  # Personal projects icon
     └── website-program-svgrepo-com.svg
 ```
 
@@ -62,11 +62,11 @@ ykdevelops-next/
 - ✅ **Component Updates**: Merged certifications into Education section
 - ✅ **Intro Section**: Removed rotating text animation, stacked text vertically
 - ✅ **Pitch Section**: Added bold and underlined emphasis to key phrases
-- ✅ **Case Studies**: Unified title styling with other sections
-- Added Case Studies section with featured projects
+- ✅ **Personal Projects**: Unified title styling with other sections
+- Added Personal Projects section with featured projects
 - Implemented responsive typography matching education hierarchy
 - Updated case study icons and styling
-- Improved mobile layout and alignment for case studies
+- Improved mobile layout and alignment for personal projects
 - Enhanced visual consistency across all sections
 
 ## Getting Started

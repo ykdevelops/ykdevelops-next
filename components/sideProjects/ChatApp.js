@@ -9,9 +9,9 @@ export default function ChatApp() {
         'https://ykdevelops.s3.us-east-2.amazonaws.com/projects/chatApp.mp4'
     return (
         <>
-            <div className={styles.caseTopHalf}>
-                <div className={styles.caseTopStack}>
-                    <div className={styles.caseMediaBox}>
+            <div className={styles.projectTopHalf}>
+                <div className={styles.projectTopStack}>
+                    <div className={styles.projectMediaBox}>
                         <video
                             src={videoUrl}
                             controls
@@ -23,9 +23,9 @@ export default function ChatApp() {
                     </div>
                 </div>
             </div>
-            <div className={styles.caseBottomHalf}>
-                <div className={styles.caseTitle}>
-                    <h1 className={styles.caseProjectTitle}>Chat App</h1>
+            <div className={styles.projectBottomHalf}>
+                <div className={styles.projectTitleRow}>
+                    <h1 className={styles.projectTitleHeading}>Chat App</h1>
                     <div>
                         <a
                             href="https://chatapp-reactfire.vercel.app/"
@@ -42,11 +42,6 @@ export default function ChatApp() {
                             <BsGithub className={styles.projectIconLink2} />
                         </a>
                     </div>
-                </div>
-                <div className={styles.caseDescription}>
-                    <p className={styles.projectDescription}>
-                        A sleek and user-friendly chat application utilizing ReactFire.
-                    </p>
                 </div>
             </div>
         </>
