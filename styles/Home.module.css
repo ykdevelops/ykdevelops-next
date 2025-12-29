@@ -1,3 +1,11 @@
+/* 
+  Responsive Breakpoints:
+  - Mobile: 0–767px (default styles)
+  - Tablet: 768–1023px (@media (min-width: 768px))
+  - Desktop: 1024–1919px (@media (min-width: 1024px))
+  - TV / Large screens: 1920px+ (@media (min-width: 1920px))
+*/
+
 /* Mobile size */
 /* 
   Individual container for the "Education" block 
@@ -1605,7 +1613,9 @@
   display: none !important;
 }
 
-@media (max-width: 1024px) {
+/* Mobile: 0–767px (default styles) */
+/* Tablet: 768–1023px */
+@media (max-width: 1023px) {
   .personalProjectItem .textContainer > div:first-child {
     justify-content: center !important;
     align-items: center !important;
@@ -1631,7 +1641,8 @@
   }
 }
 
-@media (min-width: 1025px) {
+/* Desktop: 1024–1919px */
+@media (min-width: 1024px) {
   .personalProjectsGrid {
     display: flex;
     flex-direction: row;
@@ -1803,7 +1814,8 @@
 
 /* #endregion Personal Projects */
 
-@media (min-width: 1025px) {
+/* Desktop: 1024–1919px */
+@media (min-width: 1024px) {
   /* 
     Education and Certifications are now separate sections
     Each uses the .layer class, so they stack vertically
@@ -2484,7 +2496,9 @@
   /* #endregion Contact */
 }
 
-@media (max-width: 1024px) {
+/* Mobile: 0–767px (default styles) */
+/* Tablet: 768–1023px */
+@media (max-width: 1023px) {
 
   .pitchParagraphWrapper {
     padding: 0 !important;
@@ -2710,6 +2724,26 @@
   .learnMoreButton {
     font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
+
+/* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
+@media (max-width: 767px) {
+  .contactIconSmall {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .contactIconLabel {
+    font-size: 0.875rem !important;
+  }
+
+  .contactIconLinks {
+    gap: 0.75rem !important;
+  }
+
+  .rightHalf {
+    padding: 0 !important;
   }
 }
 

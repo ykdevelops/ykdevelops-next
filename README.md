@@ -56,18 +56,17 @@ ykdevelops-next/
 
 ## Recent Updates
 
+- ✅ **Responsive Breakpoints**: Updated to modern breakpoint system (Mobile: 0-767px, Tablet: 768-1023px, Desktop: 1024-1919px, Large: 1920px+)
+- ✅ **Pitch Section Redesign**: Reorganized layout - paragraph above 2x2 cards on left, video above button on right
+- ✅ **Personal Projects**: Renamed from Case Studies, removed project descriptions, updated card sizing (300px height, 80/20 split)
+- ✅ **Typography**: All text minimum 20px for improved readability
+- ✅ **Website Service**: Updated description text and removed clickability from 2x2 cards (hover only)
+- ✅ **Mobile Optimizations**: Smaller contact icons/labels, removed intro padding, improved spacing
 - ✅ **AWS SES Integration**: Fully integrated contact form with AWS SES email delivery
 - ✅ **Typography Improvements**: Applied Noto Kufi Arabic font to section titles and name
 - ✅ **Design System**: Implemented 8pt grid spacing system and improved typography hierarchy
 - ✅ **Component Updates**: Merged certifications into Education section
 - ✅ **Intro Section**: Removed rotating text animation, stacked text vertically
-- ✅ **Pitch Section**: Added bold and underlined emphasis to key phrases
-- ✅ **Personal Projects**: Unified title styling with other sections
-- Added Personal Projects section with featured projects
-- Implemented responsive typography matching education hierarchy
-- Updated case study icons and styling
-- Improved mobile layout and alignment for personal projects
-- Enhanced visual consistency across all sections
 
 ## Getting Started
 

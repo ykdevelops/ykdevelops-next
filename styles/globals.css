@@ -1,3 +1,11 @@
+/* 
+  Responsive Breakpoints:
+  - Mobile: 0–767px (default styles)
+  - Tablet: 768–1023px (@media (min-width: 768px))
+  - Desktop: 1024–1919px (@media (min-width: 1024px))
+  - TV / Large screens: 1920px+ (@media (min-width: 1920px))
+*/
+
 /* Reset styles */
 html {
   scroll-behavior: smooth;
@@ -90,8 +98,8 @@ html::-webkit-scrollbar {
   display: none; /* Webkit-based browsers (Chrome, Safari, etc.) */
 }
 
-/* Media queries for responsive typography */
-@media (min-width: 1025px) {
+/* Desktop: 1024–1919px */
+@media (min-width: 1024px) {
   h1 {
     font-size: 4rem;
   }
