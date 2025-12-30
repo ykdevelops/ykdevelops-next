@@ -40,6 +40,80 @@ function Intro() {
               </h2>
             ))}
           </div>
+          <div className={styles.contactIconLinks}>
+              <a
+                href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Youssef_Khalil_2025_Resume+(3).pdf"
+                target="_blank"
+                rel="noreferrer"
+                download
+                className={styles.contactIconLink}
+              >
+                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                  <Image
+                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/resumeIcon.png"
+                    alt="Resume"
+                    width={397}
+                    height={512}
+                    className={styles.contactIconSmall}
+                  />
+                </Suspense>
+                <span className={styles.contactIconLabel}>Resume</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/ykdevelops"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactIconLink}
+              >
+                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                  <Image
+                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/linkedin2.png"
+                    alt="linkedin"
+                    width={500}
+                    height={500}
+                    className={styles.contactIconSmall}
+                  />
+                </Suspense>
+                <span className={styles.contactIconLabel}>LinkedIn</span>
+              </a>
+
+              <a
+                href="https://github.com/ykdevelops"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactIconLink}
+              >
+                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                  <Image
+                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/github.png"
+                    alt="github"
+                    width={500}
+                    height={500}
+                    className={styles.contactIconSmall}
+                  />
+                </Suspense>
+                <span className={styles.contactIconLabel}>GitHub</span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/channel/UCRIft9RM1NOq6m0MIJeiJJg"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.contactIconLink}
+              >
+                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                  <Image
+                    src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/youtube1.png"
+                    alt="youtube"
+                    width={500}
+                    height={500}
+                    className={styles.contactIconSmall}
+                  />
+                </Suspense>
+                <span className={styles.contactIconLabel}>YouTube</span>
+              </a>
+            </div>
         </div>
       </div>
     </div>

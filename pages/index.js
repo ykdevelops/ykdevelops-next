@@ -40,9 +40,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>YK Portfolio</title>
+        <title>Youssef Khalil</title>
         <meta name='description' content='Portfolio' />
-        <link rel='icon' href='/favicon2.ico' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       {/* <SpeakButton /> */}
       {showScrollDown && (

@@ -800,6 +800,24 @@
   align-items: center;
   text-align: start;
 }
+
+.introCTAContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  width: auto;
+}
+
+.textContainer > .contactIconLinks {
+  margin-top: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.textContainer > .contactIconLinks .contactIconLabel {
+  display: none;
+}
 /* #endregion Intro */
 /* #region Description */
 .descriptionImage {
@@ -1073,6 +1091,7 @@
   font-size: 1.25rem;
   color: rgb(218, 218, 218);
   text-align: center;
+  display: none;
 }
 
 .contactRightColumn {
@@ -2195,6 +2214,21 @@
     max-width: 650px;
     text-align: start;
   }
+
+  .textContainer > .contactIconLinks {
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+
+  .textContainer > .contactIconLinks .contactIconLabel {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .textContainer > .contactIconLinks .contactIconLink:hover .contactIconLabel {
+    opacity: 1;
+  }
   /* #endregion Intro */
   /* #region Description */
   .descriptionImage {
@@ -2467,6 +2501,16 @@
   .contactIconSmall {
     width: 60px;
     height: 60px;
+  }
+
+  .contactIconLabel {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .contactIconLink:hover .contactIconLabel {
+    opacity: 1;
   }
 
   .contactRightColumn {
