@@ -139,7 +139,7 @@ export default function Pitch() {
                 <Suspense fallback={<div>Loading...</div>}>
                   <div className={styles.pitchGifWrapper}>
                     <Image
-                      src="/ykwebservice.gif"
+                      src="https://ykdevelops.s3.us-east-2.amazonaws.com/pitchArtCompressed.gif"
                       alt="web service illustration"
                       fill
                       className={styles.pitchGif}

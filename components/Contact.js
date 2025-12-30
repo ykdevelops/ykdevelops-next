@@ -110,7 +110,7 @@ export default function Contact() {
                         className={styles.contactImage}
                     />}>
                         <Image
-                            src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/outro4.gif"
+                            src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/outroArt.gif"
                             alt="headshot"
                             width={500}
                             height={500}

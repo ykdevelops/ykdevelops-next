@@ -15,7 +15,6 @@ import Lo2usGallery from '../components/sideProjects/lo2usGallery'
 import ArtisticFilters from '../components/sideProjects/ArtisticFilters'
 import { MdWorkOutline } from 'react-icons/md'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
-import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 
 export default function Home() {
   const [showScrollDown, setShowScrollDown] = useState(false)

@@ -222,11 +222,11 @@
   text-align: start;
   gap: 0.25em;
   overflow: visible;
-  opacity: 0.6;
+  opacity: 0.9;
   transition: opacity 0.2s ease;
   /* Uses itemLevel4 base styles */
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  color: rgb(180, 180, 180);
+  color: rgb(218, 218, 218);
   font-weight: normal;
   line-height: 1.5;
 }
@@ -238,8 +238,8 @@
 .eduLink img {
   display: flex;
   align-items: center;
-  filter: brightness(0) invert(0.85);
-  opacity: 0.6;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
   transform: translateY(3px);
   transition: opacity 0.2s ease;
   width: 18px !important;
@@ -1908,7 +1908,7 @@
   .eduLink {
     /* Level 4 - Desktop */
     font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    color: rgb(180, 180, 180);
+    color: rgb(218, 218, 218);
     font-weight: normal;
     line-height: 1.5;
   }
@@ -1939,7 +1939,7 @@
   .eduLink {
     /* Level 4 - Desktop (larger viewport) */
     font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    color: rgb(180, 180, 180);
+    color: rgb(218, 218, 218);
     font-weight: normal;
     line-height: 1.5;
   }
@@ -2713,7 +2713,7 @@
   .contactIconLabel,
   .eduLink {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    color: rgb(180, 180, 180) !important;
+    color: rgb(218, 218, 218) !important;
     font-weight: normal !important;
     line-height: 1.5;
   }
