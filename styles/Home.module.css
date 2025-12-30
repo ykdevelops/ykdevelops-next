@@ -261,6 +261,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
 }
 
 .pitchWrapper {
@@ -585,6 +588,8 @@
   flex-direction: column-reverse;
   margin-bottom: 5rem;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 .leftHalf {
   width: 100%;
@@ -1032,6 +1037,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
 }
 
 .contactWrapper {
@@ -1631,8 +1639,50 @@
 .personalProjectItem .projectLanguages {
   display: none !important;
 }
+.personalProjectsItemSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
 
-/* Mobile: 0–767px (default styles) */
+.personalProjectsHeaderIconSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
+/* Extra small mobile devices - width less than 350px */
+@media (max-width: 350px) {
+  .sectionTitle {
+    font-size: clamp(1.25rem, 5vw, 2.5rem) !important;
+  }
+
+  .pitchWrapper {
+    gap: 0 !important;
+  }
+
+  .pitchContentRow {
+    gap: 0 !important;
+  }
+}
+/* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
+@media (max-width: 767px) {
+  .contactIconSmall {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .contactIconLabel {
+    font-size: 0.875rem !important;
+  }
+
+  .contactIconLinks {
+    gap: 0.75rem !important;
+  }
+
+  .rightHalf {
+    padding: 0 !important;
+  }
+}
 /* Tablet: 768–1023px */
 @media (max-width: 1023px) {
   .personalProjectItem .textContainer > div:first-child {
@@ -1658,8 +1708,233 @@
     align-items: center !important;
     text-align: center !important;
   }
-}
 
+  .pitchParagraphWrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    order: 1; /* Paragraph appears first on mobile */
+  }
+
+  .pitchExpectationsList {
+    order: 2; /* 2x2 cards appear below paragraph on mobile */
+  }
+
+  .pitchCTAContainer {
+    order: 2; /* Button appears below video on mobile */
+  }
+
+  /* Hide 2x2 boxes on mobile */
+  .pitchExpectationsList {
+    display: none !important;
+  }
+
+  /* Base details - hidden by default */
+  .details {
+    width: 100%;
+    margin: 0;
+    margin-left: 0;
+    transform: none;
+  }
+
+  /* Show state - visible when BOTH classes are present */
+  .details.detailsShow {
+    max-height: 2000px; /* Large enough for content */
+    padding: 1rem 0rem 0rem 0rem;
+    width: 100%;
+    opacity: 1;
+    overflow: hidden;
+    margin-left: 0;
+    transform: none;
+  }
+
+ 
+
+  .contactRightColumn {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contactForm {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactFormInput,
+  .contactFormTextarea {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactSubmitButtonContainer {
+    justify-content: center !important;
+  }
+
+  .contactImage {
+    width: clamp(200px, 70vw, 400px) !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .pitchContentRow {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pitchRightColumn {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    gap: 0 !important;
+  }
+
+
+  .pitchButtonImageRow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    order: 1; /* Video/GIF appears first on mobile */
+  }
+
+  .pitchButtonImageRow .pitchCTA {
+    flex-shrink: 0;
+
+  }
+
+  .pitchButtonImageRow .pitchGifContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center !important;
+    width: auto !important;
+    flex: 1;
+  }
+
+  .pitchGifContainer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Change 2x2 boxes to 1x4 column on mobile */
+
+
+  .pitchExpectationItem {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
+  
+  /* Level 1: Main Section Titles (Largest) - 6-7vw */
+  .sectionTitle,
+  .eduSectionTitle {
+    font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
+    line-height: 1.2;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Level 2: Intro Text (Large) - 4.5-5.5vw */
+  .introName {
+    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+    line-height: 1.4;
+  }
+
+  .introGreeting {
+    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
+    line-height: 1.4;
+  }
+
+  .introDescription {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .introDescriptionLine {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Level 1: Primary Titles - Mobile */
+  .workCompanyTitle,
+  .pitchExpectationTitle,
+  .contactHeadline,
+  .contactThankYou,
+  .eduItemDegree,
+  .eduItemTitle {
+    font-size: clamp(1.25rem, 3.75vw, 1.75rem) !important;
+    color: white !important;
+    font-weight: bold !important;
+    line-height: 1.4;
+    margin-bottom: 0.25rem !important;
+
+  }
+  .contactThankYou, .contactHeadline{
+    display: flex;
+    justify-content: center;
+    text-align: center !important;
+  }
+
+  /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
+  .workPositionTitle,
+  .eduItemDegree + .eduItemTitle {
+    font-size: clamp(1.25rem, 3.25vw, 1.5rem) !important;
+    color: rgb(240, 240, 240) !important;
+    font-weight: normal !important;
+    line-height: 1.4;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Level 3: Tertiary Text - Mobile */
+  .workDate,
+  .pitchExpectationDescription,
+  .eduItemDate {
+    font-size: clamp(1.25rem, 2.75vw, 1.5rem) !important;
+    color: rgb(218, 218, 218) !important;
+    font-weight: normal !important;
+    line-height: 1.5;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Level 4: Body Text - Mobile */
+  .pitchParagraph,
+  .workDescription,
+  .eduDescription,
+  .contactFormLabel {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    line-height: 1.6;
+  }
+
+  /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
+  .pitchNote {
+    font-size: clamp(1.25rem, 2.625vw, 1.5rem) !important;
+    line-height: 1.5;
+  }
+
+  /* Level 4: Smallest Text - Mobile */
+  .contactFormInput,
+  .contactFormTextarea,
+  .contactIconLabel,
+  .eduLink {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+    color: rgb(218, 218, 218) !important;
+    font-weight: normal !important;
+    line-height: 1.5;
+  }
+
+  /* Buttons - 2.75-3.25vw */
+  .pitchCTA,
+  .contactSubmitButton,
+  .learnMoreButton {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
 /* Desktop: 1024–1919px */
 @media (min-width: 1024px) {
   .personalProjectsGrid {
@@ -1817,25 +2092,7 @@
     text-align: left;
     justify-content: flex-start;
   }
-}
-
-.personalProjectsItemSuspense {
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
-}
-
-.personalProjectsHeaderIconSuspense {
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
-}
-
-/* #endregion Personal Projects */
-
-/* Desktop: 1024–1919px */
-@media (min-width: 1024px) {
-  /* 
+   /* 
     Education and Certifications are now separate sections
     Each uses the .layer class, so they stack vertically
   */
@@ -2540,268 +2797,6 @@
   /* #endregion Contact */
 }
 
-/* Mobile: 0–767px (default styles) */
-/* Tablet: 768–1023px */
-@media (max-width: 1023px) {
-
-  .pitchParagraphWrapper {
-    padding: 0 !important;
-    margin: 0 !important;
-    order: 1; /* Paragraph appears first on mobile */
-  }
-
-  .pitchExpectationsList {
-    order: 2; /* 2x2 cards appear below paragraph on mobile */
-  }
-
-  .pitchCTAContainer {
-    order: 2; /* Button appears below video on mobile */
-  }
-
-  /* Hide 2x2 boxes on mobile */
-  .pitchExpectationsList {
-    display: none !important;
-  }
-
-  /* Base details - hidden by default */
-  .details {
-    width: 100%;
-    margin: 0;
-    margin-left: 0;
-    transform: none;
-  }
-
-  /* Show state - visible when BOTH classes are present */
-  .details.detailsShow {
-    max-height: 2000px; /* Large enough for content */
-    padding: 1rem 0rem 0rem 0rem;
-    width: 100%;
-    opacity: 1;
-    overflow: hidden;
-    margin-left: 0;
-    transform: none;
-  }
-
- 
-
-  .contactRightColumn {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .contactForm {
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contactFormInput,
-  .contactFormTextarea {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contactSubmitButtonContainer {
-    justify-content: center !important;
-  }
-
-  .contactImage {
-    width: clamp(200px, 70vw, 400px) !important;
-    height: auto !important;
-    max-width: 100%;
-    object-fit: cover;
-  }
-
-  .pitchContentRow {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .pitchRightColumn {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    gap: 0 !important;
-  }
 
 
-  .pitchButtonImageRow {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    order: 1; /* Video/GIF appears first on mobile */
-  }
 
-  .pitchButtonImageRow .pitchCTA {
-    flex-shrink: 0;
-
-  }
-
-  .pitchButtonImageRow .pitchGifContainer {
-    display: flex !important;
-    justify-content: center;
-    align-items: center !important;
-    width: auto !important;
-    flex: 1;
-  }
-
-  .pitchGifContainer {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  /* Change 2x2 boxes to 1x4 column on mobile */
-
-
-  .pitchExpectationItem {
-    width: 100% !important;
-    flex: 0 0 auto !important;
-  }
-
-  /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
-  
-  /* Level 1: Main Section Titles (Largest) - 6-7vw */
-  .sectionTitle,
-  .eduSectionTitle {
-    font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
-    line-height: 1.2;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-
-  /* Level 2: Intro Text (Large) - 4.5-5.5vw */
-  .introName {
-    font-size: clamp(2rem, 6vw, 3.5rem) !important;
-    line-height: 1.4;
-  }
-
-  .introGreeting {
-    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
-    line-height: 1.4;
-  }
-
-  .introDescription {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.5rem !important;
-  }
-
-  .introDescriptionLine {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    line-height: 1.4 !important;
-  }
-
-  /* Level 1: Primary Titles - Mobile */
-  .workCompanyTitle,
-  .pitchExpectationTitle,
-  .contactHeadline,
-  .contactThankYou,
-  .eduItemDegree,
-  .eduItemTitle {
-    font-size: clamp(1.25rem, 3.75vw, 1.75rem) !important;
-    color: white !important;
-    font-weight: bold !important;
-    line-height: 1.4;
-    margin-bottom: 0.25rem !important;
-
-  }
-  .contactThankYou, .contactHeadline{
-    display: flex;
-    justify-content: center;
-    text-align: center !important;
-  }
-
-  /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
-  .workPositionTitle,
-  .eduItemDegree + .eduItemTitle {
-    font-size: clamp(1.25rem, 3.25vw, 1.5rem) !important;
-    color: rgb(240, 240, 240) !important;
-    font-weight: normal !important;
-    line-height: 1.4;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* Level 3: Tertiary Text - Mobile */
-  .workDate,
-  .pitchExpectationDescription,
-  .eduItemDate {
-    font-size: clamp(1.25rem, 2.75vw, 1.5rem) !important;
-    color: rgb(218, 218, 218) !important;
-    font-weight: normal !important;
-    line-height: 1.5;
-    margin-bottom: 0.75rem !important;
-  }
-
-  /* Level 4: Body Text - Mobile */
-  .pitchParagraph,
-  .workDescription,
-  .eduDescription,
-  .contactFormLabel {
-    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
-    line-height: 1.6;
-  }
-
-  /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
-  .pitchNote {
-    font-size: clamp(1.25rem, 2.625vw, 1.5rem) !important;
-    line-height: 1.5;
-  }
-
-  /* Level 4: Smallest Text - Mobile */
-  .contactFormInput,
-  .contactFormTextarea,
-  .contactIconLabel,
-  .eduLink {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    color: rgb(218, 218, 218) !important;
-    font-weight: normal !important;
-    line-height: 1.5;
-  }
-
-  /* Buttons - 2.75-3.25vw */
-  .pitchCTA,
-  .contactSubmitButton,
-  .learnMoreButton {
-    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
-    padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
-  }
-}
-
-/* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
-@media (max-width: 767px) {
-  .contactIconSmall {
-    width: 35px !important;
-    height: 35px !important;
-  }
-
-  .contactIconLabel {
-    font-size: 0.875rem !important;
-  }
-
-  .contactIconLinks {
-    gap: 0.75rem !important;
-  }
-
-  .rightHalf {
-    padding: 0 !important;
-  }
-}
-
-/* Extra small mobile devices - width less than 350px */
-@media (max-width: 350px) {
-  .sectionTitle {
-    font-size: clamp(1.25rem, 5vw, 2.5rem) !important;
-  }
-
-  .pitchWrapper {
-    gap: 0 !important;
-  }
-
-  .pitchContentRow {
-    gap: 0 !important;
-  }
-}
