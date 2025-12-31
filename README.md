@@ -1,12 +1,12 @@
-# YKDevelops Portfolio Website
+# Youssef Khalil - Portfolio Website
 
 A modern, responsive portfolio website built with Next.js showcasing my projects, experience, and skills.
 
 ## Features
 
 - **Responsive Design**: Fully responsive layout that works seamlessly on mobile and desktop
-- **Personal Projects Section**: Showcase of featured projects including MugCulture Beta, Chat App, and 3D Studio
-- **Work Experience**: Professional experience timeline
+- **Personal Projects Section**: Showcase of featured projects with responsive card layout (max-width 300px)
+- **Work Section**: Professional work experience timeline
 - **Education**: Academic background and certifications
 - **Contact Form**: Integrated contact form with AWS SES backend
 - **3D Visualizations**: Interactive 3D workspace visualization using React Three Fiber
@@ -19,7 +19,8 @@ A modern, responsive portfolio website built with Next.js showcasing my projects
 - **Styling**: CSS Modules
 - **3D Graphics**: React Three Fiber, Three.js, @react-three/drei
 - **Animations**: Framer Motion
-- **Icons**: React Icons
+- **Icons**: React Icons, Material UI Icons
+- **Fonts**: Noto Kufi Arabic (section titles), Noto Sans JP (body), Boldonse (pitch paragraph)
 - **Backend**: AWS SES (for contact form)
 - **Analytics**: Vercel Analytics & Speed Insights
 
@@ -50,23 +51,29 @@ ykdevelops-next/
 │   ├── Home.module.css         # Main stylesheet with responsive design
 │   └── globals.css             # Global styles
 └── public/                     # Static assets
-    ├── puzzle-svgrepo-com.svg  # Personal projects icon
-    └── website-program-svgrepo-com.svg
+    ├── fonts/                  # Custom font files (Boldonse)
+    ├── favicon.ico             # Site favicon
+    └── [other assets]
 ```
 
 ## Recent Updates
 
+- ✅ **Site Branding**: Updated site title to "Youssef Khalil" and favicon
+- ✅ **Scroll Snap**: Implemented smooth scroll snap navigation between sections
+- ✅ **Social Media Integration**: Added social media icons (Resume, LinkedIn, GitHub, YouTube) to Intro section with desktop-only hover labels
+- ✅ **Contact Button**: Added "Contact" button to Intro section with smooth scroll to contact form
+- ✅ **Responsive Layout**: ContainerTitleRow layout for tablet (1/4 icon, 3/4 title split) with proper alignment
+- ✅ **Work Section**: Renamed "Professional Experience" to "Work" for cleaner naming
+- ✅ **Typography**: Pitch paragraph now uses Boldonse font (by Universitype) and bold styling
+- ✅ **Section Titles**: Updated sectionTitle styling (no top/bottom padding, height 100%, vertically centered, 5px transform offset)
+- ✅ **Personal Projects**: Added max-width constraint (300px) to personalProjectItem cards
 - ✅ **Responsive Breakpoints**: Updated to modern breakpoint system (Mobile: 0-767px, Tablet: 768-1023px, Desktop: 1024-1919px, Large: 1920px+)
-- ✅ **Pitch Section Redesign**: Reorganized layout - paragraph above 2x2 cards on left, video above button on right
-- ✅ **Personal Projects**: Renamed from Case Studies, removed project descriptions, updated card sizing (300px height, 80/20 split)
-- ✅ **Typography**: All text minimum 20px for improved readability
-- ✅ **Website Service**: Updated description text and removed clickability from 2x2 cards (hover only)
-- ✅ **Mobile Optimizations**: Smaller contact icons/labels, removed intro padding, improved spacing
+- ✅ **Pitch Section**: Updated to use S3-hosted GIF image
+- ✅ **Contact Component**: Added desktop-only hover labels for social media icons
+- ✅ **Credential Links**: Improved color contrast for better readability (rgb(218, 218, 218))
 - ✅ **AWS SES Integration**: Fully integrated contact form with AWS SES email delivery
 - ✅ **Typography Improvements**: Applied Noto Kufi Arabic font to section titles and name
 - ✅ **Design System**: Implemented 8pt grid spacing system and improved typography hierarchy
-- ✅ **Component Updates**: Merged certifications into Education section
-- ✅ **Intro Section**: Removed rotating text animation, stacked text vertically
 
 ## Getting Started
 

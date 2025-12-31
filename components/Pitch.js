@@ -32,7 +32,7 @@ export default function Pitch() {
     <div className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
         {/* Title Row - Full Width */}
-        <div className={styles.pitchTitleRow}>
+        <div className={styles.containerTitleRow}>
           <Suspense fallback={<div>Loading icon...</div>}>
             <Image
               src="/wms-icon.svg"

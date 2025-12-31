@@ -6,6 +6,17 @@
   - TV / Large screens: 1920px+ (@media (min-width: 1920px))
 */
 
+/* Boldonse Font - Designed by Universitype */
+@font-face {
+  font-family: 'Boldonse';
+  src: url('/fonts/Boldonse.woff2') format('woff2'),
+       url('/fonts/Boldonse.woff') format('woff'),
+       url('/fonts/Boldonse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Reset styles */
 html {
   scroll-behavior: smooth;

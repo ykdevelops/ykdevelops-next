@@ -17,7 +17,7 @@ export default function WorkExperience() {
                             className={styles.sectionTitleIcon}
                         />
                     </Suspense>
-                    <h1 className={styles.sectionTitle}>Professional Experience</h1>
+                    <h1 className={styles.sectionTitle}>Work Experience</h1>
                 </div>
 
                 {/* QuoteMedia Experience */}

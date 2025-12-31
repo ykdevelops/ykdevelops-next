@@ -274,20 +274,6 @@
   gap: 0;
 }
 
-.pitchTitleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; /* 16px - 8pt grid base spacing */
-  width: 100%;
-  margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
-  position: relative;
-  /* Soft radial gradient to fade out dots behind title */
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.2) 60%, transparent 100%);
-  border-radius: 8px;
-}
 
 .pitchContentRow {
   width: 100%;
@@ -359,6 +345,8 @@
   max-width: 650px;
   text-align: center;
   letter-spacing: 0;
+  font-weight: bold;
+  font-family: "Boldonse", sans-serif;
 }
 
 .pitchParagraph strong {
@@ -480,6 +468,8 @@
   background: radial-gradient(ellipse 150% 120% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 50%, transparent 100%);
   border-radius: 8px;
   order: 2; /* Appears below paragraph */
+  display: none !important;
+  
 }
 
 .pitchExpectationItem {
@@ -642,9 +632,11 @@
   align-items: center;
   font-size: 7vw;
   height: 100%;
-  padding-top: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
   line-height: 1.0;
   letter-spacing: -0.02em;
+  transform: translateY(5px);
 }
 /* #region Scroll */
 .scrollColumn {
@@ -1334,6 +1326,7 @@
 
 .personalProjectItem {
   width: 100%;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -1650,10 +1643,47 @@
   min-height: 300px !important;
   max-height: 300px !important;
 }
+.containerTitleRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.containerTitleRow > *:first-child {
+  width: 25%;
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTitleRow .sectionTitleIcon {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.containerTitleRow .sectionTitle {
+  width: 75%;
+  height: 100%;
+  flex: 0 0 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1rem;
+  margin: 0;
+}
 /* Extra small mobile devices - width less than 350px */
 @media (max-width: 350px) {
-  .sectionTitle {
-    font-size: clamp(1.25rem, 5vw, 2.5rem) !important;
+  .containerTitleRow .sectionTitle {
+    padding-left: 0rem;
   }
 
   .pitchWrapper {
@@ -1662,6 +1692,10 @@
 
   .pitchContentRow {
     gap: 0 !important;
+  }
+  .sectionTitleIcon{
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
@@ -1684,10 +1718,11 @@
   }
 }
 /* Tablet: 768–1023px */
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+
   .personalProjectItem .textContainer > div:first-child {
     justify-content: center !important;
-    align-items: center !important;
     gap: 0.5rem !important;
   }
 
@@ -1834,8 +1869,7 @@
   .eduSectionTitle {
     font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
     line-height: 1.2;
-    justify-content: center !important;
-    text-align: center !important;
+    text-align: center !important;;
   }
 
   /* Level 2: Intro Text (Large) - 4.5-5.5vw */
@@ -1935,6 +1969,8 @@
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
   }
 }
+
+
 /* Desktop: 1024–1919px */
 @media (min-width: 1024px) {
   .personalProjectsGrid {
@@ -1949,7 +1985,7 @@
   .personalProjectItem {
     flex: 1 1 calc(33.333% - 0.667rem);
     min-width: 0;
-    max-width: calc(33.333% - 0.667rem);
+    max-width: 300px;
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
@@ -2225,10 +2261,6 @@
     padding: 6rem 0;
   }
 
-  .pitchTitleRow {
-    margin-bottom: 2rem;
-    justify-content: flex-start;
-  }
 
   .pitchContentRow {
     flex-direction: row;
@@ -2329,13 +2361,17 @@
   }
 
   .sectionTitle {
-    padding: 1rem 1rem 1rem 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-weight: normal;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: clamp(3rem, 5vw, 5rem);
     height: 100%;
+    transform: translateY(0px);
   }
 
   .containerTitleRow {
