@@ -1620,13 +1620,7 @@
   transform: none !important;
 }
 
-.personalProjectItem .projectIconLink:hover {
-  transform: scale(1.2);
-}
-
-.personalProjectItem .projectIconLink2:hover {
-  transform: scale(1.2);
-}
+/* Hover effects only on desktop - see @media (min-width: 1024px) */
 
 .personalProjectItem .projectDescription {
   font-size: 1.25rem !important;
@@ -2163,6 +2157,16 @@
     font-size: 1.25rem !important;
   }
 
+  /* Icon hover effects - desktop only */
+  .personalProjectItem .projectIconLink:hover {
+    transform: scale(1.2) !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .personalProjectItem .projectIconLink2:hover {
+    transform: scale(1.2) !important;
+    transition: all 0.2s ease-in-out;
+  }
 
   .caseContainerTitleRow {
     justify-content: flex-start;
