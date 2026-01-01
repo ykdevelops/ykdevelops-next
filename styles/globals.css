@@ -20,19 +20,21 @@
 /* Reset styles */
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
   background-color: #3f3d6b !important;
   background-image: none !important;
   color: white;
   height: 100%;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Remove any pseudo-elements that might create patterns */
@@ -76,26 +78,30 @@ p {
 
 h1 {
   font-size: 2rem;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 1.5rem;
-  line-height: 1.0;
-  letter-spacing: -0.015em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h3 {
   font-size: 1.25rem;
-  line-height: 1.0;
+  line-height: 1.2;
   letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
 p {
-  font-size: 1.25rem; /* 20px minimum */
-  line-height: 1.5;
-  letter-spacing: 0;
+  font-size: 1.0625rem; /* 17px - Apple's preferred body size */
+  line-height: 1.47059; /* ~25px line-height for 17px font - Apple's standard */
+  letter-spacing: -0.011em;
+  font-weight: 400;
 }
 
 /* Scrollbar customization */
@@ -110,22 +116,37 @@ html::-webkit-scrollbar {
   display: none; /* Webkit-based browsers (Chrome, Safari, etc.) */
 }
 
+/* Tablet and Desktop: 768px+ - Enable scroll snap */
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+}
+
 /* Desktop: 1024–1919px */
 @media (min-width: 1024px) {
   h1 {
     font-size: 4rem;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
   }
 
   h2 {
     font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
 
   h3 {
     font-size: 1.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
   }
 
   p {
-    font-size: 1.25rem; /* 20px minimum */
+    font-size: 1.1875rem; /* 19px - Apple's preferred desktop body size */
+    line-height: 1.42105; /* ~27px line-height for 19px font */
+    letter-spacing: -0.011em;
   }
 }
 

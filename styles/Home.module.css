@@ -16,9 +16,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem; /* space below each section */
+  margin-bottom: 4rem; /* Increased spacing - Apple's generous spacing */
   position: relative;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem; /* Increased padding */
 }
 
 /* 
@@ -29,10 +29,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem; /* Increased spacing */
   position: relative;
   /* Soft radial gradient to fade out dots behind title */
-  padding: 1.5rem;
+  padding: 2rem 1.5rem; /* Increased vertical padding */
   background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.55) 0%, rgba(63, 61, 107, 0.25) 60%, transparent 100%);
   border-radius: 8px;
 }
@@ -97,7 +97,7 @@
   overflow: visible;
   position: relative;
   /* Soft radial gradient to fade out dots behind education items */
-  padding: 2rem 1.5rem;
+  padding: 3rem 2rem; /* Increased padding */
   background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 55%, transparent 100%);
   border-radius: 8px;
 }
@@ -109,38 +109,42 @@
 
 /* Level 1: TOP ROW - Largest, Brightest White */
 .itemLevel1 {
-  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
   color: white;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 /* Level 2: SECOND ROW - Medium, Light Grey */
 .itemLevel2 {
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-size: clamp(1.0625rem, 3vw, 1.1875rem);
   color: rgb(240, 240, 240);
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 /* Level 3: THIRD ROW - Smaller, Medium Grey */
 .itemLevel3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.0625rem, 2.5vw, 1.125rem);
   color: rgb(218, 218, 218);
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 /* Level 4: BOTTOM ROW - Smallest, Darkest Grey */
 .itemLevel4 {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.0625rem);
   color: rgb(180, 180, 180);
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 /* 
@@ -156,11 +160,12 @@
   text-align: start;
   width: 100%;
   /* Uses itemLevel1 base styles - First element in column */
-  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
-  font-weight: bold;
+  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
+  font-weight: 600;
   color: white;
-  margin-bottom: 0.25rem;
-  line-height: 1.4;
+  margin-bottom: 0.375rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 /* 
@@ -168,11 +173,12 @@
 */
 .eduItemDegree + .eduItemTitle {
   /* Uses itemLevel2 base styles - Second in column */
-  font-size: clamp(1.25rem, 3.25vw, 1.5rem);
-  font-weight: normal;
+  font-size: clamp(1.0625rem, 3.25vw, 1.1875rem);
+  font-weight: 400;
   color: rgb(240, 240, 240);
   margin-bottom: 0.5rem;
-  line-height: 1.4;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 /* 
@@ -183,11 +189,12 @@
   text-align: start;
   width: 100%;
   /* Uses itemLevel3 base styles */
-  font-size: clamp(1.25rem, 2.75vw, 1.5rem);
-  font-weight: normal;
+  font-size: clamp(1.0625rem, 2.75vw, 1.125rem);
+  font-weight: 400;
   color: rgb(218, 218, 218);
   margin-bottom: 0.75rem;
-  line-height: 1.5;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 /* 
@@ -197,11 +204,11 @@
   padding: 0 0 1rem 0;
   width: 90%;
   max-width: 650px;
-  font-size: 1.25rem;
-  font-weight: normal;
+  font-size: 1.0625rem;
+  font-weight: 400;
   overflow-wrap: break-word;
-  line-height: 1.5;
-  letter-spacing: 0;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
   text-align: center;
 }
 
@@ -255,14 +262,12 @@
 */
 .pitchSection {
   width: 100%;
-  padding: 5rem 0;
-  margin-bottom: 5rem;
+  padding: 6rem 0; /* Increased padding */
+  margin-bottom: 6rem; /* Increased margin */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100vh;
 }
 
@@ -279,7 +284,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* 32px - 8pt grid double spacing */
+  gap: 3rem; /* Increased spacing - Apple's generous gaps */
 }
 
 .pitchLeftColumn {
@@ -330,7 +335,7 @@
   position: relative;
   margin: 0;
   margin-top: 0rem;
-  margin-bottom: 2rem; /* 32px - 8pt grid double spacing */
+  margin-bottom: 3rem; /* Increased spacing */
   /* Soft radial gradient to fade out dots behind text */
   background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 60%, transparent 100%);
   padding: 0;
@@ -339,13 +344,13 @@
 
 .pitchParagraph {
   margin: 0;
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-  line-height: 1.6;
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  line-height: 1.47059;
   color: rgb(218, 218, 218);
   max-width: 650px;
   text-align: center;
-  letter-spacing: 0;
-  font-weight: bold;
+  letter-spacing: -0.011em;
+  font-weight: 400;
   font-family: "Boldonse", sans-serif;
 }
 
@@ -446,11 +451,13 @@
 
 .pitchNote {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   color: rgb(180, 180, 180);
   font-style: italic;
   max-width: 500px;
   text-align: center;
+  line-height: 1.47059;
+  letter-spacing: -0.011em;
 }
 
 
@@ -540,10 +547,10 @@
 .pitchExpectationTitle {
   margin: 0;
   /* Uses itemLevel1 base styles */
-  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
-  font-weight: bold;
+  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
+  font-weight: 600;
   color: white;
-  line-height: 1.0;
+  line-height: 1.2;
   letter-spacing: -0.015em;
   text-align: center;
 }
@@ -551,12 +558,12 @@
 .pitchExpectationDescription {
   margin: 0;
   /* Uses itemLevel3 base styles */
-  font-size: clamp(0.875rem, 2vw, 1rem);
-  line-height: 1.4;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  line-height: 1.47059;
   color: rgb(218, 218, 218);
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
-  letter-spacing: 0;
+  letter-spacing: -0.011em;
   max-width: 100%;
 }
 
@@ -576,10 +583,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem; /* Increased spacing */
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 .leftHalf {
   width: 100%;
@@ -600,7 +605,7 @@
   flex-direction: column;
   position: relative;
   /* Soft radial gradient to fade out dots behind text */
-  padding: 2rem 1.5rem;
+  padding: 3rem 2rem; /* Increased padding */
   background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.65) 0%, rgba(63, 61, 107, 0.35) 55%, transparent 100%);
   border-radius: 8px;
 }
@@ -634,8 +639,8 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
   transform: translateY(5px);
 }
 /* #region Scroll */
@@ -753,8 +758,8 @@
   margin: 0;
   color: white;
   display: inline;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 .introGreeting {
   padding: 0;
@@ -781,10 +786,11 @@
 .introDescriptionLine {
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: white;
-  line-height: 1.4;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.47059;
+  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+  letter-spacing: -0.011em;
 }
 .introPic {
   width: 90%;
@@ -1029,8 +1035,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100vh;
 }
 
@@ -1700,6 +1704,27 @@
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
+  .pitchContentRow {
+    gap: 0 !important;
+  }
+
+  .pitchRightColumn {
+    display: contents;
+  }
+
+  .pitchButtonImageRow {
+    order: 1;
+  }
+
+  .pitchLeftColumn {
+    order: 2;
+  }
+
+  .pitchCTAContainer {
+    margin-top: 0 !important;
+    order: 3;
+  }
+
   .contactIconSmall {
     width: 35px !important;
     height: 35px !important;
@@ -1719,7 +1744,20 @@
 }
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
-  
+  .layer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .pitchSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .contactSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 
   .personalProjectItem .textContainer > div:first-child {
     justify-content: center !important;
@@ -1747,15 +1785,10 @@
   .pitchParagraphWrapper {
     padding: 0 !important;
     margin: 0 !important;
-    order: 1; /* Paragraph appears first on mobile */
   }
 
   .pitchExpectationsList {
     order: 2; /* 2x2 cards appear below paragraph on mobile */
-  }
-
-  .pitchCTAContainer {
-    order: 2; /* Button appears below video on mobile */
   }
 
   /* Hide 2x2 boxes on mobile */
@@ -1820,11 +1853,8 @@
   }
 
   .pitchRightColumn {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    gap: 0 !important;
+    display: contents;
   }
-
 
   .pitchButtonImageRow {
     display: flex !important;
@@ -1832,7 +1862,15 @@
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    order: 1; /* Video/GIF appears first on mobile */
+    order: 1; /* Image appears first */
+  }
+
+  .pitchLeftColumn {
+    order: 2; /* Text appears second */
+  }
+
+  .pitchCTAContainer {
+    order: 3; /* Button appears third */
   }
 
   .pitchButtonImageRow .pitchCTA {
@@ -1973,6 +2011,21 @@
 
 /* Desktop: 1024–1919px */
 @media (min-width: 1024px) {
+  .layer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .pitchSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .contactSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
   .personalProjectsGrid {
     display: flex;
     flex-direction: row;
@@ -2459,9 +2512,10 @@
     font-size: clamp(3rem, 5.5vw, 5rem);
     padding: 0;
     margin: 0;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
-    line-height: 1.2;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
     display: inline;
   }
   .introGreeting {
@@ -2492,10 +2546,11 @@
     margin: 0;
     padding: 0;
     padding-left: 0.5rem;
-    font-weight: normal;
+    font-weight: 400;
     color: white;
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    line-height: 1.4;
+    font-size: clamp(1.1875rem, 2vw, 1.1875rem);
+    line-height: 1.47059;
+    letter-spacing: -0.011em;
   }
   .introPic {
     max-width: 650px;
@@ -2553,13 +2608,14 @@
   }
   .workCompany {
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    font-weight: bold;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 2.5rem;
     width: 100%;
-    line-height: 1.3;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .workCompanyHeader {
@@ -2575,19 +2631,21 @@
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
     text-align: start;
     color: white;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
-    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   .workPositionTitle {
     /* Level 2 - Desktop */
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-size: clamp(1.1875rem, 2vw, 1.1875rem);
     text-align: start;
     color: rgb(240, 240, 240);
-    font-weight: normal;
+    font-weight: 400;
     margin-bottom: 0.5rem;
-    line-height: 1.4;
+    line-height: 1.47059;
+    letter-spacing: -0.011em;
   }
 
   .workDate {
@@ -2595,11 +2653,12 @@
     padding: 0;
     margin: 0;
     text-align: start;
-    font-size: clamp(1rem, 1.75vw, 1.25rem);
+    font-size: clamp(1.0625rem, 1.75vw, 1.125rem);
     color: rgb(218, 218, 218);
-    font-weight: normal;
+    font-weight: 400;
     margin-bottom: 0.75rem;
-    line-height: 1.5;
+    line-height: 1.47059;
+    letter-spacing: -0.011em;
   }
 
   
@@ -2627,8 +2686,9 @@
     overflow-wrap: break-word;
     transition: opacity 0.5s ease-in-out;
     text-align: start;
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    line-height: 1.6;
+    font-size: clamp(1.1875rem, 1.5vw, 1.1875rem);
+    line-height: 1.47059;
+    letter-spacing: -0.011em;
     transform: translateX(5px);
   }
   .workDescriptionBox {
