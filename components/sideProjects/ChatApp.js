@@ -33,14 +33,14 @@ export default function ChatApp() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsLink45Deg className={homeStyles.projectIconLink} />
+                            <BsLink45Deg className={styles.projectIconLink} />
                         </a>
                         <a
                             href="https://github.com/ykdevelops/chatapp-reactfire.git"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsGithub className={homeStyles.projectIconLink2} />
+                            <BsGithub className={styles.projectIconLink2} />
                         </a>
                     </div>
                 </div>

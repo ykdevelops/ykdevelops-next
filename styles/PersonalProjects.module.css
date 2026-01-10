@@ -71,13 +71,13 @@
   max-height: 20% !important;
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-start !important;
+  align-items: center !important;
   justify-content: flex-start !important;
   margin: 0 !important;
   padding: 0.75rem 0 0 0 !important;
   box-sizing: border-box !important;
   flex: 0 0 20% !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 .projectMediaBox {
@@ -137,6 +137,7 @@
   flex-shrink: 0 !important;
   gap: 0.75rem !important;
   box-sizing: border-box !important;
+  flex-wrap: nowrap !important;
 }
 
 .projectTitleRow > div {
@@ -144,6 +145,35 @@
   flex-direction: row !important;
   gap: 0.5rem !important;
   align-items: center !important;
+}
+
+.projectTitleRow > div > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+}
+
+.projectIconLink {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  opacity: 0.9;
+}
+
+.projectIconLink2 {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  opacity: 0.9;
+}
+
+.projectTitleRow > div > a:hover .projectIconLink,
+.projectTitleRow > div > a:hover .projectIconLink2 {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .projectTitleHeading {
@@ -154,9 +184,14 @@
   font-weight: bold !important;
   color: white !important;
   display: inline-block !important;
-  line-height: 1.4 !important;
+  line-height: 1.2 !important;
   vertical-align: middle !important;
   box-sizing: border-box !important;
+  /* Keep title on one line and inside footer */
+  max-width: calc(100% - 80px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .personalProjectsItemSuspense {

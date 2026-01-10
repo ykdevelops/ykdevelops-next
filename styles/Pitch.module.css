@@ -456,12 +456,12 @@
   }
 
   .pitchParagraphWrapper {
-    text-align: start;
+    text-align: center;
     order: 1; /* Paragraph appears first on desktop */
   }
 
   .pitchParagraph {
-    text-align: start;
+    text-align: center;
     max-width: 100%;
   }
 
