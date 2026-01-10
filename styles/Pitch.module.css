@@ -426,6 +426,7 @@
     font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem)
       clamp(1.125rem, 3.5vw, 2.25rem) !important;
+    width: clamp(240px, 35vw, 320px);
   }
 }
 
