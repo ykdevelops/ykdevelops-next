@@ -315,6 +315,11 @@
     order: 1;
   }
 
+  .pitchGifWrapper {
+    transform: translateY(-2rem);
+    will-change: transform;
+  }
+
   .pitchLeftColumn {
     order: 2;
   }
