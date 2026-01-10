@@ -152,16 +152,7 @@
 .textContainer > .contactIconLinks .contactIconLabel {
   display: none;
 }
-/* #region Description */
-/* moved to styles/Description.module.css */
-/* #endregion Description */
-/* #region Work Experience */
-/* #endregion Work Experience */
 
-/* #region Project */
-/* moved to styles/Projects.module.css */
-/* #endregion Project */
-/* #region Contact */
 /* Shared social/link styles (used in Intro + Contact) */
 .contactIconLinks {
   display: flex;
@@ -244,6 +235,10 @@
   .containerTitleRow .sectionTitle {
     padding-left: 0rem;
   }
+  .containerTitleRow .sectionTitleIcon {
+    max-width: 40px;
+    max-height: 40px;
+  }
   .sectionTitleIcon{
     width: 40px;
     height: 40px;
@@ -251,6 +246,11 @@
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
+  .containerTitleRow .sectionTitleIcon {
+    max-width: 56px;
+    max-height: 56px;
+  }
+
   .contactIconSmall {
     width: 35px;
     height: 35px;
@@ -380,21 +380,7 @@
     margin-left: 0rem;
   }
 
-  /* #region Intro */
-  /* moved to styles/Intro.module.css */
-  /* #endregion Intro */
-  /* #region Description */
-  /* moved to styles/Description.module.css */
-  /* #endregion Description */
-  /* #region Work Experience */
-  /* moved to styles/Work.module.css */
-  /* #endregion Work Experience */
 
-  /* #region Project */
-  /* moved to styles/Projects.module.css */
-  /* #endregion Project */
-
-  /* #region Contact */
   .contactIconLinks {
     flex-wrap: nowrap;
     gap: 1.25rem;
@@ -415,7 +401,7 @@
   .contactIconLink:hover .contactIconLabel {
     opacity: 1;
   }
-  /* #endregion Contact */
+
 }
 
 
