@@ -198,6 +198,7 @@
   width: 100%;
   justify-content: flex-start;
   align-items: center;
+  padding-bottom: 1.5rem;
 }
 
 .containerTitleRow > *:first-child {
@@ -246,10 +247,6 @@
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
-  .containerTitleRow {
-    padding-bottom: 1.5rem;
-  }
-
   .containerTitleRow .sectionTitleIcon {
     max-width: 56px;
     max-height: 56px;
@@ -324,6 +321,7 @@
 
   .containerTitleRow {
     justify-content: flex-start;
+    padding-bottom: 2.5rem;
   }
   .layer {
     width: 100%;
