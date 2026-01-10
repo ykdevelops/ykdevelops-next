@@ -17,6 +17,32 @@
   font-display: swap;
 }
 
+/* Design tokens (CSS variables) */
+:root {
+  /* Colors */
+  --color-bg-primary: #3f3d6b;
+  --color-text-primary: #ffffff;
+  --color-text-strong: rgb(240, 240, 240);
+  --color-text-muted: rgb(218, 218, 218);
+  --color-text-subtle: rgb(180, 180, 180);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* Typography */
+  --text-letter-spacing: -0.011em;
+  --text-line-height: 1.47059;
+
+  /* Spacing (8pt-ish scale) */
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+}
+
 /* Reset styles */
 html {
   scroll-behavior: smooth;
@@ -160,4 +186,27 @@ html::-webkit-scrollbar {
 .full-screen {
   width: 100%;
   height: 100vh;
+}
+
+/* Shared animations (global) */
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
 }

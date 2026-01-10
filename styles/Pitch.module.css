@@ -1,0 +1,540 @@
+/* Pitch section styles - extracted from Home.module.css */
+
+.pitchSection {
+  width: 100%;
+  padding: 6rem 0; /* Increased padding */
+  margin-bottom: 6rem; /* Increased margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.pitchWrapper {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pitchContentRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Increased spacing - Apple's generous gaps */
+}
+
+.pitchLeftColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+}
+
+.pitchCTAContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* 32px - 8pt grid double spacing */
+  width: 100%;
+  order: 2; /* Appears below video */
+}
+
+.pitchRightColumn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.pitchRightColumnBottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.pitchIcon {
+  width: clamp(3rem, 1vw, 4.5rem);
+  height: clamp(3rem, 1vw, 4.5rem);
+  flex-shrink: 0;
+  transform: translateY(0.3rem);
+  margin-right: 1rem;
+}
+
+.pitchParagraphWrapper {
+  position: relative;
+  margin: 0;
+  margin-top: 0rem;
+  margin-bottom: 3rem; /* Increased spacing */
+  /* Soft radial gradient to fade out dots behind text */
+  background: radial-gradient(
+    ellipse 120% 100% at center,
+    rgba(63, 61, 107, 0.7) 0%,
+    rgba(63, 61, 107, 0.4) 60%,
+    transparent 100%
+  );
+  padding: 0;
+  border-radius: var(--radius-sm);
+}
+
+.pitchParagraph {
+  margin: 0;
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  line-height: var(--text-line-height);
+  color: var(--color-text-muted);
+  max-width: 650px;
+  text-align: center;
+  letter-spacing: var(--text-letter-spacing);
+  font-weight: 400;
+  font-family: "Boldonse", sans-serif;
+}
+
+.pitchParagraph strong {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.pitchButtonImageRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pitchGifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pitchGifWrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.pitchGif {
+  object-fit: contain;
+}
+
+.pitchCTA {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: gradientWave 3s ease infinite;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  letter-spacing: 0.05em;
+}
+
+.pitchCTA::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 2s infinite;
+}
+
+.pitchCTA:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  animation-duration: 2s;
+}
+
+.pitchNote {
+  margin: 0;
+  font-size: 1.0625rem;
+  color: var(--color-text-subtle);
+  font-style: italic;
+  max-width: 500px;
+  text-align: center;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}
+
+.pitchExpectationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px - 8pt grid base spacing */
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  /* Soft radial gradient to fade out dots behind cards */
+  padding: 2rem 1rem;
+  background: radial-gradient(
+    ellipse 150% 120% at center,
+    rgba(63, 61, 107, 0.6) 0%,
+    rgba(63, 61, 107, 0.3) 50%,
+    transparent 100%
+  );
+  border-radius: var(--radius-sm);
+  order: 2; /* Appears below paragraph */
+  display: none !important;
+}
+
+.pitchExpectationItem {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.pitchCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* open state when BOTH classes are present (CSS Modules exports `flipped`) */
+.pitchExpectationItem.flipped .pitchCardInner {
+  transform: rotateY(180deg);
+}
+
+.pitchCardFront,
+.pitchCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* 16px - 8pt grid base spacing */
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pitchCardFront {
+  transform: rotateY(0deg);
+}
+
+.pitchCardBack {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.pitchExpectationItem:hover .pitchCardFront,
+.pitchExpectationItem:hover .pitchCardBack {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pitchExpectationTitle {
+  margin: 0;
+  /* Uses itemLevel1 base styles */
+  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-align: center;
+}
+
+.pitchExpectationDescription {
+  margin: 0;
+  /* Uses itemLevel3 base styles */
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  line-height: var(--text-line-height);
+  color: var(--color-text-muted);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: var(--text-letter-spacing);
+  max-width: 100%;
+}
+
+/* Extra small mobile devices - width less than 350px */
+@media (max-width: 350px) {
+  .pitchWrapper {
+    gap: 0 !important;
+  }
+
+  .pitchContentRow {
+    gap: 0 !important;
+  }
+}
+
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
+  .pitchContentRow {
+    gap: 0 !important;
+  }
+
+  .pitchRightColumn {
+    display: contents;
+  }
+
+  .pitchButtonImageRow {
+    order: 1;
+  }
+
+  .pitchLeftColumn {
+    order: 2;
+  }
+
+  .pitchCTAContainer {
+    margin-top: 0 !important;
+    order: 3;
+  }
+}
+
+/* Tablet: 768–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pitchSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .pitchParagraphWrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .pitchExpectationsList {
+    order: 2; /* 2x2 cards appear below paragraph on mobile */
+  }
+
+  /* Hide 2x2 boxes on mobile */
+  .pitchExpectationsList {
+    display: none !important;
+  }
+
+  .pitchContentRow {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pitchRightColumn {
+    display: contents;
+  }
+
+  .pitchButtonImageRow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    order: 1; /* Image appears first */
+  }
+
+  .pitchLeftColumn {
+    order: 2; /* Text appears second */
+  }
+
+  .pitchCTAContainer {
+    order: 3; /* Button appears third */
+  }
+
+  .pitchButtonImageRow .pitchCTA {
+    flex-shrink: 0;
+  }
+
+  .pitchButtonImageRow .pitchGifContainer {
+    display: flex !important;
+    justify-content: center;
+    align-items: center !important;
+    width: auto !important;
+    flex: 1;
+  }
+
+  .pitchGifContainer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .pitchExpectationItem {
+    width: 100% !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Mobile Text Hierarchy - Pitch-only */
+  .pitchExpectationTitle {
+    font-size: clamp(1.25rem, 3.75vw, 1.75rem) !important;
+    color: white !important;
+    font-weight: bold !important;
+    line-height: 1.4;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .pitchExpectationDescription {
+    font-size: clamp(1.25rem, 2.75vw, 1.5rem) !important;
+    color: var(--color-text-muted) !important;
+    font-weight: normal !important;
+    line-height: 1.5;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .pitchParagraph {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    line-height: 1.6;
+  }
+
+  .pitchNote {
+    font-size: clamp(1.25rem, 2.625vw, 1.5rem) !important;
+    line-height: 1.5;
+  }
+
+  .pitchCTA {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    padding: clamp(0.75rem, 2.25vw, 1.125rem)
+      clamp(1.125rem, 3.5vw, 2.25rem) !important;
+  }
+}
+
+/* Desktop: 1024–1919px */
+@media (min-width: 1024px) {
+  .pitchSection {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  /* Desktop two-column layout */
+  .pitchSection {
+    padding: 6rem 0;
+  }
+
+  .pitchContentRow {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4rem;
+    padding-top: 2rem;
+  }
+
+  .pitchLeftColumn {
+    width: 50%;
+    max-width: 550px;
+    order: 1; /* Appears on left side on desktop */
+    gap: 1rem;
+  }
+
+  .pitchParagraphWrapper {
+    text-align: start;
+    order: 1; /* Paragraph appears first on desktop */
+  }
+
+  .pitchParagraph {
+    text-align: start;
+    max-width: 100%;
+  }
+
+  .pitchButtonImageRow {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    order: 1; /* Video/GIF appears first on desktop (above button) */
+  }
+
+  .pitchCTAContainer {
+    order: 2; /* Button appears below video on desktop */
+  }
+
+  .pitchExpectationsList {
+    order: 2; /* 2x2 cards appear below paragraph on desktop */
+  }
+
+  .pitchButtonImageRow .pitchGifContainer {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pitchGifContainer {
+    justify-content: flex-end;
+  }
+
+  .pitchGif {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .pitchRightColumn {
+    width: 50%;
+    max-width: 550px;
+    align-items: flex-start;
+    text-align: start;
+    order: 2; /* Appears on right side on desktop */
+  }
+
+  .pitchRightColumnBottom {
+    align-items: flex-start;
+    text-align: start;
+    transform: translateY(-100px);
+  }
+
+  .pitchNote {
+    text-align: start;
+  }
+
+  /* Desktop: 2x2 grid layout for client process */
+  .pitchExpectationsList {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 1rem !important;
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: start !important;
+  }
+
+  .pitchExpectationItem {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .pitchIcon {
+    width: 64px;
+    height: 64px;
+    transform: translateY(0.3rem);
+    margin-right: 0;
+  }
+}

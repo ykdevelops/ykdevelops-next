@@ -6,102 +6,6 @@
   - TV / Large screens: 1920px+ (@media (min-width: 1920px))
 */
 
-/* Mobile size */
-/* 
-  Individual container for the "Education" block 
-  and the "Licenses & Certifications" block 
-  (each now uses .layer class as a separate section)
-*/
-.eduContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4rem; /* Increased spacing - Apple's generous spacing */
-  position: relative;
-  padding: 4rem 2rem; /* Increased padding */
-}
-
-/* 
-  Title row: icon + section heading 
-*/
-.eduTitleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem; /* Increased spacing */
-  position: relative;
-  /* Soft radial gradient to fade out dots behind title */
-  padding: 2rem 1.5rem; /* Increased vertical padding */
-  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.55) 0%, rgba(63, 61, 107, 0.25) 60%, transparent 100%);
-  border-radius: 8px;
-}
-
-/* 
-  Icon next to the section title (e.g., educationIcon.gif, certIcon.gif) 
-  For mobile, keep a relative size
-*/
-.eduTitleIcon {
-  width: 8vw;
-  height: 8vw;
-  margin-right: 10px;
-}
-
-/* 
-  The main section heading text
-  (e.g., "Education" or "Licenses & Certifications") 
-*/
-.eduSectionTitle {
-  font-weight: normal;
-  font-size: 7vw;
-  margin: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 
-  Each item (e.g., one school or one certification) 
-*/
-.eduItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 6vw;
-  padding: 0 0 1rem 0; /* spacing below each item */
-  overflow: visible;
-}
-
-/* 
-  Logo for each item (university or certification)
-*/
-.eduLogo {
-  margin-bottom: 1rem;
-  width: 150px;
-  height: 150px;
-}
-
-/* 
-  Container for the text info (title, date, description) 
-*/
-.eduInfo {
-  padding: 1rem 0 3rem 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: visible;
-  position: relative;
-  /* Soft radial gradient to fade out dots behind education items */
-  padding: 3rem 2rem; /* Increased padding */
-  background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 55%, transparent 100%);
-  border-radius: 8px;
-}
-
 /* ============================================
    STANDARDIZED TEXT HIERARCHY SYSTEM
    Brightest → Darkest, Largest → Smallest
@@ -120,451 +24,31 @@
 /* Level 2: SECOND ROW - Medium, Light Grey */
 .itemLevel2 {
   font-size: clamp(1.0625rem, 3vw, 1.1875rem);
-  color: rgb(240, 240, 240);
+  color: var(--color-text-strong);
   font-weight: 400;
   margin-bottom: 0.5rem;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
 }
 
 /* Level 3: THIRD ROW - Smaller, Medium Grey */
 .itemLevel3 {
   font-size: clamp(1.0625rem, 2.5vw, 1.125rem);
-  color: rgb(218, 218, 218);
+  color: var(--color-text-muted);
   font-weight: 400;
   margin-bottom: 0.75rem;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
 }
 
 /* Level 4: BOTTOM ROW - Smallest, Darkest Grey */
 .itemLevel4 {
   font-size: clamp(1rem, 2vw, 1.0625rem);
-  color: rgb(180, 180, 180);
+  color: var(--color-text-subtle);
   font-weight: 400;
   margin-bottom: 0;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
-}
-
-/* 
-  Item title (e.g., "University of Ottawa – BSc Computer Science") 
-*/
-/* 
-  Degree/Program name (e.g., "BSc of Computer Science") - First in Education
-  OR Certification Title - First in Certifications
-*/
-.eduItemDegree,
-.eduItemTitle {
-  margin: 0;
-  text-align: start;
-  width: 100%;
-  /* Uses itemLevel1 base styles - First element in column */
-  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
-  font-weight: 600;
-  color: white;
-  margin-bottom: 0.375rem;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-}
-
-/* 
-  School name in Education - Second element (comes after eduItemDegree)
-*/
-.eduItemDegree + .eduItemTitle {
-  /* Uses itemLevel2 base styles - Second in column */
-  font-size: clamp(1.0625rem, 3.25vw, 1.1875rem);
-  font-weight: 400;
-  color: rgb(240, 240, 240);
-  margin-bottom: 0.5rem;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
-}
-
-/* 
-  Date line (e.g., "Sep 2024 – Sep 2027")
-*/
-.eduItemDate {
-  margin: 0;
-  text-align: start;
-  width: 100%;
-  /* Uses itemLevel3 base styles */
-  font-size: clamp(1.0625rem, 2.75vw, 1.125rem);
-  font-weight: 400;
-  color: rgb(218, 218, 218);
-  margin-bottom: 0.75rem;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
-}
-
-/* 
-  Description text (e.g., "Grade: 2nd year", "Credential ID: ...")
-*/
-.eduDescription {
-  padding: 0 0 1rem 0;
-  width: 90%;
-  max-width: 650px;
-  font-size: 1.0625rem;
-  font-weight: 400;
-  overflow-wrap: break-word;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
-  text-align: center;
-}
-
-/* 
-  Link for "Show Credential" or external references 
-*/
-.eduLink {
-  padding: 0;
-  margin: 0;
-  text-decoration: underline;
-  cursor: pointer;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: start;
-  gap: 0.25em;
-  overflow: visible;
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
-  /* Uses itemLevel4 base styles */
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  color: rgb(218, 218, 218);
-  font-weight: normal;
-  line-height: 1.5;
-}
-
-.eduLink:hover {
-  opacity: 1;
-}
-
-.eduLink img {
-  display: flex;
-  align-items: center;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-  transform: translateY(3px);
-  transition: opacity 0.2s ease;
-  width: 18px !important;
-  height: 12px !important;
-}
-
-.eduLink:hover img {
-  opacity: 1;
-}
-
-/* 
-  Pitch section styles - New two-column layout
-*/
-.pitchSection {
-  width: 100%;
-  padding: 6rem 0; /* Increased padding */
-  margin-bottom: 6rem; /* Increased margin */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
-}
-
-.pitchWrapper {
-  width: 90%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-
-.pitchContentRow {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem; /* Increased spacing - Apple's generous gaps */
-}
-
-.pitchLeftColumn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  align-items: center;
-}
-
-.pitchCTAContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem; /* 32px - 8pt grid double spacing */
-  width: 100%;
-  order: 2; /* Appears below video */
-}
-
-.pitchRightColumn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-}
-
-.pitchRightColumnBottom {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  text-align: center;
-}
-
-.pitchIcon {
-  width: clamp(3rem, 1vw, 4.5rem);
-  height: clamp(3rem, 1vw, 4.5rem);
-  flex-shrink: 0;
-  transform: translateY(0.3rem);
-  margin-right: 1rem;
-}
-
-
-.pitchParagraphWrapper {
-  position: relative;
-  margin: 0;
-  margin-top: 0rem;
-  margin-bottom: 3rem; /* Increased spacing */
-  /* Soft radial gradient to fade out dots behind text */
-  background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 60%, transparent 100%);
-  padding: 0;
-  border-radius: 8px;
-}
-
-.pitchParagraph {
-  margin: 0;
-  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
-  line-height: 1.47059;
-  color: rgb(218, 218, 218);
-  max-width: 650px;
-  text-align: center;
-  letter-spacing: -0.011em;
-  font-weight: 400;
-  font-family: "Boldonse", sans-serif;
-}
-
-.pitchParagraph strong {
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
-}
-
-.pitchButtonImageRow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-}
-
-.pitchGifContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-}
-
-.pitchGifWrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
-  max-height: 300px;
-}
-
-.pitchGif {
-  object-fit: contain;
-}
-
-.pitchCTA {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
-  background-size: 300% 100%;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  width: 200px;
-  transition: all 0.3s ease;
-  margin-top: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  animation: gradientWave 3s ease infinite;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-  letter-spacing: 0.05em;
-}
-
-.pitchCTA::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shine 2s infinite;
-}
-
-.pitchCTA:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
-  animation-duration: 2s;
-}
-
-@keyframes gradientWave {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes shine {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
-
-.pitchNote {
-  margin: 0;
-  font-size: 1.0625rem;
-  color: rgb(180, 180, 180);
-  font-style: italic;
-  max-width: 500px;
-  text-align: center;
-  line-height: 1.47059;
-  letter-spacing: -0.011em;
-}
-
-
-.pitchExpectationsList {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* 16px - 8pt grid base spacing */
-  max-width: 600px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  /* Soft radial gradient to fade out dots behind cards */
-  padding: 2rem 1rem;
-  background: radial-gradient(ellipse 150% 120% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 50%, transparent 100%);
-  border-radius: 8px;
-  order: 2; /* Appears below paragraph */
-  display: none !important;
-  
-}
-
-.pitchExpectationItem {
-  perspective: 1000px;
-  width: 100%;
-  height: 100%;
-  min-height: 120px;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.pitchCardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 120px;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pitchExpectationItem.flipped .pitchCardInner {
-  transform: rotateY(180deg);
-}
-
-.pitchCardFront,
-.pitchCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  min-height: 120px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem; /* 16px - 8pt grid base spacing */
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  overflow: visible;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.pitchCardFront {
-  transform: rotateY(0deg);
-}
-
-.pitchCardBack {
-  transform: rotateY(180deg);
-  text-align: center;
-}
-
-.pitchExpectationItem:hover .pitchCardFront,
-.pitchExpectationItem:hover .pitchCardBack {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.pitchExpectationTitle {
-  margin: 0;
-  /* Uses itemLevel1 base styles */
-  font-size: clamp(1.1875rem, 3.5vw, 1.5rem);
-  font-weight: 600;
-  color: white;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  text-align: center;
-}
-
-.pitchExpectationDescription {
-  margin: 0;
-  /* Uses itemLevel3 base styles */
-  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
-  line-height: 1.47059;
-  color: rgb(218, 218, 218);
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: -0.011em;
-  max-width: 100%;
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
 }
 
 /* #region general */
@@ -607,7 +91,7 @@
   /* Soft radial gradient to fade out dots behind text */
   padding: 3rem 2rem; /* Increased padding */
   background: radial-gradient(ellipse 120% 100% at center, rgba(63, 61, 107, 0.65) 0%, rgba(63, 61, 107, 0.35) 55%, transparent 100%);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 .sectionTitleRow {
   display: flex;
@@ -788,9 +272,9 @@
   padding: 0;
   font-weight: 400;
   color: white;
-  line-height: 1.47059;
+  line-height: var(--text-line-height);
   font-size: clamp(1.0625rem, 2vw, 1.1875rem);
-  letter-spacing: -0.011em;
+  letter-spacing: var(--text-letter-spacing);
 }
 .introPic {
   width: 90%;
@@ -892,7 +376,7 @@
   padding: 0;
   /* Uses itemLevel2 base styles */
   font-size: clamp(1.25rem, 3vw, 1.5rem);
-  color: rgb(240, 240, 240);
+  color: var(--color-text-strong);
   font-weight: normal;
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -904,7 +388,7 @@
   text-align: start;
   /* Uses itemLevel3 base styles */
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-  color: rgb(218, 218, 218);
+  color: var(--color-text-muted);
   font-weight: normal;
   margin-bottom: 0.75rem;
   line-height: 1.5;
@@ -921,7 +405,7 @@
 }
 .learnMoreButton {
   background-color: transparent;
-  color: rgb(218, 218, 218);
+  color: var(--color-text-muted);
   border: none;
   display: flex;
   flex-direction: row;
@@ -1027,42 +511,7 @@
 }
 /* #endregion Studio */
 /* #region Contact */
-.contactSection {
-  width: 100%;
-  padding: 2.5rem 0;
-  margin-bottom: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
-}
-
-.contactWrapper {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-.contactLeftColumn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  order: 2;
-}
-
-.contactImage {
-
-    width: 90%;
-    height: auto;
-  
-}
-
+/* Shared social/link styles (used in Intro + Contact) */
 .contactIconLinks {
   display: flex;
   flex-wrap: wrap;
@@ -1093,167 +542,9 @@
 
 .contactIconLabel {
   font-size: 1.25rem;
-  color: rgb(218, 218, 218);
+  color: var(--color-text-muted);
   text-align: center;
   display: none;
-}
-
-.contactRightColumn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  order: 1;
-  position: relative;
-  /* Soft radial gradient to fade out dots behind form */
-  padding: 2rem 1.5rem;
-  background: radial-gradient(ellipse 130% 110% at center, rgba(63, 61, 107, 0.7) 0%, rgba(63, 61, 107, 0.4) 55%, transparent 100%);
-  border-radius: 8px;
-}
-
-.contactThankYou {
-  margin: 0;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: white;
-  font-weight: normal;
-  line-height: 1.0;
-  letter-spacing: -0.015em;
-  text-align: left;
-}
-
-.contactHeadline {
-  margin: 0;
-  margin-bottom: 1rem; /* 16px - 8pt grid base spacing */
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: white;
-  font-weight: normal;
-  line-height: 1.0;
-  letter-spacing: -0.015em;
-}
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* 16px - 8pt grid base spacing */
-  width: 100%;
-}
-
-.contactFormField {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-
-.contactFormLabel {
-  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
-  color: rgb(218, 218, 218);
-  font-weight: 500;
-}
-
-.contactFormInput,
-.contactFormTextarea {
-  padding: 0.625rem 0.875rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
-  color: white;
-  font-family: inherit;
-  transition: all 0.2s ease;
-  width: 100%;
-}
-
-.contactFormInput:focus,
-.contactFormTextarea:focus {
-  outline: none;
-  border-color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
-}
-
-.contactFormTextarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-.contactSubmitButtonContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-.contactSubmitButton {
-  padding: 1rem 2rem;
-  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
-  background-size: 300% 100%;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  animation: gradientWave 3s ease infinite;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-  will-change: transform, background-position;
-  backface-visibility: hidden;
-  letter-spacing: 0.05em;
-}
-
-.contactSubmitButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
-  animation-duration: 2s;
-}
-
-.contactSubmitButton:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3), 0 6px 20px rgba(255, 107, 53, 0.6);
-}
-
-.contactSubmitButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none !important;
-  animation: none !important;
-  pointer-events: none;
-}
-
-.contactFormMessage {
-  padding: 0.875rem 1rem;
-  border-radius: 8px;
-  font-size: clamp(1.25rem, 1.2vw, 1.5rem);
-  text-align: center;
-  margin-top: 0.5rem;
-  animation: fadeIn 0.3s ease-in;
-  min-height: 0;
-  will-change: opacity, transform;
-  backface-visibility: hidden;
-}
-
-.contactFormMessageSuccess {
-  background-color: rgba(76, 175, 80, 0.2);
-  border: 1px solid rgba(76, 175, 80, 0.4);
-  color: #4caf50;
-}
-
-.contactFormMessageError {
-  background-color: rgba(244, 67, 54, 0.2);
-  border: 1px solid rgba(244, 67, 54, 0.4);
-  color: #f44336;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* #endregion Contact */
@@ -1277,7 +568,7 @@
   /* Soft radial gradient to fade out dots behind personal projects */
   padding: 2rem 1rem;
   background: radial-gradient(ellipse 140% 120% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.25) 50%, transparent 100%);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .caseContainerTitleRow {
@@ -1290,7 +581,7 @@
   /* Soft radial gradient to fade out dots behind title */
   padding: 1.5rem;
   background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 60%, transparent 100%);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 .caseSectionTitleIcon {
@@ -1335,7 +626,7 @@
   justify-content: center;
   align-items: stretch;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1683,14 +974,6 @@
   .containerTitleRow .sectionTitle {
     padding-left: 0rem;
   }
-
-  .pitchWrapper {
-    gap: 0 !important;
-  }
-
-  .pitchContentRow {
-    gap: 0 !important;
-  }
   .sectionTitleIcon{
     width: 40px !important;
     height: 40px !important;
@@ -1698,27 +981,6 @@
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
-  .pitchContentRow {
-    gap: 0 !important;
-  }
-
-  .pitchRightColumn {
-    display: contents;
-  }
-
-  .pitchButtonImageRow {
-    order: 1;
-  }
-
-  .pitchLeftColumn {
-    order: 2;
-  }
-
-  .pitchCTAContainer {
-    margin-top: 0 !important;
-    order: 3;
-  }
-
   .contactIconSmall {
     width: 35px !important;
     height: 35px !important;
@@ -1739,16 +1001,6 @@
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .layer {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-
-  .pitchSection {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-
-  .contactSection {
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
@@ -1776,20 +1028,6 @@
     text-align: center !important;
   }
 
-  .pitchParagraphWrapper {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .pitchExpectationsList {
-    order: 2; /* 2x2 cards appear below paragraph on mobile */
-  }
-
-  /* Hide 2x2 boxes on mobile */
-  .pitchExpectationsList {
-    display: none !important;
-  }
-
   /* Base details - hidden by default */
   .details {
     width: 100%;
@@ -1809,96 +1047,10 @@
     transform: none;
   }
 
- 
-
-  .contactRightColumn {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .contactForm {
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contactFormInput,
-  .contactFormTextarea {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contactSubmitButtonContainer {
-    justify-content: center !important;
-  }
-
-  .contactImage {
-    width: clamp(200px, 70vw, 400px) !important;
-    height: auto !important;
-    max-width: 100%;
-    object-fit: cover;
-  }
-
-  .pitchContentRow {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .pitchRightColumn {
-    display: contents;
-  }
-
-  .pitchButtonImageRow {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    order: 1; /* Image appears first */
-  }
-
-  .pitchLeftColumn {
-    order: 2; /* Text appears second */
-  }
-
-  .pitchCTAContainer {
-    order: 3; /* Button appears third */
-  }
-
-  .pitchButtonImageRow .pitchCTA {
-    flex-shrink: 0;
-
-  }
-
-  .pitchButtonImageRow .pitchGifContainer {
-    display: flex !important;
-    justify-content: center;
-    align-items: center !important;
-    width: auto !important;
-    flex: 1;
-  }
-
-  .pitchGifContainer {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  /* Change 2x2 boxes to 1x4 column on mobile */
-
-
-  .pitchExpectationItem {
-    width: 100% !important;
-    flex: 0 0 auto !important;
-  }
-
   /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
   
   /* Level 1: Main Section Titles (Largest) - 6-7vw */
-  .sectionTitle,
-  .eduSectionTitle {
+  .sectionTitle {
     font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
     line-height: 1.2;
     text-align: center !important;;
@@ -1927,12 +1079,7 @@
   }
 
   /* Level 1: Primary Titles - Mobile */
-  .workCompanyTitle,
-  .pitchExpectationTitle,
-  .contactHeadline,
-  .contactThankYou,
-  .eduItemDegree,
-  .eduItemTitle {
+  .workCompanyTitle {
     font-size: clamp(1.25rem, 3.75vw, 1.75rem) !important;
     color: white !important;
     font-weight: bold !important;
@@ -1940,62 +1087,41 @@
     margin-bottom: 0.25rem !important;
 
   }
-  .contactThankYou, .contactHeadline{
-    display: flex;
-    justify-content: center;
-    text-align: center !important;
-  }
 
   /* Level 2: Secondary Titles - Mobile (School name in Education, comes after eduItemDegree) */
-  .workPositionTitle,
-  .eduItemDegree + .eduItemTitle {
+  .workPositionTitle {
     font-size: clamp(1.25rem, 3.25vw, 1.5rem) !important;
-    color: rgb(240, 240, 240) !important;
+    color: var(--color-text-strong) !important;
     font-weight: normal !important;
     line-height: 1.4;
     margin-bottom: 0.5rem !important;
   }
 
   /* Level 3: Tertiary Text - Mobile */
-  .workDate,
-  .pitchExpectationDescription,
-  .eduItemDate {
+  .workDate {
     font-size: clamp(1.25rem, 2.75vw, 1.5rem) !important;
-    color: rgb(218, 218, 218) !important;
+    color: var(--color-text-muted) !important;
     font-weight: normal !important;
     line-height: 1.5;
     margin-bottom: 0.75rem !important;
   }
 
   /* Level 4: Body Text - Mobile */
-  .pitchParagraph,
-  .workDescription,
-  .eduDescription,
-  .contactFormLabel {
+  .workDescription {
     font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     line-height: 1.6;
   }
 
   /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
-  .pitchNote {
-    font-size: clamp(1.25rem, 2.625vw, 1.5rem) !important;
-    line-height: 1.5;
-  }
-
   /* Level 4: Smallest Text - Mobile */
-  .contactFormInput,
-  .contactFormTextarea,
-  .contactIconLabel,
-  .eduLink {
+  .contactIconLabel {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    color: rgb(218, 218, 218) !important;
+    color: var(--color-text-muted) !important;
     font-weight: normal !important;
     line-height: 1.5;
   }
 
   /* Buttons - 2.75-3.25vw */
-  .pitchCTA,
-  .contactSubmitButton,
   .learnMoreButton {
     font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
     padding: clamp(0.75rem, 2.25vw, 1.125rem) clamp(1.125rem, 3.5vw, 2.25rem) !important;
@@ -2006,16 +1132,6 @@
 /* Desktop: 1024–1919px */
 @media (min-width: 1024px) {
   .layer {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-
-  .pitchSection {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-
-  .contactSection {
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
@@ -2185,237 +1301,6 @@
     text-align: left;
     justify-content: flex-start;
   }
-   /* 
-    Education and Certifications are now separate sections
-    Each uses the .layer class, so they stack vertically
-  */
-  .eduContainer {
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .eduTitleRow {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding-top: 3rem; /* optional, if you want spacing at the top */
-  }
-
-  .eduTitleIcon {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    transform: translateY(5px);
-  }
-
-  .eduSectionTitle {
-    font-size: 3rem; /* Instead of 7vw or 90px, a bit smaller for desktop */
-    margin: 0;
-    text-align: left;
-    justify-content: flex-start;
-  }
-
-  .eduItem {
-    font-size: 1.4rem;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-
-  .eduLogo {
-    margin-right: 2rem;
-    margin-bottom: 0;
-    width: 120px;
-    height: 120px;
-    /* Adjust if needed for your design */
-  }
-
-  .eduInfo {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: visible;
-  }
-
-  /* Level 1 - Desktop - First element (Degree in Education, Title in Certifications) */
-  .eduItemDegree,
-  .eduItemTitle {
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    margin-bottom: 0.25rem;
-    text-align: left;
-    color: white;
-    font-weight: bold;
-    line-height: 1.4;
-  }
-
-  /* Level 2 - Desktop - School name in Education (comes after eduItemDegree) */
-  .eduItemDegree + .eduItemTitle {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-bottom: 0.5rem;
-    text-align: left;
-    color: rgb(240, 240, 240);
-    font-weight: normal;
-    line-height: 1.4;
-  }
-
-  .eduItemDate {
-    /* Level 3 - Desktop */
-    font-size: clamp(1.25rem, 1.75vw, 1.5rem);
-    color: rgb(218, 218, 218);
-    font-weight: normal;
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-  }
-
-  .eduDescription {
-    width: 100%;
-    font-size: 1.25rem;
-  }
-
-  .eduLink {
-    /* Level 4 - Desktop */
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    color: rgb(218, 218, 218);
-    font-weight: normal;
-    line-height: 1.5;
-  }
-
-
-  .eduTitleIcon {
-    width: 64px;
-    height: 64px;
-    transform: translateY(0.4rem);
-  }
-
-  .eduSectionTitle {
-    font-size: clamp(3rem, 5vw, 5rem);
-    text-align: left;
-    justify-content: flex-start;
-  }
-
-  .eduItem {
-    font-size: clamp(1.25rem, 1.2vw, 1.5rem);
-  }
-
-  /* Note: eduItemTitle, eduItemDegree, eduItemDate styles are defined earlier in this media query */
-
-  .eduDescription {
-    font-size: clamp(1.25rem, 1.1vw, 1.5rem);
-  }
-
-  .eduLink {
-    /* Level 4 - Desktop (larger viewport) */
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    color: rgb(218, 218, 218);
-    font-weight: normal;
-    line-height: 1.5;
-  }
-
-  /* Pitch section - Desktop two-column layout */
-  .pitchSection {
-    padding: 6rem 0;
-  }
-
-
-  .pitchContentRow {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 4rem;
-    padding-top: 2rem;
-  }
-
-  .pitchLeftColumn {
-    width: 50%;
-    max-width: 550px;
-    order: 1; /* Appears on left side on desktop */
-    gap: 1rem;
-  }
-
-  .pitchParagraphWrapper {
-    text-align: start;
-    order: 1; /* Paragraph appears first on desktop */
-  }
-
-  .pitchParagraph {
-    text-align: start;
-    max-width: 100%;
-  }
-
-  .pitchButtonImageRow {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    order: 1; /* Video/GIF appears first on desktop (above button) */
-  }
-
-  .pitchCTAContainer {
-    order: 2; /* Button appears below video on desktop */
-  }
-
-  .pitchExpectationsList {
-    order: 2; /* 2x2 cards appear below paragraph on desktop */
-  }
-
-  .pitchButtonImageRow .pitchGifContainer {
-    justify-content: center;
-
-    width: 100%;
-  }
-
-  .pitchGifContainer {
-    justify-content: flex-end;
-  }
-
-  .pitchGif {
-    max-width: 350px;
-    max-height: 350px;
-  }
-
-  .pitchRightColumn {
-    width: 50%;
-    max-width: 550px;
-    align-items: flex-start;
-    text-align: start;
-    order: 2; /* Appears on right side on desktop */
-  }
-
-  .pitchRightColumnBottom {
-    align-items: flex-start;
-    text-align: start;
-    transform: translateY(-100px);
-  }
-
-  .pitchNote {
-    text-align: start;
-  }
-
-  /* Desktop: 2x2 grid layout for client process */
-  .pitchExpectationsList {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    grid-auto-rows: auto !important;
-    gap: 1rem !important;
-    max-width: 600px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: start !important;
-  }
-
-  .pitchExpectationItem {
-    flex: 0 0 auto !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .pitchIcon {
-    width: 64px;
-    height: 64px;
-    transform: translateY(0.3rem);
-    margin-right: 0;
-  }
 
   .sectionTitle {
     padding-top: 0;
@@ -2553,8 +1438,8 @@
     font-weight: 400;
     color: white;
     font-size: clamp(1.1875rem, 2vw, 1.1875rem);
-    line-height: 1.47059;
-    letter-spacing: -0.011em;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
   }
   .introPic {
     max-width: 650px;
@@ -2645,11 +1530,11 @@
     /* Level 2 - Desktop */
     font-size: clamp(1.1875rem, 2vw, 1.1875rem);
     text-align: start;
-    color: rgb(240, 240, 240);
+    color: var(--color-text-strong);
     font-weight: 400;
     margin-bottom: 0.5rem;
-    line-height: 1.47059;
-    letter-spacing: -0.011em;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
   }
 
   .workDate {
@@ -2658,11 +1543,11 @@
     margin: 0;
     text-align: start;
     font-size: clamp(1.0625rem, 1.75vw, 1.125rem);
-    color: rgb(218, 218, 218);
+    color: var(--color-text-muted);
     font-weight: 400;
     margin-bottom: 0.75rem;
-    line-height: 1.47059;
-    letter-spacing: -0.011em;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
   }
 
   
@@ -2691,8 +1576,8 @@
     transition: opacity 0.5s ease-in-out;
     text-align: start;
     font-size: clamp(1.1875rem, 1.5vw, 1.1875rem);
-    line-height: 1.47059;
-    letter-spacing: -0.011em;
+    line-height: var(--text-line-height);
+    letter-spacing: var(--text-letter-spacing);
     transform: translateX(5px);
   }
   .workDescriptionBox {
@@ -2827,28 +1712,6 @@
   /* #endregion Project */
 
   /* #region Contact */
-  .contactSection {
-    padding: 3rem 0;
-  }
-
-  .contactWrapper {
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .contactLeftColumn {
-    width: 50%;
-    max-width: 550px;
-    align-items: center;
-    order: 1;
-  }
-
-  .contactImage {
-    width: 600px;
-    height: 600px;
-  }
-
   .contactIconLinks {
     flex-wrap: nowrap;
     gap: 1.25rem;
@@ -2868,31 +1731,6 @@
 
   .contactIconLink:hover .contactIconLabel {
     opacity: 1;
-  }
-
-  .contactRightColumn {
-    width: 50%;
-    max-width: 600px;
-    order: 2;
-  }
-
-  .contactHeadline {
-    margin-bottom: 1rem;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: bold;
-    color: white;
-  }
-
-  .contactThankYou {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: normal;
-    color: white;
-    width: 100%;
-    text-align: left !important;
-  }
-
-  .contactForm {
-    gap: 0.875rem;
   }
   /* #endregion Contact */
 }

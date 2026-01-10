@@ -1,6 +1,7 @@
 import React, { Suspense, useState } from 'react';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
+import styles from '../styles/Pitch.module.css';
 
 export default function Pitch() {
   const [hoveredCards, setHoveredCards] = useState(new Set());
@@ -32,17 +33,17 @@ export default function Pitch() {
     <div className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
         {/* Title Row - Full Width */}
-        <div className={styles.containerTitleRow}>
+        <div className={homeStyles.containerTitleRow}>
           <Suspense fallback={<div>Loading icon...</div>}>
             <Image
               src="/wms-icon.svg"
               alt="webManagementIcon"
               width={150}
               height={150}
-              className={styles.sectionTitleIcon}
+              className={homeStyles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.sectionTitle}>Website Service</h1>
+          <h1 className={homeStyles.sectionTitle}>Website Service</h1>
         </div>
 
         {/* Content Row - Two Columns */}
