@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import homeStyles from '../styles/Home.module.css';
+import workStyles from '../styles/Work.module.css';
 import Studio from './sideProjects/Studio';
 import ChatApp from './sideProjects/ChatApp';
 import MugCulture from './sideProjects/MugCulture';
@@ -13,29 +14,29 @@ export default function PersonalProjects() {
   ];
 
   return (
-    <div className={styles.layer}>
-      <div className={styles.workContainer}>
+    <div className={homeStyles.layer}>
+      <div className={workStyles.workContainer}>
         {/* Header Section */}
-        <div className={styles.containerTitleRow}>
+        <div className={homeStyles.containerTitleRow}>
           <Suspense 
-            className={styles.personalProjectsHeaderIconSuspense} 
-            fallback={<div className={styles.personalProjectsLoadingImage}></div>}
+            className={homeStyles.personalProjectsHeaderIconSuspense} 
+            fallback={<div className={homeStyles.personalProjectsLoadingImage}></div>}
           >
             <Image
               src="/puzzle-svgrepo-com.svg"
               alt="Personal projects icon"
               width={150}
               height={150}
-              className={styles.sectionTitleIcon}
+              className={homeStyles.sectionTitleIcon}
             />
           </Suspense>
-          <h1 className={styles.sectionTitle}>Personal Projects</h1>
+          <h1 className={homeStyles.sectionTitle}>Personal Projects</h1>
         </div>
 
         {/* Personal Projects Grid */}
-        <div className={styles.personalProjectsGrid}>
+        <div className={homeStyles.personalProjectsGrid}>
           {personalProjects.map(({ id, component: ProjectComponent }) => (
-            <div key={id} className={styles.personalProjectItem}>
+            <div key={id} className={homeStyles.personalProjectItem}>
               <ProjectComponent />
             </div>
           ))}

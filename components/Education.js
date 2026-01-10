@@ -2,11 +2,12 @@ import React, { Suspense } from 'react';
 import Image from 'next/image';
 import homeStyles from '../styles/Home.module.css';
 import styles from '../styles/Education.module.css';
+import workStyles from '../styles/Work.module.css';
 
 export default function Education() {
   return (
     <div className={homeStyles.layer}>
-      <div className={homeStyles.workContainer}>
+      <div className={workStyles.workContainer}>
         <div className={homeStyles.containerTitleRow}>
           <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
             <Image
@@ -21,18 +22,18 @@ export default function Education() {
         </div>
 
         {/* University of Ottawa (Current) */}
-        <div className={homeStyles.workCompany}>
-          <div className={homeStyles.workCompanyHeader}>
+        <div className={workStyles.workCompany}>
+          <div className={workStyles.workCompanyHeader}>
             <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
               <Image
                 src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/uottawa.png"
                 alt="uOttawaLogo"
                 width={150}
                 height={150}
-                className={homeStyles.workLogo}
+                className={workStyles.workLogo}
               />
             </Suspense>
-            <div className={homeStyles.workInfo}>
+            <div className={workStyles.workInfo}>
               <h2 className={styles.eduItemDegree}>Honours BSc Computer Science</h2>
               <h1 className={styles.eduItemTitle}>
                 University of Ottawa
@@ -43,18 +44,18 @@ export default function Education() {
         </div>
 
         {/* Algonquin College */}
-        <div className={homeStyles.workCompany}>
-          <div className={homeStyles.workCompanyHeader}>
+        <div className={workStyles.workCompany}>
+          <div className={workStyles.workCompanyHeader}>
             <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
               <Image
                 src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/algonquin.png"
                 alt="AlgonquinLogo"
                 width={150}
                 height={150}
-                className={homeStyles.workLogo}
+                className={workStyles.workLogo}
               />
             </Suspense>
-            <div className={homeStyles.workInfo}>
+            <div className={workStyles.workInfo}>
               <h2 className={styles.eduItemDegree}>Mobile Application Design & Development</h2>
               <h1 className={styles.eduItemTitle}>
                 Algonquin College
@@ -65,18 +66,18 @@ export default function Education() {
         </div>
 
         {/* Google Cybersecurity Specialization */}
-        <div className={homeStyles.workCompany}>
-          <div className={homeStyles.workCompanyHeader}>
+        <div className={workStyles.workCompany}>
+          <div className={workStyles.workCompanyHeader}>
             <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
               <Image
                 src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/google.jpg"
                 alt="GoogleLogo"
                 width={150}
                 height={150}
-                className={homeStyles.workLogo}
+                className={workStyles.workLogo}
               />
             </Suspense>
-            <div className={homeStyles.workInfo}>
+            <div className={workStyles.workInfo}>
               <h1 className={styles.eduItemTitle}>Google Cybersecurity Specialization</h1>
               <h2 className={styles.eduItemDate}>Issued Jan 2025</h2>
               <a
@@ -92,18 +93,18 @@ export default function Education() {
         </div>
 
         {/* AWS Certified Cloud Practitioner */}
-        <div className={homeStyles.workCompany}>
-          <div className={homeStyles.workCompanyHeader}>
+        <div className={workStyles.workCompany}>
+          <div className={workStyles.workCompanyHeader}>
             <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
               <Image
                 src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/aws.jpg"
                 alt="AWSLogo"
                 width={150}
                 height={150}
-                className={homeStyles.workLogo}
+                className={workStyles.workLogo}
               />
             </Suspense>
-            <div className={homeStyles.workInfo}>
+            <div className={workStyles.workInfo}>
               <h1 className={styles.eduItemTitle}>AWS Certified Cloud Practitioner</h1>
               <h2 className={styles.eduItemDate}>Issued Oct 2023 – Expires Oct 2026</h2>
               <a
@@ -119,18 +120,18 @@ export default function Education() {
         </div>
 
         {/* OpenCV for Beginners */}
-        <div className={homeStyles.workCompany}>
-          <div className={homeStyles.workCompanyHeader}>
+        <div className={workStyles.workCompany}>
+          <div className={workStyles.workCompanyHeader}>
             <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>
               <Image
                 src="https://ykdevelops.s3.us-east-2.amazonaws.com/education/openCV.png"
                 alt="OpenCVLogo"
                 width={150}
                 height={150}
-                className={homeStyles.workLogo}
+                className={workStyles.workLogo}
               />
             </Suspense>
-            <div className={homeStyles.workInfo}>
+            <div className={workStyles.workInfo}>
               <h1 className={styles.eduItemTitle}>OpenCV for Beginners</h1>
               <h2 className={styles.eduItemDate}>Issued May 2023</h2>
               <a
