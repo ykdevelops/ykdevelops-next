@@ -1,0 +1,223 @@
+/* Personal Projects (grid + card) styles - extracted from Home.module.css */
+
+.personalProjectsLoadingImage {
+  background-color: grey;
+  width: 150px;
+  height: 150px;
+}
+
+.personalProjectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.personalProjectItem {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  box-sizing: border-box;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.projectTopHalf {
+  width: 100% !important;
+  height: 80% !important;
+  min-height: 80% !important;
+  max-height: 80% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0.5rem !important;
+  box-sizing: border-box !important;
+  flex: 0 0 80% !important;
+  position: relative !important;
+}
+
+.projectTopStack {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+.projectBottomHalf {
+  width: 100% !important;
+  height: 20% !important;
+  min-height: 20% !important;
+  max-height: 20% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 0.75rem 0 0 0 !important;
+  box-sizing: border-box !important;
+  flex: 0 0 20% !important;
+  overflow-y: auto !important;
+}
+
+.projectMediaBox {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-shrink: 1 !important;
+  flex-grow: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 4px !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+.videoVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectMediaBox video,
+.projectMediaBox .videoVisual {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.projectMediaBox .boxCanvas,
+.projectMediaBox .canvasBox {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.projectTitleRow {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  gap: 0.75rem !important;
+  box-sizing: border-box !important;
+}
+
+.projectTitleRow > div {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  align-items: center !important;
+}
+
+.projectTitleHeading {
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem) !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  color: white !important;
+  display: inline-block !important;
+  line-height: 1.4 !important;
+  vertical-align: middle !important;
+  box-sizing: border-box !important;
+}
+
+.personalProjectsItemSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
+
+.personalProjectsHeaderIconSuspense {
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
+
+.canvasBox {
+  display: flex;
+  width: 300px !important;
+  height: 400px !important;
+  margin-right: 0px !important;
+}
+
+/* Tablet: 768–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .projectTitleHeading {
+    font-size: 1.25rem !important;
+    padding-top: 0.5rem;
+  }
+}
+
+/* Desktop: 1024–1919px */
+@media (min-width: 1024px) {
+  .personalProjectsGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .personalProjectItem {
+    flex: 1 1 calc(33.333% - 0.667rem);
+    min-width: 0;
+    max-width: 300px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+
+  .canvasBox {
+    display: flex;
+    width: 400px;
+    height: 500px;
+  }
+}
+

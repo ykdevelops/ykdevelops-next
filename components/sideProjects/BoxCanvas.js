@@ -1,7 +1,7 @@
 import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/PersonalProjects.module.css";
 function Model({ url }) {
     const { scene } = useGLTF(url)
     return <primitive object={scene} />

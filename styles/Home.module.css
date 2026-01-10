@@ -231,55 +231,6 @@
 
 /* #endregion general */
 
-/* #region Intro */
-.introName {
-  font-family: "Noto Kufi Arabic", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: clamp(2.5rem, 4.5vw, 4rem);
-  padding: 0;
-  margin: 0;
-  color: white;
-  display: inline;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-}
-.introGreeting {
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-  color: white;
-  text-align: center;
-  min-height: 1.4em;
-  line-height: 1.0;
-  letter-spacing: -0.01em;
-}
-
-.introDescription {
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.introDescriptionLine {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  color: white;
-  line-height: var(--text-line-height);
-  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
-  letter-spacing: var(--text-letter-spacing);
-}
-.introPic {
-  width: 90%;
-  height: auto;
-}
 .textContainer {
   display: flex;
   flex-direction: column;
@@ -287,15 +238,6 @@
   align-items: center;
   text-align: start;
 }
-
-.introCTAContainer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 0;
-  width: auto;
-}
-
 .textContainer > .contactIconLinks {
   margin-top: 1.5rem;
   justify-content: center;
@@ -305,7 +247,6 @@
 .textContainer > .contactIconLinks .contactIconLabel {
   display: none;
 }
-/* #endregion Intro */
 /* #region Description */
 .descriptionImage {
   border-radius: 50%;
@@ -366,27 +307,6 @@
   align-items: center;
   flex-direction: column;
 }
-.projectIconLink {
-  margin-right: 1rem;
-  margin-top: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  transition: all 0.2s ease-in-out;
-}
-.projectIconLink2 {
-  width: 1.8rem;
-  height: 1.8rem;
-  transform: translateY(-7px);
-  transition: all 0.2s ease-in-out;
-}
-.projectIconLink:hover {
-  transform: scale(1.5);
-  transition: all 0.2s ease-in-out;
-}
-.projectIconLink2:hover {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.5) translateY(-5px);
-}
 .djLo2usTitleIcon {
   width: 12vw;
   height: 12vw;
@@ -399,14 +319,6 @@
   align-items: center;
 }
 /* #endregion Project */
-/* #region Studio */
-.canvasBox {
-  display: flex;
-  width: 300px !important;
-  height: 400px !important;
-  margin-right: 0px !important;
-}
-/* #endregion Studio */
 /* #region Contact */
 /* Shared social/link styles (used in Intro + Contact) */
 .contactIconLinks {
@@ -501,150 +413,6 @@
   padding-top: 5px;
 }
 
-.personalProjectsLoadingImage {
-  background-color: grey;
-  width: 150px;
-  height: 150px;
-}
-
-.personalProjectsGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.personalProjectItem {
-  width: 100%;
-  max-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-sm);
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 300px;
-  min-height: 300px;
-  max-height: 300px;
-  box-sizing: border-box;
-  flex-direction: column !important;
-  gap: 0 !important;
-}
-
-/* chatAppLayer wrapper removed from ChatApp component - no special case needed */
-
-.projectTopHalf {
-  width: 100% !important;
-  height: 80% !important;
-  min-height: 80% !important;
-  max-height: 80% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 !important;
-  padding: 0.5rem !important;
-  box-sizing: border-box !important;
-  flex: 0 0 80% !important;
-  position: relative !important;
-}
-
-
-.projectTopStack {
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-}
-
-.projectBottomHalf {
-  width: 100% !important;
-  height: 20% !important;
-  min-height: 20% !important;
-  max-height: 20% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  margin: 0 !important;
-  padding: 0.75rem 0 0 0 !important;
-  box-sizing: border-box !important;
-  flex: 0 0 20% !important;
-  overflow-y: auto !important;
-}
-
-.projectMediaBox {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  max-height: 100% !important;
-  min-height: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-shrink: 1 !important;
-  flex-grow: 1 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 4px !important;
-  aspect-ratio: 16 / 9 !important;
-}
-
-.projectMediaBox video,
-.projectMediaBox .videoVisual {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* ChatApp video override removed - all case study media follows same rules */
-
-.projectMediaBox .boxCanvas,
-.projectMediaBox .canvasBox {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.projectTitleRow {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  flex-shrink: 0 !important;
-  gap: 0.75rem !important;
-  box-sizing: border-box !important;
-}
-
-.projectTitleRow > div {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 0.5rem !important;
-  align-items: center !important;
-}
 
 .caseDescription {
   width: 100% !important;
@@ -664,170 +432,6 @@
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
-}
-
-/* Legacy support for existing components */
-.personalProjectItem .leftHalf {
-  width: 100% !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
-  flex: 0 0 50% !important;
-}
-
-.personalProjectItem .rightHalf {
-  width: 100% !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  box-sizing: border-box !important;
-  height: 50% !important;
-  min-height: 50% !important;
-  max-height: 50% !important;
-  flex: 0 0 50% !important;
-}
-
-.personalProjectItem .textContainer {
-  align-items: center !important;
-  text-align: center !important;
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.75rem !important;
-}
-
-.projectTitleRow {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  gap: 0.75rem !important;
-}
-
-.caseDescription {
-  width: 100% !important;
-  max-width: 600px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  height: 100% !important;
-  overflow-y: visible !important;
-  text-align: left !important;
-  box-sizing: border-box !important;
-}
-
-.caseDescription p {
-  text-align: center !important;
-  width: 100% !important;
-  margin: 0 !important;
-  margin-top: 0 !important;
-  padding: 0 !important;
-  padding-top: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.projectTitleHeading {
-  font-size: clamp(1.25rem, 3.5vw, 1.5rem) !important;
-  margin: 0 !important;
-  margin-top: 0 !important;
-  padding: 0 !important;
-  font-weight: bold !important;
-  color: white !important;
-  display: inline-block !important;
-  line-height: 1.4 !important;
-  vertical-align: middle !important;
-  box-sizing: border-box !important;
-}
-
-.personalProjectItem .projectTitle {
-  font-size: 1.25rem !important;
-  margin: 0 !important;
-  font-weight: bold !important;
-  color: white !important;
-}
-
-.personalProjectItem .textContainer > div:first-child {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0.5rem !important;
-  flex-wrap: nowrap !important;
-  width: 100% !important;
-  margin-bottom: 0.5rem;
-}
-
-.personalProjectItem .textContainer > div:first-child h1 {
-  margin: 0 !important;
-  white-space: nowrap;
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: auto;
-  display: inline-block !important;
-  line-height: 1.4 !important;
-  vertical-align: middle !important;
-}
-
-.personalProjectItem .textContainer > div:first-child > div:last-child {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 0.5rem !important;
-  align-items: center !important;
-  flex-shrink: 0;
-  align-self: center !important;
-}
-
-.personalProjectItem .projectIconLink,
-.personalProjectItem .projectIconLink2 {
-  width: 1.25rem !important;
-  height: 1.25rem !important;
-  transition: all 0.2s ease-in-out;
-  margin: 0 !important;
-  padding: 0 !important;
-  flex-shrink: 0;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  vertical-align: middle !important;
-}
-
-.personalProjectItem .projectIconLink2 {
-  transform: none !important;
-}
-
-/* Hover effects only on desktop - see @media (min-width: 1024px) */
-
-.personalProjectItem .projectDescription {
-  font-size: 1.25rem !important;
-  line-height: 1.4 !important;
-}
-
-.personalProjectItem .projectLanguages {
-  display: none !important;
-}
-.personalProjectsItemSuspense {
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
-}
-
-.personalProjectsHeaderIconSuspense {
-  height: 300px !important;
-  min-height: 300px !important;
-  max-height: 300px !important;
 }
 .containerTitleRow {
   display: flex;
@@ -902,29 +506,6 @@
     scroll-snap-stop: always;
   }
 
-  .personalProjectItem .textContainer > div:first-child {
-    justify-content: center !important;
-    gap: 0.5rem !important;
-  }
-
-  .projectTitleHeading {
-    font-size: 1.25rem !important;
-    padding-top: 0.5rem;
-  }
-
-  .personalProjectItem .projectTitle {
-    font-size: 1.25rem !important;
-  }
-
-  .personalProjectItem .projectDescription {
-    font-size: 1.25rem !important;
-  }
-
-  .personalProjectItem .rightHalf {
-    align-items: center !important;
-    text-align: center !important;
-  }
-
   /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */
   
   /* Level 1: Main Section Titles (Largest) - 6-7vw */
@@ -935,27 +516,6 @@
   }
 
   /* Level 2: Intro Text (Large) - 4.5-5.5vw */
-  .introName {
-    font-size: clamp(2rem, 6vw, 3.5rem) !important;
-    line-height: 1.4;
-  }
-
-  .introGreeting {
-    font-size: clamp(1.125rem, 4.25vw, 2rem) !important;
-    line-height: 1.4;
-  }
-
-  .introDescription {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.5rem !important;
-  }
-
-  .introDescriptionLine {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    line-height: 1.4 !important;
-  }
-
   /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
   /* Level 4: Smallest Text - Mobile */
   .contactIconLabel {
@@ -973,154 +533,6 @@
   .layer {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-  }
-
-  .personalProjectsGrid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .personalProjectItem {
-    flex: 1 1 calc(33.333% - 0.667rem);
-    min-width: 0;
-    max-width: 300px;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 8px !important;
-    padding: 1.5rem !important;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
-    height: 300px !important;
-    min-height: 300px !important;
-    max-height: 300px !important;
-  }
-
-
-.projectTopHalf {
-  width: 100% !important;
-  height: 80% !important;
-  min-height: 80% !important;
-  max-height: 80% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 !important;
-  padding: 0.5rem !important;
-  box-sizing: border-box !important;
-  flex: 0 0 80% !important;
-  position: relative !important;
-}
-
-
-.projectTopStack {
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-}
-
-.projectBottomHalf {
-  width: 100% !important;
-  height: 20% !important;
-  min-height: 20% !important;
-  max-height: 20% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  margin: 0 !important;
-  padding: 0.75rem 0 0 0 !important;
-  box-sizing: border-box !important;
-  flex: 0 0 20% !important;
-  overflow-y: auto !important;
-}
-
-  /* Legacy support */
-  .personalProjectItem .leftHalf {
-    width: 100% !important;
-    height: 50% !important;
-    min-height: 50% !important;
-    max-height: 50% !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex: 0 0 50% !important;
-  }
-
-  .personalProjectItem .rightHalf {
-    width: 100% !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 50% !important;
-    min-height: 50% !important;
-    max-height: 50% !important;
-    flex: 0 0 50% !important;
-  }
-
-  .personalProjectItem .textContainer {
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .personalProjectItem .textContainer > div:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  .personalProjectItem .textContainer > div:first-child {
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-  }
-
-  .projectTitleHeading {
-    font-size: 1.25rem !important;
-    font-weight: bold !important;
-    color: white !important;
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-    line-height: 1.4 !important;
-  }
-
-  .personalProjectItem .projectTitle {
-    font-size: 1.25rem !important;
-    font-weight: bold !important;
-    color: white !important;
-  }
-
-  .personalProjectItem .projectDescription {
-    font-size: 1.25rem !important;
-  }
-
-  /* Icon hover effects - desktop only */
-  .personalProjectItem .projectIconLink:hover {
-    transform: scale(1.2) !important;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .personalProjectItem .projectIconLink2:hover {
-    transform: scale(1.2) !important;
-    transition: all 0.2s ease-in-out;
   }
 
   .caseContainerTitleRow {
@@ -1157,11 +569,6 @@
 
   .containerTitleRow {
     justify-content: flex-start;
-  }
-  .canvasBox {
-    display: flex;
-    width: 400px;
-    height: 500px;
   }
   .layer {
     width: 100%;
@@ -1228,83 +635,7 @@
   }
 
   /* #region Intro */
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: start;
-    width: 100%;
-  }
-  .introName {
-    font-size: clamp(3rem, 5.5vw, 5rem);
-    padding: 0;
-    margin: 0;
-    font-weight: 700;
-    color: white;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    display: inline;
-  }
-  .introGreeting {
-    padding: 0;
-    margin: 0;
-    font-weight: normal;
-    color: white;
-    text-align: start;
-    width: 100%;
-    font-size: clamp(1.25rem, 3.5vw, 3.5rem);
-    line-height: 1.4;
-    min-height: 1.4em;
-  }
-
-  .introDescription {
-    padding: 1rem 0 0 0;
-    margin: 0;
-    font-weight: normal;
-    color: white;
-    text-align: start;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .introDescriptionLine {
-    margin: 0;
-    padding: 0;
-    padding-left: 0.5rem;
-    font-weight: 400;
-    color: white;
-    font-size: clamp(1.1875rem, 2vw, 1.1875rem);
-    line-height: var(--text-line-height);
-    letter-spacing: var(--text-letter-spacing);
-  }
-  .introPic {
-    max-width: 650px;
-    width: 100%;
-    height: auto;
-  }
-  .introDescription {
-    width: 100%;
-    max-width: 650px;
-    text-align: start;
-  }
-
-  .textContainer > .contactIconLinks {
-    justify-content: flex-start;
-    margin-top: 2rem;
-  }
-
-  .textContainer > .contactIconLinks .contactIconLabel {
-    display: block;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-
-  .textContainer > .contactIconLinks .contactIconLink:hover .contactIconLabel {
-    opacity: 1;
-  }
+  /* moved to styles/Intro.module.css */
   /* #endregion Intro */
   /* #region Description */
   .descriptionImage {

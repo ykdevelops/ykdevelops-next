@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import homeStyles from '../../styles/Home.module.css'
+import styles from '../../styles/PersonalProjects.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
@@ -32,14 +33,14 @@ export default function ChatApp() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsLink45Deg className={styles.projectIconLink} />
+                            <BsLink45Deg className={homeStyles.projectIconLink} />
                         </a>
                         <a
                             href="https://github.com/ykdevelops/chatapp-reactfire.git"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsGithub className={styles.projectIconLink2} />
+                            <BsGithub className={homeStyles.projectIconLink2} />
                         </a>
                     </div>
                 </div>

@@ -1,14 +1,15 @@
 import React, { Suspense } from "react";
 import Image from "next/image";
 
-import styles from "../styles/Home.module.css";
+import homeStyles from "../styles/Home.module.css";
+import styles from "../styles/Intro.module.css";
 
 function Intro() {
   const textArray = ["Intermediate Web Developer", "Third year Computer Science @uOttawa"];
 
   return (
-    <div className={styles.layer}>
-      <div className={styles.leftHalf}>
+    <div className={homeStyles.layer}>
+      <div className={homeStyles.leftHalf}>
         <Suspense
           fallback={
             <Image
@@ -16,7 +17,7 @@ function Intro() {
               alt="headshot"
               width={500}
               height={500}
-              className={styles.contactImage}
+              className={styles.introPic}
             />
           }
         >
@@ -30,8 +31,8 @@ function Intro() {
           />
         </Suspense>
       </div>
-      <div className={styles.rightHalf}>
-        <div className={styles.textContainer}>
+      <div className={homeStyles.rightHalf}>
+        <div className={homeStyles.textContainer}>
          <span className={styles.introName}>Youssef Khalil</span>
           <div className={styles.introDescription}>
             {textArray.map((text, index) => (
@@ -40,78 +41,78 @@ function Intro() {
               </h2>
             ))}
           </div>
-          <div className={styles.contactIconLinks}>
+          <div className={homeStyles.contactIconLinks}>
               <a
                 href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Youssef_Khalil_2025_Resume+(3).pdf"
                 target="_blank"
                 rel="noreferrer"
                 download
-                className={styles.contactIconLink}
+                className={homeStyles.contactIconLink}
               >
-                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                   <Image
                     src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/resumeIcon.png"
                     alt="Resume"
                     width={397}
                     height={512}
-                    className={styles.contactIconSmall}
+                    className={homeStyles.contactIconSmall}
                   />
                 </Suspense>
-                <span className={styles.contactIconLabel}>Resume</span>
+                <span className={homeStyles.contactIconLabel}>Resume</span>
               </a>
 
               <a
                 href="https://linkedin.com/in/ykdevelops"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.contactIconLink}
+                className={homeStyles.contactIconLink}
               >
-                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                   <Image
                     src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/linkedin2.png"
                     alt="linkedin"
                     width={500}
                     height={500}
-                    className={styles.contactIconSmall}
+                    className={homeStyles.contactIconSmall}
                   />
                 </Suspense>
-                <span className={styles.contactIconLabel}>LinkedIn</span>
+                <span className={homeStyles.contactIconLabel}>LinkedIn</span>
               </a>
 
               <a
                 href="https://github.com/ykdevelops"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.contactIconLink}
+                className={homeStyles.contactIconLink}
               >
-                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                   <Image
                     src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/github.png"
                     alt="github"
                     width={500}
                     height={500}
-                    className={styles.contactIconSmall}
+                    className={homeStyles.contactIconSmall}
                   />
                 </Suspense>
-                <span className={styles.contactIconLabel}>GitHub</span>
+                <span className={homeStyles.contactIconLabel}>GitHub</span>
               </a>
 
               <a
                 href="https://www.youtube.com/channel/UCRIft9RM1NOq6m0MIJeiJJg"
                 target="_blank"
                 rel="noreferrer"
-                className={styles.contactIconLink}
+                className={homeStyles.contactIconLink}
               >
-                <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                   <Image
                     src="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/youtube1.png"
                     alt="youtube"
                     width={500}
                     height={500}
-                    className={styles.contactIconSmall}
+                    className={homeStyles.contactIconSmall}
                   />
                 </Suspense>
-                <span className={styles.contactIconLabel}>YouTube</span>
+                <span className={homeStyles.contactIconLabel}>YouTube</span>
               </a>
             </div>
         </div>

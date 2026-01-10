@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import Image from 'next/image';
 import homeStyles from '../styles/Home.module.css';
 import workStyles from '../styles/Work.module.css';
+import styles from '../styles/PersonalProjects.module.css';
 import Studio from './sideProjects/Studio';
 import ChatApp from './sideProjects/ChatApp';
 import MugCulture from './sideProjects/MugCulture';
@@ -19,8 +20,8 @@ export default function PersonalProjects() {
         {/* Header Section */}
         <div className={homeStyles.containerTitleRow}>
           <Suspense 
-            className={homeStyles.personalProjectsHeaderIconSuspense} 
-            fallback={<div className={homeStyles.personalProjectsLoadingImage}></div>}
+            className={styles.personalProjectsHeaderIconSuspense} 
+            fallback={<div className={styles.personalProjectsLoadingImage}></div>}
           >
             <Image
               src="/puzzle-svgrepo-com.svg"
@@ -34,9 +35,9 @@ export default function PersonalProjects() {
         </div>
 
         {/* Personal Projects Grid */}
-        <div className={homeStyles.personalProjectsGrid}>
+        <div className={styles.personalProjectsGrid}>
           {personalProjects.map(({ id, component: ProjectComponent }) => (
-            <div key={id} className={homeStyles.personalProjectItem}>
+            <div key={id} className={styles.personalProjectItem}>
               <ProjectComponent />
             </div>
           ))}

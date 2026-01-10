@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import homeStyles from '../../styles/Home.module.css'
+import styles from '../../styles/PersonalProjects.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 import BoxCanvas from './BoxCanvas'
@@ -12,7 +13,7 @@ export default function Studio() {
                     <div className={styles.projectMediaBox}>
                         <Suspense
                             className={styles.personalProjectsItemSuspense}
-                            fallback={<div className={styles.loaderImage}></div>}
+                            fallback={<div className={homeStyles.loaderImage}></div>}
                         >
                             <BoxCanvas className={styles.boxCanvas} />
                         </Suspense>
@@ -28,14 +29,14 @@ export default function Studio() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsLink45Deg className={styles.projectIconLink} />
+                            <BsLink45Deg className={homeStyles.projectIconLink} />
                         </a>
                         <a
                             href="https://github.com/ykdevelops/ykdevelops-r3f"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsGithub className={styles.projectIconLink2} />
+                            <BsGithub className={homeStyles.projectIconLink2} />
                         </a>
                     </div>
                 </div>
