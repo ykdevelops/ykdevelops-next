@@ -248,76 +248,13 @@
   display: none;
 }
 /* #region Description */
-.descriptionImage {
-  border-radius: 50%;
-  display: block;
-  width: 300px;
-  height: 300px;
-}
+/* moved to styles/Description.module.css */
 /* #endregion Description */
 /* #region Work Experience */
 /* #endregion Work Experience */
 
 /* #region Project */
-.sideProjectsTitleIcon {
-  width: 10vw;
-  height: 10vw;
-
-  margin-right: 10px;
-}
-.chatAppLayer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5rem;
-}
-.projectContainer {
-  width: 90%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.projectSectionTitle {
-  transform: translateY(-4rem);
-}
-.projectTitle {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0rem;
-}
-.projectLanguages {
-  font-size: 1.25rem;
-  text-align: center;
-}
-.projectDescription {
-  text-align: center;
-  max-width: 600px;
-  padding-top: 3rem;
-}
-.projectLinkIcon {
-  padding-right: 4rem;
-}
-.projectVisual {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-.djLo2usTitleIcon {
-  width: 12vw;
-  height: 12vw;
-  margin-right: 10px;
-  transform: translateY(5px);
-}
-.djLo2usLayer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* moved to styles/Projects.module.css */
 /* #endregion Project */
 /* #region Contact */
 /* Shared social/link styles (used in Intro + Contact) */
@@ -358,81 +295,7 @@
 
 /* #endregion Contact */
 
-/* #region Personal Projects */
-.caseLayer {
-  width: 90%;
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column-reverse;
-  margin-bottom: 5rem;
-  position: relative;
-}
-
-.caseWorkContainer {
-  width: 100%;
-  position: relative;
-  /* Soft radial gradient to fade out dots behind personal projects */
-  padding: 2rem 1rem;
-  background: radial-gradient(ellipse 140% 120% at center, rgba(63, 61, 107, 0.5) 0%, rgba(63, 61, 107, 0.25) 50%, transparent 100%);
-  border-radius: var(--radius-sm);
-}
-
-.caseContainerTitleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
-  position: relative;
-  /* Soft radial gradient to fade out dots behind title */
-  padding: 1.5rem;
-  background: radial-gradient(ellipse 100% 80% at center, rgba(63, 61, 107, 0.6) 0%, rgba(63, 61, 107, 0.3) 60%, transparent 100%);
-  border-radius: var(--radius-sm);
-}
-
-.caseSectionTitleIcon {
-  width: 8vw;
-  height: 8vw;
-  margin-right: 10px;
-  animation: none !important;
-  transform: none !important;
-  will-change: auto;
-}
-
-.caseSectionTitle {
-  font-weight: normal;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 7vw;
-  margin: 0;
-  height: 100%;
-  padding-top: 5px;
-}
-
-
-.caseDescription {
-  width: 100% !important;
-  max-width: 600px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  text-align: left !important;
-  box-sizing: border-box !important;
-}
-
-.caseDescription p {
-  text-align: center !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
+/* #region Shared section header */
 .containerTitleRow {
   display: flex;
   flex-direction: row;
@@ -470,6 +333,7 @@
   padding-left: 1rem;
   margin: 0;
 }
+/* #endregion Shared section header */
 /* Extra small mobile devices - width less than 350px */
 @media (max-width: 350px) {
   .containerTitleRow .sectionTitle {
@@ -533,24 +397,6 @@
   .layer {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-  }
-
-  .caseContainerTitleRow {
-    justify-content: flex-start;
-  }
-
-  .caseSectionTitleIcon {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    transform: translateY(5px);
-  }
-
-  .caseSectionTitle {
-    font-size: 3rem;
-    margin: 0;
-    text-align: left;
-    justify-content: flex-start;
   }
 
   .sectionTitle {
@@ -638,81 +484,14 @@
   /* moved to styles/Intro.module.css */
   /* #endregion Intro */
   /* #region Description */
-  .descriptionImage {
-    border-radius: 50%;
-    display: block;
-    margin-right: 5rem;
-    width: 500px;
-    height: 500px;
-  }
+  /* moved to styles/Description.module.css */
   /* #endregion Description */
   /* #region Work Experience */
   /* moved to styles/Work.module.css */
   /* #endregion Work Experience */
 
   /* #region Project */
-  .projectContainer {
-    width: 90%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .projectSectionTitle {
-    transform: translateY(-4rem);
-  }
-  .projectTitle {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .projectLanguages {
-    font-size: 1.25rem;
-  }
-  .projectDescription {
-    max-width: 700px;
-    text-align: start;
-    padding: 3rem 0 10px 0;
-  }
-  .projectLinkIcon {
-    padding-right: 4rem;
-  }
-  .projectVisual {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    max-width: 700px;
-    padding-right: 1rem;
-  }
-  .videoVisual {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .projectIconLink {
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2 {
-    width: 1.8rem;
-    height: 1.8rem;
-    transform: translateY(-7px);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink:hover {
-    transform: scale(1.5);
-    transition: all 0.2s ease-in-out;
-  }
-  .projectIconLink2:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.5) translateY(-5px);
-  }
+  /* moved to styles/Projects.module.css */
   /* #endregion Project */
 
   /* #region Contact */

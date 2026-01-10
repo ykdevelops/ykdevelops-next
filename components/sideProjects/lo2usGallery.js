@@ -1,26 +1,27 @@
 import React, { Suspense, lazy } from 'react'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
+import homeStyles from '../../styles/Home.module.css'
+import projectStyles from '../../styles/Projects.module.css'
 import { BsLink45Deg } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
 export default function lo2usGallery() {
     return (
-        <div className={styles.djLo2usLayer}>
-            <div className={styles.containerTitleRow}>
-                <Suspense fallback={<div className={styles['loading-image']}></div>}>
+        <div className={projectStyles.djLo2usLayer}>
+            <div className={homeStyles.containerTitleRow}>
+                <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                     <Image
                         src='https://ykdevelops.s3.us-east-2.amazonaws.com/projects/sideProjectsIcon2.gif'
                         alt='side projects logo'
                         width={150}
                         height={150}
-                        className={styles.sectionTitleIcon}
+                        className={homeStyles.sectionTitleIcon}
                     />
                 </Suspense>
-                <h1 className={styles.sectionTitle}>Side Projects</h1>
+                <h1 className={homeStyles.sectionTitle}>Side Projects</h1>
             </div>
-            <div className={styles.layer}>
-                <div className={styles.leftHalf}>
-                    <div className={styles.projectVisual}>
+            <div className={homeStyles.layer}>
+                <div className={homeStyles.leftHalf}>
+                    <div className={projectStyles.projectVisual}>
                         <video
                             src='https://ykdevelops.s3.us-east-2.amazonaws.com/projects/djlo2usGallery.mp4'
                             controls
@@ -34,17 +35,17 @@ export default function lo2usGallery() {
                         />
                     </div>
                 </div>
-                <div className={styles.rightHalf}>
-                    <div className={styles.textContainer}>
-                        <h1 className={styles.projectTitle}>The djlo2us gallery</h1>
-                        <p className={styles.projectDescription}>
+                <div className={homeStyles.rightHalf}>
+                    <div className={homeStyles.textContainer}>
+                        <h1 className={projectStyles.projectTitle}>The djlo2us gallery</h1>
+                        <p className={projectStyles.projectDescription}>
                             An online gallery showcasing a beautiful fusion of music and artificial intelligence,
                             highlighting the limitless possibilities and the ethical considerations that come with this innovative functionality.
                         </p>
                     </div>
 
 
-                    <h3 className={styles.projectLanguages}>
+                    <h3 className={projectStyles.projectLanguages}>
                         NextJS | ReactJS | Vercel | AWS S3 | Stripe
                     </h3>
                     <div>
@@ -53,14 +54,14 @@ export default function lo2usGallery() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsLink45Deg className={styles.projectIconLink} />
+                            <BsLink45Deg className={projectStyles.projectIconLink} />
                         </a>
                         <a
                             href="https://github.com/ykdevelops/djlo2usgallery.git"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <BsGithub className={styles.projectIconLink2} />
+                            <BsGithub className={projectStyles.projectIconLink2} />
                         </a>
                     </div>
                 </div>
