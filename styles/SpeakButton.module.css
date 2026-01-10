@@ -1,0 +1,40 @@
+/* SpeakButton styles - extracted from Home.module.css */
+
+.speakButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.speakButton:hover {
+  transform: scale(1.1);
+}
+
+.speakTitle {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.speakIcon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speakButton {
+    transition: none;
+  }
+
+  .speakButton:hover {
+    transform: none;
+  }
+}
+

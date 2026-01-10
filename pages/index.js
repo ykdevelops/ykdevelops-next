@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import scrollStyles from '../styles/ScrollHint.module.css'
 import Intro from '../components/Intro'
 import Education from '../components/Education'
 import PersonalProjects from '../components/PersonalProjects'
@@ -46,9 +47,9 @@ export default function Home() {
       </Head>
       {/* <SpeakButton /> */}
       {showScrollDown && (
-        <div className={styles.scrollColumn}>
-          <div className={styles.scrollTitle}>Scroll for more</div>
-          <div className={styles.iconScroll}></div>
+        <div className={scrollStyles.scrollColumn}>
+          <div className={scrollStyles.scrollTitle}>Scroll for more</div>
+          <div className={scrollStyles.iconScroll}></div>
         </div>
       )}
 

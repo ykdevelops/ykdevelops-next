@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import homeStyles from "../styles/Home.module.css";
+import styles from "../styles/SpeakButton.module.css";
 const SpeakButton = () => {
     const [synth, setSynth] = useState(null);
     const [utterance, setUtterance] = useState(null);
@@ -49,7 +50,7 @@ const SpeakButton = () => {
             <div className={styles.speakTitle} >{playing ? 'Stop Listening' : 'Listen to Text'}</div>
             <button className="speak-button__button">
                 {playing ? (
-                    <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                    <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                         <Image
                             src="/playpause.svg"
                             alt="Pause Icon" width={24} height={24}
@@ -57,7 +58,7 @@ const SpeakButton = () => {
                         />
                     </Suspense>
                 ) : (
-                    <Suspense fallback={<div className={styles.loaderImage}></div>}>
+                    <Suspense fallback={<div className={homeStyles.loaderImage}></div>}>
                         <Image
                             src="/play.svg"
                             alt="Play Icon" width={24} height={24}

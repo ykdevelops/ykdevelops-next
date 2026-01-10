@@ -106,8 +106,8 @@
   width: 8vw;
   height: 8vw;
   margin-right: 10px;
-  animation: none !important;
-  transform: none !important;
+  animation: none;
+  transform: none;
   will-change: auto;
 }
 .sectionTitle {
@@ -127,106 +127,11 @@
   letter-spacing: -0.04em;
   transform: translateY(5px);
 }
-/* #region Scroll */
-.scrollColumn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: fit-content;
-  padding: 10px 20px;
-  color: black;
-  border-radius: 20px;
-  width: 100%;
-  height: 200px;
-  background-color: transparent;
-}
-
-.scrollTitle {
-  transform: translateY(-3rem);
-  font-size: 1.25rem;
-  color: #ffff;
-}
-
-.iconScroll,
-.iconScroll:before {
-  position: absolute;
-  left: 50%;
-  color: #ffff;
-}
-
-.iconScroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px black;
-  border-radius: 25px;
-  border: 1.5px solid;
-}
-
-.iconScroll:before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #ffff;
-  margin-left: -4px;
-  bottom: 8px; /* Change the 'top' value to 'bottom' */
-  border-radius: 4px;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    transform: translateY(0); /* Change 'transform' to start from bottom */
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-46px); /* Change 'transform' to go up */
-  }
-}
-
-/* #endregion Scroll */
-
-/* #region SpeakButton */
-.speakButton {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  z-index: 1000;
-  transition: transform 0.2s ease-in-out;
-}
-.speakButton:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-}
-/* #endregion SpeakButton */
 
 .loaderImage {
   background-color: grey;
   width: 300px;
   height: 300px;
-}
-.containerTitleRow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
 }
 
 /* #endregion general */
@@ -340,27 +245,27 @@
     padding-left: 0rem;
   }
   .sectionTitleIcon{
-    width: 40px !important;
-    height: 40px !important;
+    width: 40px;
+    height: 40px;
   }
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
   .contactIconSmall {
-    width: 35px !important;
-    height: 35px !important;
+    width: 35px;
+    height: 35px;
   }
 
   .contactIconLabel {
-    font-size: 0.875rem !important;
+    font-size: 0.875rem;
   }
 
   .contactIconLinks {
-    gap: 0.75rem !important;
+    gap: 0.75rem;
   }
 
   .rightHalf {
-    padding: 0 !important;
+    padding: 0;
   }
 }
 /* Tablet: 768–1023px */
@@ -374,18 +279,18 @@
   
   /* Level 1: Main Section Titles (Largest) - 6-7vw */
   .sectionTitle {
-    font-size: clamp(1.75rem, 6.5vw, 4rem) !important;
+    font-size: clamp(1.75rem, 6.5vw, 4rem);
     line-height: 1.2;
-    text-align: center !important;;
+    text-align: center;
   }
 
   /* Level 2: Intro Text (Large) - 4.5-5.5vw */
   /* Level 5: Secondary Text (Small-Medium) - 2.5-2.75vw */
   /* Level 4: Smallest Text - Mobile */
   .contactIconLabel {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
-    color: var(--color-text-muted) !important;
-    font-weight: normal !important;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    color: var(--color-text-muted);
+    font-weight: normal;
     line-height: 1.5;
   }
 
@@ -424,11 +329,6 @@
     align-items: center;
     flex-direction: row;
   }
-  .chatAppLayer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .container {
     width: 100%;
     display: flex;
@@ -450,7 +350,7 @@
     margin-right: 10px;
     transform: translateY(-0.2rem);
     filter: brightness(0) invert(1);
-    animation: none !important;
+    animation: none;
     will-change: auto;
   }
   .sectionTitleIcon2 {
