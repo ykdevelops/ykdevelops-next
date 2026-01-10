@@ -183,10 +183,10 @@
   overflow: visible;
   opacity: 0.9;
   transition: opacity 0.2s ease;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.95rem, 2.25vw, 1.05rem);
   color: var(--color-text-muted);
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .eduLink:hover {
@@ -200,8 +200,8 @@
   opacity: 0.9;
   transform: translateY(3px);
   transition: opacity 0.2s ease;
-  width: 18px !important;
-  height: 12px !important;
+  width: 14px !important;
+  height: 10px !important;
 }
 
 .eduLink:hover img {
@@ -247,7 +247,7 @@
   }
 
   .eduLink {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+    font-size: clamp(1.0625rem, 2.25vw, 1.25rem) !important;
     color: var(--color-text-muted) !important;
     font-weight: normal !important;
     line-height: 1.5;
@@ -344,7 +344,7 @@
   }
 
   .eduLink {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.0625rem, 1.25vw, 1.25rem);
     color: var(--color-text-muted);
     font-weight: normal;
     line-height: 1.5;
@@ -371,7 +371,7 @@
   }
 
   .eduLink {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.0625rem, 1.25vw, 1.25rem);
     color: var(--color-text-muted);
     font-weight: normal;
     line-height: 1.5;
