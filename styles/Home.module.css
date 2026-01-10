@@ -246,6 +246,10 @@
 }
 /* Mobile: 0–767px - Contact icons and labels smaller to fit on one line */
 @media (max-width: 767px) {
+  .containerTitleRow {
+    padding-bottom: 1.5rem;
+  }
+
   .containerTitleRow .sectionTitleIcon {
     max-width: 56px;
     max-height: 56px;
