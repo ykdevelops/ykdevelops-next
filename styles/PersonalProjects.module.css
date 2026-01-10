@@ -215,6 +215,21 @@
 
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .personalProjectsGrid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .personalProjectItem {
+    width: auto;
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 260px;
+    max-width: 300px;
+  }
+
   .projectTitleHeading {
     font-size: 1.25rem !important;
     padding-top: 0.5rem;
@@ -226,14 +241,15 @@
   .personalProjectsGrid {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     width: 100%;
   }
 
   .personalProjectItem {
-    flex: 1 1 calc(33.333% - 0.667rem);
+    width: auto;
+    flex: 0 1 calc(33.333% - 1rem);
     min-width: 0;
     max-width: 300px;
     display: flex !important;
