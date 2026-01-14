@@ -322,11 +322,14 @@
 
   .pitchLeftColumn {
     order: 2;
+    transform: translateY(-3.5rem);
+    will-change: transform;
   }
 
   .pitchCTAContainer {
     margin-top: 0 !important;
     order: 3;
+    transform: translateY(-3.5rem);
   }
 }
 
@@ -456,19 +459,23 @@
 
   .pitchLeftColumn {
     width: 50%;
-    max-width: 550px;
+    max-width: none;
     order: 1; /* Appears on left side on desktop */
     gap: 1rem;
   }
 
   .pitchParagraphWrapper {
-    text-align: center;
+    text-align: start;
     order: 1; /* Paragraph appears first on desktop */
+    width: 100%;
+    padding-left: 1rem;
   }
 
   .pitchParagraph {
-    text-align: center;
-    max-width: 100%;
+    text-align: start;
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
   }
 
   .pitchButtonImageRow {
@@ -480,6 +487,13 @@
 
   .pitchCTAContainer {
     order: 2; /* Button appears below video on desktop */
+    padding-top: 0;
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .pitchCTA {
+    margin-top: 0;
   }
 
   .pitchExpectationsList {

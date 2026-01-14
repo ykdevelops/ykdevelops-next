@@ -37,6 +37,15 @@ export default function Contact() {
         }
     }, [isFormOpen]);
 
+    useEffect(() => {
+        const handleOpen = () => {
+            setIsFormOpen(true);
+        };
+
+        window.addEventListener('contact:openForm', handleOpen);
+        return () => window.removeEventListener('contact:openForm', handleOpen);
+    }, []);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -210,7 +219,7 @@ export default function Contact() {
                     <h3 className={styles.contactThankYou}>Thank you for exploring my portfolio!</h3>
                     <h2 className={styles.contactHeadline}>How can I help you?</h2>
 
-                    {/* Trigger */}
+                    {/* Trigger (opens form) */}
                     {!isFormOpen && (
                         <div className={styles.contactOpenFormContainer}>
                             <button
@@ -218,15 +227,31 @@ export default function Contact() {
                                 className={styles.contactOpenFormButton}
                                 onClick={() => setIsFormOpen(true)}
                                 aria-expanded={isFormOpen}
-                                aria-controls="contact-form"
+                                aria-controls="contact-form-panel"
                             >
-                                Send a Message
+                                Get in touch
                             </button>
                         </div>
                     )}
 
-                    {/* Contact Form (hidden by default) */}
-                    {isFormOpen && (
+                    {/* Contact Form Panel (animated open/close) */}
+                    <div
+                        id="contact-form-panel"
+                        className={`${styles.contactFormPanel} ${isFormOpen ? styles.contactFormPanelOpen : ''}`}
+                        aria-hidden={!isFormOpen}
+                    >
+                        <button
+                            type="button"
+                            className={styles.contactFormCloseButton}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setIsFormOpen(false);
+                            }}
+                            aria-label="Close contact form"
+                        >
+                            ×
+                        </button>
                         <form
                             id="contact-form"
                             className={styles.contactForm}
@@ -243,6 +268,7 @@ export default function Contact() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     className={styles.contactFormInput}
+                                    disabled={!isFormOpen}
                                     required
                                 />
                             </div>
@@ -256,6 +282,7 @@ export default function Contact() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     className={styles.contactFormInput}
+                                    disabled={!isFormOpen}
                                     required
                                 />
                             </div>
@@ -269,6 +296,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     className={styles.contactFormTextarea}
                                     rows={6}
+                                    disabled={!isFormOpen}
                                     required
                                 />
                             </div>
@@ -293,6 +321,7 @@ export default function Contact() {
                                     tabIndex="-1"
                                     autoComplete="off"
                                     aria-hidden="true"
+                                    disabled={!isFormOpen}
                                 />
                             </div>
 
@@ -300,7 +329,7 @@ export default function Contact() {
                                 <button 
                                     type="submit" 
                                     className={styles.contactSubmitButton}
-                                    disabled={isSubmitting}
+                                    disabled={!isFormOpen || isSubmitting}
                                 >
                                     {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </button>
@@ -318,7 +347,7 @@ export default function Contact() {
                                 </div>
                             )}
                         </form>
-                    )}
+                    </div>
                 </div>
             </div>
         </div>

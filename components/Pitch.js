@@ -15,6 +15,8 @@ export default function Pitch() {
         block: 'start'
       });
     }
+    // Also open the contact form
+    window.dispatchEvent(new Event('contact:openForm'));
   };
 
   const handleCardHover = (index, isEntering) => {
