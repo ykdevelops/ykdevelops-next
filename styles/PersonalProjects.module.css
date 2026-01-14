@@ -1,5 +1,15 @@
 /* Personal Projects (grid + card) styles - extracted from Home.module.css */
 
+.hideOnMobile {
+  /* visible by default */
+}
+
+@media (max-width: 767px) {
+  .hideOnMobile {
+    display: none !important;
+  }
+}
+
 .personalProjectsLoadingImage {
   background-color: grey;
   width: 150px;
