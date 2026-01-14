@@ -79,6 +79,44 @@
   width: 100%;
 }
 
+.contactOpenFormContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.contactOpenFormButton {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #ff6b35, #ff8c42, #ff6b35, #ff8c42);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: gradientWave 3s ease infinite;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+  will-change: transform, background-position;
+  backface-visibility: hidden;
+  letter-spacing: 0.05em;
+}
+
+.contactOpenFormButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+  animation-duration: 2s;
+}
+
+.contactOpenFormButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3),
+    0 6px 20px rgba(255, 107, 53, 0.6);
+}
+
 .contactFormField {
   display: flex;
   flex-direction: column;
