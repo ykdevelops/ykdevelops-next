@@ -72,6 +72,17 @@
   letter-spacing: -0.015em;
 }
 
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
+  .contactThankYou,
+  .contactHeadline {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;
