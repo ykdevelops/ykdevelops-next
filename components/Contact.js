@@ -134,6 +134,7 @@ export default function Contact() {
                             width={500}
                             height={500}
                             className={styles.contactImage}
+                            unoptimized
                         />
                     </Suspense>
 

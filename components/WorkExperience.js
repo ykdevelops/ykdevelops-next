@@ -16,6 +16,7 @@ export default function WorkExperience() {
                             width={150}
                             height={150}
                             className={homeStyles.sectionTitleIcon}
+                            unoptimized
                         />
                     </Suspense>
                     <h1 className={homeStyles.sectionTitle}>Work Experience</h1>

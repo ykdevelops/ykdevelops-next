@@ -55,6 +55,7 @@ const SpeakButton = () => {
                             src="/playpause.svg"
                             alt="Pause Icon" width={24} height={24}
                             className={styles.speakIcon}
+                            unoptimized
                         />
                     </Suspense>
                 ) : (
@@ -63,6 +64,7 @@ const SpeakButton = () => {
                             src="/play.svg"
                             alt="Play Icon" width={24} height={24}
                             className={styles.speakIcon}
+                            unoptimized
                         />
                     </Suspense>
                 )}

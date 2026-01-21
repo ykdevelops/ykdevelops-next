@@ -19,6 +19,7 @@ export default function Description() {
                         width={400}
                         height={400}
                         className={styles.descriptionImage}
+                        unoptimized
                     />
                 </Suspense>
             </div>

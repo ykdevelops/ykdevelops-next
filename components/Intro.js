@@ -28,6 +28,7 @@ function Intro() {
             height={600}
             className={styles.introPic}
             priority
+            unoptimized
           />
         </Suspense>
       </div>

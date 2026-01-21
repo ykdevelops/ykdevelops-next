@@ -15,6 +15,7 @@ export default function lo2usGallery() {
                         width={150}
                         height={150}
                         className={homeStyles.sectionTitleIcon}
+                        unoptimized
                     />
                 </Suspense>
                 <h1 className={homeStyles.sectionTitle}>Side Projects</h1>

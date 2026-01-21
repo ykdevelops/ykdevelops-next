@@ -86,7 +86,7 @@ export default function Education() {
                 rel="noopener noreferrer"
                 className={styles.eduLink}
               >
-                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} unoptimized />
               </a>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Education() {
                 rel="noopener noreferrer"
                 className={styles.eduLink}
               >
-                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} unoptimized />
               </a>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function Education() {
                 rel="noopener noreferrer"
                 className={styles.eduLink}
               >
-                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} />
+                Credential <Image src="/leave-website.svg" alt="external link" width={24} height={16} unoptimized />
               </a>
             </div>
           </div>

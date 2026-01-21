@@ -43,6 +43,7 @@ export default function Pitch() {
               width={150}
               height={150}
               className={homeStyles.sectionTitleIcon}
+              unoptimized
             />
           </Suspense>
           <h1 className={homeStyles.sectionTitle}>Website Service</h1>
@@ -147,6 +148,7 @@ export default function Pitch() {
                       fill
                       className={styles.pitchGif}
                       sizes="(max-width: 768px) 250px, 200px"
+                      unoptimized
                     />
                   </div>
                 </Suspense>
