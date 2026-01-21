@@ -5,7 +5,7 @@ import homeStyles from "../styles/Home.module.css";
 import styles from "../styles/Intro.module.css";
 
 function Intro() {
-  const textArray = ["Intermediate Web Developer", "Third year Computer Science @uOttawa"];
+  const textArray = ["Third year Computer Science @uOttawa", "Intermediate Web Developer"];
 
   return (
     <div className={homeStyles.layer}>

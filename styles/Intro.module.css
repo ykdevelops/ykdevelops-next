@@ -30,7 +30,7 @@
   margin: 0;
   font-weight: normal;
   color: white;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -109,18 +109,18 @@
   }
 
   .introDescription {
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 0 0.7rem;
     margin: 0;
     font-weight: normal;
     color: white;
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     max-width: 650px;
     align-self: stretch;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .introDescriptionLine {
@@ -132,7 +132,7 @@
     font-size: clamp(1.1875rem, 2vw, 1.1875rem);
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
-    text-align: center;
+    text-align: left;
   }
 
   .introPic {

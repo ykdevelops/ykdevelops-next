@@ -140,12 +140,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: start;
+  align-items: flex-start;
+  text-align: left;
 }
 .textContainer > .contactIconLinks {
   margin-top: 1.5rem;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -401,6 +401,21 @@
   }
 
   .contactIconLink:hover .contactIconLabel {
+    opacity: 1;
+  }
+
+  /* Intro section: Show labels on hover for desktop */
+  .textContainer > .contactIconLinks {
+    justify-content: flex-start;
+  }
+
+  .textContainer > .contactIconLinks .contactIconLabel {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .textContainer > .contactIconLinks .contactIconLink:hover .contactIconLabel {
     opacity: 1;
   }
 
