@@ -1,5 +1,6 @@
 import React, { Suspense, useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 import homeStyles from "../styles/Home.module.css";
 import styles from "../styles/Contact.module.css";
 
@@ -34,6 +35,7 @@ export default function Contact() {
         if (isFormOpen) {
             // Focus first input when opening the form
             nameInputRef.current?.focus?.();
+            track("contact_form_open", { location: "contact" });
         }
     }, [isFormOpen]);
 
@@ -87,6 +89,7 @@ export default function Contact() {
             if (response.ok) {
                 setSubmitStatus('success');
                 setSubmitMessage('Thank you! Your message has been sent successfully.');
+                track("contact_submit", { status: "success" });
                 // Reset form
                 setFormData({
                     name: '',
@@ -97,6 +100,7 @@ export default function Contact() {
                 });
             } else {
                 setSubmitStatus('error');
+                track("contact_submit", { status: "error" });
                 // Show detailed error message from API
                 const errorMsg = data.message || data.error || 'Failed to send message. Please try again.';
                 console.error('API Error Response:', data);
@@ -104,6 +108,7 @@ export default function Contact() {
             }
         } catch (error) {
             setSubmitStatus('error');
+            track("contact_submit", { status: "error" });
             if (error.message === 'Request timeout') {
                 setSubmitMessage('Request timed out. Please check your connection and try again.');
             } else {

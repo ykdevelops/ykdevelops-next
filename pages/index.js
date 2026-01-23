@@ -7,18 +7,16 @@ import Education from '../components/Education'
 import PersonalProjects from '../components/PersonalProjects'
 import Pitch from '../components/Pitch'
 import WorkExperience from '../components/WorkExperience'
-import Studio from '../components/sideProjects/Studio'
-import MugCulture from '../components/sideProjects/MugCulture'
 import Contact from '../components/Contact'
-import SpeakButton from '../components/SpeakButton'
-import ChatApp from '../components/sideProjects/ChatApp'
-import Lo2usGallery from '../components/sideProjects/lo2usGallery'
-import ArtisticFilters from '../components/sideProjects/ArtisticFilters'
-import { MdWorkOutline } from 'react-icons/md'
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
+import StickyNav from '../components/StickyNav'
 
 export default function Home() {
   const [showScrollDown, setShowScrollDown] = useState(false)
+  const siteUrl = 'https://youssefkhalil.info'
+  const title = 'Youssef Khalil — Web Developer'
+  const description =
+    'Fast, modern websites for small businesses—strategy, build, launch, and ongoing care.'
+  const ogImage = 'https://ykdevelops.s3.us-east-2.amazonaws.com/contact/introGif-min.png'
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -41,10 +39,48 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Youssef Khalil</title>
-        <meta name='description' content='Portfolio' />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={siteUrl} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Youssef Khalil" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:alt" content="Youssef Khalil — Web Developer" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  url: siteUrl,
+                  name: 'Youssef Khalil',
+                  description,
+                },
+                {
+                  '@type': 'Person',
+                  name: 'Youssef Khalil',
+                  url: siteUrl,
+                  sameAs: ['https://linkedin.com/in/ykdevelops', 'https://github.com/ykdevelops'],
+                },
+              ],
+            }),
+          }}
+        />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <StickyNav />
       {/* <SpeakButton /> */}
       {showScrollDown && (
         <div className={scrollStyles.scrollColumn}>

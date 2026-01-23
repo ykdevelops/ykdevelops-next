@@ -6,7 +6,7 @@ import workStyles from '../styles/Work.module.css';
 export default function WorkExperience() {
 
     return (
-        <div className={homeStyles.layer}>
+        <div id="work" className={homeStyles.layer}>
             <div className={workStyles.workContainer}>
                 <div className={homeStyles.containerTitleRow}>
                     <Suspense fallback={<div className={homeStyles['loading-image']}></div>}>

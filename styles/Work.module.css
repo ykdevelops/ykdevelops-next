@@ -19,6 +19,13 @@
   min-height: 0; /* Fix flexbox min-size quirk */
 }
 
+/* Desktop: Add spacing between workCompany items */
+@media (min-width: 1024px) {
+  .workCompany + .workCompany {
+    margin-top: 0;
+  }
+}
+
 .workCompanyHeader {
   display: flex;
   flex-direction: row;
@@ -109,6 +116,22 @@
 
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
+  /* Education section - make everything smaller on tablet */
+  :global(#education) .workLogo {
+    width: clamp(40px, 6vw, 60px) !important;
+    height: clamp(40px, 6vw, 60px) !important;
+    margin-right: 0.75rem !important;
+  }
+
+  :global(#education) .workCompany {
+    padding-bottom: 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  :global(#education) .workInfo {
+    padding: 0rem 0rem 0.75rem 0rem !important;
+  }
+
   /* Base details - hidden by default */
   .details {
     width: 100%;
@@ -169,19 +192,49 @@
 @media (min-width: 1024px) {
   .workContainer {
     max-width: 1050px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
 
   .workLogo {
     margin-right: 2rem;
     width: clamp(120px, 8vw, 150px);
     height: clamp(120px, 8vw, 150px);
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem;
+  }
+
+  /* Education section - make everything smaller on desktop */
+  :global(#education) .workLogo {
+    width: clamp(60px, 4vw, 75px) !important;
+    height: clamp(60px, 4vw, 75px) !important;
+    margin-right: 1rem !important;
+    padding: 0.25rem !important;
+  }
+
+  :global(#education) .workCompany {
+    padding: 1.25rem !important;
+    padding-bottom: 1.5rem !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0 !important;
+    width: calc(50% - 0.75rem) !important;
+  }
+
+  :global(#education) .workInfo {
+    padding: 0rem 0rem 0.75rem 0rem !important;
   }
 
   .workInfo {
     align-items: flex-start;
     text-align: start;
     flex: 1;
-    padding: 0rem 0rem 2rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    min-width: 0;
   }
 
   .workTitle {
@@ -195,10 +248,25 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 2rem;
     padding-bottom: 2.5rem;
-    width: 100%;
+    width: calc(50% - 0.75rem);
     line-height: 1.2;
     letter-spacing: -0.02em;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .workCompany:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
   }
 
   .workCompanyHeader {
@@ -206,7 +274,7 @@
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .workCompanyTitle {
@@ -214,7 +282,7 @@
     text-align: start;
     color: white;
     font-weight: 600;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.5rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }
@@ -223,8 +291,8 @@
     font-size: clamp(1.1875rem, 2vw, 1.1875rem);
     text-align: start;
     color: var(--color-text-strong);
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-bottom: 0.375rem;
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
   }
@@ -236,7 +304,7 @@
     font-size: clamp(1.0625rem, 1.75vw, 1.125rem);
     color: var(--color-text-muted);
     font-weight: 400;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0;
     line-height: var(--text-line-height);
     letter-spacing: var(--text-letter-spacing);
   }
@@ -332,8 +400,17 @@
   /* motion preference */
   @media (prefers-reduced-motion: reduce) {
     .details,
-    .workDescription {
+    .workDescription,
+    .workCompany {
       transition: none;
+    }
+
+    .workCompany:hover {
+      transform: none;
+    }
+
+    :global(#education) .workCompany:hover {
+      transform: none !important;
     }
   }
 }

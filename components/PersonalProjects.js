@@ -15,7 +15,7 @@ export default function PersonalProjects() {
   ];
 
   return (
-    <div className={`${homeStyles.layer} ${styles.hideOnMobile}`}>
+    <div id="projects" className={`${homeStyles.layer} ${styles.hideOnMobile}`}>
       <div className={workStyles.workContainer}>
         {/* Header Section */}
         <div className={homeStyles.containerTitleRow}>

@@ -1,10 +1,12 @@
 import React, { Suspense, useState } from 'react';
 import Image from 'next/image';
+import { track } from "@vercel/analytics";
 import homeStyles from '../styles/Home.module.css';
 import styles from '../styles/Pitch.module.css';
 
 export default function Pitch() {
   const [hoveredCards, setHoveredCards] = useState(new Set());
+  const [toggledCards, setToggledCards] = useState(new Set());
 
   const handleScrollToContact = (e) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ export default function Pitch() {
     }
     // Also open the contact form
     window.dispatchEvent(new Event('contact:openForm'));
+    track("cta_click", { location: "pitch", target: "contact" });
   };
 
   const handleCardHover = (index, isEntering) => {
@@ -31,8 +34,24 @@ export default function Pitch() {
     }
   };
 
+  const handleCardToggle = (index) => {
+    setToggledCards((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
+
+  const handleCardKeyDown = (e, index) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleCardToggle(index);
+    }
+  };
+
   return (
-    <div className={styles.pitchSection}>
+    <div id="service" className={styles.pitchSection}>
       <div className={styles.pitchWrapper}>
         {/* Title Row - Full Width */}
         <div className={homeStyles.containerTitleRow}>
@@ -66,9 +85,15 @@ export default function Pitch() {
 
             <div className={styles.pitchExpectationsList}>
               <div 
-                className={`${styles.pitchExpectationItem} ${hoveredCards.has(0) ? styles.flipped : ''}`}
+                className={`${styles.pitchExpectationItem} ${(hoveredCards.has(0) || toggledCards.has(0)) ? styles.flipped : ''}`}
                 onMouseEnter={() => handleCardHover(0, true)}
                 onMouseLeave={() => handleCardHover(0, false)}
+                onClick={() => handleCardToggle(0)}
+                onKeyDown={(e) => handleCardKeyDown(e, 0)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={hoveredCards.has(0) || toggledCards.has(0)}
+                aria-label="Strategy session (toggle details)"
               >
                 <div className={styles.pitchCardInner}>
                   <div className={styles.pitchCardFront}>
@@ -83,9 +108,15 @@ export default function Pitch() {
               </div>
               
               <div 
-                className={`${styles.pitchExpectationItem} ${hoveredCards.has(1) ? styles.flipped : ''}`}
+                className={`${styles.pitchExpectationItem} ${(hoveredCards.has(1) || toggledCards.has(1)) ? styles.flipped : ''}`}
                 onMouseEnter={() => handleCardHover(1, true)}
                 onMouseLeave={() => handleCardHover(1, false)}
+                onClick={() => handleCardToggle(1)}
+                onKeyDown={(e) => handleCardKeyDown(e, 1)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={hoveredCards.has(1) || toggledCards.has(1)}
+                aria-label="Technical and content audit (toggle details)"
               >
                 <div className={styles.pitchCardInner}>
                   <div className={styles.pitchCardFront}>
@@ -100,9 +131,15 @@ export default function Pitch() {
               </div>
               
               <div 
-                className={`${styles.pitchExpectationItem} ${hoveredCards.has(2) ? styles.flipped : ''}`}
+                className={`${styles.pitchExpectationItem} ${(hoveredCards.has(2) || toggledCards.has(2)) ? styles.flipped : ''}`}
                 onMouseEnter={() => handleCardHover(2, true)}
                 onMouseLeave={() => handleCardHover(2, false)}
+                onClick={() => handleCardToggle(2)}
+                onKeyDown={(e) => handleCardKeyDown(e, 2)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={hoveredCards.has(2) || toggledCards.has(2)}
+                aria-label="Build, polish, launch (toggle details)"
               >
                 <div className={styles.pitchCardInner}>
                   <div className={styles.pitchCardFront}>
@@ -117,9 +154,15 @@ export default function Pitch() {
               </div>
               
               <div 
-                className={`${styles.pitchExpectationItem} ${hoveredCards.has(3) ? styles.flipped : ''}`}
+                className={`${styles.pitchExpectationItem} ${(hoveredCards.has(3) || toggledCards.has(3)) ? styles.flipped : ''}`}
                 onMouseEnter={() => handleCardHover(3, true)}
                 onMouseLeave={() => handleCardHover(3, false)}
+                onClick={() => handleCardToggle(3)}
+                onKeyDown={(e) => handleCardKeyDown(e, 3)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={hoveredCards.has(3) || toggledCards.has(3)}
+                aria-label="Website care (toggle details)"
               >
                 <div className={styles.pitchCardInner}>
                   <div className={styles.pitchCardFront}>
@@ -157,8 +200,11 @@ export default function Pitch() {
 
             {/* CTA Button - Below the video */}
             <div className={styles.pitchCTAContainer}>
+              <p className={styles.trustLine}>
+                Fast, modern websites for small businesses—strategy, build, and launch.
+              </p>
               <a href="#contact" onClick={handleScrollToContact} className={styles.pitchCTA}>
-                Get in touch
+                Book a free consult
               </a>
             </div>
           </div>

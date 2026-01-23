@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 import homeStyles from "../styles/Home.module.css";
 import styles from "../styles/Intro.module.css";
@@ -7,8 +8,21 @@ import styles from "../styles/Intro.module.css";
 function Intro() {
   const textArray = ["Third year Computer Science @uOttawa", "Intermediate Web Developer"];
 
+  const handlePrimaryCTA = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    window.dispatchEvent(new Event("contact:openForm"));
+    track("cta_click", { location: "intro", target: "contact" });
+  };
+
   return (
-    <div className={homeStyles.layer}>
+    <div id="intro" className={homeStyles.layer}>
       <div className={homeStyles.leftHalf}>
         <Suspense
           fallback={
@@ -42,7 +56,16 @@ function Intro() {
               </h2>
             ))}
           </div>
-          <div className={homeStyles.contactIconLinks}>
+          <div className={styles.ctaRow}>
+            <a
+              href="#contact"
+              onClick={handlePrimaryCTA}
+              className={styles.primaryCTA}
+              aria-label="Get in touch (opens contact form)"
+            >
+              Get in touch
+            </a>
+            <div className={homeStyles.contactIconLinks}>
               <a
                 href="https://ykdevelops.s3.us-east-2.amazonaws.com/contact/Youssef_Khalil_2025_Resume+(3).pdf"
                 target="_blank"
@@ -116,6 +139,7 @@ function Intro() {
                 <span className={homeStyles.contactIconLabel}>YouTube</span>
               </a>
             </div>
+          </div>
         </div>
       </div>
     </div>
