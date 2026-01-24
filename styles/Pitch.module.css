@@ -39,7 +39,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem; /* 32px - 8pt grid double spacing */
+  margin-top: 1rem; /* Reduced spacing */
   width: 100%;
   order: 2; /* Appears below video */
   gap: 0.75rem;
@@ -86,7 +86,7 @@
   position: relative;
   margin: 0;
   margin-top: 0rem;
-  margin-bottom: 3rem; /* Increased spacing */
+  margin-bottom: 1.5rem; /* Reduced spacing */
   /* Soft radial gradient to fade out dots behind text */
   background: radial-gradient(
     ellipse 120% 100% at center,
@@ -375,6 +375,11 @@
   .pitchParagraphWrapper {
     padding: 0 !important;
     margin: 0 !important;
+    transform: translateY(-3rem);
+  }
+
+  .pitchCTAContainer {
+    transform: translateY(-3rem);
   }
 
   .pitchExpectationsList {

@@ -183,7 +183,7 @@
   overflow: visible;
   opacity: 0.9;
   transition: opacity 0.2s ease;
-  font-size: clamp(0.95rem, 2.25vw, 1.05rem);
+  font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
   color: var(--color-text-muted);
   font-weight: normal;
   line-height: 1.35;
@@ -208,6 +208,29 @@
   opacity: 1;
 }
 
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
+  .eduItemDegree,
+  .eduItemTitle {
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem) !important;
+    margin-bottom: 0.375rem !important;
+  }
+
+  .eduItemDegree + .eduItemTitle {
+    font-size: clamp(0.75rem, 1.25vw, 0.875rem) !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .eduItemDate {
+    font-size: clamp(0.6875rem, 1.1vw, 0.8125rem) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .eduLink {
+    font-size: clamp(0.6875rem, 1.2vw, 0.75rem) !important;
+  }
+}
+
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .eduSectionTitle {
@@ -218,27 +241,18 @@
 
   .eduItemDegree,
   .eduItemTitle {
-    font-size: clamp(0.875rem, 2.5vw, 1.125rem) !important; /* Much smaller */
-    color: white !important;
-    font-weight: bold !important;
-    line-height: 1.4;
-    margin-bottom: 0.125rem !important;
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem) !important;
+    margin-bottom: 0.375rem !important;
   }
 
   .eduItemDegree + .eduItemTitle {
-    font-size: clamp(0.75rem, 2.25vw, 0.9375rem) !important; /* Much smaller */
-    color: var(--color-text-strong) !important;
-    font-weight: normal !important;
-    line-height: 1.4;
+    font-size: clamp(0.75rem, 1.25vw, 0.875rem) !important;
     margin-bottom: 0.25rem !important;
   }
 
   .eduItemDate {
-    font-size: clamp(0.6875rem, 2vw, 0.875rem) !important; /* Much smaller */
-    color: var(--color-text-muted) !important;
-    font-weight: normal !important;
-    line-height: 1.5;
-    margin-bottom: 0.375rem !important;
+    font-size: clamp(0.6875rem, 1.1vw, 0.8125rem) !important;
+    margin-bottom: 0 !important;
   }
 
   .eduDescription {
@@ -247,7 +261,7 @@
   }
 
   .eduLink {
-    font-size: clamp(1.0625rem, 2.25vw, 1.25rem) !important;
+    font-size: clamp(0.6875rem, 1.2vw, 0.75rem) !important;
     color: var(--color-text-muted) !important;
     font-weight: normal !important;
     line-height: 1.5;

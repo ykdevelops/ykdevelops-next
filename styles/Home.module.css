@@ -266,7 +266,31 @@
   }
 
   .rightHalf {
-    padding: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .textContainer {
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .textContainer > .contactIconLinks {
+    justify-content: center;
+    margin-top: 0;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .containerTitleRow {
+    justify-content: center;
+  }
+
+  .containerTitleRow .sectionTitle {
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
   }
 }
 /* Tablet: 768–1023px */
@@ -274,6 +298,25 @@
   .layer {
     scroll-snap-align: start;
     scroll-snap-stop: always;
+  }
+
+  .textContainer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .textContainer > .contactIconLinks {
+    justify-content: center;
+  }
+
+  .containerTitleRow {
+    justify-content: center;
+  }
+
+  .containerTitleRow .sectionTitle {
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
   }
 
   /* Mobile Text Hierarchy - Responsive Sizing (Relative to Screen Width) */

@@ -200,9 +200,6 @@ export default function Pitch() {
 
             {/* CTA Button - Below the video */}
             <div className={styles.pitchCTAContainer}>
-              <p className={styles.trustLine}>
-                Fast, modern websites for small businesses—strategy, build, and launch.
-              </p>
               <a href="#contact" onClick={handleScrollToContact} className={styles.pitchCTA}>
                 Book a free consult
               </a>

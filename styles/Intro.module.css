@@ -122,11 +122,45 @@
   color: var(--color-text-muted);
  }
 
+/* Mobile: 0–767px */
+@media (max-width: 767px) {
+  .introName {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .introDescription {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .introDescriptionLine {
+    text-align: center;
+  }
+
+  .ctaRow {
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .ctaStack {
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
 /* Tablet: 768–1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   .introName {
     font-size: clamp(2rem, 6vw, 3.5rem) !important;
     line-height: 1.4;
+    text-align: center;
   }
 
   .introGreeting {
@@ -138,11 +172,24 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 0.5rem !important;
+    align-items: center;
+    text-align: center;
   }
 
   .introDescriptionLine {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
     line-height: 1.4 !important;
+    text-align: center;
+  }
+
+  .ctaRow {
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .ctaStack {
+    align-items: center;
+    padding-left: 0;
   }
 }
 
