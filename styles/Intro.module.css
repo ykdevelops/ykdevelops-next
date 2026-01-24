@@ -153,6 +153,10 @@
     margin-bottom: 1.5rem;
     padding: 0 1rem;
   }
+
+  .introPic {
+    transform: translateY(-6rem);
+  }
 }
 
 /* Tablet: 768–1023px */
@@ -190,6 +194,10 @@
   .ctaStack {
     align-items: center;
     padding-left: 0;
+  }
+
+  .introPic {
+    transform: translateY(-6rem);
   }
 }
 
